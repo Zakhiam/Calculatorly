@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light" />
+<title>Dice Random Calculator | Calculatorly</title>
+<meta name="description" content="Work out a dice roll result for any number of dice — formula, worked example and breakdown. Free, no sign-up, answers as you type." />
+<link rel="canonical" href="https://calculatorly.online/math/dice-random-calculator/" />
+<link rel="icon" href="data:," />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,400;0,600;0,700;0,800;1,400&amp;family=IBM+Plex+Mono:wght@500;600;700&amp;display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../../assets/css/khata.css" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Dice Random Calculator","url":"https://calculatorly.online/math/dice-random-calculator/","applicationCategory":"UtilitiesApplication","operatingSystem":"Any (web browser)","browserRequirements":"Requires JavaScript","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"provider":{"@type":"Organization","name":"Calculatorly","url":"https://calculatorly.online/"}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://calculatorly.online/"},{"@type":"ListItem","position":2,"name":"Math","item":"https://calculatorly.online/math/"},{"@type":"ListItem","position":3,"name":"Dice Random Calculator","item":"https://calculatorly.online/math/dice-random-calculator/"}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Are the rolls really random?","acceptedAnswer":{"@type":"Answer","text":"Yes. Each die is rolled with the browser's built-in secure random numbers (crypto.getRandomValues), which are designed so that no roll can be predicted from the ones before it. The rolls are not worked out from a fixed list, and nothing is stored."}},{"@type":"Question","name":"Can I roll more than 2 dice, or dice with more sides?","acceptedAnswer":{"@type":"Answer","text":"Yes. You can roll 1 to 100 dice, each with 2 to 100 sides. For example, 1 die with 20 sides is a d20, the die used in many tabletop games, and 3 dice with 6 sides give a total from 3 to 18."}},{"@type":"Question","name":"Why does the total change when I only click in a box?","acceptedAnswer":{"@type":"Answer","text":"Because every change rolls the dice again: the tool is live, and each new set of numbers means a fresh roll. If you want to keep a roll, write it down — the page does not store rolls, and going back will not bring the same one back."}},{"@type":"Question","name":"Can this predict a roll, or help me win a game?","acceptedAnswer":{"@type":"Answer","text":"No. The rolls are random, and this page cannot predict them, influence them, or give an edge in any game. Any site that claims to predict dice rolls is not telling the truth."}},{"@type":"Question","name":"What is the average total for 2 six-sided dice?","acceptedAnswer":{"@type":"Answer","text":"The average roll of one six-sided die is 3.5, so two dice average 7. Totals near the middle are more likely than totals at the ends: there is only one way to roll 2 (1 + 1), but six ways to roll 7."}},{"@type":"Question","name":"Is this calculator free, and do I need to sign up?","acceptedAnswer":{"@type":"Answer","text":"Yes, it is free, and no sign-up is needed. Nothing is uploaded: the roll happens in your browser on your own device, and the numbers you type are not sent anywhere."}}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"HowTo","name":"How to use the Dice Random Calculator","step":[{"@type":"HowToStep","position":1,"text":"Type how many dice to roll and how many sides each die has. Change either number to roll again — every change rolls fresh dice."},{"@type":"HowToStep","position":2,"text":"Read the total in the result line, with each die shown in the table below."},{"@type":"HowToStep","position":3,"text":"The rolls use the browser's secure random numbers, so no roll can be predicted or repeated on purpose."}]}
+</script>
+</head>
+<body class="hub-math">
+<div class="sheet">
+  <header class="masthead">
+    <div class="brand"><a href="../../">Calculator<span class="ly">ly</span></a></div>
+    <div class="domain mono">calculatorly.online</div>
+    <div class="mast-note">Every calculator, worked out in full.</div>
+  </header>
+  <main>
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="https://calculatorly.online/">Home</a></li>
+        <li><a href="https://calculatorly.online/math/">Math</a></li>
+        <li aria-current="page">Dice Random Calculator</li>
+      </ol>
+    </nav>
+    <span class="hub-tag">Hub: Math</span>
+    
+    <h1>Dice Random Calculator</h1>
+
+    <section class="tool" aria-label="Dice Random Calculator tool">
+      <p class="tool-q">What will these dice roll?</p>
+      <div class="fields">
+      <div class="field">
+        <label for="in-d">Number of dice</label>
+        <input id="in-d" type="number" inputmode="decimal" step="any" value="2" autocomplete="off" />
+      </div>
+      <div class="field">
+        <label for="in-s">Sides per die</label>
+        <input id="in-s" type="number" inputmode="decimal" step="any" value="6" autocomplete="off" />
+      </div>
+      </div>
+
+      <div class="result-wrap" aria-live="polite">
+        <div class="stamp" id="stamp" aria-hidden="true" hidden>Checked ✓</div>
+        <div class="result-label">Result</div>
+        <div class="result" id="result">—</div>
+        <div class="result-sentence" id="sentence">Type your numbers above and the answer appears here.</div>
+        <p class="msg" id="msg" hidden></p>
+      </div>
+      <ol class="howto">
+        <li><strong>Type how many dice to roll and how many sides each die has. Change either number to roll again — every change rolls fresh dice.</strong></li>
+        <li><strong>Read the total in the result line, with each die shown in the table below.</strong></li>
+        <li><strong>The rolls use the browser&#x27;s secure random numbers, so no roll can be predicted or repeated on purpose.</strong></li>
+      </ol>
+      <p class="limit-note"><strong>Limit:</strong> Dice 1-100, sides 2-100; results are random, not a prediction. <strong>Rounding:</strong> every result uses one named default — Whole numbers, no decimal places — in the answer, the bar and the table. The Checked stamp appears on the result box only while a valid result is showing.</p>
+    </section>
+
+    <section class="quick" aria-labelledby="quickH">
+      <h2 id="quickH"><span class="no">2</span>Quick answer</h2>
+      <p>A dice roll picks a random number from 1 up to the number of sides, for each die, and adds the rolls together. For example, 2 six-sided dice can give any total from 2 to 12. This calculator rolls real random dice in your browser, and a fresh roll appears every time you change a number above.</p>
+    </section>
+
+    <section class="part" aria-labelledby="formulaH">
+      <h2 id="formulaH"><span class="no">3</span>The formula</h2>
+      <p>A fair die gives every side the same chance. This calculator uses the browser&#x27;s secure random numbers, which are built for exactly this kind of job — not a fixed pattern:</p>
+      <div class="formula-box">
+        <strong>Dice roll — in words: for each die, pick a whole number from 1 up to the number of sides, using secure random numbers, then add all the rolls together.</strong>
+        <span class="sym">total = roll 1 + roll 2 + … + roll n, where each roll is a whole number from 1 to the number of sides</span>
+      </div>
+      <p class="small">Formula source: a uniform random whole number from 1 to the number of sides, drawn with the browser&#x27;s built-in secure random numbers (crypto.getRandomValues). No result is stored or repeated.</p>
+    </section>
+
+    <section class="part" aria-labelledby="exampleH">
+      <h2 id="exampleH"><span class="no">4</span>Worked example: 2 six-sided dice</h2>
+      <ol class="steps">
+        <li>Start with the figures: 2 dice, 6 sides each.</li>
+        <li>The lowest possible total is 1 + 1 = 2, and the highest possible total is 6 + 6 = 12.</li>
+        <li>Roll the first die: any whole number from 1 to 6, each with the same chance.</li>
+        <li>Roll the second die the same way, then add the two rolls together for the total.</li>
+        <li class="ans">Answer: the total is the sum of the two rolls — change the numbers above to roll again.</li>
+      </ol>
+      <p class="small">Try it in the tool above: with 2 dice and 6 sides, every roll gives a total between 2 and 12.</p>
+    </section>
+
+    <section class="part" aria-labelledby="chartH">
+      <h2 id="chartH"><span class="no">5</span>Your result, drawn</h2>
+      <p>This bar and table are drawn from the numbers you typed above. Change a number and they change with it.</p>
+      <div class="bar" role="img" id="bar" aria-label="No result to draw yet">
+        <div class="seg-a" style="width:0%"></div>
+        <div class="seg-b"></div>
+      </div>
+      <div class="bar-legend">
+        <span><span class="swatch a"></span><span id="legend-a">No result yet</span></span>
+        <span><span class="swatch b"></span><span id="legend-b">—</span></span>
+      </div>
+      <div class="table-scroll">
+        <table>
+          <thead><tr><th scope="col">Part of your sum</th><th scope="col" class="num">Value</th></tr></thead>
+          <tbody id="break-body">
+            <tr><td>Type your numbers in the tool above</td><td class="num">—</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="part" aria-labelledby="faqH">
+      <h2 id="faqH"><span class="no">6</span>Questions about dice random</h2>
+      <details>
+        <summary>Are the rolls really random?</summary>
+        <p>Yes. Each die is rolled with the browser&#x27;s built-in secure random numbers (crypto.getRandomValues), which are designed so that no roll can be predicted from the ones before it. The rolls are not worked out from a fixed list, and nothing is stored.</p>
+      </details>
+      <details>
+        <summary>Can I roll more than 2 dice, or dice with more sides?</summary>
+        <p>Yes. You can roll 1 to 100 dice, each with 2 to 100 sides. For example, 1 die with 20 sides is a d20, the die used in many tabletop games, and 3 dice with 6 sides give a total from 3 to 18.</p>
+      </details>
+      <details>
+        <summary>Why does the total change when I only click in a box?</summary>
+        <p>Because every change rolls the dice again: the tool is live, and each new set of numbers means a fresh roll. If you want to keep a roll, write it down — the page does not store rolls, and going back will not bring the same one back.</p>
+      </details>
+      <details>
+        <summary>Can this predict a roll, or help me win a game?</summary>
+        <p>No. The rolls are random, and this page cannot predict them, influence them, or give an edge in any game. Any site that claims to predict dice rolls is not telling the truth.</p>
+      </details>
+      <details>
+        <summary>What is the average total for 2 six-sided dice?</summary>
+        <p>The average roll of one six-sided die is 3.5, so two dice average 7. Totals near the middle are more likely than totals at the ends: there is only one way to roll 2 (1 + 1), but six ways to roll 7.</p>
+      </details>
+      <details>
+        <summary>Is this calculator free, and do I need to sign up?</summary>
+        <p>Yes, it is free, and no sign-up is needed. Nothing is uploaded: the roll happens in your browser on your own device, and the numbers you type are not sent anywhere.</p>
+      </details>
+    </section>
+
+    <section class="part" aria-labelledby="relatedH">
+      <h2 id="relatedH"><span class="no">7</span>Related tools</h2>
+      <p class="small">More tools that go with this one — each with its own page, one job per page:</p>
+      <ul class="related">
+        <li><a href="https://calculatorly.online/math/roman-numerals-calculator/">Roman Numerals Calculator<span class="d">Arabic numbers to Roman numerals, and Roman numerals back to numbers.</span><span class="u mono">calculatorly.online/math/roman-numerals-calculator/</span></a></li>
+        <li><a href="https://calculatorly.online/math/binary-hex-calculator/">Binary Hex Calculator<span class="d">One number shown in binary, decimal and hexadecimal.</span><span class="u mono">calculatorly.online/math/binary-hex-calculator/</span></a></li>
+      </ul>
+    </section>
+
+    <section class="part" aria-labelledby="testsH">
+      <h2 id="testsH">Known-answer test cases — run live on this page</h2>
+      <p>Each test below is worked out by the same code as the calculator above, the moment this page loads, and marked Pass or Fail against its known answer. If a row ever shows Fail, the page is not finished.</p>
+      <div class="table-scroll stack-wrap">
+        <table class="stackable">
+          <thead><tr><th scope="col">#</th><th scope="col">Test</th><th scope="col">Expected answer</th><th scope="col">Calculator gave</th><th scope="col">Result</th></tr></thead>
+          <tbody id="test-body">
+            <tr><td class="num" data-label="#">1</td><td data-label="Test">Roll of 2 six-sided dice lands between 2 and 12</td><td class="num" data-label="Expected answer">Total is between 2 and 12</td><td class="num" data-got data-label="Calculator gave">—</td><td data-label="Result"><span class="chip run" data-chip>RUNNING</span></td></tr>
+            <tr><td class="num" data-label="#">2</td><td data-label="Test">Roll of 1 twenty-sided die lands between 1 and 20</td><td class="num" data-label="Expected answer">Total is between 1 and 20</td><td class="num" data-got data-label="Calculator gave">—</td><td data-label="Result"><span class="chip run" data-chip>RUNNING</span></td></tr>
+            <tr><td class="num" data-label="#">3</td><td data-label="Test">Roll of 3 four-sided dice lands between 3 and 12</td><td class="num" data-label="Expected answer">Total is between 3 and 12</td><td class="num" data-got data-label="Calculator gave">—</td><td data-label="Result"><span class="chip run" data-chip>RUNNING</span></td></tr>
+            <tr><td class="num" data-label="#">4</td><td data-label="Test">Too few dice: 0 dice cannot be rolled</td><td class="num" data-label="Expected answer">Clear message: number of dice must be 1 to 100</td><td class="num" data-got data-label="Calculator gave">—</td><td data-label="Result"><span class="chip run" data-chip>RUNNING</span></td></tr>
+            <tr><td class="num" data-label="#">5</td><td data-label="Test">Too few sides: a 1-sided die cannot be rolled</td><td class="num" data-label="Expected answer">Clear message: sides per die must be 2 to 100</td><td class="num" data-got data-label="Calculator gave">—</td><td data-label="Result"><span class="chip run" data-chip>RUNNING</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="record-note" style="margin-top:12px" id="test-summary">Tests are running…</p>
+    </section>
+
+    <section class="part" aria-labelledby="verdictH">
+      <h2 id="verdictH">Build record — verdict for this tool</h2>
+      <div class="table-scroll stack-wrap">
+        <table class="stackable">
+          <thead><tr><th scope="col">#</th><th scope="col">Tool</th><th scope="col">Verdict</th><th scope="col">Input → Output</th><th scope="col">Library / method</th><th scope="col">Limit or note shown on the page</th></tr></thead>
+          <tbody>
+            <tr>
+              <td class="num" data-label="#">1</td>
+              <td data-label="Tool">Dice Random Calculator</td>
+              <td data-label="Verdict"><strong>Browser-real</strong></td>
+              <td data-label="Input → Output">A number of dice + sides per die -&gt; a random roll and the total</td>
+              <td data-label="Library / method">No library. Plain JavaScript arithmetic in the browser</td>
+              <td data-label="Limit or note shown on the page">Dice 1-100, sides 2-100; results are random, not a prediction.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="record-note" style="margin-top:12px"><strong>Plan for this tool:</strong> one page only, in the Math hub, built from the shared template with no libraries and no server. Security items that need a server (login, database, password rules) are N/A — this is a static page with no login and no stored data.</p>
+    </section>
+    <script type="application/json" id="tool-config">{"tool": "dice-random", "chart": "dice", "tests": [{"label": "Roll of 2 six-sided dice lands between 2 and 12", "inputs": {"d": "2", "s": "6"}, "expect_state": "ok", "expect_text": "Total is between 2 and 12"}, {"label": "Roll of 1 twenty-sided die lands between 1 and 20", "inputs": {"d": "1", "s": "20"}, "expect_state": "ok", "expect_text": "Total is between 1 and 20"}, {"label": "Roll of 3 four-sided dice lands between 3 and 12", "inputs": {"d": "3", "s": "4"}, "expect_state": "ok", "expect_text": "Total is between 3 and 12"}, {"label": "Too few dice: 0 dice cannot be rolled", "inputs": {"d": "0", "s": "6"}, "expect_state": "error", "expect_text": "Clear message: number of dice must be 1 to 100"}, {"label": "Too few sides: a 1-sided die cannot be rolled", "inputs": {"d": "2", "s": "1"}, "expect_state": "error", "expect_text": "Clear message: sides per die must be 2 to 100"}], "fields": ["d", "s"]}</script>
+  </main>
+<footer class="site">
+    <span class="fbrand">Calculatorly</span>
+    <nav aria-label="Footer">
+      <a href="../../about/">About</a>
+      <a href="../../contact/">Contact</a>
+      <a href="../../privacy/">Privacy</a>
+      <a href="../../terms/">Terms</a>
+      <a href="../../disclaimer/">Disclaimer</a>
+    </nav>
+    <span>Calculatorly — free calculators, no sign-up. The domain calculatorly.online is bought; hosting is separate.</span>
+    <div class="ad-slot" hidden aria-hidden="true"></div>
+  </footer>
+</div>
+<script src="../../assets/js/calculatorly.js"></script>
+<script src="../../assets/js/engines-s4.js"></script>
+</body>
+</html>

@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light" />
+<title>Working Days Between Dates Calculator | Calculatorly</title>
+<meta name="description" content="Work out the working days between two dates, with holidays — formula, worked example and breakdown. Free, no sign-up, answers as you type." />
+<link rel="canonical" href="https://calculatorly.online/date-time/working-days-between-calculator/" />
+<link rel="icon" href="data:," />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,400;0,600;0,700;0,800;1,400&amp;family=IBM+Plex+Mono:wght@500;600;700&amp;display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../../assets/css/khata.css" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Working Days Between Dates Calculator","url":"https://calculatorly.online/date-time/working-days-between-calculator/","applicationCategory":"UtilitiesApplication","operatingSystem":"Any (web browser)","browserRequirements":"Requires JavaScript","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"provider":{"@type":"Organization","name":"Calculatorly","url":"https://calculatorly.online/"}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://calculatorly.online/"},{"@type":"ListItem","position":2,"name":"Date and Time","item":"https://calculatorly.online/date-time/"},{"@type":"ListItem","position":3,"name":"Working Days Between Dates Calculator","item":"https://calculatorly.online/date-time/working-days-between-calculator/"}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How is this different from the Business Days Calculator?","acceptedAnswer":{"@type":"Answer","text":"This page has a box for public holidays, and takes them off the count. The Business Days Calculator counts Monday to Friday only, and leaves holidays in."}},{"@type":"Question","name":"Should a holiday on a weekend be counted?","acceptedAnswer":{"@type":"Answer","text":"No. A holiday on a Saturday or Sunday is already taken off as a weekend day. Count only holidays that fall on a Monday to Friday inside the range."}},{"@type":"Question","name":"What if there are more holidays than business days?","acceptedAnswer":{"@type":"Answer","text":"Then the page shows a message instead of a result, because the count cannot go below zero. Check the holiday number and try again."}},{"@type":"Question","name":"Are both end dates counted?","acceptedAnswer":{"@type":"Answer","text":"Yes. The start date and the end date are both counted if they fall on a weekday and are not holidays."}},{"@type":"Question","name":"How far apart can the dates be?","acceptedAnswer":{"@type":"Answer","text":"From 1 January 1900 to 31 December 2100. Outside that range the page shows a message instead of a result."}},{"@type":"Question","name":"Is this calculator free, and do I need to sign up?","acceptedAnswer":{"@type":"Answer","text":"Yes, it is free, and no sign-up is needed. Nothing is uploaded: the calculation runs in your browser on your own device, and the dates you type are not sent anywhere."}}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"HowTo","name":"How to use the Working Days Between Dates Calculator","step":[{"@type":"HowToStep","position":1,"text":"Type the start date, the end date, and how many public holidays fall inside the range. There is no Calculate button — the answer appears as you type."},{"@type":"HowToStep","position":2,"text":"Read the result line for the working days left after weekends and holidays are taken off."},{"@type":"HowToStep","position":3,"text":"Check the bar and table under the result to see the total days, the weekend days and the holidays."}]}
+</script>
+</head>
+<body class="hub-date-time">
+<div class="sheet">
+  <header class="masthead">
+    <div class="brand"><a href="../../">Calculator<span class="ly">ly</span></a></div>
+    <div class="domain mono">calculatorly.online</div>
+    <div class="mast-note">Every calculator, worked out in full.</div>
+  </header>
+  <main>
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="https://calculatorly.online/">Home</a></li>
+        <li><a href="https://calculatorly.online/date-time/">Date and Time</a></li>
+        <li aria-current="page">Working Days Between Dates Calculator</li>
+      </ol>
+    </nav>
+    <span class="hub-tag">Hub: Date and Time</span>
+    
+    <h1>Working Days Between Dates Calculator</h1>
+
+    <section class="tool" aria-label="Working Days Between Dates Calculator tool">
+      <p class="tool-q">How many working days are there between two dates, with holidays taken off?</p>
+      <div class="fields">
+      <div class="field">
+        <label for="in-start">Start date</label>
+        <input id="in-start" type="date" value="2026-11-02" autocomplete="off" />
+      </div>
+      <div class="field">
+        <label for="in-end">End date</label>
+        <input id="in-end" type="date" value="2026-11-06" autocomplete="off" />
+      </div>
+      <div class="field">
+        <label for="in-holidays">Public holidays in the range</label>
+        <input id="in-holidays" type="number" inputmode="decimal" step="any" value="1" autocomplete="off" />
+      </div>
+      </div>
+
+      <div class="result-wrap" aria-live="polite">
+        <div class="stamp" id="stamp" aria-hidden="true" hidden>Checked ✓</div>
+        <div class="result-label">Result</div>
+        <div class="result" id="result">4 working days</div>
+        <div class="result-sentence" id="sentence">From 2 November 2026 to 6 November 2026 there are 5 business days, and with 1 public holidays taken off there are 4 working days.</div>
+        <p class="msg" id="msg" hidden></p>
+      </div>
+      <ol class="howto">
+        <li><strong>Type the start date, the end date, and how many public holidays fall inside the range. There is no Calculate button — the answer appears as you type.</strong></li>
+        <li><strong>Read the result line for the working days left after weekends and holidays are taken off.</strong></li>
+        <li><strong>Check the bar and table under the result to see the total days, the weekend days and the holidays.</strong></li>
+      </ol>
+      <p class="limit-note"><strong>Limit:</strong> Dates from 1900 to 2100; a start date after the end date shows a clear message. <strong>Rounding:</strong> every result uses one named default — Whole numbers, no decimal places — in the answer, the bar and the table. The Checked stamp appears on the result box only while a valid result is showing.</p>
+    </section>
+
+    <section class="quick" aria-labelledby="quickH">
+      <h2 id="quickH"><span class="no">2</span>Quick answer</h2>
+      <p>Working days are Monday to Friday, counting both end dates, with public holidays taken off. From Monday 2 November to Friday 6 November 2026 there are 5 business days, and with 1 public holiday taken off there are 4 working days. Type your dates and holidays above to count your range.</p>
+    </section>
+
+    <section class="part" aria-labelledby="formulaH">
+      <h2 id="formulaH"><span class="no">3</span>The formula</h2>
+      <p>Business days are Monday to Friday. The holidays box counts only holidays that fall on a weekday inside the range — a holiday on a Saturday or Sunday is already taken off as a weekend day.</p>
+      <div class="formula-box">
+        <strong>Working days — in words: count the business days from the start date to the end date, counting both end dates, then take off the public holidays.</strong>
+        <span class="sym">working days = business days in the range − public holidays in the range</span>
+      </div>
+      <p class="small">Formula source: the calendar and the holiday count you type. No holiday list is built in, because holidays differ by country and by year, so you type the number yourself.</p>
+    </section>
+
+    <section class="part" aria-labelledby="exampleH">
+      <h2 id="exampleH"><span class="no">4</span>Worked example: 2 November to 6 November 2026, 1 holiday</h2>
+      <ol class="steps">
+        <li>Total days, counting both end dates: 5.</li>
+        <li>Weekend days in that range: 0, so business days are 5.</li>
+        <li>Public holidays: 1.</li>
+        <li class="ans">Answer: 5 − 1 = 4 working days.</li>
+      </ol>
+      <p class="small">Try it in the tool above: pick 2 November 2026 and 6 November 2026, type 1 holiday, and the result line shows 4 working days.</p>
+    </section>
+
+    <section class="part" aria-labelledby="chartH">
+      <h2 id="chartH"><span class="no">5</span>Your result, drawn</h2>
+      <p>This bar and table are drawn from the numbers you typed above. Change a number and they change with it.</p>
+      <div class="bar" role="img" id="bar" aria-label="Bar showing the working days out of the business days">
+        <div class="seg-a" style="width:80%"></div>
+        <div class="seg-b"></div>
+      </div>
+      <div class="bar-legend">
+        <span><span class="swatch a"></span><span id="legend-a">Working days: 4</span></span>
+        <span><span class="swatch b"></span><span id="legend-b">Business days before holidays: 5</span></span>
+      </div>
+      <div class="table-scroll">
+        <table>
+          <thead><tr><th scope="col">Part of your sum</th><th scope="col" class="num">Value</th></tr></thead>
+          <tbody id="break-body">
+            <tr><td>Start date</td><td class="num">2 November 2026</td></tr>
+            <tr><td>End date</td><td class="num">6 November 2026</td></tr>
+            <tr><td>Total days (both ends counted)</td><td class="num">5</td></tr>
+            <tr><td>Weekend days</td><td class="num">0</td></tr>
+            <tr><td>Business days</td><td class="num">5</td></tr>
+            <tr><td>Public holidays</td><td class="num">1</td></tr>
+            <tr><td>Working days (your result)</td><td class="num">4</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="part" aria-labelledby="faqH">
+      <h2 id="faqH"><span class="no">6</span>Questions about working days between dates</h2>
+      <details>
+        <summary>How is this different from the Business Days Calculator?</summary>
+        <p>This page has a box for public holidays, and takes them off the count. The Business Days Calculator counts Monday to Friday only, and leaves holidays in.</p>
+      </details>
+      <details>
+        <summary>Should a holiday on a weekend be counted?</summary>
+        <p>No. A holiday on a Saturday or Sunday is already taken off as a weekend day. Count only holidays that fall on a Monday to Friday inside the range.</p>
+      </details>
+      <details>
+        <summary>What if there are more holidays than business days?</summary>
+        <p>Then the page shows a message instead of a result, because the count cannot go below zero. Check the holiday number and try again.</p>
+      </details>
+      <details>
+        <summary>Are both end dates counted?</summary>
+        <p>Yes. The start date and the end date are both counted if they fall on a weekday and are not holidays.</p>
+      </details>
+      <details>
+        <summary>How far apart can the dates be?</summary>
+        <p>From 1 January 1900 to 31 December 2100. Outside that range the page shows a message instead of a result.</p>
+      </details>
+      <details>
+        <summary>Is this calculator free, and do I need to sign up?</summary>
+        <p>Yes, it is free, and no sign-up is needed. Nothing is uploaded: the calculation runs in your browser on your own device, and the dates you type are not sent anywhere.</p>
+      </details>
+    </section>
+
+    <section class="part" aria-labelledby="relatedH">
+      <h2 id="relatedH"><span class="no">7</span>Related tools</h2>
+      <p class="small">More tools that go with this one — each with its own page, one job per page:</p>
+      <ul class="related">
+        <li><a href="https://calculatorly.online/date-time/business-days-calculator/">Business Days Calculator<span class="d">Business days between two dates.</span><span class="u mono">calculatorly.online/date-time/business-days-calculator/</span></a></li>
+        <li><a href="https://calculatorly.online/date-time/countdown-calculator/">Countdown Calculator<span class="d">Days, hours, minutes and seconds until a date.</span><span class="u mono">calculatorly.online/date-time/countdown-calculator/</span></a></li>
+      </ul>
+    </section>
+
+    <section class="part" aria-labelledby="testsH">
+      <h2 id="testsH">Known-answer test cases — run live on this page</h2>
+      <p>Each test below is worked out by the same code as the calculator above, the moment this page loads, and marked Pass or Fail against its known answer. If a row ever shows Fail, the page is not finished.</p>
+      <div class="table-scroll stack-wrap">
+        <table class="stackable">
+          <thead><tr><th scope="col">#</th><th scope="col">Test</th><th scope="col">Expected answer</th><th scope="col">Calculator gave</th><th scope="col">Result</th></tr></thead>
+          <tbody id="test-body">
+            <tr><td class="num" data-label="#">1</td><td data-label="Test">2 to 6 November 2026, 1 holiday</td><td class="num" data-label="Expected answer">4 working days</td><td class="num" data-got data-label="Calculator gave">—</td><td data-label="Result"><span class="chip run" data-chip>RUNNING</span></td></tr>
+            <tr><td class="num" data-label="#">2</td><td data-label="Test">2 to 6 November 2026, no holidays</td><td class="num" data-label="Expected answer">5 working days</td><td class="num" data-got data-label="Calculator gave">—</td><td data-label="Result"><span class="chip run" data-chip>RUNNING</span></td></tr>
+            <tr><td class="num" data-label="#">3</td><td data-label="Test">Saturday 7 to Sunday 8 November 2026, no holidays</td><td class="num" data-label="Expected answer">0 working days</td><td class="num" data-got data-label="Calculator gave">—</td><td data-label="Result"><span class="chip run" data-chip>RUNNING</span></td></tr>
+            <tr><td class="num" data-label="#">4</td><td data-label="Test">Empty input: end date left blank</td><td class="num" data-label="Expected answer">Prompt message, no result, no NaN</td><td class="num" data-got data-label="Calculator gave">—</td><td data-label="Result"><span class="chip run" data-chip>RUNNING</span></td></tr>
+            <tr><td class="num" data-label="#">5</td><td data-label="Test">More holidays than business days</td><td class="num" data-label="Expected answer">Holidays cannot be more than the business days in the range.</td><td class="num" data-got data-label="Calculator gave">—</td><td data-label="Result"><span class="chip run" data-chip>RUNNING</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="record-note" style="margin-top:12px" id="test-summary">Tests are running…</p>
+    </section>
+
+    <section class="part" aria-labelledby="verdictH">
+      <h2 id="verdictH">Build record — verdict for this tool</h2>
+      <div class="table-scroll stack-wrap">
+        <table class="stackable">
+          <thead><tr><th scope="col">#</th><th scope="col">Tool</th><th scope="col">Verdict</th><th scope="col">Input → Output</th><th scope="col">Library / method</th><th scope="col">Limit or note shown on the page</th></tr></thead>
+          <tbody>
+            <tr>
+              <td class="num" data-label="#">1</td>
+              <td data-label="Tool">Working Days Between Dates Calculator</td>
+              <td data-label="Verdict"><strong>Browser-real</strong></td>
+              <td data-label="Input → Output">Two dates + holidays -&gt; the working days between them</td>
+              <td data-label="Library / method">No library. Plain JavaScript Date arithmetic in the browser</td>
+              <td data-label="Limit or note shown on the page">Dates from 1900 to 2100; a start date after the end date shows a clear message.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="record-note" style="margin-top:12px"><strong>Plan for this tool:</strong> one page only, in the Date and Time hub, built from the shared template with no libraries and no server. Security items that need a server (login, database, password rules) are N/A — this is a static page with no login and no stored data.</p>
+    </section>
+    <script type="application/json" id="tool-config">{"tool": "working-days-between", "chart": "bar-table", "tests": [{"label": "2 to 6 November 2026, 1 holiday", "inputs": {"start": "2026-11-02", "end": "2026-11-06", "holidays": "1"}, "expect": "4 working days"}, {"label": "2 to 6 November 2026, no holidays", "inputs": {"start": "2026-11-02", "end": "2026-11-06", "holidays": "0"}, "expect": "5 working days"}, {"label": "Saturday 7 to Sunday 8 November 2026, no holidays", "inputs": {"start": "2026-11-07", "end": "2026-11-08", "holidays": "0"}, "expect": "0 working days"}, {"label": "Empty input: end date left blank", "inputs": {"start": "2026-11-02", "end": "", "holidays": "1"}, "expect_state": "empty", "expect_text": "Prompt message, no result, no NaN"}, {"label": "More holidays than business days", "inputs": {"start": "2026-11-02", "end": "2026-11-06", "holidays": "9"}, "expect_state": "range", "expect_text": "Holidays cannot be more than the business days in the range."}], "fields": ["start", "end", "holidays"]}</script>
+  </main>
+<footer class="site">
+    <span class="fbrand">Calculatorly</span>
+    <nav aria-label="Footer">
+      <a href="../../about/">About</a>
+      <a href="../../contact/">Contact</a>
+      <a href="../../privacy/">Privacy</a>
+      <a href="../../terms/">Terms</a>
+      <a href="../../disclaimer/">Disclaimer</a>
+    </nav>
+    <span>Calculatorly — free calculators, no sign-up. The domain calculatorly.online is bought; hosting is separate.</span>
+    <div class="ad-slot" hidden aria-hidden="true"></div>
+  </footer>
+</div>
+<script src="../../assets/js/calculatorly.js"></script>
+<script src="../../assets/js/engines-s3.js"></script>
+</body>
+</html>

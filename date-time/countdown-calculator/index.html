@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light" />
+<title>Countdown Calculator | Calculatorly</title>
+<meta name="description" content="Work out the days, hours and minutes until a date — formula, worked example and breakdown. Free, no sign-up, answers as you type." />
+<link rel="canonical" href="https://calculatorly.online/date-time/countdown-calculator/" />
+<link rel="icon" href="data:," />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,400;0,600;0,700;0,800;1,400&amp;family=IBM+Plex+Mono:wght@500;600;700&amp;display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../../assets/css/khata.css" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Countdown Calculator","url":"https://calculatorly.online/date-time/countdown-calculator/","applicationCategory":"UtilitiesApplication","operatingSystem":"Any (web browser)","browserRequirements":"Requires JavaScript","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"provider":{"@type":"Organization","name":"Calculatorly","url":"https://calculatorly.online/"}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://calculatorly.online/"},{"@type":"ListItem","position":2,"name":"Date and Time","item":"https://calculatorly.online/date-time/"},{"@type":"ListItem","position":3,"name":"Countdown Calculator","item":"https://calculatorly.online/date-time/countdown-calculator/"}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Does the countdown tick every second?","acceptedAnswer":{"@type":"Answer","text":"No. It is worked out once, when the page loads. Refresh the page to see the seconds move on. The days, hours and minutes are right at the moment the page loads."}},{"@type":"Question","name":"What if the target date is today?","acceptedAnswer":{"@type":"Answer","text":"Then the answer is 0 days, 0 hours, 0 minutes, 0 seconds, counted from midnight. A target date in the past shows a message instead of a count."}},{"@type":"Question","name":"What is the second date box for?","acceptedAnswer":{"@type":"Answer","text":"It lets you count from a date other than today, for checking or planning. Leave it blank and the countdown starts from today."}},{"@type":"Question","name":"How far ahead can I count?","acceptedAnswer":{"@type":"Answer","text":"To 31 December 2100. A target date after that shows a message instead of a result."}},{"@type":"Question","name":"Does the countdown use my time zone?","acceptedAnswer":{"@type":"Answer","text":"Yes. It uses the clock on your own device, so the count is right for where you are."}},{"@type":"Question","name":"Is this calculator free, and do I need to sign up?","acceptedAnswer":{"@type":"Answer","text":"Yes, it is free, and no sign-up is needed. Nothing is uploaded: the calculation runs in your browser on your own device, and the dates you type are not sent anywhere."}}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"HowTo","name":"How to use the Countdown Calculator","step":[{"@type":"HowToStep","position":1,"text":"Type the target date, and leave the second box blank to count from today. There is no Calculate button — the answer appears as you type."},{"@type":"HowToStep","position":2,"text":"Read the result line for the days, hours, minutes and seconds left."},{"@type":"HowToStep","position":3,"text":"Check the bar and table under the result to see the wait in days, weeks and months."}]}
+</script>
+</head>
+<body class="hub-date-time">
+<div class="sheet">
+  <header class="masthead">
+    <div class="brand"><a href="../../">Calculator<span class="ly">ly</span></a></div>
+    <div class="domain mono">calculatorly.online</div>
+    <div class="mast-note">Every calculator, worked out in full.</div>
+  </header>
+  <main>
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="https://calculatorly.online/">Home</a></li>
+        <li><a href="https://calculatorly.online/date-time/">Date and Time</a></li>
+        <li aria-current="page">Countdown Calculator</li>
+      </ol>
+    </nav>
+    <span class="hub-tag">Hub: Date and Time</span>
+    
+    <h1>Countdown Calculator</h1>
+
+    <section class="tool" aria-label="Countdown Calculator tool">
+      <p class="tool-q">How long is it until a date?</p>
+      <div class="fields">
+      <div class="field">
+        <label for="in-target">Target date</label>
+        <input id="in-target" type="date" value="2027-01-01" autocomplete="off" />
+      </div>
+      <div class="field">
+        <label for="in-from">Count from this date (leave blank for today)</label>
+        <input id="in-from" type="date" value="" autocomplete="off" />
+      </div>
+      </div>
+
+      <div class="result-wrap" aria-live="polite">
+        <div class="stamp" id="stamp" aria-hidden="true" hidden>Checked ✓</div>
+        <div class="result-label">Result</div>
+        <div class="result" id="result">—</div>
+        <div class="result-sentence" id="sentence">Type your numbers above and the answer appears here.</div>
+        <p class="msg" id="msg" hidden></p>
+      </div>
+      <ol class="howto">
+        <li><strong>Type the target date, and leave the second box blank to count from today. There is no Calculate button — the answer appears as you type.</strong></li>
+        <li><strong>Read the result line for the days, hours, minutes and seconds left.</strong></li>
+        <li><strong>Check the bar and table under the result to see the wait in days, weeks and months.</strong></li>
+      </ol>
+      <p class="limit-note"><strong>Limit:</strong> Dates from today to 2100; a date in the past shows a clear message. <strong>Rounding:</strong> every result uses one named default — Whole numbers, no decimal places — in the answer, the bar and the table. The Checked stamp appears on the result box only while a valid result is showing.</p>
+    </section>
+
+    <section class="quick" aria-labelledby="quickH">
+      <h2 id="quickH"><span class="no">2</span>Quick answer</h2>
+      <p>A countdown counts the time left until a date. From 11 November 2026 to 1 January 2027 there are 51 days, 0 hours, 0 minutes, 0 seconds left. Type your target date above and this calculator shows the time left, down to the second.</p>
+    </section>
+
+    <section class="part" aria-labelledby="formulaH">
+      <h2 id="formulaH"><span class="no">3</span>The formula</h2>
+      <p>The count is worked out when the page loads. Refresh the page to update the seconds. A target date in the past shows a message instead of a count.</p>
+      <div class="formula-box">
+        <strong>Time left — in words: take the target date and time, take away the current date and time, and split what is left into days, hours, minutes and seconds.</strong>
+        <span class="sym">time left = target date and time − now, split into days, hours, minutes and seconds</span>
+      </div>
+      <p class="small">Formula source: the clock on your own device and the date you type. No outside data is used, and nothing is sent anywhere.</p>
+    </section>
+
+    <section class="part" aria-labelledby="exampleH">
+      <h2 id="exampleH"><span class="no">4</span>Worked example: 11 November 2026 to 1 January 2027</h2>
+      <ol class="steps">
+        <li>Days left: 1 January 2027 minus 11 November 2026 = 51 days.</li>
+        <li>Hours, minutes and seconds left on top of those days: 0, because both dates are counted from midnight.</li>
+        <li>In weeks: 51 ÷ 7 = 7 weeks and 2 days.</li>
+        <li class="ans">Answer: 51 days, 0 hours, 0 minutes, 0 seconds.</li>
+      </ol>
+      <p class="small">Try it in the tool above: pick 1 January 2027 and 11 November 2026, and the result line shows 51 days, 0 hours, 0 minutes, 0 seconds.</p>
+    </section>
+
+    <section class="part" aria-labelledby="chartH">
+      <h2 id="chartH"><span class="no">5</span>Your result, drawn</h2>
+      <p>This bar and table are drawn from the numbers you typed above. Change a number and they change with it.</p>
+      <div class="bar" role="img" id="bar" aria-label="No result to draw yet">
+        <div class="seg-a" style="width:0%"></div>
+        <div class="seg-b"></div>
+      </div>
+      <div class="bar-legend">
+        <span><span class="swatch a"></span><span id="legend-a">No result yet</span></span>
+        <span><span class="swatch b"></span><span id="legend-b">—</span></span>
+      </div>
+      <div class="table-scroll">
+        <table>
+          <thead><tr><th scope="col">Part of your sum</th><th scope="col" class="num">Value</th></tr></thead>
+          <tbody id="break-body">
+            <tr><td>Type your numbers in the tool above</td><td class="num">—</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="part" aria-labelledby="faqH">
+      <h2 id="faqH"><span class="no">6</span>Questions about countdown</h2>
+      <details>
+        <summary>Does the countdown tick every second?</summary>
+        <p>No. It is worked out once, when the page loads. Refresh the page to see the seconds move on. The days, hours and minutes are right at the moment the page loads.</p>
+      </details>
+      <details>
+        <summary>What if the target date is today?</summary>
+        <p>Then the answer is 0 days, 0 hours, 0 minutes, 0 seconds, counted from midnight. A target date in the past shows a message instead of a count.</p>
+      </details>
+      <details>
+        <summary>What is the second date box for?</summary>
+        <p>It lets you count from a date other than today, for checking or planning. Leave it blank and the countdown starts from today.</p>
+      </details>
+      <details>
+        <summary>How far ahead can I count?</summary>
+        <p>To 31 December 2100. A target date after that shows a message instead of a result.</p>
+      </details>
+      <details>
+        <summary>Does the countdown use my time zone?</summary>
+        <p>Yes. It uses the clock on your own device, so the count is right for where you are.</p>
+      </details>
+      <details>
+        <summary>Is this calculator free, and do I need to sign up?</summary>
+        <p>Yes, it is free, and no sign-up is needed. Nothing is uploaded: the calculation runs in your browser on your own device, and the dates you type are not sent anywhere.</p>
+      </details>
+    </section>
+
+    <section class="part" aria-labelledby="relatedH">
+      <h2 id="relatedH"><span class="no">7</span>Related tools</h2>
+      <p class="small">More tools that go with this one — each with its own page, one job per page:</p>
+      <ul class="related">
+        <li><a href="https://calculatorly.online/date-time/business-days-calculator/">Business Days Calculator<span class="d">Business days between two dates.</span><span class="u mono">calculatorly.online/date-time/business-days-calculator/</span></a></li>
+        <li><a href="https://calculatorly.online/date-time/working-days-between-calculator/">Working Days Between Dates Calculator<span class="d">Working days between two dates, with holidays taken off.</span><span class="u mono">calculatorly.online/date-time/working-days-between-calculator/</span></a></li>
+      </ul>
+    </section>
+
+    <section class="part" aria-labelledby="testsH">
+      <h2 id="testsH">Known-answer test cases — run live on this page</h2>
+      <p>Each test below is worked out by the same code as the calculator above, the moment this page loads, and marked Pass or Fail against its known answer. If a row ever shows Fail, the page is not finished.</p>
+      <div class="table-scroll stack-wrap">
+        <table class="stackable">
+          <thead><tr><th scope="col">#</th><th scope="col">Test</th><th scope="col">Expected answer</th><th scope="col">Calculator gave</th><th scope="col">Result</th></tr></thead>
+          <tbody id="test-body">
+            <tr><td class="num" data-label="#">1</td><td data-label="Test">11 November 2026 to 1 January 2027</td><td class="num" data-label="Expected answer">51 days, 0 hours, 0 minutes, 0 seconds</td><td class="num" data-got data-label="Calculator gave">—</td><td data-label="Result"><span class="chip run" data-chip>RUNNING</span></td></tr>
+            <tr><td class="num" data-label="#">2</td><td data-label="Test">11 November 2026 to 25 December 2026</td><td class="num" data-label="Expected answer">44 days, 0 hours, 0 minutes, 0 seconds</td><td class="num" data-got data-label="Calculator gave">—</td><td data-label="Result"><span class="chip run" data-chip>RUNNING</span></td></tr>
+            <tr><td class="num" data-label="#">3</td><td data-label="Test">Target date is today: 11 November 2026</td><td class="num" data-label="Expected answer">0 days, 0 hours, 0 minutes, 0 seconds</td><td class="num" data-got data-label="Calculator gave">—</td><td data-label="Result"><span class="chip run" data-chip>RUNNING</span></td></tr>
+            <tr><td class="num" data-label="#">4</td><td data-label="Test">Empty input: target date left blank</td><td class="num" data-label="Expected answer">Prompt message, no result, no NaN</td><td class="num" data-got data-label="Calculator gave">—</td><td data-label="Result"><span class="chip run" data-chip>RUNNING</span></td></tr>
+            <tr><td class="num" data-label="#">5</td><td data-label="Test">Target date in the past</td><td class="num" data-label="Expected answer">The target date is in the past.</td><td class="num" data-got data-label="Calculator gave">—</td><td data-label="Result"><span class="chip run" data-chip>RUNNING</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="record-note" style="margin-top:12px" id="test-summary">Tests are running…</p>
+    </section>
+
+    <section class="part" aria-labelledby="verdictH">
+      <h2 id="verdictH">Build record — verdict for this tool</h2>
+      <div class="table-scroll stack-wrap">
+        <table class="stackable">
+          <thead><tr><th scope="col">#</th><th scope="col">Tool</th><th scope="col">Verdict</th><th scope="col">Input → Output</th><th scope="col">Library / method</th><th scope="col">Limit or note shown on the page</th></tr></thead>
+          <tbody>
+            <tr>
+              <td class="num" data-label="#">1</td>
+              <td data-label="Tool">Countdown Calculator</td>
+              <td data-label="Verdict"><strong>Browser-real</strong></td>
+              <td data-label="Input → Output">A future date -&gt; the days, hours and minutes until it</td>
+              <td data-label="Library / method">No library. Plain JavaScript Date arithmetic in the browser</td>
+              <td data-label="Limit or note shown on the page">Dates from today to 2100; a date in the past shows a clear message.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="record-note" style="margin-top:12px"><strong>Plan for this tool:</strong> one page only, in the Date and Time hub, built from the shared template with no libraries and no server. Security items that need a server (login, database, password rules) are N/A — this is a static page with no login and no stored data.</p>
+    </section>
+    <script type="application/json" id="tool-config">{"tool": "countdown", "chart": "bar-table", "tests": [{"label": "11 November 2026 to 1 January 2027", "inputs": {"target": "2027-01-01", "from": "2026-11-11"}, "expect": "51 days, 0 hours, 0 minutes, 0 seconds"}, {"label": "11 November 2026 to 25 December 2026", "inputs": {"target": "2026-12-25", "from": "2026-11-11"}, "expect": "44 days, 0 hours, 0 minutes, 0 seconds"}, {"label": "Target date is today: 11 November 2026", "inputs": {"target": "2026-11-11", "from": "2026-11-11"}, "expect": "0 days, 0 hours, 0 minutes, 0 seconds"}, {"label": "Empty input: target date left blank", "inputs": {"target": "", "from": "2026-11-11"}, "expect_state": "empty", "expect_text": "Prompt message, no result, no NaN"}, {"label": "Target date in the past", "inputs": {"target": "2026-11-01", "from": "2026-11-11"}, "expect_state": "range", "expect_text": "The target date is in the past."}], "fields": ["target", "from"]}</script>
+  </main>
+<footer class="site">
+    <span class="fbrand">Calculatorly</span>
+    <nav aria-label="Footer">
+      <a href="../../about/">About</a>
+      <a href="../../contact/">Contact</a>
+      <a href="../../privacy/">Privacy</a>
+      <a href="../../terms/">Terms</a>
+      <a href="../../disclaimer/">Disclaimer</a>
+    </nav>
+    <span>Calculatorly — free calculators, no sign-up. The domain calculatorly.online is bought; hosting is separate.</span>
+    <div class="ad-slot" hidden aria-hidden="true"></div>
+  </footer>
+</div>
+<script src="../../assets/js/calculatorly.js"></script>
+<script src="../../assets/js/engines-s3.js"></script>
+</body>
+</html>

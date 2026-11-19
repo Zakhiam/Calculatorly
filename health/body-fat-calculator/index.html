@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light" />
+<title>Body Fat Calculator | Calculatorly</title>
+<meta name="description" content="Work out your body fat percent from measurements — formula, worked example and breakdown. Free, no sign-up, answers as you type." />
+<link rel="canonical" href="https://calculatorly.online/health/body-fat-calculator/" />
+<link rel="icon" href="data:," />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,400;0,600;0,700;0,800;1,400&amp;family=IBM+Plex+Mono:wght@500;600;700&amp;display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../../assets/css/khata.css" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Body Fat Calculator","url":"https://calculatorly.online/health/body-fat-calculator/","applicationCategory":"UtilitiesApplication","operatingSystem":"Any (web browser)","browserRequirements":"Requires JavaScript","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"provider":{"@type":"Organization","name":"Calculatorly","url":"https://calculatorly.online/"}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://calculatorly.online/"},{"@type":"ListItem","position":2,"name":"Health and Fitness","item":"https://calculatorly.online/health/"},{"@type":"ListItem","position":3,"name":"Body Fat Calculator","item":"https://calculatorly.online/health/body-fat-calculator/"}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How exact is the US Navy method?","acceptedAnswer":{"@type":"Answer","text":"It is an estimate, usually within a few percent of a scan. It works best for average builds. Very muscular people can read higher than they are, because muscle makes the neck and waist thicker, and very lean people can read lower."}},{"@type":"Question","name":"Why do women need a hip measurement?","acceptedAnswer":{"@type":"Answer","text":"Because women carry more fat around the hips, so the hip size carries real information about body fat. For men the waist and neck are enough, so the hip box is left at 0."}},{"@type":"Question","name":"How should I measure my waist?","acceptedAnswer":{"@type":"Answer","text":"Stand relaxed and measure around the waist at the navel, with the tape level and snug but not tight. Do not breathe in. Measure twice and use the average if the two readings differ."}},{"@type":"Question","name":"What is a healthy body fat percent?","acceptedAnswer":{"@type":"Answer","text":"For men, roughly 10–20% is the fitness range and 21–24% is average; for women, roughly 16–24% is the fitness range and 25–31% is average. These are guides, not medical limits, and age and sport change them."}},{"@type":"Question","name":"Why does the calculator stop when the waist is smaller than the neck?","acceptedAnswer":{"@type":"Answer","text":"Because the formula takes the log of waist minus neck, and the log of zero or a negative number has no answer. A waist smaller than the neck is a measuring mistake — check the tape and try again."}},{"@type":"Question","name":"Is this medical advice?","acceptedAnswer":{"@type":"Answer","text":"No. This is a general guide only, worked out from the numbers you type. It is not a diagnosis and never replaces advice from a doctor or another health professional."}}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"HowTo","name":"How to use the Body Fat Calculator","step":[{"@type":"HowToStep","position":1,"text":"Choose male or female, then type your age, height, waist and neck measurements in centimetres. Women also type the hip measurement; men leave it at 0. There is no Calculate button — the answer appears as you type."},{"@type":"HowToStep","position":2,"text":"Read the body fat percent in the result line, rounded half-up to 1 decimal place."},{"@type":"HowToStep","position":3,"text":"Check the table under the result for the fat mass, the lean mass and the category your result falls in."}]}
+</script>
+</head>
+<body class="hub-health">
+<div class="sheet">
+  <header class="masthead">
+    <div class="brand"><a href="../../">Calculator<span class="ly">ly</span></a></div>
+    <div class="domain mono">calculatorly.online</div>
+    <div class="mast-note">Every calculator, worked out in full.</div>
+  </header>
+  <main>
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="https://calculatorly.online/">Home</a></li>
+        <li><a href="https://calculatorly.online/health/">Health and Fitness</a></li>
+        <li aria-current="page">Body Fat Calculator</li>
+      </ol>
+    </nav>
+    <span class="hub-tag">Hub: Health and Fitness</span>
+    
+    <h1>Body Fat Calculator</h1>
+
+    <section class="tool" aria-label="Body Fat Calculator tool">
+      <p class="tool-q">What is my body fat percentage from my measurements?</p>
+      <div class="fields">
+      <div class="field">
+        <label for="in-sex">Sex</label>
+        <select id="in-sex"><option value="male" selected>Male</option><option value="female">Female</option></select>
+      </div>
+      <div class="field">
+        <label for="in-age">Age (years)</label>
+        <input id="in-age" type="number" inputmode="decimal" step="any" value="30" autocomplete="off" />
+      </div>
+      <div class="field">
+        <label for="in-height">Height (cm)</label>
+        <input id="in-height" type="number" inputmode="decimal" step="any" value="180" autocomplete="off" />
+      </div>
+      <div class="field">
+        <label for="in-waist">Waist (cm, at the navel)</label>
+        <input id="in-waist" type="number" inputmode="decimal" step="any" value="90" autocomplete="off" />
+      </div>
+      <div class="field">
+        <label for="in-neck">Neck (cm, below the Adam&#x27;s apple)</label>
+        <input id="in-neck" type="number" inputmode="decimal" step="any" value="40" autocomplete="off" />
+      </div>
+      <div class="field">
+        <label for="in-hip">Hip (cm, women only — leave 0 if male)</label>
+        <input id="in-hip" type="number" inputmode="decimal" step="any" value="0" autocomplete="off" />
+      </div>
+      </div>
+
+      <div class="result-wrap" aria-live="polite">
+        <div class="stamp" id="stamp" aria-hidden="true" hidden>Checked ✓</div>
+        <div class="result-label">Result</div>
+        <div class="result" id="result">18.4%</div>
+        <div class="result-sentence" id="sentence">Body fat about 18.4% (US Navy method). Category: Average.</div>
+        <p class="msg" id="msg" hidden></p>
+      </div>
+      <ol class="howto">
+        <li><strong>Choose male or female, then type your age, height, waist and neck measurements in centimetres. Women also type the hip measurement; men leave it at 0. There is no Calculate button — the answer appears as you type.</strong></li>
+        <li><strong>Read the body fat percent in the result line, rounded half-up to 1 decimal place.</strong></li>
+        <li><strong>Check the table under the result for the fat mass, the lean mass and the category your result falls in.</strong></li>
+      </ol>
+      <p class="limit-note"><strong>Limit:</strong> Age 10-100 years; height 100-250 cm; waist 40-200 cm; empty or out-of-range input shows a clear message. <strong>Rounding:</strong> every result uses one named default — Half-up to 1 decimal place — in the answer, the bar and the table. The Checked stamp appears on the result box only while a valid result is showing.</p>
+    </section>
+
+    <section class="quick" aria-labelledby="quickH">
+      <h2 id="quickH"><span class="no">2</span>Quick answer</h2>
+      <p>A man of 180 cm with a 90 cm waist and a 40 cm neck has about 18.4% body fat by the US Navy method. It uses height, waist and neck for men, and adds the hip for women. It is a guide only, from the numbers you type — not medical advice, and never a replacement for a doctor.</p>
+    </section>
+
+    <section class="part" aria-labelledby="formulaH">
+      <h2 id="formulaH"><span class="no">3</span>The formula</h2>
+      <p>The US Navy method estimates body fat from tape measurements instead of a scan. All measurements are in centimetres:</p>
+      <div class="formula-box">
+        <strong>Body fat (US Navy method) — in words: the result comes from the logs of the waist, neck and height measurements for men, with the hip added for women.</strong>
+        <span class="sym">men: 495 ÷ (1.0324 − 0.19077 × log10(waist − neck) + 0.15456 × log10(height)) − 450; women: 495 ÷ (1.29579 − 0.35004 × log10(waist + hip − neck) + 0.22100 × log10(height)) − 450</span>
+      </div>
+      <p class="small">Formula source: the US Navy body fat formula, the version used by the US Department of Defense. It is an estimate, not a scan, and it can be off by a few percent for very muscular or very lean people.</p>
+    </section>
+
+    <section class="part" aria-labelledby="exampleH">
+      <h2 id="exampleH"><span class="no">4</span>Worked example: man, 180 cm, waist 90 cm, neck 40 cm</h2>
+      <ol class="steps">
+        <li>Start with the numbers: male, height 180 cm, waist 90 cm, neck 40 cm.</li>
+        <li>Waist minus neck is 90 − 40 = 50 cm. The log of 50 is 1.6990 and the log of 180 is 2.2553.</li>
+        <li>Put the numbers in the formula: 495 ÷ (1.0324 − 0.19077 × 1.6990 + 0.15456 × 2.2553) − 450 = 495 ÷ 1.0569 − 450 = 18.35.</li>
+        <li class="ans">Answer: the body fat is 18.4% (rounded half-up to 1 decimal place).</li>
+      </ol>
+      <p class="small">Try it in the tool above: choose male and type 30, 180, 90, 40 and 0, and the result line shows 18.4%.</p>
+    </section>
+
+    <section class="part" aria-labelledby="chartH">
+      <h2 id="chartH"><span class="no">5</span>Your result, drawn</h2>
+      <p>This bar and table are drawn from the numbers you typed above. Change a number and they change with it.</p>
+      <div class="bar" role="img" id="bar" aria-label="Bar showing body fat 18.4%">
+        <div class="seg-a" style="width:18.37%"></div>
+        <div class="seg-b"></div>
+      </div>
+      <div class="bar-legend">
+        <span><span class="swatch a"></span><span id="legend-a">Your body fat: 18.4%</span></span>
+        <span><span class="swatch b"></span><span id="legend-b">Category: Average</span></span>
+      </div>
+      <div class="table-scroll">
+        <table>
+          <thead><tr><th scope="col">Part of your sum</th><th scope="col" class="num">Value</th></tr></thead>
+          <tbody id="break-body">
+            <tr><td>Body fat percent (your result)</td><td class="num">18.4%</td></tr>
+            <tr><td>Category</td><td class="num">Average</td></tr>
+            <tr><td>Waist minus neck</td><td class="num">50.00 cm</td></tr>
+            <tr><td>Height</td><td class="num">180.00 cm</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="part" aria-labelledby="faqH">
+      <h2 id="faqH"><span class="no">6</span>Questions about body fat</h2>
+      <details>
+        <summary>How exact is the US Navy method?</summary>
+        <p>It is an estimate, usually within a few percent of a scan. It works best for average builds. Very muscular people can read higher than they are, because muscle makes the neck and waist thicker, and very lean people can read lower.</p>
+      </details>
+      <details>
+        <summary>Why do women need a hip measurement?</summary>
+        <p>Because women carry more fat around the hips, so the hip size carries real information about body fat. For men the waist and neck are enough, so the hip box is left at 0.</p>
+      </details>
+      <details>
+        <summary>How should I measure my waist?</summary>
+        <p>Stand relaxed and measure around the waist at the navel, with the tape level and snug but not tight. Do not breathe in. Measure twice and use the average if the two readings differ.</p>
+      </details>
+      <details>
+        <summary>What is a healthy body fat percent?</summary>
+        <p>For men, roughly 10–20% is the fitness range and 21–24% is average; for women, roughly 16–24% is the fitness range and 25–31% is average. These are guides, not medical limits, and age and sport change them.</p>
+      </details>
+      <details>
+        <summary>Why does the calculator stop when the waist is smaller than the neck?</summary>
+        <p>Because the formula takes the log of waist minus neck, and the log of zero or a negative number has no answer. A waist smaller than the neck is a measuring mistake — check the tape and try again.</p>
+      </details>
+      <details>
+        <summary>Is this medical advice?</summary>
+        <p>No. This is a general guide only, worked out from the numbers you type. It is not a diagnosis and never replaces advice from a doctor or another health professional.</p>
+      </details>
+    </section>
+
+    <section class="part" aria-labelledby="relatedH">
+      <h2 id="relatedH"><span class="no">7</span>Related tools</h2>
+      <p class="small">More tools that go with this one — each with its own page, one job per page:</p>
+      <ul class="related">
+        <li><a href="https://calculatorly.online/health/ideal-weight-calculator/">Ideal Weight Calculator<span class="d">Healthy weight range for a height, by common formulas.</span><span class="u mono">calculatorly.online/health/ideal-weight-calculator/</span></a></li>
+        <li><a href="https://calculatorly.online/health/macro-calculator/">Macro Calculator<span class="d">Daily macros in grams from calories and a goal.</span><span class="u mono">calculatorly.online/health/macro-calculator/</span></a></li>
+        <li><a href="https://calculatorly.online/health/pace-calculator/">Pace Calculator<span class="d">Minutes per mile or kilometre from distance and time.</span><span class="u mono">calculatorly.online/health/pace-calculator/</span></a></li>
+      </ul>
+    </section>
+
+    <section class="part" aria-labelledby="testsH">
+      <h2 id="testsH">Known-answer test cases — run live on this page</h2>
+      <p>Each test below is worked out by the same code as the calculator above, the moment this page loads, and marked Pass or Fail against its known answer. If a row ever shows Fail, the page is not finished.</p>
+      <div class="table-scroll stack-wrap">
+        <table class="stackable">
+          <thead><tr><th scope="col">#</th><th scope="col">Test</th><th scope="col">Expected answer</th><th scope="col">Calculator gave</th><th scope="col">Result</th></tr></thead>
+          <tbody id="test-body">
+            <tr><td class="num" data-label="#">1</td><td data-label="Test">Man, 180 cm, waist 90 cm, neck 40 cm</td><td class="num" data-label="Expected answer">18.4%</td><td class="num" data-got data-label="Calculator gave">—</td><td data-label="Result"><span class="chip run" data-chip>RUNNING</span></td></tr>
+            <tr><td class="num" data-label="#">2</td><td data-label="Test">Woman, 165 cm, waist 75 cm, neck 32 cm, hip 100 cm</td><td class="num" data-label="Expected answer">29.9%</td><td class="num" data-got data-label="Calculator gave">—</td><td data-label="Result"><span class="chip run" data-chip>RUNNING</span></td></tr>
+            <tr><td class="num" data-label="#">3</td><td data-label="Test">Waist smaller than neck: waist 35 cm, neck 40 cm</td><td class="num" data-label="Expected answer">Waist must be larger than the neck for this formula</td><td class="num" data-got data-label="Calculator gave">—</td><td data-label="Result"><span class="chip run" data-chip>RUNNING</span></td></tr>
+            <tr><td class="num" data-label="#">4</td><td data-label="Test">Empty input: the waist box left blank</td><td class="num" data-label="Expected answer">Prompt message, no result, no NaN</td><td class="num" data-got data-label="Calculator gave">—</td><td data-label="Result"><span class="chip run" data-chip>RUNNING</span></td></tr>
+            <tr><td class="num" data-label="#">5</td><td data-label="Test">Height out of range: 300 cm</td><td class="num" data-label="Expected answer">Height must be between 100 and 250 cm</td><td class="num" data-got data-label="Calculator gave">—</td><td data-label="Result"><span class="chip run" data-chip>RUNNING</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="record-note" style="margin-top:12px" id="test-summary">Tests are running…</p>
+    </section>
+
+    <section class="part" aria-labelledby="verdictH">
+      <h2 id="verdictH">Build record — verdict for this tool</h2>
+      <div class="table-scroll stack-wrap">
+        <table class="stackable">
+          <thead><tr><th scope="col">#</th><th scope="col">Tool</th><th scope="col">Verdict</th><th scope="col">Input → Output</th><th scope="col">Library / method</th><th scope="col">Limit or note shown on the page</th></tr></thead>
+          <tbody>
+            <tr>
+              <td class="num" data-label="#">1</td>
+              <td data-label="Tool">Body Fat Calculator</td>
+              <td data-label="Verdict"><strong>Browser-real</strong></td>
+              <td data-label="Input → Output">Height + waist + neck (+ hip) measurements -&gt; the body fat percent</td>
+              <td data-label="Library / method">No library. Plain JavaScript arithmetic in the browser</td>
+              <td data-label="Limit or note shown on the page">Age 10-100 years; height 100-250 cm; waist 40-200 cm; empty or out-of-range input shows a clear message.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="record-note" style="margin-top:12px"><strong>Plan for this tool:</strong> one page only, in the Health and Fitness hub, built from the shared template with no libraries and no server. Security items that need a server (login, database, password rules) are N/A — this is a static page with no login and no stored data.</p>
+    </section>
+    <script type="application/json" id="tool-config">{"tool": "body-fat", "chart": "bar", "tests": [{"label": "Man, 180 cm, waist 90 cm, neck 40 cm", "inputs": {"sex": "male", "age": "30", "height": "180", "waist": "90", "neck": "40", "hip": "0"}, "expect": "18.4%"}, {"label": "Woman, 165 cm, waist 75 cm, neck 32 cm, hip 100 cm", "inputs": {"sex": "female", "age": "30", "height": "165", "waist": "75", "neck": "32", "hip": "100"}, "expect": "29.9%"}, {"label": "Waist smaller than neck: waist 35 cm, neck 40 cm", "inputs": {"sex": "male", "age": "30", "height": "180", "waist": "35", "neck": "40", "hip": "0"}, "expect_state": "invalid", "expect_text": "Waist must be larger than the neck for this formula"}, {"label": "Empty input: the waist box left blank", "inputs": {"sex": "male", "age": "30", "height": "180", "waist": "", "neck": "40", "hip": "0"}, "expect_state": "empty", "expect_text": "Prompt message, no result, no NaN"}, {"label": "Height out of range: 300 cm", "inputs": {"sex": "male", "age": "30", "height": "300", "waist": "90", "neck": "40", "hip": "0"}, "expect_state": "invalid", "expect_text": "Height must be between 100 and 250 cm"}], "fields": ["sex", "age", "height", "waist", "neck", "hip"]}</script>
+  </main>
+<footer class="site">
+    <span class="fbrand">Calculatorly</span>
+    <nav aria-label="Footer">
+      <a href="../../about/">About</a>
+      <a href="../../contact/">Contact</a>
+      <a href="../../privacy/">Privacy</a>
+      <a href="../../terms/">Terms</a>
+      <a href="../../disclaimer/">Disclaimer</a>
+    </nav>
+    <span>Calculatorly — free calculators, no sign-up. The domain calculatorly.online is bought; hosting is separate.</span>
+    <div class="ad-slot" hidden aria-hidden="true"></div>
+  </footer>
+</div>
+<script src="../../assets/js/calculatorly.js"></script>
+<script src="../../assets/js/engines-s2.js"></script>
+</body>
+</html>

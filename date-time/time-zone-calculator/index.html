@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light" />
+<title>Time Zone Calculator | Calculatorly</title>
+<meta name="description" content="Work out the time in another time zone — formula, worked example and breakdown. Free, no sign-up, answers as you type." />
+<link rel="canonical" href="https://calculatorly.online/date-time/time-zone-calculator/" />
+<link rel="icon" href="data:," />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,400;0,600;0,700;0,800;1,400&amp;family=IBM+Plex+Mono:wght@500;600;700&amp;display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../../assets/css/khata.css" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Time Zone Calculator","url":"https://calculatorly.online/date-time/time-zone-calculator/","applicationCategory":"UtilitiesApplication","operatingSystem":"Any (web browser)","browserRequirements":"Requires JavaScript","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"provider":{"@type":"Organization","name":"Calculatorly","url":"https://calculatorly.online/"}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://calculatorly.online/"},{"@type":"ListItem","position":2,"name":"Date and Time","item":"https://calculatorly.online/date-time/"},{"@type":"ListItem","position":3,"name":"Time Zone Calculator","item":"https://calculatorly.online/date-time/time-zone-calculator/"}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Why does the answer change with the date?","acceptedAnswer":{"@type":"Answer","text":"Because of daylight saving: zones move their clocks forward in spring and back in autumn, on different dates in different places. London and New York are 5 hours apart in both June and November, but other pairs change — Sydney and Los Angeles, for example, are 17 hours apart in January and 19 hours apart in July. Always pick the real date."}},{"@type":"Question","name":"Where do the time zone offsets come from?","acceptedAnswer":{"@type":"Answer","text":"From the browser's built-in time zone data, which holds the real IANA time zone rules, including daylight saving. This page never guesses an offset and never stores a fixed list of offsets — it asks the browser for the offset that applies on the date you pick."}},{"@type":"Question","name":"Can the converted time fall on a different day?","acceptedAnswer":{"@type":"Answer","text":"Yes, often. For example, 12:00 on 15 Jan 2026 in Sydney is 17:00 on 14 Jan 2026 in Los Angeles — the day before — because Los Angeles is 19 hours behind Sydney on that date. The sentence under the result always names both dates."}},{"@type":"Question","name":"What if I type a time like 25:00?","acceptedAnswer":{"@type":"Answer","text":"The calculator shows a clear message instead of a result. Hours must be 00 to 23 and minutes 00 to 59, written as HH:MM — for example, 09:30 or 14:00."}},{"@type":"Question","name":"Which time zones can I pick?","acceptedAnswer":{"@type":"Answer","text":"The list holds the zones most visitors need, from London, Paris and Berlin to New York, Toronto, Sydney, Tokyo and Auckland. If a zone you need is missing, pick the nearest city in the same zone — for example, Paris and Berlin share the same time."}},{"@type":"Question","name":"Is this calculator free, and do I need to sign up?","acceptedAnswer":{"@type":"Answer","text":"Yes, it is free, and no sign-up is needed. Nothing is uploaded: the conversion runs in your browser on your own device, and the numbers you type are not sent anywhere."}}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"HowTo","name":"How to use the Time Zone Calculator","step":[{"@type":"HowToStep","position":1,"text":"Pick the date, type the time as hours and minutes, then pick the two time zones. There is no Calculate button — the answer appears as you type."},{"@type":"HowToStep","position":2,"text":"Read the time in the second zone in the result line."},{"@type":"HowToStep","position":3,"text":"Check the bar and table under the result (Part 5 below) to see both times and the difference in hours."}]}
+</script>
+</head>
+<body class="hub-date-time">
+<div class="sheet">
+  <header class="masthead">
+    <div class="brand"><a href="../../">Calculator<span class="ly">ly</span></a></div>
+    <div class="domain mono">calculatorly.online</div>
+    <div class="mast-note">Every calculator, worked out in full.</div>
+  </header>
+  <main>
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="https://calculatorly.online/">Home</a></li>
+        <li><a href="https://calculatorly.online/date-time/">Date and Time</a></li>
+        <li aria-current="page">Time Zone Calculator</li>
+      </ol>
+    </nav>
+    <span class="hub-tag">Hub: Date and Time</span>
+    
+    <h1>Time Zone Calculator</h1>
+
+    <section class="tool" aria-label="Time Zone Calculator tool">
+      <p class="tool-q">What time is it in the other time zone?</p>
+      <div class="fields">
+      <div class="field">
+        <label for="in-date">Date</label>
+        <input id="in-date" type="date" value="2026-11-11" autocomplete="off" />
+      </div>
+      <div class="field">
+        <label for="in-time">Time (HH:MM)</label>
+        <input id="in-time" type="text" value="14:00" autocomplete="off" />
+      </div>
+      <div class="field">
+        <label for="in-frm">From time zone</label>
+        <select id="in-frm"><option value="Europe/London" selected>London — Europe/London</option><option value="Europe/Paris">Paris — Europe/Paris</option><option value="Europe/Berlin">Berlin — Europe/Berlin</option><option value="Europe/Madrid">Madrid — Europe/Madrid</option><option value="Europe/Moscow">Moscow — Europe/Moscow</option><option value="Atlantic/Reykjavik">Reykjavik — Atlantic/Reykjavik</option><option value="Africa/Cairo">Cairo — Africa/Cairo</option><option value="Africa/Lagos">Lagos — Africa/Lagos</option><option value="Asia/Dubai">Dubai — Asia/Dubai</option><option value="Asia/Karachi">Karachi — Asia/Karachi</option><option value="Asia/Kolkata">Mumbai / Kolkata — Asia/Kolkata</option><option value="Asia/Dhaka">Dhaka — Asia/Dhaka</option><option value="Asia/Bangkok">Bangkok — Asia/Bangkok</option><option value="Asia/Singapore">Singapore — Asia/Singapore</option><option value="Asia/Shanghai">Shanghai — Asia/Shanghai</option><option value="Asia/Tokyo">Tokyo — Asia/Tokyo</option><option value="Asia/Seoul">Seoul — Asia/Seoul</option><option value="Australia/Sydney">Sydney — Australia/Sydney</option><option value="Australia/Melbourne">Melbourne — Australia/Melbourne</option><option value="Pacific/Auckland">Auckland — Pacific/Auckland</option><option value="America/New_York">New York — America/New_York</option><option value="America/Chicago">Chicago — America/Chicago</option><option value="America/Denver">Denver — America/Denver</option><option value="America/Los_Angeles">Los Angeles — America/Los_Angeles</option><option value="America/Toronto">Toronto — America/Toronto</option><option value="America/Mexico_City">Mexico City — America/Mexico_City</option><option value="America/Sao_Paulo">Sao Paulo — America/Sao_Paulo</option></select>
+      </div>
+      <div class="field">
+        <label for="in-to">To time zone</label>
+        <select id="in-to"><option value="Europe/London">London — Europe/London</option><option value="Europe/Paris">Paris — Europe/Paris</option><option value="Europe/Berlin">Berlin — Europe/Berlin</option><option value="Europe/Madrid">Madrid — Europe/Madrid</option><option value="Europe/Moscow">Moscow — Europe/Moscow</option><option value="Atlantic/Reykjavik">Reykjavik — Atlantic/Reykjavik</option><option value="Africa/Cairo">Cairo — Africa/Cairo</option><option value="Africa/Lagos">Lagos — Africa/Lagos</option><option value="Asia/Dubai">Dubai — Asia/Dubai</option><option value="Asia/Karachi">Karachi — Asia/Karachi</option><option value="Asia/Kolkata">Mumbai / Kolkata — Asia/Kolkata</option><option value="Asia/Dhaka">Dhaka — Asia/Dhaka</option><option value="Asia/Bangkok">Bangkok — Asia/Bangkok</option><option value="Asia/Singapore">Singapore — Asia/Singapore</option><option value="Asia/Shanghai">Shanghai — Asia/Shanghai</option><option value="Asia/Tokyo">Tokyo — Asia/Tokyo</option><option value="Asia/Seoul">Seoul — Asia/Seoul</option><option value="Australia/Sydney">Sydney — Australia/Sydney</option><option value="Australia/Melbourne">Melbourne — Australia/Melbourne</option><option value="Pacific/Auckland">Auckland — Pacific/Auckland</option><option value="America/New_York" selected>New York — America/New_York</option><option value="America/Chicago">Chicago — America/Chicago</option><option value="America/Denver">Denver — America/Denver</option><option value="America/Los_Angeles">Los Angeles — America/Los_Angeles</option><option value="America/Toronto">Toronto — America/Toronto</option><option value="America/Mexico_City">Mexico City — America/Mexico_City</option><option value="America/Sao_Paulo">Sao Paulo — America/Sao_Paulo</option></select>
+      </div>
+      </div>
+
+      <div class="result-wrap" aria-live="polite">
+        <div class="stamp" id="stamp" aria-hidden="true" hidden>Checked ✓</div>
+        <div class="result-label">Result</div>
+        <div class="result" id="result">09:00</div>
+        <div class="result-sentence" id="sentence">14:00 on 11 Nov 2026 in Europe/London is 09:00 on 11 Nov 2026 in America/New_York (5 hours behind).</div>
+        <p class="msg" id="msg" hidden></p>
+      </div>
+      <ol class="howto">
+        <li><strong>Pick the date, type the time as hours and minutes, then pick the two time zones. There is no Calculate button — the answer appears as you type.</strong></li>
+        <li><strong>Read the time in the second zone in the result line.</strong></li>
+        <li><strong>Check the bar and table under the result (Part 5 below) to see both times and the difference in hours.</strong></li>
+      </ol>
+      <p class="limit-note"><strong>Limit:</strong> Dates from 1900 to 2100; times in hours and minutes. <strong>Rounding:</strong> every result uses one named default — Whole numbers, no decimal places — in the answer, the bar and the table. The Checked stamp appears on the result box only while a valid result is showing.</p>
+    </section>
+
+    <section class="quick" aria-labelledby="quickH">
+      <h2 id="quickH"><span class="no">2</span>Quick answer</h2>
+      <p>To find the time in another zone, take the time you have, work out the real offset of each zone on that date — including daylight saving — and shift the time by the difference. For example, 14:00 on 11 Nov 2026 in London is 09:00 the same day in New York, 5 hours behind. Pick your zones above.</p>
+    </section>
+
+    <section class="part" aria-labelledby="formulaH">
+      <h2 id="formulaH"><span class="no">3</span>The formula</h2>
+      <p>Time zones are not fixed numbers: the offset of a zone changes with daylight saving, so the conversion must use the offset that applies on the date you pick. This page uses the browser&#x27;s built-in time zone data, which holds the real rules:</p>
+      <div class="formula-box">
+        <strong>Time zone conversion — in words: turn the date and time in the first zone into one exact moment, then read that same moment in the second zone, using the real offset of each zone on that date.</strong>
+        <span class="sym">time in zone B = time in zone A + (offset of B − offset of A)</span>
+      </div>
+      <p class="small">Formula source: the browser&#x27;s built-in international time zone data (real IANA zones, with daylight saving). No offset is typed in or guessed — the offsets come from the browser itself.</p>
+    </section>
+
+    <section class="part" aria-labelledby="exampleH">
+      <h2 id="exampleH"><span class="no">4</span>Worked example: 14:00 in London on 11 Nov 2026</h2>
+      <ol class="steps">
+        <li>Start with the moment: 14:00 on 11 Nov 2026 in London (Europe/London).</li>
+        <li>Find the offset of London on that date: Greenwich Mean Time, UTC+0, because daylight saving has ended.</li>
+        <li>Find the offset of New York on that date: Eastern Standard Time, UTC−5, because daylight saving has ended there too.</li>
+        <li>Shift the time by the difference: 14:00 minus 5 hours is 09:00.</li>
+        <li class="ans">Answer: 14:00 in London is 09:00 the same day in New York.</li>
+      </ol>
+      <p class="small">Try it in the tool above: pick 11 Nov 2026, type 14:00, London to New York, and the result line shows 09:00.</p>
+    </section>
+
+    <section class="part" aria-labelledby="chartH">
+      <h2 id="chartH"><span class="no">5</span>Your result, drawn</h2>
+      <p>This bar and table are drawn from the numbers you typed above. Change a number and they change with it.</p>
+      <div class="bar" role="img" id="bar" aria-label="Bar showing the time of day in the new zone">
+        <div class="seg-a" style="width:37.5%"></div>
+        <div class="seg-b"></div>
+      </div>
+      <div class="bar-legend">
+        <span><span class="swatch a"></span><span id="legend-a">Time in America/New_York: 09:00</span></span>
+        <span><span class="swatch b"></span><span id="legend-b">Time of day in the new zone</span></span>
+      </div>
+      <div class="table-scroll">
+        <table>
+          <thead><tr><th scope="col">Part of your sum</th><th scope="col" class="num">Value</th></tr></thead>
+          <tbody id="break-body">
+            <tr><td>Date</td><td class="num">11 Nov 2026</td></tr>
+            <tr><td>Time in Europe/London</td><td class="num">14:00</td></tr>
+            <tr><td>Time in America/New_York</td><td class="num">09:00</td></tr>
+            <tr><td>Difference</td><td class="num">5 hours behind</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="part" aria-labelledby="faqH">
+      <h2 id="faqH"><span class="no">6</span>Questions about time zone</h2>
+      <details>
+        <summary>Why does the answer change with the date?</summary>
+        <p>Because of daylight saving: zones move their clocks forward in spring and back in autumn, on different dates in different places. London and New York are 5 hours apart in both June and November, but other pairs change — Sydney and Los Angeles, for example, are 17 hours apart in January and 19 hours apart in July. Always pick the real date.</p>
+      </details>
+      <details>
+        <summary>Where do the time zone offsets come from?</summary>
+        <p>From the browser&#x27;s built-in time zone data, which holds the real IANA time zone rules, including daylight saving. This page never guesses an offset and never stores a fixed list of offsets — it asks the browser for the offset that applies on the date you pick.</p>
+      </details>
+      <details>
+        <summary>Can the converted time fall on a different day?</summary>
+        <p>Yes, often. For example, 12:00 on 15 Jan 2026 in Sydney is 17:00 on 14 Jan 2026 in Los Angeles — the day before — because Los Angeles is 19 hours behind Sydney on that date. The sentence under the result always names both dates.</p>
+      </details>
+      <details>
+        <summary>What if I type a time like 25:00?</summary>
+        <p>The calculator shows a clear message instead of a result. Hours must be 00 to 23 and minutes 00 to 59, written as HH:MM — for example, 09:30 or 14:00.</p>
+      </details>
+      <details>
+        <summary>Which time zones can I pick?</summary>
+        <p>The list holds the zones most visitors need, from London, Paris and Berlin to New York, Toronto, Sydney, Tokyo and Auckland. If a zone you need is missing, pick the nearest city in the same zone — for example, Paris and Berlin share the same time.</p>
+      </details>
+      <details>
+        <summary>Is this calculator free, and do I need to sign up?</summary>
+        <p>Yes, it is free, and no sign-up is needed. Nothing is uploaded: the conversion runs in your browser on your own device, and the numbers you type are not sent anywhere.</p>
+      </details>
+    </section>
+
+    <section class="part" aria-labelledby="relatedH">
+      <h2 id="relatedH"><span class="no">7</span>Related tools</h2>
+      <p class="small">More tools that go with this one — each with its own page, one job per page:</p>
+      <ul class="related">
+        <li><a href="https://calculatorly.online/date-time/time-card-calculator/">Time Card Calculator<span class="d">Hours and pay from clock-in and clock-out times, with breaks.</span><span class="u mono">calculatorly.online/date-time/time-card-calculator/</span></a></li>
+      </ul>
+    </section>
+
+    <section class="part" aria-labelledby="testsH">
+      <h2 id="testsH">Known-answer test cases — run live on this page</h2>
+      <p>Each test below is worked out by the same code as the calculator above, the moment this page loads, and marked Pass or Fail against its known answer. If a row ever shows Fail, the page is not finished.</p>
+      <div class="table-scroll stack-wrap">
+        <table class="stackable">
+          <thead><tr><th scope="col">#</th><th scope="col">Test</th><th scope="col">Expected answer</th><th scope="col">Calculator gave</th><th scope="col">Result</th></tr></thead>
+          <tbody id="test-body">
+            <tr><td class="num" data-label="#">1</td><td data-label="Test">14:00 in London on 11 Nov 2026 → New York</td><td class="num" data-label="Expected answer">09:00</td><td class="num" data-got data-label="Calculator gave">—</td><td data-label="Result"><span class="chip run" data-chip>RUNNING</span></td></tr>
+            <tr><td class="num" data-label="#">2</td><td data-label="Test">14:00 in London on 11 Jun 2026 → New York</td><td class="num" data-label="Expected answer">09:00</td><td class="num" data-got data-label="Calculator gave">—</td><td data-label="Result"><span class="chip run" data-chip>RUNNING</span></td></tr>
+            <tr><td class="num" data-label="#">3</td><td data-label="Test">14:00 in Tokyo on 11 Nov 2026 → London</td><td class="num" data-label="Expected answer">05:00</td><td class="num" data-got data-label="Calculator gave">—</td><td data-label="Result"><span class="chip run" data-chip>RUNNING</span></td></tr>
+            <tr><td class="num" data-label="#">4</td><td data-label="Test">12:00 in Sydney on 15 Jan 2026 → Los Angeles</td><td class="num" data-label="Expected answer">17:00</td><td class="num" data-got data-label="Calculator gave">—</td><td data-label="Result"><span class="chip run" data-chip>RUNNING</span></td></tr>
+            <tr><td class="num" data-label="#">5</td><td data-label="Test">Invalid time: 25:00 is not a time</td><td class="num" data-label="Expected answer">Clear message: time must be HH:MM, hours 00-23</td><td class="num" data-got data-label="Calculator gave">—</td><td data-label="Result"><span class="chip run" data-chip>RUNNING</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="record-note" style="margin-top:12px" id="test-summary">Tests are running…</p>
+    </section>
+
+    <section class="part" aria-labelledby="verdictH">
+      <h2 id="verdictH">Build record — verdict for this tool</h2>
+      <div class="table-scroll stack-wrap">
+        <table class="stackable">
+          <thead><tr><th scope="col">#</th><th scope="col">Tool</th><th scope="col">Verdict</th><th scope="col">Input → Output</th><th scope="col">Library / method</th><th scope="col">Limit or note shown on the page</th></tr></thead>
+          <tbody>
+            <tr>
+              <td class="num" data-label="#">1</td>
+              <td data-label="Tool">Time Zone Calculator</td>
+              <td data-label="Verdict"><strong>Browser-real</strong></td>
+              <td data-label="Input → Output">A time + two time zones -&gt; the time in the second zone</td>
+              <td data-label="Library / method">No library. Plain JavaScript Date arithmetic in the browser</td>
+              <td data-label="Limit or note shown on the page">Dates from 1900 to 2100; times in hours and minutes.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="record-note" style="margin-top:12px"><strong>Plan for this tool:</strong> one page only, in the Date and Time hub, built from the shared template with no libraries and no server. Security items that need a server (login, database, password rules) are N/A — this is a static page with no login and no stored data.</p>
+    </section>
+    <script type="application/json" id="tool-config">{"tool": "time-zone", "chart": "time-zone", "tests": [{"label": "14:00 in London on 11 Nov 2026 → New York", "inputs": {"date": "2026-11-11", "time": "14:00", "frm": "Europe/London", "to": "America/New_York"}, "expect": "09:00"}, {"label": "14:00 in London on 11 Jun 2026 → New York", "inputs": {"date": "2026-06-11", "time": "14:00", "frm": "Europe/London", "to": "America/New_York"}, "expect": "09:00"}, {"label": "14:00 in Tokyo on 11 Nov 2026 → London", "inputs": {"date": "2026-11-11", "time": "14:00", "frm": "Asia/Tokyo", "to": "Europe/London"}, "expect": "05:00"}, {"label": "12:00 in Sydney on 15 Jan 2026 → Los Angeles", "inputs": {"date": "2026-01-15", "time": "12:00", "frm": "Australia/Sydney", "to": "America/Los_Angeles"}, "expect": "17:00"}, {"label": "Invalid time: 25:00 is not a time", "inputs": {"date": "2026-11-11", "time": "25:00", "frm": "Europe/London", "to": "America/New_York"}, "expect_state": "error", "expect_text": "Clear message: time must be HH:MM, hours 00-23"}], "fields": ["date", "time", "frm", "to"]}</script>
+  </main>
+<footer class="site">
+    <span class="fbrand">Calculatorly</span>
+    <nav aria-label="Footer">
+      <a href="../../about/">About</a>
+      <a href="../../contact/">Contact</a>
+      <a href="../../privacy/">Privacy</a>
+      <a href="../../terms/">Terms</a>
+      <a href="../../disclaimer/">Disclaimer</a>
+    </nav>
+    <span>Calculatorly — free calculators, no sign-up. The domain calculatorly.online is bought; hosting is separate.</span>
+    <div class="ad-slot" hidden aria-hidden="true"></div>
+  </footer>
+</div>
+<script src="../../assets/js/calculatorly.js"></script>
+<script src="../../assets/js/engines-s4.js"></script>
+</body>
+</html>

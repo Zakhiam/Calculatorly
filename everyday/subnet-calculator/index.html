@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light" />
+<title>Subnet Calculator | Calculatorly</title>
+<meta name="description" content="Work out the network, broadcast and host range of a subnet — formula, worked example and breakdown. Free, no sign-up, answers as you type." />
+<link rel="canonical" href="https://calculatorly.online/everyday/subnet-calculator/" />
+<link rel="icon" href="data:," />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,400;0,600;0,700;0,800;1,400&amp;family=IBM+Plex+Mono:wght@500;600;700&amp;display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../../assets/css/khata.css" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Subnet Calculator","url":"https://calculatorly.online/everyday/subnet-calculator/","applicationCategory":"UtilitiesApplication","operatingSystem":"Any (web browser)","browserRequirements":"Requires JavaScript","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"provider":{"@type":"Organization","name":"Calculatorly","url":"https://calculatorly.online/"}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://calculatorly.online/"},{"@type":"ListItem","position":2,"name":"Everyday","item":"https://calculatorly.online/everyday/"},{"@type":"ListItem","position":3,"name":"Subnet Calculator","item":"https://calculatorly.online/everyday/subnet-calculator/"}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Why are there 254 usable hosts in a /24, not 256?","acceptedAnswer":{"@type":"Answer","text":"Because two addresses are set aside: the network address itself (192.168.1.0) and the broadcast address (192.168.1.255). The 254 addresses between them, from 192.168.1.1 to 192.168.1.254, can be given to devices."}},{"@type":"Question","name":"What does the prefix length mean?","acceptedAnswer":{"@type":"Answer","text":"It is the number of bits in the network part of the address. A /24 keeps the first 24 bits as the network and leaves 8 bits for hosts, which is 256 addresses. A /16 leaves 16 bits for hosts, or 65,536 addresses."}},{"@type":"Question","name":"What is the first and last usable address?","acceptedAnswer":{"@type":"Answer","text":"The first is the network address plus 1, and the last is the broadcast address minus 1. In a /24 starting at 192.168.1.0, they are 192.168.1.1 and 192.168.1.254. The table under your result shows both."}},{"@type":"Question","name":"Does this work for IPv6?","acceptedAnswer":{"@type":"Answer","text":"No. This page covers IPv4 only, in dotted form such as 192.168.1.10. IPv6 addresses use a different form and are not accepted here."}},{"@type":"Question","name":"What if I type an address that is not valid?","acceptedAnswer":{"@type":"Answer","text":"The page shows a message instead of a result. Each of the four parts must be a whole number from 0 to 255, and the prefix must be from 0 to 32."}},{"@type":"Question","name":"Is this calculator free, and do I need to sign up?","acceptedAnswer":{"@type":"Answer","text":"Yes, it is free, and no sign-up is needed. Nothing is uploaded: the calculation runs in your browser on your own device, and the address you type is not sent anywhere."}}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"HowTo","name":"How to use the Subnet Calculator","step":[{"@type":"HowToStep","position":1,"text":"Type an IPv4 address in dotted form and the prefix length, such as 24 for a /24 network. There is no Calculate button — the answer appears as you type."},{"@type":"HowToStep","position":2,"text":"Read the result line for the network address."},{"@type":"HowToStep","position":3,"text":"Check the bar and table under the result for the subnet mask, the broadcast address and the usable hosts."}]}
+</script>
+</head>
+<body class="hub-everyday">
+<div class="sheet">
+  <header class="masthead">
+    <div class="brand"><a href="../../">Calculator<span class="ly">ly</span></a></div>
+    <div class="domain mono">calculatorly.online</div>
+    <div class="mast-note">Every calculator, worked out in full.</div>
+  </header>
+  <main>
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="https://calculatorly.online/">Home</a></li>
+        <li><a href="https://calculatorly.online/everyday/">Everyday</a></li>
+        <li aria-current="page">Subnet Calculator</li>
+      </ol>
+    </nav>
+    <span class="hub-tag">Hub: Everyday</span>
+    
+    <h1>Subnet Calculator</h1>
+
+    <section class="tool" aria-label="Subnet Calculator tool">
+      <p class="tool-q">What is the network address and broadcast address of a subnet?</p>
+      <div class="fields">
+      <div class="field">
+        <label for="in-ip">IPv4 address</label>
+        <input id="in-ip" type="text" value="192.168.1.10" autocomplete="off" />
+      </div>
+      <div class="field">
+        <label for="in-prefix">Prefix length (for example 24 for /24)</label>
+        <input id="in-prefix" type="number" inputmode="decimal" step="any" value="24" autocomplete="off" />
+      </div>
+      </div>
+
+      <div class="result-wrap" aria-live="polite">
+        <div class="stamp" id="stamp" aria-hidden="true" hidden>Checked ✓</div>
+        <div class="result-label">Result</div>
+        <div class="result" id="result">192.168.1.0/24</div>
+        <div class="result-sentence" id="sentence">Network 192.168.1.0, broadcast 192.168.1.255, 254 usable hosts.</div>
+        <p class="msg" id="msg" hidden></p>
+      </div>
+      <ol class="howto">
+        <li><strong>Type an IPv4 address in dotted form and the prefix length, such as 24 for a /24 network. There is no Calculate button — the answer appears as you type.</strong></li>
+        <li><strong>Read the result line for the network address.</strong></li>
+        <li><strong>Check the bar and table under the result for the subnet mask, the broadcast address and the usable hosts.</strong></li>
+      </ol>
+      <p class="limit-note"><strong>Limit:</strong> IPv4 addresses only, in dotted form (for example 192.168.1.0/24). <strong>Rounding:</strong> every result uses one named default — Whole numbers, no decimal places — in the answer, the bar and the table. The Checked stamp appears on the result box only while a valid result is showing.</p>
+    </section>
+
+    <section class="quick" aria-labelledby="quickH">
+      <h2 id="quickH"><span class="no">2</span>Quick answer</h2>
+      <p>A subnet splits an IPv4 address into a network part and a host part, using the prefix length. The address 192.168.1.10 with a /24 prefix sits on the network 192.168.1.0, with broadcast 192.168.1.255 and 254 usable hosts. Type an address and a prefix above to work out your subnet.</p>
+    </section>
+
+    <section class="part" aria-labelledby="formulaH">
+      <h2 id="formulaH"><span class="no">3</span>The formula</h2>
+      <p>The subnet mask has 1 bits for the prefix length and 0 bits after it. A /24 mask is 255.255.255.0. The usable hosts are the addresses between the network and the broadcast address.</p>
+      <div class="formula-box">
+        <strong>Network address — in words: take the address and the subnet mask made from the prefix, and keep only the bits where both have a 1.</strong>
+        <span class="sym">network = address AND subnet mask; broadcast = network OR (NOT subnet mask)</span>
+      </div>
+      <p class="small">Formula source: IPv4 bitwise arithmetic on the address and prefix you type. This page covers IPv4 only, in dotted form such as 192.168.1.10.</p>
+    </section>
+
+    <section class="part" aria-labelledby="exampleH">
+      <h2 id="exampleH"><span class="no">4</span>Worked example: 192.168.1.10/24</h2>
+      <ol class="steps">
+        <li>Subnet mask for /24: 255.255.255.0.</li>
+        <li>Network: 192.168.1.10 AND 255.255.255.0 = 192.168.1.0.</li>
+        <li>Broadcast: 192.168.1.0 OR 0.0.0.255 = 192.168.1.255. Usable hosts: 256 − 2 = 254.</li>
+        <li class="ans">Answer: 192.168.1.0/24.</li>
+      </ol>
+      <p class="small">Try it in the tool above: type 192.168.1.10 and 24, and the result line shows 192.168.1.0/24.</p>
+    </section>
+
+    <section class="part" aria-labelledby="chartH">
+      <h2 id="chartH"><span class="no">5</span>Your result, drawn</h2>
+      <p>This bar and table are drawn from the numbers you typed above. Change a number and they change with it.</p>
+      <div class="bar" role="img" id="bar" aria-label="Bar showing the prefix length out of 32 bits">
+        <div class="seg-a" style="width:75%"></div>
+        <div class="seg-b"></div>
+      </div>
+      <div class="bar-legend">
+        <span><span class="swatch a"></span><span id="legend-a">Network: 192.168.1.0</span></span>
+        <span><span class="swatch b"></span><span id="legend-b">Broadcast: 192.168.1.255</span></span>
+      </div>
+      <div class="table-scroll">
+        <table>
+          <thead><tr><th scope="col">Part of your sum</th><th scope="col" class="num">Value</th></tr></thead>
+          <tbody id="break-body">
+            <tr><td>Address given</td><td class="num">192.168.1.10</td></tr>
+            <tr><td>Subnet mask</td><td class="num">255.255.255.0</td></tr>
+            <tr><td>Network address (your result)</td><td class="num">192.168.1.0/24</td></tr>
+            <tr><td>Broadcast address</td><td class="num">192.168.1.255</td></tr>
+            <tr><td>First usable host</td><td class="num">192.168.1.1</td></tr>
+            <tr><td>Last usable host</td><td class="num">192.168.1.254</td></tr>
+            <tr><td>Usable hosts</td><td class="num">254</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="part" aria-labelledby="faqH">
+      <h2 id="faqH"><span class="no">6</span>Questions about subnet</h2>
+      <details>
+        <summary>Why are there 254 usable hosts in a /24, not 256?</summary>
+        <p>Because two addresses are set aside: the network address itself (192.168.1.0) and the broadcast address (192.168.1.255). The 254 addresses between them, from 192.168.1.1 to 192.168.1.254, can be given to devices.</p>
+      </details>
+      <details>
+        <summary>What does the prefix length mean?</summary>
+        <p>It is the number of bits in the network part of the address. A /24 keeps the first 24 bits as the network and leaves 8 bits for hosts, which is 256 addresses. A /16 leaves 16 bits for hosts, or 65,536 addresses.</p>
+      </details>
+      <details>
+        <summary>What is the first and last usable address?</summary>
+        <p>The first is the network address plus 1, and the last is the broadcast address minus 1. In a /24 starting at 192.168.1.0, they are 192.168.1.1 and 192.168.1.254. The table under your result shows both.</p>
+      </details>
+      <details>
+        <summary>Does this work for IPv6?</summary>
+        <p>No. This page covers IPv4 only, in dotted form such as 192.168.1.10. IPv6 addresses use a different form and are not accepted here.</p>
+      </details>
+      <details>
+        <summary>What if I type an address that is not valid?</summary>
+        <p>The page shows a message instead of a result. Each of the four parts must be a whole number from 0 to 255, and the prefix must be from 0 to 32.</p>
+      </details>
+      <details>
+        <summary>Is this calculator free, and do I need to sign up?</summary>
+        <p>Yes, it is free, and no sign-up is needed. Nothing is uploaded: the calculation runs in your browser on your own device, and the address you type is not sent anywhere.</p>
+      </details>
+    </section>
+
+    <section class="part" aria-labelledby="relatedH">
+      <h2 id="relatedH"><span class="no">7</span>Related tools</h2>
+      <p class="small">More tools that go with this one — each with its own page, one job per page:</p>
+      <ul class="related">
+        <li><a href="https://calculatorly.online/everyday/password-strength-calculator/">Password Strength Calculator<span class="d">Strength and crack time for a password, checked in your browser only.</span><span class="u mono">calculatorly.online/everyday/password-strength-calculator/</span></a></li>
+      </ul>
+    </section>
+
+    <section class="part" aria-labelledby="testsH">
+      <h2 id="testsH">Known-answer test cases — run live on this page</h2>
+      <p>Each test below is worked out by the same code as the calculator above, the moment this page loads, and marked Pass or Fail against its known answer. If a row ever shows Fail, the page is not finished.</p>
+      <div class="table-scroll stack-wrap">
+        <table class="stackable">
+          <thead><tr><th scope="col">#</th><th scope="col">Test</th><th scope="col">Expected answer</th><th scope="col">Calculator gave</th><th scope="col">Result</th></tr></thead>
+          <tbody id="test-body">
+            <tr><td class="num" data-label="#">1</td><td data-label="Test">192.168.1.10/24</td><td class="num" data-label="Expected answer">192.168.1.0/24</td><td class="num" data-got data-label="Calculator gave">—</td><td data-label="Result"><span class="chip run" data-chip>RUNNING</span></td></tr>
+            <tr><td class="num" data-label="#">2</td><td data-label="Test">10.0.0.5/8</td><td class="num" data-label="Expected answer">10.0.0.0/8</td><td class="num" data-got data-label="Calculator gave">—</td><td data-label="Result"><span class="chip run" data-chip>RUNNING</span></td></tr>
+            <tr><td class="num" data-label="#">3</td><td data-label="Test">192.168.1.5/30</td><td class="num" data-label="Expected answer">192.168.1.4/30</td><td class="num" data-got data-label="Calculator gave">—</td><td data-label="Result"><span class="chip run" data-chip>RUNNING</span></td></tr>
+            <tr><td class="num" data-label="#">4</td><td data-label="Test">Empty input: address left blank</td><td class="num" data-label="Expected answer">Prompt message, no result, no NaN</td><td class="num" data-got data-label="Calculator gave">—</td><td data-label="Result"><span class="chip run" data-chip>RUNNING</span></td></tr>
+            <tr><td class="num" data-label="#">5</td><td data-label="Test">Not a valid address: 999.1.1.1</td><td class="num" data-label="Expected answer">That is not a valid IPv4 address.</td><td class="num" data-got data-label="Calculator gave">—</td><td data-label="Result"><span class="chip run" data-chip>RUNNING</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="record-note" style="margin-top:12px" id="test-summary">Tests are running…</p>
+    </section>
+
+    <section class="part" aria-labelledby="verdictH">
+      <h2 id="verdictH">Build record — verdict for this tool</h2>
+      <div class="table-scroll stack-wrap">
+        <table class="stackable">
+          <thead><tr><th scope="col">#</th><th scope="col">Tool</th><th scope="col">Verdict</th><th scope="col">Input → Output</th><th scope="col">Library / method</th><th scope="col">Limit or note shown on the page</th></tr></thead>
+          <tbody>
+            <tr>
+              <td class="num" data-label="#">1</td>
+              <td data-label="Tool">Subnet Calculator</td>
+              <td data-label="Verdict"><strong>Browser-real</strong></td>
+              <td data-label="Input → Output">An IPv4 address + a prefix length -&gt; the network, broadcast and usable host range</td>
+              <td data-label="Library / method">No library. Plain JavaScript bitwise arithmetic in the browser</td>
+              <td data-label="Limit or note shown on the page">IPv4 addresses only, in dotted form (for example 192.168.1.0/24).</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="record-note" style="margin-top:12px"><strong>Plan for this tool:</strong> one page only, in the Everyday hub, built from the shared template with no libraries and no server. Security items that need a server (login, database, password rules) are N/A — this is a static page with no login and no stored data.</p>
+    </section>
+    <script type="application/json" id="tool-config">{"tool": "subnet", "chart": "bar-table", "tests": [{"label": "192.168.1.10/24", "inputs": {"ip": "192.168.1.10", "prefix": "24"}, "expect": "192.168.1.0/24"}, {"label": "10.0.0.5/8", "inputs": {"ip": "10.0.0.5", "prefix": "8"}, "expect": "10.0.0.0/8"}, {"label": "192.168.1.5/30", "inputs": {"ip": "192.168.1.5", "prefix": "30"}, "expect": "192.168.1.4/30"}, {"label": "Empty input: address left blank", "inputs": {"ip": "", "prefix": "24"}, "expect_state": "empty", "expect_text": "Prompt message, no result, no NaN"}, {"label": "Not a valid address: 999.1.1.1", "inputs": {"ip": "999.1.1.1", "prefix": "24"}, "expect_state": "invalid", "expect_text": "That is not a valid IPv4 address."}], "fields": ["ip", "prefix"]}</script>
+  </main>
+<footer class="site">
+    <span class="fbrand">Calculatorly</span>
+    <nav aria-label="Footer">
+      <a href="../../about/">About</a>
+      <a href="../../contact/">Contact</a>
+      <a href="../../privacy/">Privacy</a>
+      <a href="../../terms/">Terms</a>
+      <a href="../../disclaimer/">Disclaimer</a>
+    </nav>
+    <span>Calculatorly — free calculators, no sign-up. The domain calculatorly.online is bought; hosting is separate.</span>
+    <div class="ad-slot" hidden aria-hidden="true"></div>
+  </footer>
+</div>
+<script src="../../assets/js/calculatorly.js"></script>
+<script src="../../assets/js/engines-s3.js"></script>
+</body>
+</html>

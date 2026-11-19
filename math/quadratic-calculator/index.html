@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light" />
+<title>Quadratic Calculator | Calculatorly</title>
+<meta name="description" content="Work out the roots of a quadratic equation — formula, worked example and breakdown. Free, no sign-up, answers as you type." />
+<link rel="canonical" href="https://calculatorly.online/math/quadratic-calculator/" />
+<link rel="icon" href="data:," />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,400;0,600;0,700;0,800;1,400&amp;family=IBM+Plex+Mono:wght@500;600;700&amp;display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../../assets/css/khata.css" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Quadratic Calculator","url":"https://calculatorly.online/math/quadratic-calculator/","applicationCategory":"UtilitiesApplication","operatingSystem":"Any (web browser)","browserRequirements":"Requires JavaScript","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"provider":{"@type":"Organization","name":"Calculatorly","url":"https://calculatorly.online/"}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://calculatorly.online/"},{"@type":"ListItem","position":2,"name":"Math","item":"https://calculatorly.online/math/"},{"@type":"ListItem","position":3,"name":"Quadratic Calculator","item":"https://calculatorly.online/math/quadratic-calculator/"}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is a root of a quadratic equation?","acceptedAnswer":{"@type":"Answer","text":"A root is a value of x that makes the equation true — the value where the curve crosses the x-axis. For x² − 5x + 6 = 0, the roots are 3 and 2, because 3² − 5 × 3 + 6 = 0 and 2² − 5 × 2 + 6 = 0."}},{"@type":"Question","name":"What does it mean when there are no real roots?","acceptedAnswer":{"@type":"Answer","text":"It means the discriminant is negative, so its square root is not a real number, and the curve never crosses the x-axis. For example, x² + 1 = 0 has a discriminant of −4, so the calculator says plainly that there are no real roots, instead of giving a made-up number."}},{"@type":"Question","name":"What is a repeated root?","acceptedAnswer":{"@type":"Answer","text":"It happens when the discriminant is exactly zero: the plus and minus parts of the formula give the same value, so there is one root counted twice. For example, x² + 2x + 1 = 0 has the repeated root x = −1.0000."}},{"@type":"Question","name":"What if a is zero?","acceptedAnswer":{"@type":"Answer","text":"Then it is not a quadratic equation at all — it is a straight-line equation, bx + c = 0, with one root. The calculator shows a clear message and asks for a value of a that is not zero, instead of dividing by zero."}},{"@type":"Question","name":"How do I check the roots by hand?","acceptedAnswer":{"@type":"Answer","text":"Put each root back into the equation: the result must be zero. For x = 3 in x² − 5x + 6 = 0: 9 − 15 + 6 = 0. For x = 2: 4 − 10 + 6 = 0. Both check out."}},{"@type":"Question","name":"Is this calculator free, and do I need to sign up?","acceptedAnswer":{"@type":"Answer","text":"Yes, it is free, and no sign-up is needed. Nothing is uploaded: the calculation runs in your browser on your own device, and the numbers you type are not sent anywhere."}}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"HowTo","name":"How to use the Quadratic Calculator","step":[{"@type":"HowToStep","position":1,"text":"Type a, b and c from your equation ax² + bx + c = 0. There is no Calculate button — the answer appears as you type."},{"@type":"HowToStep","position":2,"text":"Read the roots in the result line, rounded half-up to 4 decimal places."},{"@type":"HowToStep","position":3,"text":"Check the bar and table under the result (Part 5 below) to see the discriminant and both roots."}]}
+</script>
+</head>
+<body class="hub-math">
+<div class="sheet">
+  <header class="masthead">
+    <div class="brand"><a href="../../">Calculator<span class="ly">ly</span></a></div>
+    <div class="domain mono">calculatorly.online</div>
+    <div class="mast-note">Every calculator, worked out in full.</div>
+  </header>
+  <main>
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="https://calculatorly.online/">Home</a></li>
+        <li><a href="https://calculatorly.online/math/">Math</a></li>
+        <li aria-current="page">Quadratic Calculator</li>
+      </ol>
+    </nav>
+    <span class="hub-tag">Hub: Math</span>
+    
+    <h1>Quadratic Calculator</h1>
+
+    <section class="tool" aria-label="Quadratic Calculator tool">
+      <p class="tool-q">What are the roots of this quadratic equation?</p>
+      <div class="fields">
+      <div class="field">
+        <label for="in-a">a (number before x²)</label>
+        <input id="in-a" type="number" inputmode="decimal" step="any" value="1" autocomplete="off" />
+      </div>
+      <div class="field">
+        <label for="in-b">b (number before x)</label>
+        <input id="in-b" type="number" inputmode="decimal" step="any" value="-5" autocomplete="off" />
+      </div>
+      <div class="field">
+        <label for="in-c">c (plain number)</label>
+        <input id="in-c" type="number" inputmode="decimal" step="any" value="6" autocomplete="off" />
+      </div>
+      </div>
+
+      <div class="result-wrap" aria-live="polite">
+        <div class="stamp" id="stamp" aria-hidden="true" hidden>Checked ✓</div>
+        <div class="result-label">Result</div>
+        <div class="result" id="result">x = 3.0000, x = 2.0000</div>
+        <div class="result-sentence" id="sentence">For 1.00x² + -5.00x + 6.00 = 0, the roots are x = 3.0000 and x = 2.0000.</div>
+        <p class="msg" id="msg" hidden></p>
+      </div>
+      <ol class="howto">
+        <li><strong>Type a, b and c from your equation ax² + bx + c = 0. There is no Calculate button — the answer appears as you type.</strong></li>
+        <li><strong>Read the roots in the result line, rounded half-up to 4 decimal places.</strong></li>
+        <li><strong>Check the bar and table under the result (Part 5 below) to see the discriminant and both roots.</strong></li>
+      </ol>
+      <p class="limit-note"><strong>Limit:</strong> Numbers up to 1,000,000,000,000; empty or over-limit input shows a clear message. <strong>Rounding:</strong> every result uses one named default — Half-up to 4 decimal places — in the answer, the bar and the table. The Checked stamp appears on the result box only while a valid result is showing.</p>
+    </section>
+
+    <section class="quick" aria-labelledby="quickH">
+      <h2 id="quickH"><span class="no">2</span>Quick answer</h2>
+      <p>The roots of ax² + bx + c = 0 come from the quadratic formula: x equals minus b plus or minus the square root of b² minus 4ac, all divided by 2a. For example, x² − 5x + 6 = 0 has the roots x = 3.0000 and x = 2.0000. Type your own a, b and c above.</p>
+    </section>
+
+    <section class="part" aria-labelledby="formulaH">
+      <h2 id="formulaH"><span class="no">3</span>The formula</h2>
+      <p>The discriminant, b² − 4ac, decides what kind of answer there is: positive means two different real roots, zero means one repeated root, and negative means no real roots at all:</p>
+      <div class="formula-box">
+        <strong>Quadratic formula — in words: the roots are minus b, plus or minus the square root of the discriminant (b squared minus 4ac), all divided by twice a.</strong>
+        <span class="sym">x = (−b ± √(b² − 4ac)) ÷ 2a</span>
+      </div>
+      <p class="small">Formula source: the standard quadratic formula. No outside data is used — only the three numbers you type.</p>
+    </section>
+
+    <section class="part" aria-labelledby="exampleH">
+      <h2 id="exampleH"><span class="no">4</span>Worked example: x² − 5x + 6 = 0</h2>
+      <ol class="steps">
+        <li>Start with the equation: a = 1, b = −5, c = 6.</li>
+        <li>Find the discriminant: b² − 4ac = (−5)² − 4 × 1 × 6 = 25 − 24 = 1.</li>
+        <li>Take the square root of the discriminant: √1 = 1.</li>
+        <li>Apply the formula: x = (5 ± 1) ÷ 2, so x = 6 ÷ 2 = 3 and x = 4 ÷ 2 = 2.</li>
+        <li class="ans">Answer: the roots are x = 3.0000 and x = 2.0000.</li>
+      </ol>
+      <p class="small">Try it in the tool above: type 1, -5 and 6, and the result line shows x = 3.0000, x = 2.0000.</p>
+    </section>
+
+    <section class="part" aria-labelledby="chartH">
+      <h2 id="chartH"><span class="no">5</span>Your result, drawn</h2>
+      <p>This bar and table are drawn from the numbers you typed above. Change a number and they change with it.</p>
+      <div class="bar" role="img" id="bar" aria-label="Bar showing the discriminant, capped at 100">
+        <div class="seg-a" style="width:1%"></div>
+        <div class="seg-b"></div>
+      </div>
+      <div class="bar-legend">
+        <span><span class="swatch a"></span><span id="legend-a">Discriminant: 1.0000</span></span>
+        <span><span class="swatch b"></span><span id="legend-b">Shown capped at 100</span></span>
+      </div>
+      <div class="table-scroll">
+        <table>
+          <thead><tr><th scope="col">Part of your sum</th><th scope="col" class="num">Value</th></tr></thead>
+          <tbody id="break-body">
+            <tr><td>a</td><td class="num">1.00</td></tr>
+            <tr><td>b</td><td class="num">-5.00</td></tr>
+            <tr><td>c</td><td class="num">6.00</td></tr>
+            <tr><td>Discriminant</td><td class="num">1.0000</td></tr>
+            <tr><td>Root 1</td><td class="num">3.0000</td></tr>
+            <tr><td>Root 2</td><td class="num">2.0000</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="part" aria-labelledby="faqH">
+      <h2 id="faqH"><span class="no">6</span>Questions about quadratic</h2>
+      <details>
+        <summary>What is a root of a quadratic equation?</summary>
+        <p>A root is a value of x that makes the equation true — the value where the curve crosses the x-axis. For x² − 5x + 6 = 0, the roots are 3 and 2, because 3² − 5 × 3 + 6 = 0 and 2² − 5 × 2 + 6 = 0.</p>
+      </details>
+      <details>
+        <summary>What does it mean when there are no real roots?</summary>
+        <p>It means the discriminant is negative, so its square root is not a real number, and the curve never crosses the x-axis. For example, x² + 1 = 0 has a discriminant of −4, so the calculator says plainly that there are no real roots, instead of giving a made-up number.</p>
+      </details>
+      <details>
+        <summary>What is a repeated root?</summary>
+        <p>It happens when the discriminant is exactly zero: the plus and minus parts of the formula give the same value, so there is one root counted twice. For example, x² + 2x + 1 = 0 has the repeated root x = −1.0000.</p>
+      </details>
+      <details>
+        <summary>What if a is zero?</summary>
+        <p>Then it is not a quadratic equation at all — it is a straight-line equation, bx + c = 0, with one root. The calculator shows a clear message and asks for a value of a that is not zero, instead of dividing by zero.</p>
+      </details>
+      <details>
+        <summary>How do I check the roots by hand?</summary>
+        <p>Put each root back into the equation: the result must be zero. For x = 3 in x² − 5x + 6 = 0: 9 − 15 + 6 = 0. For x = 2: 4 − 10 + 6 = 0. Both check out.</p>
+      </details>
+      <details>
+        <summary>Is this calculator free, and do I need to sign up?</summary>
+        <p>Yes, it is free, and no sign-up is needed. Nothing is uploaded: the calculation runs in your browser on your own device, and the numbers you type are not sent anywhere.</p>
+      </details>
+    </section>
+
+    <section class="part" aria-labelledby="relatedH">
+      <h2 id="relatedH"><span class="no">7</span>Related tools</h2>
+      <p class="small">More tools that go with this one — each with its own page, one job per page:</p>
+      <ul class="related">
+        <li><a href="https://calculatorly.online/math/slope-calculator/">Slope Calculator<span class="d">Gradient and line equation from two points.</span><span class="u mono">calculatorly.online/math/slope-calculator/</span></a></li>
+        <li><a href="https://calculatorly.online/math/exponent-calculator/">Exponent Calculator<span class="d">Powers with whole and decimal exponents, step by step.</span><span class="u mono">calculatorly.online/math/exponent-calculator/</span></a></li>
+      </ul>
+    </section>
+
+    <section class="part" aria-labelledby="testsH">
+      <h2 id="testsH">Known-answer test cases — run live on this page</h2>
+      <p>Each test below is worked out by the same code as the calculator above, the moment this page loads, and marked Pass or Fail against its known answer. If a row ever shows Fail, the page is not finished.</p>
+      <div class="table-scroll stack-wrap">
+        <table class="stackable">
+          <thead><tr><th scope="col">#</th><th scope="col">Test</th><th scope="col">Expected answer</th><th scope="col">Calculator gave</th><th scope="col">Result</th></tr></thead>
+          <tbody id="test-body">
+            <tr><td class="num" data-label="#">1</td><td data-label="Test">x² − 5x + 6 = 0</td><td class="num" data-label="Expected answer">x = 3.0000, x = 2.0000</td><td class="num" data-got data-label="Calculator gave">—</td><td data-label="Result"><span class="chip run" data-chip>RUNNING</span></td></tr>
+            <tr><td class="num" data-label="#">2</td><td data-label="Test">Repeated root: x² + 2x + 1 = 0</td><td class="num" data-label="Expected answer">x = -1.0000 (repeated root)</td><td class="num" data-got data-label="Calculator gave">—</td><td data-label="Result"><span class="chip run" data-chip>RUNNING</span></td></tr>
+            <tr><td class="num" data-label="#">3</td><td data-label="Test">2x² − 8 = 0</td><td class="num" data-label="Expected answer">x = 2.0000, x = -2.0000</td><td class="num" data-got data-label="Calculator gave">—</td><td data-label="Result"><span class="chip run" data-chip>RUNNING</span></td></tr>
+            <tr><td class="num" data-label="#">4</td><td data-label="Test">x² − 4x + 4 = 0</td><td class="num" data-label="Expected answer">x = 2.0000 (repeated root)</td><td class="num" data-got data-label="Calculator gave">—</td><td data-label="Result"><span class="chip run" data-chip>RUNNING</span></td></tr>
+            <tr><td class="num" data-label="#">5</td><td data-label="Test">No real roots: x² + 1 = 0</td><td class="num" data-label="Expected answer">Clear message: no real roots</td><td class="num" data-got data-label="Calculator gave">—</td><td data-label="Result"><span class="chip run" data-chip>RUNNING</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="record-note" style="margin-top:12px" id="test-summary">Tests are running…</p>
+    </section>
+
+    <section class="part" aria-labelledby="verdictH">
+      <h2 id="verdictH">Build record — verdict for this tool</h2>
+      <div class="table-scroll stack-wrap">
+        <table class="stackable">
+          <thead><tr><th scope="col">#</th><th scope="col">Tool</th><th scope="col">Verdict</th><th scope="col">Input → Output</th><th scope="col">Library / method</th><th scope="col">Limit or note shown on the page</th></tr></thead>
+          <tbody>
+            <tr>
+              <td class="num" data-label="#">1</td>
+              <td data-label="Tool">Quadratic Calculator</td>
+              <td data-label="Verdict"><strong>Browser-real</strong></td>
+              <td data-label="Input → Output">Coefficients a, b and c -&gt; the roots of the equation</td>
+              <td data-label="Library / method">No library. Plain JavaScript Math functions in the browser</td>
+              <td data-label="Limit or note shown on the page">Numbers up to 1,000,000,000,000; empty or over-limit input shows a clear message.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="record-note" style="margin-top:12px"><strong>Plan for this tool:</strong> one page only, in the Math hub, built from the shared template with no libraries and no server. Security items that need a server (login, database, password rules) are N/A — this is a static page with no login and no stored data.</p>
+    </section>
+    <script type="application/json" id="tool-config">{"tool": "quadratic", "chart": "quadratic", "tests": [{"label": "x² − 5x + 6 = 0", "inputs": {"a": "1", "b": "-5", "c": "6"}, "expect": "x = 3.0000, x = 2.0000"}, {"label": "Repeated root: x² + 2x + 1 = 0", "inputs": {"a": "1", "b": "2", "c": "1"}, "expect": "x = -1.0000 (repeated root)"}, {"label": "2x² − 8 = 0", "inputs": {"a": "2", "b": "0", "c": "-8"}, "expect": "x = 2.0000, x = -2.0000"}, {"label": "x² − 4x + 4 = 0", "inputs": {"a": "1", "b": "-4", "c": "4"}, "expect": "x = 2.0000 (repeated root)"}, {"label": "No real roots: x² + 1 = 0", "inputs": {"a": "1", "b": "0", "c": "1"}, "expect_state": "error", "expect_text": "Clear message: no real roots"}], "fields": ["a", "b", "c"]}</script>
+  </main>
+<footer class="site">
+    <span class="fbrand">Calculatorly</span>
+    <nav aria-label="Footer">
+      <a href="../../about/">About</a>
+      <a href="../../contact/">Contact</a>
+      <a href="../../privacy/">Privacy</a>
+      <a href="../../terms/">Terms</a>
+      <a href="../../disclaimer/">Disclaimer</a>
+    </nav>
+    <span>Calculatorly — free calculators, no sign-up. The domain calculatorly.online is bought; hosting is separate.</span>
+    <div class="ad-slot" hidden aria-hidden="true"></div>
+  </footer>
+</div>
+<script src="../../assets/js/calculatorly.js"></script>
+<script src="../../assets/js/engines-s4.js"></script>
+</body>
+</html>

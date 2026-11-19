@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light" />
+<title>Tile Calculator | Calculatorly</title>
+<meta name="description" content="Work out how many tiles a floor or wall needs — formula, worked example and breakdown. Free, no sign-up, answers as you type." />
+<link rel="canonical" href="https://calculatorly.online/home-diy/tile-calculator/" />
+<link rel="icon" href="data:," />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,400;0,600;0,700;0,800;1,400&amp;family=IBM+Plex+Mono:wght@500;600;700&amp;display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../../assets/css/khata.css" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Tile Calculator","url":"https://calculatorly.online/home-diy/tile-calculator/","applicationCategory":"UtilitiesApplication","operatingSystem":"Any (web browser)","browserRequirements":"Requires JavaScript","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"provider":{"@type":"Organization","name":"Calculatorly","url":"https://calculatorly.online/"}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://calculatorly.online/"},{"@type":"ListItem","position":2,"name":"Home and DIY","item":"https://calculatorly.online/home-diy/"},{"@type":"ListItem","position":3,"name":"Tile Calculator","item":"https://calculatorly.online/home-diy/tile-calculator/"}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the waste allowance for?","acceptedAnswer":{"@type":"Answer","text":"Cuts at edges and corners, tiles broken while cutting, and spares for later repairs. A 10% allowance is normal for a square room. Use 15% for a diagonal pattern or a room with many corners."}},{"@type":"Question","name":"How many tiles are in a box?","acceptedAnswer":{"@type":"Answer","text":"This page counts 10 tiles per box. Check the box you are buying — some tiles come in boxes of 5, 8 or 12, and the boxes needed change with that."}},{"@type":"Question","name":"Can I use centimetres instead of metres?","acceptedAnswer":{"@type":"Answer","text":"This page takes metres only. A 30 centimetre tile is 0.3 metres, and a 60 centimetre tile is 0.6 metres. Divide centimetres by 100 to get metres."}},{"@type":"Question","name":"What if my floor is not a rectangle?","acceptedAnswer":{"@type":"Answer","text":"Work out the area of each part of the floor and add them together, then put the total area in the box. This page works out one area at a time."}},{"@type":"Question","name":"Should I buy spare tiles?","acceptedAnswer":{"@type":"Answer","text":"Yes. The waste allowance already adds spares, and it is wise to keep a few whole tiles from the same batch for later repairs, because later batches can differ in shade."}},{"@type":"Question","name":"Is this calculator free, and do I need to sign up?","acceptedAnswer":{"@type":"Answer","text":"Yes, it is free, and no sign-up is needed. Nothing is uploaded: the calculation runs in your browser on your own device, and the numbers you type are not sent anywhere."}}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"HowTo","name":"How to use the Tile Calculator","step":[{"@type":"HowToStep","position":1,"text":"Type the floor area in square metres, the length and width of one tile in metres, and the waste allowance. There is no Calculate button — the answer appears as you type."},{"@type":"HowToStep","position":2,"text":"Read the result line for the number of tiles to buy, with waste included."},{"@type":"HowToStep","position":3,"text":"Check the bar and table under the result for the tiles, the boxes needed and the area of one tile."}]}
+</script>
+</head>
+<body class="hub-home-diy">
+<div class="sheet">
+  <header class="masthead">
+    <div class="brand"><a href="../../">Calculator<span class="ly">ly</span></a></div>
+    <div class="domain mono">calculatorly.online</div>
+    <div class="mast-note">Every calculator, worked out in full.</div>
+  </header>
+  <main>
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="https://calculatorly.online/">Home</a></li>
+        <li><a href="https://calculatorly.online/home-diy/">Home and DIY</a></li>
+        <li aria-current="page">Tile Calculator</li>
+      </ol>
+    </nav>
+    <span class="hub-tag">Hub: Home and DIY</span>
+    
+    <h1>Tile Calculator</h1>
+
+    <section class="tool" aria-label="Tile Calculator tool">
+      <p class="tool-q">How many tiles do I need for a floor?</p>
+      <div class="fields">
+      <div class="field">
+        <label for="in-area">Floor area (square metres)</label>
+        <input id="in-area" type="number" inputmode="decimal" step="any" value="12" autocomplete="off" />
+      </div>
+      <div class="field">
+        <label for="in-tile_length">Tile length (metres)</label>
+        <input id="in-tile_length" type="number" inputmode="decimal" step="any" value="0.3" autocomplete="off" />
+      </div>
+      <div class="field">
+        <label for="in-tile_width">Tile width (metres)</label>
+        <input id="in-tile_width" type="number" inputmode="decimal" step="any" value="0.3" autocomplete="off" />
+      </div>
+      <div class="field">
+        <label for="in-waste">Waste allowance (%)</label>
+        <input id="in-waste" type="number" inputmode="decimal" step="any" value="10" autocomplete="off" />
+      </div>
+      </div>
+
+      <div class="result-wrap" aria-live="polite">
+        <div class="stamp" id="stamp" aria-hidden="true" hidden>Checked ✓</div>
+        <div class="result-label">Result</div>
+        <div class="result" id="result">147 tiles</div>
+        <div class="result-sentence" id="sentence">For 12.00 m² you need 147 tiles, which is 15 boxes of 10.</div>
+        <p class="msg" id="msg" hidden></p>
+      </div>
+      <ol class="howto">
+        <li><strong>Type the floor area in square metres, the length and width of one tile in metres, and the waste allowance. There is no Calculate button — the answer appears as you type.</strong></li>
+        <li><strong>Read the result line for the number of tiles to buy, with waste included.</strong></li>
+        <li><strong>Check the bar and table under the result for the tiles, the boxes needed and the area of one tile.</strong></li>
+      </ol>
+      <p class="limit-note"><strong>Limit:</strong> Numbers up to 1,000,000,000,000; empty or over-limit input shows a clear message. <strong>Rounding:</strong> every result uses one named default — Half-up to 2 decimal places — in the answer, the bar and the table. The Checked stamp appears on the result box only while a valid result is showing.</p>
+    </section>
+
+    <section class="quick" aria-labelledby="quickH">
+      <h2 id="quickH"><span class="no">2</span>Quick answer</h2>
+      <p>Tiles are counted from the floor area and the area of one tile, plus waste for cuts. A 12 square metre floor with 0.3 by 0.3 metre tiles needs 147 tiles with 10% waste allowed. Type your figures above and this calculator shows the tiles and the boxes to buy.</p>
+    </section>
+
+    <section class="part" aria-labelledby="formulaH">
+      <h2 id="formulaH"><span class="no">3</span>The formula</h2>
+      <p>Boxes hold 10 tiles, rounded up. The waste allowance covers cuts at edges and corners, and broken tiles.</p>
+      <div class="formula-box">
+        <strong>Tiles needed — in words: divide the floor area by the area of one tile, add the waste allowance, then round up to a whole tile.</strong>
+        <span class="sym">tiles = floor area ÷ (tile length × tile width) × (1 + waste ÷ 100), rounded up</span>
+      </div>
+      <p class="small">Formula source: plain arithmetic on the four numbers you type, with 10 tiles per box. No outside data is used. This is an estimate for planning a job.</p>
+    </section>
+
+    <section class="part" aria-labelledby="exampleH">
+      <h2 id="exampleH"><span class="no">4</span>Worked example: 12 m² floor, 0.3 m by 0.3 m tiles, 10% waste</h2>
+      <ol class="steps">
+        <li>Area of one tile: 0.3 × 0.3 = 0.09 m².</li>
+        <li>Tiles without waste: 12 ÷ 0.09 = 133.33.</li>
+        <li>With 10% waste: 133.33 × 1.10 = 146.67, rounded up to 147 tiles.</li>
+        <li class="ans">Answer: 147 tiles. Boxes of 10: 147 ÷ 10 = 14.7, rounded up to 15 boxes.</li>
+      </ol>
+      <p class="small">Try it in the tool above: type 12, 0.3, 0.3 and 10, and the result line shows 147 tiles.</p>
+    </section>
+
+    <section class="part" aria-labelledby="chartH">
+      <h2 id="chartH"><span class="no">5</span>Your result, drawn</h2>
+      <p>This bar and table are drawn from the numbers you typed above. Change a number and they change with it.</p>
+      <div class="bar" role="img" id="bar" aria-label="Bar showing the tiles needed out of 500 tiles">
+        <div class="seg-a" style="width:29.4%"></div>
+        <div class="seg-b"></div>
+      </div>
+      <div class="bar-legend">
+        <span><span class="swatch a"></span><span id="legend-a">Tiles needed: 147</span></span>
+        <span><span class="swatch b"></span><span id="legend-b">Boxes of 10: 15</span></span>
+      </div>
+      <div class="table-scroll">
+        <table>
+          <thead><tr><th scope="col">Part of your sum</th><th scope="col" class="num">Value</th></tr></thead>
+          <tbody id="break-body">
+            <tr><td>Floor area</td><td class="num">12.00 m²</td></tr>
+            <tr><td>Area of one tile</td><td class="num">0.0900 m²</td></tr>
+            <tr><td>Tiles without waste</td><td class="num">134</td></tr>
+            <tr><td>Tiles needed (your result)</td><td class="num">147</td></tr>
+            <tr><td>Boxes of 10 needed</td><td class="num">15</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="part" aria-labelledby="faqH">
+      <h2 id="faqH"><span class="no">6</span>Questions about tile</h2>
+      <details>
+        <summary>What is the waste allowance for?</summary>
+        <p>Cuts at edges and corners, tiles broken while cutting, and spares for later repairs. A 10% allowance is normal for a square room. Use 15% for a diagonal pattern or a room with many corners.</p>
+      </details>
+      <details>
+        <summary>How many tiles are in a box?</summary>
+        <p>This page counts 10 tiles per box. Check the box you are buying — some tiles come in boxes of 5, 8 or 12, and the boxes needed change with that.</p>
+      </details>
+      <details>
+        <summary>Can I use centimetres instead of metres?</summary>
+        <p>This page takes metres only. A 30 centimetre tile is 0.3 metres, and a 60 centimetre tile is 0.6 metres. Divide centimetres by 100 to get metres.</p>
+      </details>
+      <details>
+        <summary>What if my floor is not a rectangle?</summary>
+        <p>Work out the area of each part of the floor and add them together, then put the total area in the box. This page works out one area at a time.</p>
+      </details>
+      <details>
+        <summary>Should I buy spare tiles?</summary>
+        <p>Yes. The waste allowance already adds spares, and it is wise to keep a few whole tiles from the same batch for later repairs, because later batches can differ in shade.</p>
+      </details>
+      <details>
+        <summary>Is this calculator free, and do I need to sign up?</summary>
+        <p>Yes, it is free, and no sign-up is needed. Nothing is uploaded: the calculation runs in your browser on your own device, and the numbers you type are not sent anywhere.</p>
+      </details>
+    </section>
+
+    <section class="part" aria-labelledby="relatedH">
+      <h2 id="relatedH"><span class="no">7</span>Related tools</h2>
+      <p class="small">More tools that go with this one — each with its own page, one job per page:</p>
+      <ul class="related">
+        <li><a href="https://calculatorly.online/home-diy/concrete-calculator/">Concrete Calculator<span class="d">Concrete volume, bags and weight for a slab.</span><span class="u mono">calculatorly.online/home-diy/concrete-calculator/</span></a></li>
+        <li><a href="https://calculatorly.online/home-diy/paint-calculator/">Paint Calculator<span class="d">Litres of paint and tins needed for a wall area.</span><span class="u mono">calculatorly.online/home-diy/paint-calculator/</span></a></li>
+      </ul>
+    </section>
+
+    <section class="part" aria-labelledby="testsH">
+      <h2 id="testsH">Known-answer test cases — run live on this page</h2>
+      <p>Each test below is worked out by the same code as the calculator above, the moment this page loads, and marked Pass or Fail against its known answer. If a row ever shows Fail, the page is not finished.</p>
+      <div class="table-scroll stack-wrap">
+        <table class="stackable">
+          <thead><tr><th scope="col">#</th><th scope="col">Test</th><th scope="col">Expected answer</th><th scope="col">Calculator gave</th><th scope="col">Result</th></tr></thead>
+          <tbody id="test-body">
+            <tr><td class="num" data-label="#">1</td><td data-label="Test">12 m², 0.3 m by 0.3 m tiles, 10% waste</td><td class="num" data-label="Expected answer">147 tiles</td><td class="num" data-got data-label="Calculator gave">—</td><td data-label="Result"><span class="chip run" data-chip>RUNNING</span></td></tr>
+            <tr><td class="num" data-label="#">2</td><td data-label="Test">10 m², 0.5 m by 0.5 m tiles, no waste</td><td class="num" data-label="Expected answer">40 tiles</td><td class="num" data-got data-label="Calculator gave">—</td><td data-label="Result"><span class="chip run" data-chip>RUNNING</span></td></tr>
+            <tr><td class="num" data-label="#">3</td><td data-label="Test">20 m², 0.6 m by 0.3 m tiles, 5% waste</td><td class="num" data-label="Expected answer">117 tiles</td><td class="num" data-got data-label="Calculator gave">—</td><td data-label="Result"><span class="chip run" data-chip>RUNNING</span></td></tr>
+            <tr><td class="num" data-label="#">4</td><td data-label="Test">Empty input: area left blank</td><td class="num" data-label="Expected answer">Prompt message, no result, no NaN</td><td class="num" data-got data-label="Calculator gave">—</td><td data-label="Result"><span class="chip run" data-chip>RUNNING</span></td></tr>
+            <tr><td class="num" data-label="#">5</td><td data-label="Test">Zero tile length</td><td class="num" data-label="Expected answer">Cannot divide by zero.</td><td class="num" data-got data-label="Calculator gave">—</td><td data-label="Result"><span class="chip run" data-chip>RUNNING</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="record-note" style="margin-top:12px" id="test-summary">Tests are running…</p>
+    </section>
+
+    <section class="part" aria-labelledby="verdictH">
+      <h2 id="verdictH">Build record — verdict for this tool</h2>
+      <div class="table-scroll stack-wrap">
+        <table class="stackable">
+          <thead><tr><th scope="col">#</th><th scope="col">Tool</th><th scope="col">Verdict</th><th scope="col">Input → Output</th><th scope="col">Library / method</th><th scope="col">Limit or note shown on the page</th></tr></thead>
+          <tbody>
+            <tr>
+              <td class="num" data-label="#">1</td>
+              <td data-label="Tool">Tile Calculator</td>
+              <td data-label="Verdict"><strong>Browser-real</strong></td>
+              <td data-label="Input → Output">An area + a tile size + a waste percent -&gt; the tiles and boxes needed</td>
+              <td data-label="Library / method">No library. Plain JavaScript arithmetic in the browser</td>
+              <td data-label="Limit or note shown on the page">Numbers up to 1,000,000,000,000; empty or over-limit input shows a clear message.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="record-note" style="margin-top:12px"><strong>Plan for this tool:</strong> one page only, in the Home and DIY hub, built from the shared template with no libraries and no server. Security items that need a server (login, database, password rules) are N/A — this is a static page with no login and no stored data.</p>
+    </section>
+    <script type="application/json" id="tool-config">{"tool": "tile", "chart": "bar-table", "tests": [{"label": "12 m², 0.3 m by 0.3 m tiles, 10% waste", "inputs": {"area": "12", "tile_length": "0.3", "tile_width": "0.3", "waste": "10"}, "expect": "147 tiles"}, {"label": "10 m², 0.5 m by 0.5 m tiles, no waste", "inputs": {"area": "10", "tile_length": "0.5", "tile_width": "0.5", "waste": "0"}, "expect": "40 tiles"}, {"label": "20 m², 0.6 m by 0.3 m tiles, 5% waste", "inputs": {"area": "20", "tile_length": "0.6", "tile_width": "0.3", "waste": "5"}, "expect": "117 tiles"}, {"label": "Empty input: area left blank", "inputs": {"area": "", "tile_length": "0.3", "tile_width": "0.3", "waste": "10"}, "expect_state": "empty", "expect_text": "Prompt message, no result, no NaN"}, {"label": "Zero tile length", "inputs": {"area": "12", "tile_length": "0", "tile_width": "0.3", "waste": "10"}, "expect_state": "zero", "expect_text": "Cannot divide by zero."}], "fields": ["area", "tile_length", "tile_width", "waste"]}</script>
+  </main>
+<footer class="site">
+    <span class="fbrand">Calculatorly</span>
+    <nav aria-label="Footer">
+      <a href="../../about/">About</a>
+      <a href="../../contact/">Contact</a>
+      <a href="../../privacy/">Privacy</a>
+      <a href="../../terms/">Terms</a>
+      <a href="../../disclaimer/">Disclaimer</a>
+    </nav>
+    <span>Calculatorly — free calculators, no sign-up. The domain calculatorly.online is bought; hosting is separate.</span>
+    <div class="ad-slot" hidden aria-hidden="true"></div>
+  </footer>
+</div>
+<script src="../../assets/js/calculatorly.js"></script>
+<script src="../../assets/js/engines-s3.js"></script>
+</body>
+</html>
