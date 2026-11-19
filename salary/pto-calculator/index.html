@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light" />
+<title>PTO Calculator | Calculatorly</title>
+<meta name="description" content="Work out how many paid days off you have earned — formula, worked example and breakdown. Free, no sign-up, answers as you type." />
+<link rel="canonical" href="https://calculatorly.online/salary/pto-calculator/" />
+<link rel="icon" href="data:," />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,400;0,600;0,700;0,800;1,400&amp;family=IBM+Plex+Mono:wght@500;600;700&amp;display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../../assets/css/khata.css" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"PTO Calculator","url":"https://calculatorly.online/salary/pto-calculator/","applicationCategory":"UtilitiesApplication","operatingSystem":"Any (web browser)","browserRequirements":"Requires JavaScript","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"provider":{"@type":"Organization","name":"Calculatorly","url":"https://calculatorly.online/"}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://calculatorly.online/"},{"@type":"ListItem","position":2,"name":"Salary and Tax","item":"https://calculatorly.online/salary/"},{"@type":"ListItem","position":3,"name":"PTO Calculator","item":"https://calculatorly.online/salary/pto-calculator/"}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Does this count public holidays?","acceptedAnswer":{"@type":"Answer","text":"No. Public holidays sit inside the working days you count, so they are not taken off separately. If your employer counts only days you actually work, use that count for the working days in the year."}},{"@type":"Question","name":"What if I started part-way through the year?","acceptedAnswer":{"@type":"Answer","text":"Then count only the working days from your start date to the end of the year, and use that as the working days in the full year. The days you earn are worked out on the same share of the year."}},{"@type":"Question","name":"Can I take holiday I have not earned yet?","acceptedAnswer":{"@type":"Answer","text":"That depends on your employer. Some allow taking holiday in advance, some do not, and some take it back from your final pay if you leave early. This calculator only shows what you have earned so far."}},{"@type":"Question","name":"What if my allowance is in hours, not days?","acceptedAnswer":{"@type":"Answer","text":"Use hours everywhere instead of days: yearly allowance in hours, hours worked so far, and hours in the full year. The same sum gives the hours earned so far."}},{"@type":"Question","name":"Does unused holiday carry over to next year?","acceptedAnswer":{"@type":"Answer","text":"That depends on your contract and your country. Some employers allow a few days to carry over, some do not. This calculator does not carry anything over — it only works out this year."}},{"@type":"Question","name":"Is this calculator free, and do I need to sign up?","acceptedAnswer":{"@type":"Answer","text":"Yes, it is free, and no sign-up is needed. Nothing is uploaded: the calculation runs in your browser on your own device, and the numbers you type are not sent anywhere."}}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"HowTo","name":"How to use the PTO Calculator","step":[{"@type":"HowToStep","position":1,"text":"Type your yearly holiday allowance, how many working days you have done so far, and how many working days are in the full year. There is no Calculate button — the answer appears as you type."},{"@type":"HowToStep","position":2,"text":"Read the result line for the paid days off earned so far."},{"@type":"HowToStep","position":3,"text":"Check the bar and table under the result to see the days earned, the days left to earn, and the full allowance."}]}
+</script>
+</head>
+<body class="hub-salary">
+<div class="sheet">
+  <header class="masthead">
+    <div class="brand"><a href="../../">Calculator<span class="ly">ly</span></a></div>
+    <div class="domain mono">calculatorly.online</div>
+    <div class="mast-note">Every calculator, worked out in full.</div>
+  </header>
+  <main>
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="https://calculatorly.online/">Home</a></li>
+        <li><a href="https://calculatorly.online/salary/">Salary and Tax</a></li>
+        <li aria-current="page">PTO Calculator</li>
+      </ol>
+    </nav>
+    <span class="hub-tag">Hub: Salary and Tax</span>
+    
+    <h1>PTO Calculator</h1>
+
+    <section class="tool" aria-label="PTO Calculator tool">
+      <p class="tool-q">How much paid time off have I earned so far?</p>
+      <div class="fields">
+      <div class="field">
+        <label for="in-allowance">Yearly holiday allowance (days)</label>
+        <input id="in-allowance" type="number" inputmode="decimal" step="any" value="25" autocomplete="off" />
+      </div>
+      <div class="field">
+        <label for="in-worked">Working days done so far this year</label>
+        <input id="in-worked" type="number" inputmode="decimal" step="any" value="130" autocomplete="off" />
+      </div>
+      <div class="field">
+        <label for="in-year_days">Working days in the full year</label>
+        <input id="in-year_days" type="number" inputmode="decimal" step="any" value="260" autocomplete="off" />
+      </div>
+      </div>
+
+      <div class="result-wrap" aria-live="polite">
+        <div class="stamp" id="stamp" aria-hidden="true" hidden>Checked ✓</div>
+        <div class="result-label">Result</div>
+        <div class="result" id="result">12.50 days</div>
+        <div class="result-sentence" id="sentence">With 130.00 of 260.00 working days done, you have earned 12.50 days of your 25.00-day allowance.</div>
+        <p class="msg" id="msg" hidden></p>
+      </div>
+      <ol class="howto">
+        <li><strong>Type your yearly holiday allowance, how many working days you have done so far, and how many working days are in the full year. There is no Calculate button — the answer appears as you type.</strong></li>
+        <li><strong>Read the result line for the paid days off earned so far.</strong></li>
+        <li><strong>Check the bar and table under the result to see the days earned, the days left to earn, and the full allowance.</strong></li>
+      </ol>
+      <p class="limit-note"><strong>Limit:</strong> Numbers up to 1,000,000,000,000; empty or over-limit input shows a clear message. <strong>Rounding:</strong> every result uses one named default — Half-up to 2 decimal places — in the answer, the bar and the table. The Checked stamp appears on the result box only while a valid result is showing.</p>
+    </section>
+
+    <section class="quick" aria-labelledby="quickH">
+      <h2 id="quickH"><span class="no">2</span>Quick answer</h2>
+      <p>Paid time off builds up evenly through the year. With a 25-day allowance and 130 of 260 working days done, you have earned 12.50 days so far. Type your allowance and days worked above and this calculator shows the days you have earned, with the rest of the year below.</p>
+    </section>
+
+    <section class="part" aria-labelledby="formulaH">
+      <h2 id="formulaH"><span class="no">3</span>The formula</h2>
+      <p>This is straight-line accrual: each working day earns the same share of the yearly allowance. Some employers count calendar days or round to half days, so check your own policy.</p>
+      <div class="formula-box">
+        <strong>Paid time off earned — in words: divide the working days done so far by the working days in the full year, then multiply by the yearly allowance.</strong>
+        <span class="sym">days earned = yearly allowance × (working days done ÷ working days in the year)</span>
+      </div>
+      <p class="small">Formula source: even accrual across the working days in the year, from the numbers you type. No outside data is used. Public holidays are not taken off here — they sit inside the working days you count.</p>
+    </section>
+
+    <section class="part" aria-labelledby="exampleH">
+      <h2 id="exampleH"><span class="no">4</span>Worked example: 25 days a year, 130 of 260 days done</h2>
+      <ol class="steps">
+        <li>Share of the year done: 130 ÷ 260 = 0.50, or half the year.</li>
+        <li>Days earned: 25 × 0.50 = 12.50 days.</li>
+        <li>Days still to earn: 25 − 12.50 = 12.50 days.</li>
+        <li class="ans">Answer: 12.50 days earned so far.</li>
+      </ol>
+      <p class="small">Try it in the tool above: type 25, 130 and 260, and the result line shows 12.50 days.</p>
+    </section>
+
+    <section class="part" aria-labelledby="chartH">
+      <h2 id="chartH"><span class="no">5</span>Your result, drawn</h2>
+      <p>This bar and table are drawn from the numbers you typed above. Change a number and they change with it.</p>
+      <div class="bar" role="img" id="bar" aria-label="Bar showing the days earned out of the yearly allowance">
+        <div class="seg-a" style="width:50%"></div>
+        <div class="seg-b"></div>
+      </div>
+      <div class="bar-legend">
+        <span><span class="swatch a"></span><span id="legend-a">Days earned: 12.50</span></span>
+        <span><span class="swatch b"></span><span id="legend-b">Days still to earn: 12.50</span></span>
+      </div>
+      <div class="table-scroll">
+        <table>
+          <thead><tr><th scope="col">Part of your sum</th><th scope="col" class="num">Value</th></tr></thead>
+          <tbody id="break-body">
+            <tr><td>Yearly allowance</td><td class="num">25.00 days</td></tr>
+            <tr><td>Working days done</td><td class="num">130.00</td></tr>
+            <tr><td>Working days in the year</td><td class="num">260.00</td></tr>
+            <tr><td>Days earned (your result)</td><td class="num">12.50 days</td></tr>
+            <tr><td>Days still to earn</td><td class="num">12.50 days</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="part" aria-labelledby="faqH">
+      <h2 id="faqH"><span class="no">6</span>Questions about pto</h2>
+      <details>
+        <summary>Does this count public holidays?</summary>
+        <p>No. Public holidays sit inside the working days you count, so they are not taken off separately. If your employer counts only days you actually work, use that count for the working days in the year.</p>
+      </details>
+      <details>
+        <summary>What if I started part-way through the year?</summary>
+        <p>Then count only the working days from your start date to the end of the year, and use that as the working days in the full year. The days you earn are worked out on the same share of the year.</p>
+      </details>
+      <details>
+        <summary>Can I take holiday I have not earned yet?</summary>
+        <p>That depends on your employer. Some allow taking holiday in advance, some do not, and some take it back from your final pay if you leave early. This calculator only shows what you have earned so far.</p>
+      </details>
+      <details>
+        <summary>What if my allowance is in hours, not days?</summary>
+        <p>Use hours everywhere instead of days: yearly allowance in hours, hours worked so far, and hours in the full year. The same sum gives the hours earned so far.</p>
+      </details>
+      <details>
+        <summary>Does unused holiday carry over to next year?</summary>
+        <p>That depends on your contract and your country. Some employers allow a few days to carry over, some do not. This calculator does not carry anything over — it only works out this year.</p>
+      </details>
+      <details>
+        <summary>Is this calculator free, and do I need to sign up?</summary>
+        <p>Yes, it is free, and no sign-up is needed. Nothing is uploaded: the calculation runs in your browser on your own device, and the numbers you type are not sent anywhere.</p>
+      </details>
+    </section>
+
+    <section class="part" aria-labelledby="relatedH">
+      <h2 id="relatedH"><span class="no">7</span>Related tools</h2>
+      <p class="small">More tools that go with this one — each with its own page, one job per page:</p>
+      <ul class="related">
+        <li><a href="https://calculatorly.online/salary/parental-leave-pay-calculator/">Parental Leave Pay Calculator<span class="d">Pay during parental leave from a salary, weeks and pay rate.</span><span class="u mono">calculatorly.online/salary/parental-leave-pay-calculator/</span></a></li>
+        <li><a href="https://calculatorly.online/salary/shift-pay-calculator/">Shift Pay Calculator<span class="d">Pay for day, night and weekend hours in one shift.</span><span class="u mono">calculatorly.online/salary/shift-pay-calculator/</span></a></li>
+        <li><a href="https://calculatorly.online/salary/job-offer-comparison-calculator/">Job Offer Comparison Calculator<span class="d">Which of two job offers is worth more in total.</span><span class="u mono">calculatorly.online/salary/job-offer-comparison-calculator/</span></a></li>
+      </ul>
+    </section>
+
+    <section class="part" aria-labelledby="testsH">
+      <h2 id="testsH">Known-answer test cases — run live on this page</h2>
+      <p>Each test below is worked out by the same code as the calculator above, the moment this page loads, and marked Pass or Fail against its known answer. If a row ever shows Fail, the page is not finished.</p>
+      <div class="table-scroll stack-wrap">
+        <table class="stackable">
+          <thead><tr><th scope="col">#</th><th scope="col">Test</th><th scope="col">Expected answer</th><th scope="col">Calculator gave</th><th scope="col">Result</th></tr></thead>
+          <tbody id="test-body">
+            <tr><td class="num" data-label="#">1</td><td data-label="Test">25 days, 130 of 260 days done</td><td class="num" data-label="Expected answer">12.50 days</td><td class="num" data-got data-label="Calculator gave">—</td><td data-label="Result"><span class="chip run" data-chip>RUNNING</span></td></tr>
+            <tr><td class="num" data-label="#">2</td><td data-label="Test">20 days, 65 of 260 days done</td><td class="num" data-label="Expected answer">5.00 days</td><td class="num" data-got data-label="Calculator gave">—</td><td data-label="Result"><span class="chip run" data-chip>RUNNING</span></td></tr>
+            <tr><td class="num" data-label="#">3</td><td data-label="Test">28 days, full year done</td><td class="num" data-label="Expected answer">28.00 days</td><td class="num" data-got data-label="Calculator gave">—</td><td data-label="Result"><span class="chip run" data-chip>RUNNING</span></td></tr>
+            <tr><td class="num" data-label="#">4</td><td data-label="Test">Empty input: allowance left blank</td><td class="num" data-label="Expected answer">Prompt message, no result, no NaN</td><td class="num" data-got data-label="Calculator gave">—</td><td data-label="Result"><span class="chip run" data-chip>RUNNING</span></td></tr>
+            <tr><td class="num" data-label="#">5</td><td data-label="Test">More days worked than in the year</td><td class="num" data-label="Expected answer">Days worked cannot be more than the working days in the year.</td><td class="num" data-got data-label="Calculator gave">—</td><td data-label="Result"><span class="chip run" data-chip>RUNNING</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="record-note" style="margin-top:12px" id="test-summary">Tests are running…</p>
+    </section>
+
+    <section class="part" aria-labelledby="verdictH">
+      <h2 id="verdictH">Build record — verdict for this tool</h2>
+      <div class="table-scroll stack-wrap">
+        <table class="stackable">
+          <thead><tr><th scope="col">#</th><th scope="col">Tool</th><th scope="col">Verdict</th><th scope="col">Input → Output</th><th scope="col">Library / method</th><th scope="col">Limit or note shown on the page</th></tr></thead>
+          <tbody>
+            <tr>
+              <td class="num" data-label="#">1</td>
+              <td data-label="Tool">PTO Calculator</td>
+              <td data-label="Verdict"><strong>Browser-real</strong></td>
+              <td data-label="Input → Output">Days worked + a yearly holiday allowance -&gt; the paid days off earned so far</td>
+              <td data-label="Library / method">No library. Plain JavaScript arithmetic in the browser</td>
+              <td data-label="Limit or note shown on the page">Numbers up to 1,000,000,000,000; empty or over-limit input shows a clear message.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="record-note" style="margin-top:12px"><strong>Plan for this tool:</strong> one page only, in the Salary and Tax hub, built from the shared template with no libraries and no server. Security items that need a server (login, database, password rules) are N/A — this is a static page with no login and no stored data.</p>
+    </section>
+    <script type="application/json" id="tool-config">{"tool": "pto", "chart": "bar-table", "tests": [{"label": "25 days, 130 of 260 days done", "inputs": {"allowance": "25", "worked": "130", "year_days": "260"}, "expect": "12.50 days"}, {"label": "20 days, 65 of 260 days done", "inputs": {"allowance": "20", "worked": "65", "year_days": "260"}, "expect": "5.00 days"}, {"label": "28 days, full year done", "inputs": {"allowance": "28", "worked": "260", "year_days": "260"}, "expect": "28.00 days"}, {"label": "Empty input: allowance left blank", "inputs": {"allowance": "", "worked": "130", "year_days": "260"}, "expect_state": "empty", "expect_text": "Prompt message, no result, no NaN"}, {"label": "More days worked than in the year", "inputs": {"allowance": "25", "worked": "300", "year_days": "260"}, "expect_state": "range", "expect_text": "Days worked cannot be more than the working days in the year."}], "fields": ["allowance", "worked", "year_days"]}</script>
+  </main>
+<footer class="site">
+    <span class="fbrand">Calculatorly</span>
+    <nav aria-label="Footer">
+      <a href="../../about/">About</a>
+      <a href="../../contact/">Contact</a>
+      <a href="../../privacy/">Privacy</a>
+      <a href="../../terms/">Terms</a>
+      <a href="../../disclaimer/">Disclaimer</a>
+    </nav>
+    <span>Calculatorly — free calculators, no sign-up. The domain calculatorly.online is bought; hosting is separate.</span>
+    <div class="ad-slot" hidden aria-hidden="true"></div>
+  </footer>
+</div>
+<script src="../../assets/js/calculatorly.js"></script>
+<script src="../../assets/js/engines-s3.js"></script>
+</body>
+</html>

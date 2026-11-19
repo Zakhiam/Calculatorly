@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light" />
+<title>Loan Comparison Calculator | Calculatorly</title>
+<meta name="description" content="Work out which of two loans costs less in total — formula, worked example and breakdown. Free, no sign-up, answers as you type." />
+<link rel="canonical" href="https://calculatorly.online/money/loan-comparison-calculator/" />
+<link rel="icon" href="data:," />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,400;0,600;0,700;0,800;1,400&amp;family=IBM+Plex+Mono:wght@500;600;700&amp;display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../../assets/css/khata.css" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Loan Comparison Calculator","url":"https://calculatorly.online/money/loan-comparison-calculator/","applicationCategory":"UtilitiesApplication","operatingSystem":"Any (web browser)","browserRequirements":"Requires JavaScript","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"provider":{"@type":"Organization","name":"Calculatorly","url":"https://calculatorly.online/"}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://calculatorly.online/"},{"@type":"ListItem","position":2,"name":"Money","item":"https://calculatorly.online/money/"},{"@type":"ListItem","position":3,"name":"Loan Comparison Calculator","item":"https://calculatorly.online/money/loan-comparison-calculator/"}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Should I compare the monthly payment or the total interest?","acceptedAnswer":{"@type":"Answer","text":"Compare the total interest when the loan amounts are the same — it is the true cost of borrowing. A loan can have a lower monthly payment but cost more in total if it runs for longer."}},{"@type":"Question","name":"Can a loan with a higher rate still be cheaper?","acceptedAnswer":{"@type":"Answer","text":"Yes, if its term is much shorter. Interest builds up month by month, so a short loan at a higher rate can cost less in total than a long loan at a lower rate. This calculator shows both figures so you can see it."}},{"@type":"Question","name":"What if the two loans are for different amounts?","acceptedAnswer":{"@type":"Answer","text":"Then compare the total paid for each loan, and think about what you get for the extra money. The verdict here is on total interest, which is fair only when the amounts match — the table shows the monthly payment and total paid for each loan too."}},{"@type":"Question","name":"Do fees change the answer?","acceptedAnswer":{"@type":"Answer","text":"Yes. Fees are not in this comparison — only the loan amount, rate and term. A loan with a low rate but high fees can cost more in real life, so add the fees to the loan amount before you compare, or count them on their own."}},{"@type":"Question","name":"What does total interest leave out?","acceptedAnswer":{"@type":"Answer","text":"It leaves out fees, insurance and any late-payment charges. It is the interest alone, worked out from the rate and term you type."}},{"@type":"Question","name":"Is this financial advice?","acceptedAnswer":{"@type":"Answer","text":"No. This is an estimate for planning, from the numbers you type. Check the full terms with each lender before you borrow."}}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"HowTo","name":"How to use the Loan Comparison Calculator","step":[{"@type":"HowToStep","position":1,"text":"Type the amount, yearly rate and term for Loan A, then the same three numbers for Loan B. There is no Calculate button — the answer appears as you type."},{"@type":"HowToStep","position":2,"text":"Read the verdict in the result line: which loan costs less in total interest, and by how much."},{"@type":"HowToStep","position":3,"text":"Check the table under the result for each loan's monthly payment, total interest and total paid."}]}
+</script>
+</head>
+<body class="hub-money">
+<div class="sheet">
+  <header class="masthead">
+    <div class="brand"><a href="../../">Calculator<span class="ly">ly</span></a></div>
+    <div class="domain mono">calculatorly.online</div>
+    <div class="mast-note">Every calculator, worked out in full.</div>
+  </header>
+  <main>
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="https://calculatorly.online/">Home</a></li>
+        <li><a href="https://calculatorly.online/money/">Money</a></li>
+        <li aria-current="page">Loan Comparison Calculator</li>
+      </ol>
+    </nav>
+    <span class="hub-tag">Hub: Money</span>
+    
+    <h1>Loan Comparison Calculator</h1>
+
+    <section class="tool" aria-label="Loan Comparison Calculator tool">
+      <p class="tool-q">Which of two loans costs less in total — Loan A or Loan B?</p>
+      <div class="fields">
+      <div class="field">
+        <label for="in-amount_a">Loan A amount ($)</label>
+        <input id="in-amount_a" type="number" inputmode="decimal" step="any" value="20000" autocomplete="off" />
+      </div>
+      <div class="field">
+        <label for="in-rate_a">Loan A rate (% a year)</label>
+        <input id="in-rate_a" type="number" inputmode="decimal" step="any" value="6" autocomplete="off" />
+      </div>
+      <div class="field">
+        <label for="in-years_a">Loan A term (years)</label>
+        <input id="in-years_a" type="number" inputmode="decimal" step="any" value="5" autocomplete="off" />
+      </div>
+      <div class="field">
+        <label for="in-amount_b">Loan B amount ($)</label>
+        <input id="in-amount_b" type="number" inputmode="decimal" step="any" value="20000" autocomplete="off" />
+      </div>
+      <div class="field">
+        <label for="in-rate_b">Loan B rate (% a year)</label>
+        <input id="in-rate_b" type="number" inputmode="decimal" step="any" value="5" autocomplete="off" />
+      </div>
+      <div class="field">
+        <label for="in-years_b">Loan B term (years)</label>
+        <input id="in-years_b" type="number" inputmode="decimal" step="any" value="5" autocomplete="off" />
+      </div>
+      </div>
+
+      <div class="result-wrap" aria-live="polite">
+        <div class="stamp" id="stamp" aria-hidden="true" hidden>Checked ✓</div>
+        <div class="result-label">Result</div>
+        <div class="result" id="result">Loan A costs $553.88 more in total interest</div>
+        <div class="result-sentence" id="sentence">Loan A: $386.66 a month, $3,199.36 interest. Loan B: $377.42 a month, $2,645.48 interest.</div>
+        <p class="msg" id="msg" hidden></p>
+      </div>
+      <ol class="howto">
+        <li><strong>Type the amount, yearly rate and term for Loan A, then the same three numbers for Loan B. There is no Calculate button — the answer appears as you type.</strong></li>
+        <li><strong>Read the verdict in the result line: which loan costs less in total interest, and by how much.</strong></li>
+        <li><strong>Check the table under the result for each loan&#x27;s monthly payment, total interest and total paid.</strong></li>
+      </ol>
+      <p class="limit-note"><strong>Limit:</strong> Numbers up to 1,000,000,000,000; empty or over-limit input shows a clear message. <strong>Rounding:</strong> every result uses one named default — Half-up to 2 decimal places — in the answer, the bar and the table. The Checked stamp appears on the result box only while a valid result is showing.</p>
+    </section>
+
+    <section class="quick" aria-labelledby="quickH">
+      <h2 id="quickH"><span class="no">2</span>Quick answer</h2>
+      <p>On two $20,000 loans over 5 years, Loan A at 6% costs $553.88 more in total interest than Loan B at 5%. Loan A&#x27;s payment is $386.66 a month with $3,199.36 of interest, while Loan B&#x27;s payment is $377.42 a month with $2,645.48 of interest. The lower rate wins here because the amounts and terms are the same.</p>
+    </section>
+
+    <section class="part" aria-labelledby="formulaH">
+      <h2 id="formulaH"><span class="no">3</span>The formula</h2>
+      <p>Each loan is worked out on its own with the standard amortisation formula. The comparison is on total interest, not just the monthly payment:</p>
+      <div class="formula-box">
+        <strong>Loan comparison — in words: work out the monthly payment and total interest for each loan with the standard loan formula, then subtract the smaller total interest from the larger.</strong>
+        <span class="sym">total interest = (monthly payment × number of payments) − loan amount; difference = larger total interest − smaller total interest</span>
+      </div>
+      <p class="small">Formula source: the standard amortisation formula for a fixed-rate loan. No rate is fetched from anywhere — you type both rates, and the page uses only the six numbers you type.</p>
+    </section>
+
+    <section class="part" aria-labelledby="exampleH">
+      <h2 id="exampleH"><span class="no">4</span>Worked example: $20,000 at 6% against $20,000 at 5%</h2>
+      <ol class="steps">
+        <li>Start with the numbers: both loans are $20,000 over 5 years (60 payments). Loan A is at 6%, Loan B at 5%.</li>
+        <li>Loan A: the monthly payment is $386.66, so the total paid is 60 × $386.66 = $23,199.36 and the interest is $3,199.36.</li>
+        <li>Loan B: the monthly payment is $377.42, so the total paid is 60 × $377.42 = $22,645.48 and the interest is $2,645.48.</li>
+        <li class="ans">Answer: Loan A costs $553.88 more in total interest than Loan B.</li>
+      </ol>
+      <p class="small">Try it in the tool above: type 20000, 6, 5 for Loan A and 20000, 5, 5 for Loan B, and the result line shows the verdict.</p>
+    </section>
+
+    <section class="part" aria-labelledby="chartH">
+      <h2 id="chartH"><span class="no">5</span>Your result, drawn</h2>
+      <p>This bar and table are drawn from the numbers you typed above. Change a number and they change with it.</p>
+      <div class="bar" role="img" id="bar" aria-label="Bar showing the cheaper total interest $2,645.48 against the dearest $3,199.36">
+        <div class="seg-a" style="width:82.69%"></div>
+        <div class="seg-b"></div>
+      </div>
+      <div class="bar-legend">
+        <span><span class="swatch a"></span><span id="legend-a">Cheaper loan interest: $2,645.48</span></span>
+        <span><span class="swatch b"></span><span id="legend-b">Dearest loan interest: $3,199.36</span></span>
+      </div>
+      <div class="table-scroll">
+        <table>
+          <thead><tr><th scope="col">Part of your sum</th><th scope="col" class="num">Value</th></tr></thead>
+          <tbody id="break-body">
+            <tr><td>Loan A monthly payment</td><td class="num">$386.66</td></tr>
+            <tr><td>Loan A total interest</td><td class="num">$3,199.36</td></tr>
+            <tr><td>Loan A total paid</td><td class="num">$23,199.36</td></tr>
+            <tr><td>Loan B monthly payment</td><td class="num">$377.42</td></tr>
+            <tr><td>Loan B total interest</td><td class="num">$2,645.48</td></tr>
+            <tr><td>Loan B total paid</td><td class="num">$22,645.48</td></tr>
+            <tr><td>Difference in total interest</td><td class="num">$553.88</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="part" aria-labelledby="faqH">
+      <h2 id="faqH"><span class="no">6</span>Questions about loan comparison</h2>
+      <details>
+        <summary>Should I compare the monthly payment or the total interest?</summary>
+        <p>Compare the total interest when the loan amounts are the same — it is the true cost of borrowing. A loan can have a lower monthly payment but cost more in total if it runs for longer.</p>
+      </details>
+      <details>
+        <summary>Can a loan with a higher rate still be cheaper?</summary>
+        <p>Yes, if its term is much shorter. Interest builds up month by month, so a short loan at a higher rate can cost less in total than a long loan at a lower rate. This calculator shows both figures so you can see it.</p>
+      </details>
+      <details>
+        <summary>What if the two loans are for different amounts?</summary>
+        <p>Then compare the total paid for each loan, and think about what you get for the extra money. The verdict here is on total interest, which is fair only when the amounts match — the table shows the monthly payment and total paid for each loan too.</p>
+      </details>
+      <details>
+        <summary>Do fees change the answer?</summary>
+        <p>Yes. Fees are not in this comparison — only the loan amount, rate and term. A loan with a low rate but high fees can cost more in real life, so add the fees to the loan amount before you compare, or count them on their own.</p>
+      </details>
+      <details>
+        <summary>What does total interest leave out?</summary>
+        <p>It leaves out fees, insurance and any late-payment charges. It is the interest alone, worked out from the rate and term you type.</p>
+      </details>
+      <details>
+        <summary>Is this financial advice?</summary>
+        <p>No. This is an estimate for planning, from the numbers you type. Check the full terms with each lender before you borrow.</p>
+      </details>
+    </section>
+
+    <section class="part" aria-labelledby="relatedH">
+      <h2 id="relatedH"><span class="no">7</span>Related tools</h2>
+      <p class="small">More tools that go with this one — each with its own page, one job per page:</p>
+      <ul class="related">
+        <li><a href="https://calculatorly.online/money/amortization-calculator/">Amortization Calculator<span class="d">Full repayment schedule: payment, interest and balance per month.</span><span class="u mono">calculatorly.online/money/amortization-calculator/</span></a></li>
+        <li><a href="https://calculatorly.online/money/refinance-comparison-calculator/">Refinance Comparison Calculator<span class="d">Old loan against a new loan, with fees and break-even month.</span><span class="u mono">calculatorly.online/money/refinance-comparison-calculator/</span></a></li>
+        <li><a href="https://calculatorly.online/money/credit-card-payoff-calculator/">Credit Card Payoff Calculator<span class="d">Months to clear a card balance at a fixed monthly payment.</span><span class="u mono">calculatorly.online/money/credit-card-payoff-calculator/</span></a></li>
+      </ul>
+    </section>
+
+    <section class="part" aria-labelledby="testsH">
+      <h2 id="testsH">Known-answer test cases — run live on this page</h2>
+      <p>Each test below is worked out by the same code as the calculator above, the moment this page loads, and marked Pass or Fail against its known answer. If a row ever shows Fail, the page is not finished.</p>
+      <div class="table-scroll stack-wrap">
+        <table class="stackable">
+          <thead><tr><th scope="col">#</th><th scope="col">Test</th><th scope="col">Expected answer</th><th scope="col">Calculator gave</th><th scope="col">Result</th></tr></thead>
+          <tbody id="test-body">
+            <tr><td class="num" data-label="#">1</td><td data-label="Test">$20,000 at 6% vs $20,000 at 5%, both 5 years</td><td class="num" data-label="Expected answer">Loan A costs $553.88 more in total interest</td><td class="num" data-got data-label="Calculator gave">—</td><td data-label="Result"><span class="chip run" data-chip>RUNNING</span></td></tr>
+            <tr><td class="num" data-label="#">2</td><td data-label="Test">$10,000 at 8% vs $10,000 at 7%, both 3 years</td><td class="num" data-label="Expected answer">Loan A costs $165.34 more in total interest</td><td class="num" data-got data-label="Calculator gave">—</td><td data-label="Result"><span class="chip run" data-chip>RUNNING</span></td></tr>
+            <tr><td class="num" data-label="#">3</td><td data-label="Test">$15,000 at 4% vs $15,000 at 6%, both 4 years</td><td class="num" data-label="Expected answer">Loan A costs $652.30 less in total interest</td><td class="num" data-got data-label="Calculator gave">—</td><td data-label="Result"><span class="chip run" data-chip>RUNNING</span></td></tr>
+            <tr><td class="num" data-label="#">4</td><td data-label="Test">Empty input: Loan A amount left blank</td><td class="num" data-label="Expected answer">Prompt message, no result, no NaN</td><td class="num" data-got data-label="Calculator gave">—</td><td data-label="Result"><span class="chip run" data-chip>RUNNING</span></td></tr>
+            <tr><td class="num" data-label="#">5</td><td data-label="Test">Very large loans: $999,999,999,999 at 6% vs 5%, 5 years</td><td class="num" data-label="Expected answer">Loan A costs $27,694,073,125.01 more in total interest</td><td class="num" data-got data-label="Calculator gave">—</td><td data-label="Result"><span class="chip run" data-chip>RUNNING</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="record-note" style="margin-top:12px" id="test-summary">Tests are running…</p>
+    </section>
+
+    <section class="part" aria-labelledby="verdictH">
+      <h2 id="verdictH">Build record — verdict for this tool</h2>
+      <div class="table-scroll stack-wrap">
+        <table class="stackable">
+          <thead><tr><th scope="col">#</th><th scope="col">Tool</th><th scope="col">Verdict</th><th scope="col">Input → Output</th><th scope="col">Library / method</th><th scope="col">Limit or note shown on the page</th></tr></thead>
+          <tbody>
+            <tr>
+              <td class="num" data-label="#">1</td>
+              <td data-label="Tool">Loan Comparison Calculator</td>
+              <td data-label="Verdict"><strong>Browser-real</strong></td>
+              <td data-label="Input → Output">Two loan amounts + two rates + two terms -&gt; the cheaper loan and the difference</td>
+              <td data-label="Library / method">No library. Plain JavaScript arithmetic in the browser</td>
+              <td data-label="Limit or note shown on the page">Numbers up to 1,000,000,000,000; empty or over-limit input shows a clear message.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="record-note" style="margin-top:12px"><strong>Plan for this tool:</strong> one page only, in the Money hub, built from the shared template with no libraries and no server. Security items that need a server (login, database, password rules) are N/A — this is a static page with no login and no stored data.</p>
+    </section>
+    <script type="application/json" id="tool-config">{"tool": "loan-comparison", "chart": "bar", "tests": [{"label": "$20,000 at 6% vs $20,000 at 5%, both 5 years", "inputs": {"amount_a": "20000", "rate_a": "6", "years_a": "5", "amount_b": "20000", "rate_b": "5", "years_b": "5"}, "expect": "Loan A costs $553.88 more in total interest"}, {"label": "$10,000 at 8% vs $10,000 at 7%, both 3 years", "inputs": {"amount_a": "10000", "rate_a": "8", "years_a": "3", "amount_b": "10000", "rate_b": "7", "years_b": "3"}, "expect": "Loan A costs $165.34 more in total interest"}, {"label": "$15,000 at 4% vs $15,000 at 6%, both 4 years", "inputs": {"amount_a": "15000", "rate_a": "4", "years_a": "4", "amount_b": "15000", "rate_b": "6", "years_b": "4"}, "expect": "Loan A costs $652.30 less in total interest"}, {"label": "Empty input: Loan A amount left blank", "inputs": {"amount_a": "", "rate_a": "6", "years_a": "5", "amount_b": "20000", "rate_b": "5", "years_b": "5"}, "expect_state": "empty", "expect_text": "Prompt message, no result, no NaN"}, {"label": "Very large loans: $999,999,999,999 at 6% vs 5%, 5 years", "inputs": {"amount_a": "999999999999", "rate_a": "6", "years_a": "5", "amount_b": "999999999999", "rate_b": "5", "years_b": "5"}, "expect": "Loan A costs $27,694,073,125.01 more in total interest"}], "fields": ["amount_a", "rate_a", "years_a", "amount_b", "rate_b", "years_b"]}</script>
+  </main>
+<footer class="site">
+    <span class="fbrand">Calculatorly</span>
+    <nav aria-label="Footer">
+      <a href="../../about/">About</a>
+      <a href="../../contact/">Contact</a>
+      <a href="../../privacy/">Privacy</a>
+      <a href="../../terms/">Terms</a>
+      <a href="../../disclaimer/">Disclaimer</a>
+    </nav>
+    <span>Calculatorly — free calculators, no sign-up. The domain calculatorly.online is bought; hosting is separate.</span>
+    <div class="ad-slot" hidden aria-hidden="true"></div>
+  </footer>
+</div>
+<script src="../../assets/js/calculatorly.js"></script>
+<script src="../../assets/js/engines-s2.js"></script>
+</body>
+</html>

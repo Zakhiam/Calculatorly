@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light" />
+<title>IRR Calculator | Calculatorly</title>
+<meta name="description" content="Work out the internal rate of return of a set of cash flows — formula, worked example and breakdown. Free, no sign-up, answers as you type." />
+<link rel="canonical" href="https://calculatorly.online/money/irr-calculator/" />
+<link rel="icon" href="data:," />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,400;0,600;0,700;0,800;1,400&amp;family=IBM+Plex+Mono:wght@500;600;700&amp;display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../../assets/css/khata.css" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"IRR Calculator","url":"https://calculatorly.online/money/irr-calculator/","applicationCategory":"UtilitiesApplication","operatingSystem":"Any (web browser)","browserRequirements":"Requires JavaScript","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"provider":{"@type":"Organization","name":"Calculatorly","url":"https://calculatorly.online/"}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://calculatorly.online/"},{"@type":"ListItem","position":2,"name":"Money","item":"https://calculatorly.online/money/"},{"@type":"ListItem","position":3,"name":"IRR Calculator","item":"https://calculatorly.online/money/irr-calculator/"}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What does the internal rate of return mean in plain words?","acceptedAnswer":{"@type":"Answer","text":"It is the yearly return an investment earns, once the timing of the money is taken into account. Money received early counts for more than money received late, because it can be used sooner. The IRR is the single yearly rate that makes all the flows balance out."}},{"@type":"Question","name":"Why is the first cash flow a negative number?","acceptedAnswer":{"@type":"Answer","text":"Because it is money going out — the amount you invest. Later flows are money coming in, so they are positive. The calculator needs that minus sign to tell the investment apart from the returns. If the first flow is not negative, it shows a clear message."}},{"@type":"Question","name":"What if the cash flows never change from negative to positive?","acceptedAnswer":{"@type":"Answer","text":"Then no internal rate of return exists, and the calculator says so plainly instead of giving a made-up number. For example, if every flow is positive, there is no investment to earn a return on; if every flow is negative, the money never comes back."}},{"@type":"Question","name":"Can an investment have more than one IRR?","acceptedAnswer":{"@type":"Answer","text":"Yes, if the cash flows change sign more than once — for example, money goes out, comes in, then goes out again. In that case more than one rate can balance the flows, and this calculator gives the first one it finds. Most simple investments change sign only once, so they have one IRR."}},{"@type":"Question","name":"How is IRR different from ROI?","acceptedAnswer":{"@type":"Answer","text":"ROI looks only at the total gain against the amount invested, and ignores when the money arrives. IRR takes the timing into account: money back early is worth more than money back late. The ROI Calculator on this site does the simple total-gain sum."}},{"@type":"Question","name":"Is this calculator free, and do I need to sign up?","acceptedAnswer":{"@type":"Answer","text":"Yes, it is free, and no sign-up is needed. Nothing is uploaded: the calculation runs in your browser on your own device, and the numbers you type are not sent anywhere."}}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"HowTo","name":"How to use the IRR Calculator","step":[{"@type":"HowToStep","position":1,"text":"Type the cash flows in order, one per year, separated by commas. The first flow is the money invested, so type it as a negative number — for example -1000, 300, 400, 500."},{"@type":"HowToStep","position":2,"text":"There is no Calculate button — the answer appears as you type. Read the rate of return in the result line, rounded half-up to 4 decimal places."},{"@type":"HowToStep","position":3,"text":"Check the bar and table under the result (Part 5 below) to see the money in, the money out and the net gain."}]}
+</script>
+</head>
+<body class="hub-money">
+<div class="sheet">
+  <header class="masthead">
+    <div class="brand"><a href="../../">Calculator<span class="ly">ly</span></a></div>
+    <div class="domain mono">calculatorly.online</div>
+    <div class="mast-note">Every calculator, worked out in full.</div>
+  </header>
+  <main>
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="https://calculatorly.online/">Home</a></li>
+        <li><a href="https://calculatorly.online/money/">Money</a></li>
+        <li aria-current="page">IRR Calculator</li>
+      </ol>
+    </nav>
+    <span class="hub-tag">Hub: Money</span>
+    
+    <h1>IRR Calculator</h1>
+
+    <section class="tool" aria-label="IRR Calculator tool">
+      <p class="tool-q">What is the internal rate of return of these cash flows?</p>
+      <div class="fields">
+      <div class="field">
+        <label for="in-flows">Cash flows, one per year, separated by commas (first is the money invested, as a negative number)</label>
+        <input id="in-flows" type="text" value="-1000, 300, 400, 500" autocomplete="off" />
+      </div>
+      </div>
+
+      <div class="result-wrap" aria-live="polite">
+        <div class="stamp" id="stamp" aria-hidden="true" hidden>Checked ✓</div>
+        <div class="result-label">Result</div>
+        <div class="result" id="result">8.8963%</div>
+        <div class="result-sentence" id="sentence">The cash flows -1,000.00, 300.00, 400.00, 500.00 give an internal rate of return of 8.8963% a year.</div>
+        <p class="msg" id="msg" hidden></p>
+      </div>
+      <ol class="howto">
+        <li><strong>Type the cash flows in order, one per year, separated by commas. The first flow is the money invested, so type it as a negative number — for example -1000, 300, 400, 500.</strong></li>
+        <li><strong>There is no Calculate button — the answer appears as you type. Read the rate of return in the result line, rounded half-up to 4 decimal places.</strong></li>
+        <li><strong>Check the bar and table under the result (Part 5 below) to see the money in, the money out and the net gain.</strong></li>
+      </ol>
+      <p class="limit-note"><strong>Limit:</strong> At least 2 cash flows; each flow up to 1,000,000,000,000; empty input shows a clear message. <strong>Rounding:</strong> every result uses one named default — Half-up to 4 decimal places — in the answer, the bar and the table. The Checked stamp appears on the result box only while a valid result is showing.</p>
+    </section>
+
+    <section class="quick" aria-labelledby="quickH">
+      <h2 id="quickH"><span class="no">2</span>Quick answer</h2>
+      <p>The internal rate of return is the yearly rate that makes the present value of all the cash flows add up to zero. For example, investing $1,000.00 and receiving $300.00, $400.00 and $500.00 over three years earns 8.8963% a year. Type your own cash flows above, with the investment as a negative number.</p>
+    </section>
+
+    <section class="part" aria-labelledby="formulaH">
+      <h2 id="formulaH"><span class="no">3</span>The formula</h2>
+      <p>The IRR is the rate that balances the money going out against the money coming in, once each flow is discounted back to today. There is no plain formula for it, so the calculator finds it by narrowing down the rate step by step:</p>
+      <div class="formula-box">
+        <strong>Internal rate of return — in words: the yearly rate r that makes the sum of each cash flow divided by one plus r to the power of its year equal zero.</strong>
+        <span class="sym">0 = CF0 + CF1 ÷ (1 + r) + CF2 ÷ (1 + r)² + CF3 ÷ (1 + r)³ + …</span>
+      </div>
+      <p class="small">Formula source: the standard net present value definition of IRR, solved by bisection (narrowing the rate until the net present value is zero). No rate is taken from anywhere else — only the cash flows you type.</p>
+    </section>
+
+    <section class="part" aria-labelledby="exampleH">
+      <h2 id="exampleH"><span class="no">4</span>Worked example: -1000, 300, 400, 500</h2>
+      <ol class="steps">
+        <li>Start with the cash flows: year 0: -1,000.00 (invested), year 1: 300.00, year 2: 400.00, year 3: 500.00.</li>
+        <li>Test a rate of 8.00%: 300.00 ÷ 1.08 + 400.00 ÷ 1.08² + 500.00 ÷ 1.08³ = 277.78 + 342.94 + 396.92 = 1,017.64, which is above 1,000.00, so the true rate is higher.</li>
+        <li>Test a rate of 9.00%: 300.00 ÷ 1.09 + 400.00 ÷ 1.09² + 500.00 ÷ 1.09³ = 275.23 + 336.68 + 386.09 = 998.00, which is below 1,000.00, so the true rate is between 8.00% and 9.00%.</li>
+        <li>Narrowing the range step by step gives 8.8963%, where the discounted flows add up to exactly 1,000.00.</li>
+        <li class="ans">Answer: the internal rate of return is 8.8963% a year.</li>
+      </ol>
+      <p class="small">Try it in the tool above: type -1000, 300, 400, 500, and the result line shows 8.8963%.</p>
+    </section>
+
+    <section class="part" aria-labelledby="chartH">
+      <h2 id="chartH"><span class="no">5</span>Your result, drawn</h2>
+      <p>This bar and table are drawn from the numbers you typed above. Change a number and they change with it.</p>
+      <div class="bar" role="img" id="bar" aria-label="Bar showing the rate of return, out of 100%">
+        <div class="seg-a" style="width:8.9%"></div>
+        <div class="seg-b"></div>
+      </div>
+      <div class="bar-legend">
+        <span><span class="swatch a"></span><span id="legend-a">Internal rate of return: 8.8963%</span></span>
+        <span><span class="swatch b"></span><span id="legend-b">Net gain: $200.00</span></span>
+      </div>
+      <div class="table-scroll">
+        <table>
+          <thead><tr><th scope="col">Part of your sum</th><th scope="col" class="num">Value</th></tr></thead>
+          <tbody id="break-body">
+            <tr><td>Cash flows</td><td class="num">-1,000.00, 300.00, 400.00, 500.00</td></tr>
+            <tr><td>Money in</td><td class="num">$1,200.00</td></tr>
+            <tr><td>Money out</td><td class="num">$1,000.00</td></tr>
+            <tr><td>Net gain</td><td class="num">$200.00</td></tr>
+            <tr><td>Internal rate of return</td><td class="num">8.8963%</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="part" aria-labelledby="faqH">
+      <h2 id="faqH"><span class="no">6</span>Questions about irr</h2>
+      <details>
+        <summary>What does the internal rate of return mean in plain words?</summary>
+        <p>It is the yearly return an investment earns, once the timing of the money is taken into account. Money received early counts for more than money received late, because it can be used sooner. The IRR is the single yearly rate that makes all the flows balance out.</p>
+      </details>
+      <details>
+        <summary>Why is the first cash flow a negative number?</summary>
+        <p>Because it is money going out — the amount you invest. Later flows are money coming in, so they are positive. The calculator needs that minus sign to tell the investment apart from the returns. If the first flow is not negative, it shows a clear message.</p>
+      </details>
+      <details>
+        <summary>What if the cash flows never change from negative to positive?</summary>
+        <p>Then no internal rate of return exists, and the calculator says so plainly instead of giving a made-up number. For example, if every flow is positive, there is no investment to earn a return on; if every flow is negative, the money never comes back.</p>
+      </details>
+      <details>
+        <summary>Can an investment have more than one IRR?</summary>
+        <p>Yes, if the cash flows change sign more than once — for example, money goes out, comes in, then goes out again. In that case more than one rate can balance the flows, and this calculator gives the first one it finds. Most simple investments change sign only once, so they have one IRR.</p>
+      </details>
+      <details>
+        <summary>How is IRR different from ROI?</summary>
+        <p>ROI looks only at the total gain against the amount invested, and ignores when the money arrives. IRR takes the timing into account: money back early is worth more than money back late. The ROI Calculator on this site does the simple total-gain sum.</p>
+      </details>
+      <details>
+        <summary>Is this calculator free, and do I need to sign up?</summary>
+        <p>Yes, it is free, and no sign-up is needed. Nothing is uploaded: the calculation runs in your browser on your own device, and the numbers you type are not sent anywhere.</p>
+      </details>
+    </section>
+
+    <section class="part" aria-labelledby="relatedH">
+      <h2 id="relatedH"><span class="no">7</span>Related tools</h2>
+      <p class="small">More tools that go with this one — each with its own page, one job per page:</p>
+      <ul class="related">
+        <li><a href="https://calculatorly.online/money/roi-calculator/">ROI Calculator<span class="d">Gain as a percent of the amount invested.</span><span class="u mono">calculatorly.online/money/roi-calculator/</span></a></li>
+        <li><a href="https://calculatorly.online/money/payback-period-calculator/">Payback Period Calculator<span class="d">Years and months until an investment breaks even.</span><span class="u mono">calculatorly.online/money/payback-period-calculator/</span></a></li>
+      </ul>
+    </section>
+
+    <section class="part" aria-labelledby="testsH">
+      <h2 id="testsH">Known-answer test cases — run live on this page</h2>
+      <p>Each test below is worked out by the same code as the calculator above, the moment this page loads, and marked Pass or Fail against its known answer. If a row ever shows Fail, the page is not finished.</p>
+      <div class="table-scroll stack-wrap">
+        <table class="stackable">
+          <thead><tr><th scope="col">#</th><th scope="col">Test</th><th scope="col">Expected answer</th><th scope="col">Calculator gave</th><th scope="col">Result</th></tr></thead>
+          <tbody id="test-body">
+            <tr><td class="num" data-label="#">1</td><td data-label="Test">Invest $100.00, receive $110.00 after one year</td><td class="num" data-label="Expected answer">10.0000%</td><td class="num" data-got data-label="Calculator gave">—</td><td data-label="Result"><span class="chip run" data-chip>RUNNING</span></td></tr>
+            <tr><td class="num" data-label="#">2</td><td data-label="Test">Invest $100.00, receive $60.00 and $60.00</td><td class="num" data-label="Expected answer">13.0662%</td><td class="num" data-got data-label="Calculator gave">—</td><td data-label="Result"><span class="chip run" data-chip>RUNNING</span></td></tr>
+            <tr><td class="num" data-label="#">3</td><td data-label="Test">Invest $1,000.00, receive $300.00, $400.00, $500.00</td><td class="num" data-label="Expected answer">8.8963%</td><td class="num" data-got data-label="Calculator gave">—</td><td data-label="Result"><span class="chip run" data-chip>RUNNING</span></td></tr>
+            <tr><td class="num" data-label="#">4</td><td data-label="Test">Invest $5,000.00, receive $1,500.00, $2,000.00, $2,500.00, $1,000.00</td><td class="num" data-label="Expected answer">15.3221%</td><td class="num" data-got data-label="Calculator gave">—</td><td data-label="Result"><span class="chip run" data-chip>RUNNING</span></td></tr>
+            <tr><td class="num" data-label="#">5</td><td data-label="Test">No sign change: all flows positive, so no IRR exists</td><td class="num" data-label="Expected answer">Clear message: no internal rate of return exists</td><td class="num" data-got data-label="Calculator gave">—</td><td data-label="Result"><span class="chip run" data-chip>RUNNING</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="record-note" style="margin-top:12px" id="test-summary">Tests are running…</p>
+    </section>
+
+    <section class="part" aria-labelledby="verdictH">
+      <h2 id="verdictH">Build record — verdict for this tool</h2>
+      <div class="table-scroll stack-wrap">
+        <table class="stackable">
+          <thead><tr><th scope="col">#</th><th scope="col">Tool</th><th scope="col">Verdict</th><th scope="col">Input → Output</th><th scope="col">Library / method</th><th scope="col">Limit or note shown on the page</th></tr></thead>
+          <tbody>
+            <tr>
+              <td class="num" data-label="#">1</td>
+              <td data-label="Tool">IRR Calculator</td>
+              <td data-label="Verdict"><strong>Browser-real</strong></td>
+              <td data-label="Input → Output">A list of yearly cash flows -&gt; the internal rate of return</td>
+              <td data-label="Library / method">No library. Plain JavaScript arithmetic in the browser</td>
+              <td data-label="Limit or note shown on the page">At least 2 cash flows; each flow up to 1,000,000,000,000; empty input shows a clear message.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="record-note" style="margin-top:12px"><strong>Plan for this tool:</strong> one page only, in the Money hub, built from the shared template with no libraries and no server. Security items that need a server (login, database, password rules) are N/A — this is a static page with no login and no stored data.</p>
+    </section>
+    <script type="application/json" id="tool-config">{"tool": "irr", "chart": "irr", "tests": [{"label": "Invest $100.00, receive $110.00 after one year", "inputs": {"flows": "-100, 110"}, "expect": "10.0000%"}, {"label": "Invest $100.00, receive $60.00 and $60.00", "inputs": {"flows": "-100, 60, 60"}, "expect": "13.0662%"}, {"label": "Invest $1,000.00, receive $300.00, $400.00, $500.00", "inputs": {"flows": "-1000, 300, 400, 500"}, "expect": "8.8963%"}, {"label": "Invest $5,000.00, receive $1,500.00, $2,000.00, $2,500.00, $1,000.00", "inputs": {"flows": "-5000, 1500, 2000, 2500, 1000"}, "expect": "15.3221%"}, {"label": "No sign change: all flows positive, so no IRR exists", "inputs": {"flows": "100, 110"}, "expect_state": "error", "expect_text": "Clear message: no internal rate of return exists"}], "fields": ["flows"]}</script>
+  </main>
+<footer class="site">
+    <span class="fbrand">Calculatorly</span>
+    <nav aria-label="Footer">
+      <a href="../../about/">About</a>
+      <a href="../../contact/">Contact</a>
+      <a href="../../privacy/">Privacy</a>
+      <a href="../../terms/">Terms</a>
+      <a href="../../disclaimer/">Disclaimer</a>
+    </nav>
+    <span>Calculatorly — free calculators, no sign-up. The domain calculatorly.online is bought; hosting is separate.</span>
+    <div class="ad-slot" hidden aria-hidden="true"></div>
+  </footer>
+</div>
+<script src="../../assets/js/calculatorly.js"></script>
+<script src="../../assets/js/engines-s4.js"></script>
+</body>
+</html>

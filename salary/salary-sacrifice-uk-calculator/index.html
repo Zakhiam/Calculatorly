@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light" />
+<title>UK Salary Sacrifice Calculator | Calculatorly</title>
+<meta name="description" content="Work out your tax and National Insurance saving in the UK — formula, worked example and breakdown. Free, no sign-up, answers as you type." />
+<link rel="canonical" href="https://calculatorly.online/salary/salary-sacrifice-uk-calculator/" />
+<link rel="icon" href="data:," />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,400;0,600;0,700;0,800;1,400&amp;family=IBM+Plex+Mono:wght@500;600;700&amp;display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../../assets/css/khata.css" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"UK Salary Sacrifice Calculator","url":"https://calculatorly.online/salary/salary-sacrifice-uk-calculator/","applicationCategory":"UtilitiesApplication","operatingSystem":"Any (web browser)","browserRequirements":"Requires JavaScript","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"provider":{"@type":"Organization","name":"Calculatorly","url":"https://calculatorly.online/"}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://calculatorly.online/"},{"@type":"ListItem","position":2,"name":"Salary and Tax","item":"https://calculatorly.online/salary/"},{"@type":"ListItem","position":3,"name":"UK Salary Sacrifice Calculator","item":"https://calculatorly.online/salary/salary-sacrifice-uk-calculator/"}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is salary sacrifice in the UK?","acceptedAnswer":{"@type":"Answer","text":"It is an agreement with your employer to give up part of your salary in return for a benefit, most often extra pension contributions. The sacrificed amount is not counted as taxable pay or as pay for National Insurance, so you save both income tax and National Insurance on it."}},{"@type":"Question","name":"Why do I save National Insurance as well as tax?","acceptedAnswer":{"@type":"Answer","text":"Because National Insurance is charged on the pay after the sacrifice. On a £60,000 salary the saving is £2,000.00 of income tax and £100.00 of National Insurance, which is £2,100.00 in total."}},{"@type":"Question","name":"Does my employer save anything too?","acceptedAnswer":{"@type":"Answer","text":"Yes. Your employer also pays less employer National Insurance, at 15% on pay above £5,000 a year. Some employers add some of that saving to your pension, but this page counts only your own saving."}},{"@type":"Question","name":"Does salary sacrifice affect my state pension or benefits?","acceptedAnswer":{"@type":"Answer","text":"It can. A lower salary can reduce pay-linked benefits such as statutory maternity pay or mortgage borrowing, and it can affect the National Insurance record if pay falls below the threshold. Keep your pay above £12,570 a year so the record is protected."}},{"@type":"Question","name":"What if my salary is over £100,000?","acceptedAnswer":{"@type":"Answer","text":"Then the Personal Allowance tapers away by £1 for every £2 over £100,000, and salary sacrifice can restore some of it. This calculator applies the taper, so the saving shown already includes that effect."}},{"@type":"Question","name":"Is this an exact figure for my payslip?","acceptedAnswer":{"@type":"Answer","text":"No. This is an estimate only, not professional advice. It uses the 2026/27 HMRC rates for England, Wales and Northern Ireland, and it leaves out student loan repayments, pension tax relief limits and Scottish rates. Check HMRC before acting on a figure."}}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"HowTo","name":"How to use the UK Salary Sacrifice Calculator","step":[{"@type":"HowToStep","position":1,"text":"Type your gross yearly salary and the amount you sacrifice into your pension each year. There is no Calculate button — the answer appears as you type."},{"@type":"HowToStep","position":2,"text":"Read the result line for the income tax and National Insurance saved, and the sentence under it for the new take-home pay."},{"@type":"HowToStep","position":3,"text":"Check the bar and table under the result to see the tax and National Insurance before and after the sacrifice."}]}
+</script>
+</head>
+<body class="hub-salary">
+<div class="sheet">
+  <header class="masthead">
+    <div class="brand"><a href="../../">Calculator<span class="ly">ly</span></a></div>
+    <div class="domain mono">calculatorly.online</div>
+    <div class="mast-note">Every calculator, worked out in full.</div>
+  </header>
+  <main>
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="https://calculatorly.online/">Home</a></li>
+        <li><a href="https://calculatorly.online/salary/">Salary and Tax</a></li>
+        <li aria-current="page">UK Salary Sacrifice Calculator</li>
+      </ol>
+    </nav>
+    <span class="hub-tag">Hub: Salary and Tax</span>
+    
+    <h1>UK Salary Sacrifice Calculator</h1>
+    <nav class="country-switch" aria-label="Choose your country">
+      <label for="country-switch">Country</label>
+      <select id="country-switch"><option value="https://calculatorly.online/salary/salary-sacrifice-uk-calculator/" selected>United Kingdom (£)</option><option value="https://calculatorly.online/salary/salary-sacrifice-au-calculator/">Australia (A$)</option></select>
+      <p class="small">Each country has its own page, with its own currency, tax year and official source.</p>
+    </nav>
+
+    <section class="tool" aria-label="UK Salary Sacrifice Calculator tool">
+      <p class="tool-q">How much tax and National Insurance does salary sacrifice save in the UK?</p>
+      <div class="fields">
+      <div class="field">
+        <label for="in-salary">Gross yearly salary (£)</label>
+        <input id="in-salary" type="number" inputmode="decimal" step="any" value="60000" autocomplete="off" />
+      </div>
+      <div class="field">
+        <label for="in-sacrifice">Amount sacrificed each year (£)</label>
+        <input id="in-sacrifice" type="number" inputmode="decimal" step="any" value="5000" autocomplete="off" />
+      </div>
+      </div>
+
+      <div class="result-wrap" aria-live="polite">
+        <div class="stamp" id="stamp" aria-hidden="true" hidden>Checked ✓</div>
+        <div class="result-label">Result</div>
+        <div class="result" id="result">£2,100.00</div>
+        <div class="result-sentence" id="sentence">Sacrificing £5,000.00 saves £2,100.00 in tax and National Insurance; take-home pay falls to £42,457.40 and £5,000.00 goes into your pension.</div>
+        <p class="msg" id="msg" hidden></p>
+      </div>
+      <ol class="howto">
+        <li><strong>Type your gross yearly salary and the amount you sacrifice into your pension each year. There is no Calculate button — the answer appears as you type.</strong></li>
+        <li><strong>Read the result line for the income tax and National Insurance saved, and the sentence under it for the new take-home pay.</strong></li>
+        <li><strong>Check the bar and table under the result to see the tax and National Insurance before and after the sacrifice.</strong></li>
+      </ol>
+      <p class="limit-note"><strong>Limit:</strong> Numbers up to 1,000,000,000,000; empty or over-limit input shows a clear message. <strong>Rounding:</strong> every result uses one named default — Half-up to 2 decimal places — in the answer, the bar and the table. The Checked stamp appears on the result box only while a valid result is showing.</p>
+    </section>
+
+    <section class="quick" aria-labelledby="quickH">
+      <h2 id="quickH"><span class="no">2</span>Quick answer</h2>
+      <p>Salary sacrifice cuts your taxable pay by the amount sacrificed, so you pay less income tax and National Insurance. On a salary of £60,000 with £5,000 sacrificed, the saving is £2,100.00. Type your salary and sacrifice above and this calculator shows the saving instantly, with the new take-home pay below.</p>
+    </section>
+
+    <section class="part" aria-labelledby="formulaH">
+      <h2 id="formulaH"><span class="no">3</span>The formula</h2>
+      <p>Income tax uses the HMRC 2026/27 bands for England, Wales and Northern Ireland, and National Insurance uses the Class 1 employee rates. The sacrificed amount goes into your pension in full.</p>
+      <div class="formula-box">
+        <strong>Tax and National Insurance saved — in words: work out the tax and National Insurance on the full salary, work out both on the salary after the sacrifice, and take the second away from the first.</strong>
+        <span class="sym">saving = (tax + National Insurance on full salary) − (tax + National Insurance after sacrifice)</span>
+      </div>
+      <p class="small">Formula source: HMRC 2026/27 — Personal Allowance £12,570, basic rate 20% to £50,270, higher rate 40% to £125,140, additional rate 45% above; Class 1 National Insurance 8% from £12,570 to £50,270 and 2% above. Last checked 11 November 2026. This is an estimate only, not professional advice.</p>
+    </section>
+
+    <section class="part" aria-labelledby="exampleH">
+      <h2 id="exampleH"><span class="no">4</span>Worked example: £60,000 salary, £5,000 sacrificed</h2>
+      <ol class="steps">
+        <li>Tax and National Insurance on £60,000: income tax £11,432.00 + National Insurance £3,210.60 = £14,642.60.</li>
+        <li>Tax and National Insurance on £55,000 after the sacrifice: income tax £9,432.00 + National Insurance £3,110.60 = £12,542.60.</li>
+        <li>Saving: £14,642.60 − £12,542.60 = £2,100.00.</li>
+        <li class="ans">Answer: £2,100.00 saved. Take-home pay falls from £45,357.40 to £42,457.40, and £5,000.00 goes into your pension.</li>
+      </ol>
+      <p class="small">Try it in the tool above: type 60000 and 5000, and the result line shows £2,100.00.</p>
+    </section>
+
+    <section class="part" aria-labelledby="chartH">
+      <h2 id="chartH"><span class="no">5</span>Your result, drawn</h2>
+      <p>This bar and table are drawn from the numbers you typed above. Change a number and they change with it.</p>
+      <div class="bar" role="img" id="bar" aria-label="Bar showing the saving out of the amount sacrificed">
+        <div class="seg-a" style="width:42%"></div>
+        <div class="seg-b"></div>
+      </div>
+      <div class="bar-legend">
+        <span><span class="swatch a"></span><span id="legend-a">Tax and National Insurance saved: £2,100.00</span></span>
+        <span><span class="swatch b"></span><span id="legend-b">Sacrificed: £5,000.00</span></span>
+      </div>
+      <div class="table-scroll">
+        <table>
+          <thead><tr><th scope="col">Part of your sum</th><th scope="col" class="num">Value</th></tr></thead>
+          <tbody id="break-body">
+            <tr><td>Income tax before</td><td class="num">£11,432.00</td></tr>
+            <tr><td>National Insurance before</td><td class="num">£3,210.60</td></tr>
+            <tr><td>Income tax after</td><td class="num">£9,432.00</td></tr>
+            <tr><td>National Insurance after</td><td class="num">£3,110.60</td></tr>
+            <tr><td>Total saved (your result)</td><td class="num">£2,100.00</td></tr>
+            <tr><td>Take-home pay after</td><td class="num">£42,457.40</td></tr>
+            <tr><td>Amount into pension</td><td class="num">£5,000.00</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="part" aria-labelledby="faqH">
+      <h2 id="faqH"><span class="no">6</span>Questions about uk salary sacrifice</h2>
+      <details>
+        <summary>What is salary sacrifice in the UK?</summary>
+        <p>It is an agreement with your employer to give up part of your salary in return for a benefit, most often extra pension contributions. The sacrificed amount is not counted as taxable pay or as pay for National Insurance, so you save both income tax and National Insurance on it.</p>
+      </details>
+      <details>
+        <summary>Why do I save National Insurance as well as tax?</summary>
+        <p>Because National Insurance is charged on the pay after the sacrifice. On a £60,000 salary the saving is £2,000.00 of income tax and £100.00 of National Insurance, which is £2,100.00 in total.</p>
+      </details>
+      <details>
+        <summary>Does my employer save anything too?</summary>
+        <p>Yes. Your employer also pays less employer National Insurance, at 15% on pay above £5,000 a year. Some employers add some of that saving to your pension, but this page counts only your own saving.</p>
+      </details>
+      <details>
+        <summary>Does salary sacrifice affect my state pension or benefits?</summary>
+        <p>It can. A lower salary can reduce pay-linked benefits such as statutory maternity pay or mortgage borrowing, and it can affect the National Insurance record if pay falls below the threshold. Keep your pay above £12,570 a year so the record is protected.</p>
+      </details>
+      <details>
+        <summary>What if my salary is over £100,000?</summary>
+        <p>Then the Personal Allowance tapers away by £1 for every £2 over £100,000, and salary sacrifice can restore some of it. This calculator applies the taper, so the saving shown already includes that effect.</p>
+      </details>
+      <details>
+        <summary>Is this an exact figure for my payslip?</summary>
+        <p>No. This is an estimate only, not professional advice. It uses the 2026/27 HMRC rates for England, Wales and Northern Ireland, and it leaves out student loan repayments, pension tax relief limits and Scottish rates. Check HMRC before acting on a figure.</p>
+      </details>
+    </section>
+
+    <section class="part" aria-labelledby="relatedH">
+      <h2 id="relatedH"><span class="no">7</span>Related tools</h2>
+      <p class="small">More tools that go with this one — each with its own page, one job per page:</p>
+      <ul class="related">
+        <li><a href="https://calculatorly.online/salary/salary-country-comparison-calculator/">Salary Country Comparison Calculator<span class="d">Take-home pay for the same salary in the UK, USA, Australia and Canada.</span><span class="u mono">calculatorly.online/salary/salary-country-comparison-calculator/</span></a></li>
+        <li><a href="https://calculatorly.online/salary/salary-sacrifice-au-calculator/">Australia Salary Sacrifice Calculator<span class="d">The Australian version: super, income tax and Medicare levy saved.</span><span class="u mono">calculatorly.online/salary/salary-sacrifice-au-calculator/</span></a></li>
+        <li><a href="https://calculatorly.online/salary/overtime-calculator/">Overtime Calculator<span class="d">Extra pay for hours over the standard week, in the USA and Australia.</span><span class="u mono">calculatorly.online/salary/overtime-calculator/</span></a></li>
+      </ul>
+    </section>
+
+    <section class="part" aria-labelledby="testsH">
+      <h2 id="testsH">Known-answer test cases — run live on this page</h2>
+      <p>Each test below is worked out by the same code as the calculator above, the moment this page loads, and marked Pass or Fail against its known answer. If a row ever shows Fail, the page is not finished.</p>
+      <div class="table-scroll stack-wrap">
+        <table class="stackable">
+          <thead><tr><th scope="col">#</th><th scope="col">Test</th><th scope="col">Expected answer</th><th scope="col">Calculator gave</th><th scope="col">Result</th></tr></thead>
+          <tbody id="test-body">
+            <tr><td class="num" data-label="#">1</td><td data-label="Test">£60,000 salary, £5,000 sacrificed</td><td class="num" data-label="Expected answer">£2,100.00</td><td class="num" data-got data-label="Calculator gave">—</td><td data-label="Result"><span class="chip run" data-chip>RUNNING</span></td></tr>
+            <tr><td class="num" data-label="#">2</td><td data-label="Test">£40,000 salary, £4,000 sacrificed</td><td class="num" data-label="Expected answer">£1,120.00</td><td class="num" data-got data-label="Calculator gave">—</td><td data-label="Result"><span class="chip run" data-chip>RUNNING</span></td></tr>
+            <tr><td class="num" data-label="#">3</td><td data-label="Test">£30,000 salary, £2,000 sacrificed</td><td class="num" data-label="Expected answer">£560.00</td><td class="num" data-got data-label="Calculator gave">—</td><td data-label="Result"><span class="chip run" data-chip>RUNNING</span></td></tr>
+            <tr><td class="num" data-label="#">4</td><td data-label="Test">Empty input: salary left blank</td><td class="num" data-label="Expected answer">Prompt message, no result, no NaN</td><td class="num" data-got data-label="Calculator gave">—</td><td data-label="Result"><span class="chip run" data-chip>RUNNING</span></td></tr>
+            <tr><td class="num" data-label="#">5</td><td data-label="Test">Very large value: £999,999,999,999 salary</td><td class="num" data-label="Expected answer">£4,700.00</td><td class="num" data-got data-label="Calculator gave">—</td><td data-label="Result"><span class="chip run" data-chip>RUNNING</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="record-note" style="margin-top:12px" id="test-summary">Tests are running…</p>
+    </section>
+
+    <section class="part" aria-labelledby="verdictH">
+      <h2 id="verdictH">Build record — verdict for this tool</h2>
+      <div class="table-scroll stack-wrap">
+        <table class="stackable">
+          <thead><tr><th scope="col">#</th><th scope="col">Tool</th><th scope="col">Verdict</th><th scope="col">Input → Output</th><th scope="col">Library / method</th><th scope="col">Limit or note shown on the page</th></tr></thead>
+          <tbody>
+            <tr>
+              <td class="num" data-label="#">1</td>
+              <td data-label="Tool">UK Salary Sacrifice Calculator</td>
+              <td data-label="Verdict"><strong>Browser-real</strong></td>
+              <td data-label="Input → Output">A UK salary + a sacrificed amount -&gt; the tax and National Insurance saved</td>
+              <td data-label="Library / method">No library. Plain JavaScript arithmetic in the browser</td>
+              <td data-label="Limit or note shown on the page">Numbers up to 1,000,000,000,000; empty or over-limit input shows a clear message.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="record-note" style="margin-top:12px"><strong>Plan for this tool:</strong> one page only, in the Salary and Tax hub, built from the shared template with no libraries and no server. Security items that need a server (login, database, password rules) are N/A — this is a static page with no login and no stored data.</p>
+    </section>
+    <script type="application/json" id="tool-config">{"tool": "salary-sacrifice-uk", "chart": "bar-table", "tests": [{"label": "£60,000 salary, £5,000 sacrificed", "inputs": {"salary": "60000", "sacrifice": "5000"}, "expect": "£2,100.00"}, {"label": "£40,000 salary, £4,000 sacrificed", "inputs": {"salary": "40000", "sacrifice": "4000"}, "expect": "£1,120.00"}, {"label": "£30,000 salary, £2,000 sacrificed", "inputs": {"salary": "30000", "sacrifice": "2000"}, "expect": "£560.00"}, {"label": "Empty input: salary left blank", "inputs": {"salary": "", "sacrifice": "5000"}, "expect_state": "empty", "expect_text": "Prompt message, no result, no NaN"}, {"label": "Very large value: £999,999,999,999 salary", "inputs": {"salary": "999999999999", "sacrifice": "10000"}, "expect": "£4,700.00"}], "fields": ["salary", "sacrifice"]}</script>
+  </main>
+<footer class="site">
+    <span class="fbrand">Calculatorly</span>
+    <nav aria-label="Footer">
+      <a href="../../about/">About</a>
+      <a href="../../contact/">Contact</a>
+      <a href="../../privacy/">Privacy</a>
+      <a href="../../terms/">Terms</a>
+      <a href="../../disclaimer/">Disclaimer</a>
+    </nav>
+    <span>Calculatorly — free calculators, no sign-up. The domain calculatorly.online is bought; hosting is separate.</span>
+    <div class="ad-slot" hidden aria-hidden="true"></div>
+  </footer>
+</div>
+<script src="../../assets/js/calculatorly.js"></script>
+<script src="../../assets/js/engines-s3.js"></script>
+</body>
+</html>

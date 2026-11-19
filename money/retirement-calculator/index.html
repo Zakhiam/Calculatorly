@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light" />
+<title>Retirement Calculator | Calculatorly</title>
+<meta name="description" content="Work out how much your retirement savings could be worth — formula, worked example and breakdown. Free, no sign-up, answers as you type." />
+<link rel="canonical" href="https://calculatorly.online/money/retirement-calculator/" />
+<link rel="icon" href="data:," />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,400;0,600;0,700;0,800;1,400&amp;family=IBM+Plex+Mono:wght@500;600;700&amp;display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../../assets/css/khata.css" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Retirement Calculator","url":"https://calculatorly.online/money/retirement-calculator/","applicationCategory":"UtilitiesApplication","operatingSystem":"Any (web browser)","browserRequirements":"Requires JavaScript","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"provider":{"@type":"Organization","name":"Calculatorly","url":"https://calculatorly.online/"}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://calculatorly.online/"},{"@type":"ListItem","position":2,"name":"Money","item":"https://calculatorly.online/money/"},{"@type":"ListItem","position":3,"name":"Retirement Calculator","item":"https://calculatorly.online/money/retirement-calculator/"}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is the projected pot guaranteed?","acceptedAnswer":{"@type":"Answer","text":"No. The growth rate is your own assumption, and real investment growth goes up and down. The figure shows what would happen if growth stayed steady at the rate you typed — it is a plan, not a promise."}},{"@type":"Question","name":"What growth rate should I type?","acceptedAnswer":{"@type":"Answer","text":"Type a rate you think is fair for your savings, and try a lower one too, to see how much the answer moves. Many people try 4%, 6% and 8% side by side. This site does not suggest a rate for you."}},{"@type":"Question","name":"Does the figure include inflation?","acceptedAnswer":{"@type":"Answer","text":"No. The pot is shown in today's money terms only if you type a growth rate that is already after inflation. If your rate is before inflation, the pot will buy less than the number suggests. Try a lower rate to allow for inflation."}},{"@type":"Question","name":"Are fees or tax taken off here?","acceptedAnswer":{"@type":"Answer","text":"No. Investment fees, tax on growth and any pension charges are not taken off. They all reduce the real pot, so ask your provider what they charge."}},{"@type":"Question","name":"What if I save nothing each month?","acceptedAnswer":{"@type":"Answer","text":"The pot is just your current savings grown by the rate you typed. For example, 50,000 at 4% a year for 10 years grows to about 74,541 on its own."}},{"@type":"Question","name":"How are the answers rounded?","acceptedAnswer":{"@type":"Answer","text":"Every result on this page uses one rounding rule: half-up to 2 decimal places. The same rule is used in the answer, the bar and the table, so the figures always agree."}}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"HowTo","name":"How to use the Retirement Calculator","step":[{"@type":"HowToStep","position":1,"text":"Type your current savings, how much you save each month, the yearly growth rate you expect, and the years until retirement. There is no Calculate button — the projection appears as you type."},{"@type":"HowToStep","position":2,"text":"Read the projected pot in the result line, rounded half-up to 2 decimal places."},{"@type":"HowToStep","position":3,"text":"Check the bar and table under the result (Part 5 below) to see what you pay in and how much growth adds."}]}
+</script>
+</head>
+<body class="hub-money">
+<div class="sheet">
+  <header class="masthead">
+    <div class="brand"><a href="../../">Calculator<span class="ly">ly</span></a></div>
+    <div class="domain mono">calculatorly.online</div>
+    <div class="mast-note">Every calculator, worked out in full.</div>
+  </header>
+  <main>
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="https://calculatorly.online/">Home</a></li>
+        <li><a href="https://calculatorly.online/money/">Money</a></li>
+        <li aria-current="page">Retirement Calculator</li>
+      </ol>
+    </nav>
+    <span class="hub-tag">Hub: Money</span>
+    
+    <h1>Retirement Calculator</h1>
+
+    <section class="tool" aria-label="Retirement Calculator tool">
+      <p class="tool-q">How much could my retirement savings be worth?</p>
+      <div class="fields">
+      <div class="field">
+        <label for="in-current">Current savings</label>
+        <input id="in-current" type="number" inputmode="decimal" step="any" value="10000" autocomplete="off" />
+      </div>
+      <div class="field">
+        <label for="in-monthly">Monthly saving</label>
+        <input id="in-monthly" type="number" inputmode="decimal" step="any" value="200" autocomplete="off" />
+      </div>
+      <div class="field">
+        <label for="in-rate">Yearly growth rate you expect (%)</label>
+        <input id="in-rate" type="number" inputmode="decimal" step="any" value="6" autocomplete="off" />
+      </div>
+      <div class="field">
+        <label for="in-years">Years until retirement</label>
+        <input id="in-years" type="number" inputmode="decimal" step="any" value="30" autocomplete="off" />
+      </div>
+      </div>
+
+      <div class="result-wrap" aria-live="polite">
+        <div class="stamp" id="stamp" aria-hidden="true" hidden>Checked ✓</div>
+        <div class="result-label">Result</div>
+        <div class="result" id="result">261,128.76</div>
+        <div class="result-sentence" id="sentence">Your savings could be worth 261,128.76 in 30 years if they grow at 6.00% a year and you save 200.00 a month, in your own currency. The growth rate is your own assumption, not a promise.</div>
+        <p class="msg" id="msg" hidden></p>
+      </div>
+      <ol class="howto">
+        <li><strong>Type your current savings, how much you save each month, the yearly growth rate you expect, and the years until retirement. There is no Calculate button — the projection appears as you type.</strong></li>
+        <li><strong>Read the projected pot in the result line, rounded half-up to 2 decimal places.</strong></li>
+        <li><strong>Check the bar and table under the result (Part 5 below) to see what you pay in and how much growth adds.</strong></li>
+      </ol>
+      <p class="limit-note"><strong>Limit:</strong> Numbers up to 1,000,000,000,000; empty or over-limit input shows a clear message. <strong>Rounding:</strong> every result uses one named default — Half-up to 2 decimal places — in the answer, the bar and the table. The Checked stamp appears on the result box only while a valid result is showing.</p>
+    </section>
+
+    <section class="quick" aria-labelledby="quickH">
+      <h2 id="quickH"><span class="no">2</span>Quick answer</h2>
+      <p>A retirement pot grows from three things: what you already have, what you add each month, and the growth on both. For example, 10,000 saved now plus 200 a month at 6% a year could be worth about 261,129 in 30 years. Type your figures above and this calculator gives the projected pot, with the growth rate as your assumption.</p>
+    </section>
+
+    <section class="part" aria-labelledby="formulaH">
+      <h2 id="formulaH"><span class="no">3</span>The formula</h2>
+      <p>Money grows month by month, and each monthly saving starts growing from the month it is paid in. The formula is:</p>
+      <div class="formula-box">
+        <strong>Retirement projection — in words: grow the current savings by the monthly growth rate for every month, and add the monthly savings grown the same way.</strong>
+        <span class="sym">pot = current × (1 + r)^n + monthly × ((1 + r)^n − 1) ÷ r</span>
+      </div>
+      <p class="small">Formula source: the standard future value formula with monthly contributions at the end of each month. The growth rate is typed by you as your own assumption — it is not a promise, and no fees, tax or inflation are taken off here. This is an estimate only, not professional advice.</p>
+    </section>
+
+    <section class="part" aria-labelledby="exampleH">
+      <h2 id="exampleH"><span class="no">4</span>Worked example: 10,000 now, 200 a month, 6% for 30 years</h2>
+      <ol class="steps">
+        <li>Start with the figures: current savings 10,000, monthly saving 200, yearly growth 6%, 30 years (360 months).</li>
+        <li>Work out the monthly growth rate: 6 ÷ 100 ÷ 12 = 0.005, and the growth factor over 360 months: (1.005)^360 = 6.0226.</li>
+        <li>Put the numbers in the formula: 10,000 × 6.0226 + 200 × (6.0226 − 1) ÷ 0.005.</li>
+        <li class="ans">Answer: the projected pot is 261,128.76. You pay in 82,000.00 and the growth adds 179,128.76.</li>
+      </ol>
+      <p class="small">Try it in the tool above: type 10000, 200, 6 and 30, and the result line shows 261,128.75.</p>
+    </section>
+
+    <section class="part" aria-labelledby="chartH">
+      <h2 id="chartH"><span class="no">5</span>Your result, drawn</h2>
+      <p>This bar and table are drawn from the numbers you typed above. Change a number and they change with it.</p>
+      <div class="bar" role="img" id="bar" aria-label="Bar showing growth 179,128.76 out of the projected pot 261,128.76">
+        <div class="seg-a" style="width:68.6%"></div>
+        <div class="seg-b"></div>
+      </div>
+      <div class="bar-legend">
+        <span><span class="swatch a"></span><span id="legend-a">Growth: 179,128.76</span></span>
+        <span><span class="swatch b"></span><span id="legend-b">What you pay in: 82,000.00</span></span>
+      </div>
+      <div class="table-scroll">
+        <table>
+          <thead><tr><th scope="col">Part of your sum</th><th scope="col" class="num">Value</th></tr></thead>
+          <tbody id="break-body">
+            <tr><td>Current savings</td><td class="num">10,000.00</td></tr>
+            <tr><td>Monthly saving</td><td class="num">200.00</td></tr>
+            <tr><td>Total you pay in</td><td class="num">82,000.00</td></tr>
+            <tr><td>Growth at 6.00% a year</td><td class="num">179,128.76</td></tr>
+            <tr><td>Projected pot (your result)</td><td class="num">261,128.76</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="part" aria-labelledby="faqH">
+      <h2 id="faqH"><span class="no">6</span>Questions about retirement</h2>
+      <details>
+        <summary>Is the projected pot guaranteed?</summary>
+        <p>No. The growth rate is your own assumption, and real investment growth goes up and down. The figure shows what would happen if growth stayed steady at the rate you typed — it is a plan, not a promise.</p>
+      </details>
+      <details>
+        <summary>What growth rate should I type?</summary>
+        <p>Type a rate you think is fair for your savings, and try a lower one too, to see how much the answer moves. Many people try 4%, 6% and 8% side by side. This site does not suggest a rate for you.</p>
+      </details>
+      <details>
+        <summary>Does the figure include inflation?</summary>
+        <p>No. The pot is shown in today&#x27;s money terms only if you type a growth rate that is already after inflation. If your rate is before inflation, the pot will buy less than the number suggests. Try a lower rate to allow for inflation.</p>
+      </details>
+      <details>
+        <summary>Are fees or tax taken off here?</summary>
+        <p>No. Investment fees, tax on growth and any pension charges are not taken off. They all reduce the real pot, so ask your provider what they charge.</p>
+      </details>
+      <details>
+        <summary>What if I save nothing each month?</summary>
+        <p>The pot is just your current savings grown by the rate you typed. For example, 50,000 at 4% a year for 10 years grows to about 74,541 on its own.</p>
+      </details>
+      <details>
+        <summary>How are the answers rounded?</summary>
+        <p>Every result on this page uses one rounding rule: half-up to 2 decimal places. The same rule is used in the answer, the bar and the table, so the figures always agree.</p>
+      </details>
+    </section>
+
+    <section class="part" aria-labelledby="relatedH">
+      <h2 id="relatedH"><span class="no">7</span>Related tools</h2>
+      <p class="small">More tools that go with this one — each with its own page, one job per page:</p>
+      <ul class="related">
+        <li><a href="https://calculatorly.online/money/savings-goal-calculator/">Savings Goal Calculator<span class="d">Work out how much to save each month to reach a goal.</span><span class="u mono">calculatorly.online/money/savings-goal-calculator/</span></a></li>
+        <li><a href="https://calculatorly.online/money/compound-interest-calculator/">Compound Interest Calculator<span class="d">Work out how your savings grow with compound interest.</span><span class="u mono">calculatorly.online/money/compound-interest-calculator/</span></a></li>
+        <li><a href="https://calculatorly.online/money/mortgage-calculator/">Mortgage Calculator<span class="d">Work out your monthly mortgage payment from loan, rate and term.</span><span class="u mono">calculatorly.online/money/mortgage-calculator/</span></a></li>
+      </ul>
+    </section>
+
+    <section class="part" aria-labelledby="testsH">
+      <h2 id="testsH">Known-answer test cases — run live on this page</h2>
+      <p>Each test below is worked out by the same code as the calculator above, the moment this page loads, and marked Pass or Fail against its known answer. If a row ever shows Fail, the page is not finished.</p>
+      <div class="table-scroll stack-wrap">
+        <table class="stackable">
+          <thead><tr><th scope="col">#</th><th scope="col">Test</th><th scope="col">Expected answer</th><th scope="col">Calculator gave</th><th scope="col">Result</th></tr></thead>
+          <tbody id="test-body">
+            <tr><td class="num" data-label="#">1</td><td data-label="Test">10,000 now plus 200 a month at 6% for 30 years</td><td class="num" data-label="Expected answer">261,128.76</td><td class="num" data-got data-label="Calculator gave">—</td><td data-label="Result"><span class="chip run" data-chip>RUNNING</span></td></tr>
+            <tr><td class="num" data-label="#">2</td><td data-label="Test">No current savings: 100 a month at 5% for 20 years</td><td class="num" data-label="Expected answer">41,103.37</td><td class="num" data-got data-label="Calculator gave">—</td><td data-label="Result"><span class="chip run" data-chip>RUNNING</span></td></tr>
+            <tr><td class="num" data-label="#">3</td><td data-label="Test">No monthly saving: 50,000 at 4% for 10 years</td><td class="num" data-label="Expected answer">74,541.63</td><td class="num" data-got data-label="Calculator gave">—</td><td data-label="Result"><span class="chip run" data-chip>RUNNING</span></td></tr>
+            <tr><td class="num" data-label="#">4</td><td data-label="Test">Empty input: the current savings box left blank</td><td class="num" data-label="Expected answer">State: empty</td><td class="num" data-got data-label="Calculator gave">—</td><td data-label="Result"><span class="chip run" data-chip>RUNNING</span></td></tr>
+            <tr><td class="num" data-label="#">5</td><td data-label="Test">Very large value: 999,999,999,999 now at 6% for 30 years</td><td class="num" data-label="Expected answer">6,022,575,212,256.96</td><td class="num" data-got data-label="Calculator gave">—</td><td data-label="Result"><span class="chip run" data-chip>RUNNING</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="record-note" style="margin-top:12px" id="test-summary">Tests are running…</p>
+    </section>
+
+    <section class="part" aria-labelledby="verdictH">
+      <h2 id="verdictH">Build record — verdict for this tool</h2>
+      <div class="table-scroll stack-wrap">
+        <table class="stackable">
+          <thead><tr><th scope="col">#</th><th scope="col">Tool</th><th scope="col">Verdict</th><th scope="col">Input → Output</th><th scope="col">Library / method</th><th scope="col">Limit or note shown on the page</th></tr></thead>
+          <tbody>
+            <tr>
+              <td class="num" data-label="#">1</td>
+              <td data-label="Tool">Retirement Calculator</td>
+              <td data-label="Verdict"><strong>Browser-real</strong></td>
+              <td data-label="Input → Output">Current savings + monthly saving + a growth rate + years to retirement -&gt; the projected pot at retirement</td>
+              <td data-label="Library / method">No library. Plain JavaScript arithmetic in the browser</td>
+              <td data-label="Limit or note shown on the page">Numbers up to 1,000,000,000,000; empty or over-limit input shows a clear message.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="record-note" style="margin-top:12px"><strong>Plan for this tool:</strong> one page only, in the Money hub, built from the shared template with no libraries and no server. Security items that need a server (login, database, password rules) are N/A — this is a static page with no login and no stored data.</p>
+    </section>
+    <script type="application/json" id="tool-config">{"tool": "retirement", "chart": "bar-table", "tests": [{"label": "10,000 now plus 200 a month at 6% for 30 years", "inputs": {"current": "10000", "monthly": "200", "rate": "6", "years": "30"}, "expect": "261,128.76"}, {"label": "No current savings: 100 a month at 5% for 20 years", "inputs": {"current": "0", "monthly": "100", "rate": "5", "years": "20"}, "expect": "41,103.37"}, {"label": "No monthly saving: 50,000 at 4% for 10 years", "inputs": {"current": "50000", "monthly": "0", "rate": "4", "years": "10"}, "expect": "74,541.63"}, {"label": "Empty input: the current savings box left blank", "inputs": {"current": "", "monthly": "200", "rate": "6", "years": "30"}, "expect_state": "empty", "expect_text": "State: empty"}, {"label": "Very large value: 999,999,999,999 now at 6% for 30 years", "inputs": {"current": "999999999999", "monthly": "0", "rate": "6", "years": "30"}, "expect": "6,022,575,212,256.96"}], "fields": ["current", "monthly", "rate", "years"]}</script>
+  </main>
+<footer class="site">
+    <span class="fbrand">Calculatorly</span>
+    <nav aria-label="Footer">
+      <a href="../../about/">About</a>
+      <a href="../../contact/">Contact</a>
+      <a href="../../privacy/">Privacy</a>
+      <a href="../../terms/">Terms</a>
+      <a href="../../disclaimer/">Disclaimer</a>
+    </nav>
+    <span>Calculatorly — free calculators, no sign-up. The domain calculatorly.online is bought; hosting is separate.</span>
+    <div class="ad-slot" hidden aria-hidden="true"></div>
+  </footer>
+</div>
+<script src="../../assets/js/calculatorly.js"></script>
+<script src="../../assets/js/engines-s1.js"></script>
+</body>
+</html>

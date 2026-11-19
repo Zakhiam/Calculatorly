@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light" />
+<title>Australia Salary Sacrifice Calculator | Calculatorly</title>
+<meta name="description" content="Work out your tax saving from salary sacrifice in Australia — formula, worked example and breakdown. Free, no sign-up, answers as you type." />
+<link rel="canonical" href="https://calculatorly.online/salary/salary-sacrifice-au-calculator/" />
+<link rel="icon" href="data:," />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,400;0,600;0,700;0,800;1,400&amp;family=IBM+Plex+Mono:wght@500;600;700&amp;display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../../assets/css/khata.css" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Australia Salary Sacrifice Calculator","url":"https://calculatorly.online/salary/salary-sacrifice-au-calculator/","applicationCategory":"UtilitiesApplication","operatingSystem":"Any (web browser)","browserRequirements":"Requires JavaScript","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"provider":{"@type":"Organization","name":"Calculatorly","url":"https://calculatorly.online/"}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://calculatorly.online/"},{"@type":"ListItem","position":2,"name":"Salary and Tax","item":"https://calculatorly.online/salary/"},{"@type":"ListItem","position":3,"name":"Australia Salary Sacrifice Calculator","item":"https://calculatorly.online/salary/salary-sacrifice-au-calculator/"}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is salary sacrifice in Australia?","acceptedAnswer":{"@type":"Answer","text":"It is an agreement with your employer to give up part of your salary in return for a benefit, most often extra super contributions. The sacrificed amount is not counted as taxable income, so you pay less income tax and Medicare levy on it."}},{"@type":"Question","name":"How much of the sacrificed amount reaches my super?","acceptedAnswer":{"@type":"Answer","text":"This calculator takes 15% off inside the fund, so A$10,000 sacrificed puts A$8,500.00 into super. That is the standard contributions tax rate. A higher rate of 30% can apply to very high incomes under Division 293, which this page does not cover."}},{"@type":"Question","name":"Do laptops, phones and tools still escape fringe benefits tax when salary sacrificed?","acceptedAnswer":{"@type":"Answer","text":"No. From 1 April 2027, work-related items provided through a salary sacrifice arrangement are no longer exempt from fringe benefits tax. That covers portable electronic devices such as laptops and phones, computer software, protective clothing, briefcases and tools of trade. The ATO published this change on 7 September 2026."}},{"@type":"Question","name":"Does salary sacrifice change my super guarantee?","acceptedAnswer":{"@type":"Answer","text":"No. Your employer still pays the super guarantee of 12% on your ordinary earnings. The sacrificed amount is extra, on top of that. Check with your employer whether the guarantee is worked out on the salary before or after the sacrifice."}},{"@type":"Question","name":"What is the Medicare levy shade-in?","acceptedAnswer":{"@type":"Answer","text":"Low incomes pay no levy, or a reduced levy. There is no levy on taxable income of A$28,011 or less, then the levy is 10% of the amount over that line until it reaches the full 2%. This calculator applies that shade-in."}},{"@type":"Question","name":"Is this an exact figure for my tax return?","acceptedAnswer":{"@type":"Answer","text":"No. This is an estimate only, not professional advice. It uses the 2026–27 ATO rates, leaves out offsets, the Medicare levy surcharge, HELP repayments and Division 293, and it cannot know your full tax position. Check the ATO before acting on a figure."}}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"HowTo","name":"How to use the Australia Salary Sacrifice Calculator","step":[{"@type":"HowToStep","position":1,"text":"Type your gross yearly salary and the amount you sacrifice each year. There is no Calculate button — the answer appears as you type."},{"@type":"HowToStep","position":2,"text":"Read the result line for the tax saved, and the sentence under it for the new take-home pay and the amount that goes into super."},{"@type":"HowToStep","position":3,"text":"Check the bar and table under the result to see the tax before and after the sacrifice."}]}
+</script>
+</head>
+<body class="hub-salary">
+<div class="sheet">
+  <header class="masthead">
+    <div class="brand"><a href="../../">Calculator<span class="ly">ly</span></a></div>
+    <div class="domain mono">calculatorly.online</div>
+    <div class="mast-note">Every calculator, worked out in full.</div>
+  </header>
+  <main>
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="https://calculatorly.online/">Home</a></li>
+        <li><a href="https://calculatorly.online/salary/">Salary and Tax</a></li>
+        <li aria-current="page">Australia Salary Sacrifice Calculator</li>
+      </ol>
+    </nav>
+    <span class="hub-tag">Hub: Salary and Tax</span>
+    
+    <h1>Australia Salary Sacrifice Calculator</h1>
+    <nav class="country-switch" aria-label="Choose your country">
+      <label for="country-switch">Country</label>
+      <select id="country-switch"><option value="https://calculatorly.online/salary/salary-sacrifice-uk-calculator/">United Kingdom (£)</option><option value="https://calculatorly.online/salary/salary-sacrifice-au-calculator/" selected>Australia (A$)</option></select>
+      <p class="small">Each country has its own page, with its own currency, tax year and official source.</p>
+    </nav>
+
+    <section class="tool" aria-label="Australia Salary Sacrifice Calculator tool">
+      <p class="tool-q">How much tax does salary sacrifice save in Australia?</p>
+      <div class="fields">
+      <div class="field">
+        <label for="in-salary">Gross yearly salary (A$)</label>
+        <input id="in-salary" type="number" inputmode="decimal" step="any" value="100000" autocomplete="off" />
+      </div>
+      <div class="field">
+        <label for="in-sacrifice">Amount sacrificed each year (A$)</label>
+        <input id="in-sacrifice" type="number" inputmode="decimal" step="any" value="10000" autocomplete="off" />
+      </div>
+      </div>
+
+      <div class="result-wrap" aria-live="polite">
+        <div class="stamp" id="stamp" aria-hidden="true" hidden>Checked ✓</div>
+        <div class="result-label">Result</div>
+        <div class="result" id="result">A$3,200.00</div>
+        <div class="result-sentence" id="sentence">Sacrificing A$10,000.00 saves A$3,200.00 in tax; take-home pay falls to A$70,680.00 and A$8,500.00 goes into super.</div>
+        <p class="msg" id="msg" hidden></p>
+      </div>
+      <ol class="howto">
+        <li><strong>Type your gross yearly salary and the amount you sacrifice each year. There is no Calculate button — the answer appears as you type.</strong></li>
+        <li><strong>Read the result line for the tax saved, and the sentence under it for the new take-home pay and the amount that goes into super.</strong></li>
+        <li><strong>Check the bar and table under the result to see the tax before and after the sacrifice.</strong></li>
+      </ol>
+      <p class="limit-note"><strong>Limit:</strong> Numbers up to 1,000,000,000,000; empty or over-limit input shows a clear message. <strong>Rounding:</strong> every result uses one named default — Half-up to 2 decimal places — in the answer, the bar and the table. The Checked stamp appears on the result box only while a valid result is showing.</p>
+    </section>
+
+    <section class="quick" aria-labelledby="quickH">
+      <h2 id="quickH"><span class="no">2</span>Quick answer</h2>
+      <p>Salary sacrifice cuts your taxable income by the amount sacrificed, so you pay less income tax and Medicare levy. On a salary of A$100,000 with A$10,000 sacrificed, the tax saved is A$3,200.00. Type your salary and sacrifice above and this calculator shows the saving instantly, with the new take-home pay below.</p>
+    </section>
+
+    <section class="part" aria-labelledby="formulaH">
+      <h2 id="formulaH"><span class="no">3</span>The formula</h2>
+      <p>Tax on a salary uses the ATO resident rates for 2026–27 plus the 2% Medicare levy, with the levy shade-in for low incomes. The sacrificed amount goes into super, where it is taxed at 15% inside the fund.</p>
+      <div class="formula-box">
+        <strong>Tax saved by salary sacrifice — in words: work out the tax on the full salary, work out the tax on the salary after the sacrifice, and take the second away from the first.</strong>
+        <span class="sym">tax saved = tax on full salary − tax on salary after sacrifice</span>
+      </div>
+      <p class="small">Formula source: ATO resident tax rates 2026–27 (0% to A$18,200, 15% to A$45,000, 30% to A$135,000, 37% to A$190,000, 45% above) and the 2% Medicare levy. Last checked 11 November 2026. This is an estimate only, not professional advice.</p>
+    </section>
+
+    <section class="part" aria-labelledby="exampleH">
+      <h2 id="exampleH"><span class="no">4</span>Worked example: A$100,000 salary, A$10,000 sacrificed</h2>
+      <ol class="steps">
+        <li>Tax on A$100,000: income tax A$20,520.00 + Medicare levy A$2,000.00 = A$22,520.00.</li>
+        <li>Tax on A$90,000 after the sacrifice: income tax A$17,520.00 + Medicare levy A$1,800.00 = A$19,320.00.</li>
+        <li>Tax saved: A$22,520.00 − A$19,320.00 = A$3,200.00.</li>
+        <li class="ans">Answer: tax saved A$3,200.00. Take-home pay falls from A$77,480.00 to A$70,680.00, and A$8,500.00 (the A$10,000 less 15% fund tax) goes into super.</li>
+      </ol>
+      <p class="small">Try it in the tool above: type 100000 and 10000, and the result line shows A$3,200.00.</p>
+    </section>
+
+    <section class="part" aria-labelledby="chartH">
+      <h2 id="chartH"><span class="no">5</span>Your result, drawn</h2>
+      <p>This bar and table are drawn from the numbers you typed above. Change a number and they change with it.</p>
+      <div class="bar" role="img" id="bar" aria-label="Bar showing the tax saved out of the amount sacrificed">
+        <div class="seg-a" style="width:32%"></div>
+        <div class="seg-b"></div>
+      </div>
+      <div class="bar-legend">
+        <span><span class="swatch a"></span><span id="legend-a">Tax saved: A$3,200.00</span></span>
+        <span><span class="swatch b"></span><span id="legend-b">Sacrificed: A$10,000.00</span></span>
+      </div>
+      <div class="table-scroll">
+        <table>
+          <thead><tr><th scope="col">Part of your sum</th><th scope="col" class="num">Value</th></tr></thead>
+          <tbody id="break-body">
+            <tr><td>Tax on the full salary</td><td class="num">A$22,520.00</td></tr>
+            <tr><td>Tax after the sacrifice</td><td class="num">A$19,320.00</td></tr>
+            <tr><td>Tax saved (your result)</td><td class="num">A$3,200.00</td></tr>
+            <tr><td>Take-home pay before</td><td class="num">A$77,480.00</td></tr>
+            <tr><td>Take-home pay after</td><td class="num">A$70,680.00</td></tr>
+            <tr><td>Amount into super (after 15% fund tax)</td><td class="num">A$8,500.00</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="part" aria-labelledby="faqH">
+      <h2 id="faqH"><span class="no">6</span>Questions about australia salary sacrifice</h2>
+      <details>
+        <summary>What is salary sacrifice in Australia?</summary>
+        <p>It is an agreement with your employer to give up part of your salary in return for a benefit, most often extra super contributions. The sacrificed amount is not counted as taxable income, so you pay less income tax and Medicare levy on it.</p>
+      </details>
+      <details>
+        <summary>How much of the sacrificed amount reaches my super?</summary>
+        <p>This calculator takes 15% off inside the fund, so A$10,000 sacrificed puts A$8,500.00 into super. That is the standard contributions tax rate. A higher rate of 30% can apply to very high incomes under Division 293, which this page does not cover.</p>
+      </details>
+      <details>
+        <summary>Do laptops, phones and tools still escape fringe benefits tax when salary sacrificed?</summary>
+        <p>No. From 1 April 2027, work-related items provided through a salary sacrifice arrangement are no longer exempt from fringe benefits tax. That covers portable electronic devices such as laptops and phones, computer software, protective clothing, briefcases and tools of trade. The ATO published this change on 7 September 2026.</p>
+      </details>
+      <details>
+        <summary>Does salary sacrifice change my super guarantee?</summary>
+        <p>No. Your employer still pays the super guarantee of 12% on your ordinary earnings. The sacrificed amount is extra, on top of that. Check with your employer whether the guarantee is worked out on the salary before or after the sacrifice.</p>
+      </details>
+      <details>
+        <summary>What is the Medicare levy shade-in?</summary>
+        <p>Low incomes pay no levy, or a reduced levy. There is no levy on taxable income of A$28,011 or less, then the levy is 10% of the amount over that line until it reaches the full 2%. This calculator applies that shade-in.</p>
+      </details>
+      <details>
+        <summary>Is this an exact figure for my tax return?</summary>
+        <p>No. This is an estimate only, not professional advice. It uses the 2026–27 ATO rates, leaves out offsets, the Medicare levy surcharge, HELP repayments and Division 293, and it cannot know your full tax position. Check the ATO before acting on a figure.</p>
+      </details>
+    </section>
+
+    <section class="part" aria-labelledby="relatedH">
+      <h2 id="relatedH"><span class="no">7</span>Related tools</h2>
+      <p class="small">More tools that go with this one — each with its own page, one job per page:</p>
+      <ul class="related">
+        <li><a href="https://calculatorly.online/salary/salary-country-comparison-calculator/">Salary Country Comparison Calculator<span class="d">Take-home pay for the same salary in the UK, USA, Australia and Canada.</span><span class="u mono">calculatorly.online/salary/salary-country-comparison-calculator/</span></a></li>
+        <li><a href="https://calculatorly.online/salary/salary-sacrifice-uk-calculator/">UK Salary Sacrifice Calculator<span class="d">The UK version: pension sacrifice, income tax and National Insurance saved.</span><span class="u mono">calculatorly.online/salary/salary-sacrifice-uk-calculator/</span></a></li>
+        <li><a href="https://calculatorly.online/salary/overtime-calculator/">Overtime Calculator<span class="d">Extra pay for hours over the standard week, in the USA and Australia.</span><span class="u mono">calculatorly.online/salary/overtime-calculator/</span></a></li>
+      </ul>
+    </section>
+
+    <section class="part" aria-labelledby="testsH">
+      <h2 id="testsH">Known-answer test cases — run live on this page</h2>
+      <p>Each test below is worked out by the same code as the calculator above, the moment this page loads, and marked Pass or Fail against its known answer. If a row ever shows Fail, the page is not finished.</p>
+      <div class="table-scroll stack-wrap">
+        <table class="stackable">
+          <thead><tr><th scope="col">#</th><th scope="col">Test</th><th scope="col">Expected answer</th><th scope="col">Calculator gave</th><th scope="col">Result</th></tr></thead>
+          <tbody id="test-body">
+            <tr><td class="num" data-label="#">1</td><td data-label="Test">A$100,000 salary, A$10,000 sacrificed</td><td class="num" data-label="Expected answer">A$3,200.00</td><td class="num" data-got data-label="Calculator gave">—</td><td data-label="Result"><span class="chip run" data-chip>RUNNING</span></td></tr>
+            <tr><td class="num" data-label="#">2</td><td data-label="Test">A$60,000 salary, A$5,000 sacrificed</td><td class="num" data-label="Expected answer">A$1,600.00</td><td class="num" data-got data-label="Calculator gave">—</td><td data-label="Result"><span class="chip run" data-chip>RUNNING</span></td></tr>
+            <tr><td class="num" data-label="#">3</td><td data-label="Test">A$45,000 salary, A$5,000 sacrificed</td><td class="num" data-label="Expected answer">A$850.00</td><td class="num" data-got data-label="Calculator gave">—</td><td data-label="Result"><span class="chip run" data-chip>RUNNING</span></td></tr>
+            <tr><td class="num" data-label="#">4</td><td data-label="Test">Empty input: sacrifice left blank</td><td class="num" data-label="Expected answer">Prompt message, no result, no NaN</td><td class="num" data-got data-label="Calculator gave">—</td><td data-label="Result"><span class="chip run" data-chip>RUNNING</span></td></tr>
+            <tr><td class="num" data-label="#">5</td><td data-label="Test">Very large value: A$999,999,999,999 salary</td><td class="num" data-label="Expected answer">A$4,700.00</td><td class="num" data-got data-label="Calculator gave">—</td><td data-label="Result"><span class="chip run" data-chip>RUNNING</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="record-note" style="margin-top:12px" id="test-summary">Tests are running…</p>
+    </section>
+
+    <section class="part" aria-labelledby="verdictH">
+      <h2 id="verdictH">Build record — verdict for this tool</h2>
+      <div class="table-scroll stack-wrap">
+        <table class="stackable">
+          <thead><tr><th scope="col">#</th><th scope="col">Tool</th><th scope="col">Verdict</th><th scope="col">Input → Output</th><th scope="col">Library / method</th><th scope="col">Limit or note shown on the page</th></tr></thead>
+          <tbody>
+            <tr>
+              <td class="num" data-label="#">1</td>
+              <td data-label="Tool">Australia Salary Sacrifice Calculator</td>
+              <td data-label="Verdict"><strong>Browser-real</strong></td>
+              <td data-label="Input → Output">An Australian salary + a sacrificed amount -&gt; the tax saved and the new take-home pay</td>
+              <td data-label="Library / method">No library. Plain JavaScript arithmetic in the browser</td>
+              <td data-label="Limit or note shown on the page">Numbers up to 1,000,000,000,000; empty or over-limit input shows a clear message.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="record-note" style="margin-top:12px"><strong>Plan for this tool:</strong> one page only, in the Salary and Tax hub, built from the shared template with no libraries and no server. Security items that need a server (login, database, password rules) are N/A — this is a static page with no login and no stored data.</p>
+    </section>
+    <script type="application/json" id="tool-config">{"tool": "salary-sacrifice-au", "chart": "bar-table", "tests": [{"label": "A$100,000 salary, A$10,000 sacrificed", "inputs": {"salary": "100000", "sacrifice": "10000"}, "expect": "A$3,200.00"}, {"label": "A$60,000 salary, A$5,000 sacrificed", "inputs": {"salary": "60000", "sacrifice": "5000"}, "expect": "A$1,600.00"}, {"label": "A$45,000 salary, A$5,000 sacrificed", "inputs": {"salary": "45000", "sacrifice": "5000"}, "expect": "A$850.00"}, {"label": "Empty input: sacrifice left blank", "inputs": {"salary": "100000", "sacrifice": ""}, "expect_state": "empty", "expect_text": "Prompt message, no result, no NaN"}, {"label": "Very large value: A$999,999,999,999 salary", "inputs": {"salary": "999999999999", "sacrifice": "10000"}, "expect": "A$4,700.00"}], "fields": ["salary", "sacrifice"]}</script>
+  </main>
+<footer class="site">
+    <span class="fbrand">Calculatorly</span>
+    <nav aria-label="Footer">
+      <a href="../../about/">About</a>
+      <a href="../../contact/">Contact</a>
+      <a href="../../privacy/">Privacy</a>
+      <a href="../../terms/">Terms</a>
+      <a href="../../disclaimer/">Disclaimer</a>
+    </nav>
+    <span>Calculatorly — free calculators, no sign-up. The domain calculatorly.online is bought; hosting is separate.</span>
+    <div class="ad-slot" hidden aria-hidden="true"></div>
+  </footer>
+</div>
+<script src="../../assets/js/calculatorly.js"></script>
+<script src="../../assets/js/engines-s3.js"></script>
+</body>
+</html>

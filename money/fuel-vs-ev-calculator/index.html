@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light" />
+<title>Fuel vs EV Calculator | Calculatorly</title>
+<meta name="description" content="Work out whether petrol or electric driving costs less — formula, worked example and breakdown. Free, no sign-up, answers as you type." />
+<link rel="canonical" href="https://calculatorly.online/money/fuel-vs-ev-calculator/" />
+<link rel="icon" href="data:," />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,400;0,600;0,700;0,800;1,400&amp;family=IBM+Plex+Mono:wght@500;600;700&amp;display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../../assets/css/khata.css" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Fuel vs EV Calculator","url":"https://calculatorly.online/money/fuel-vs-ev-calculator/","applicationCategory":"UtilitiesApplication","operatingSystem":"Any (web browser)","browserRequirements":"Requires JavaScript","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"provider":{"@type":"Organization","name":"Calculatorly","url":"https://calculatorly.online/"}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://calculatorly.online/"},{"@type":"ListItem","position":2,"name":"Money","item":"https://calculatorly.online/money/"},{"@type":"ListItem","position":3,"name":"Fuel vs EV Calculator","item":"https://calculatorly.online/money/fuel-vs-ev-calculator/"}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Where do the fuel and electricity prices come from?","acceptedAnswer":{"@type":"Answer","text":"From you. This site holds no fuel or electricity prices and fetches none. Type the prices you actually pay — a home charger is usually much cheaper than a public fast charger."}},{"@type":"Question","name":"Why is only fuel counted, not the cost of the car?","acceptedAnswer":{"@type":"Answer","text":"Because this tool compares running costs for the same miles. The cost of buying the car, tax, insurance and servicing are left out — an electric car often costs more to buy and less to run, so the full answer needs both sides."}},{"@type":"Question","name":"What if I drive few miles?","acceptedAnswer":{"@type":"Answer","text":"Then the yearly saving is small, because the saving is per mile. At 3,000 miles a year the saving in the example is only $165.00, which may not cover a dearer car."}},{"@type":"Question","name":"What does kWh per mile mean?","acceptedAnswer":{"@type":"Answer","text":"It is how much electricity the car uses for each mile — about 0.25 to 0.40 for most electric cars. A bigger or faster car uses more. Your car's own display or handbook gives the figure."}},{"@type":"Question","name":"Can I use litres and km instead?","acceptedAnswer":{"@type":"Answer","text":"This page uses gallons and miles. To change litres per 100 km into miles per gallon, use the unit converter on this site first, then type the result here."}},{"@type":"Question","name":"Is this financial advice?","acceptedAnswer":{"@type":"Answer","text":"No. This is an estimate for planning, from the figures you type. Prices change, so check your own fuel and electricity prices before you act."}}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"HowTo","name":"How to use the Fuel vs EV Calculator","step":[{"@type":"HowToStep","position":1,"text":"Type the miles you drive in a year, your petrol car's miles per gallon and petrol price, then your electric car's kWh per mile and electricity price. All prices are your own figures. There is no Calculate button — the answer appears as you type."},{"@type":"HowToStep","position":2,"text":"Read the yearly cost of each choice in the result line."},{"@type":"HowToStep","position":3,"text":"Check the table under the result for the cost per mile of each choice and the yearly saving."}]}
+</script>
+</head>
+<body class="hub-money">
+<div class="sheet">
+  <header class="masthead">
+    <div class="brand"><a href="../../">Calculator<span class="ly">ly</span></a></div>
+    <div class="domain mono">calculatorly.online</div>
+    <div class="mast-note">Every calculator, worked out in full.</div>
+  </header>
+  <main>
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="https://calculatorly.online/">Home</a></li>
+        <li><a href="https://calculatorly.online/money/">Money</a></li>
+        <li aria-current="page">Fuel vs EV Calculator</li>
+      </ol>
+    </nav>
+    <span class="hub-tag">Hub: Money</span>
+    
+    <h1>Fuel vs EV Calculator</h1>
+
+    <section class="tool" aria-label="Fuel vs EV Calculator tool">
+      <p class="tool-q">Does petrol driving or electric driving cost less per year for my miles?</p>
+      <div class="fields">
+      <div class="field">
+        <label for="in-miles">Miles driven in a year</label>
+        <input id="in-miles" type="number" inputmode="decimal" step="any" value="10000" autocomplete="off" />
+      </div>
+      <div class="field">
+        <label for="in-mpg">Petrol car: miles per gallon</label>
+        <input id="in-mpg" type="number" inputmode="decimal" step="any" value="35" autocomplete="off" />
+      </div>
+      <div class="field">
+        <label for="in-fuel_price">Petrol price per gallon ($)</label>
+        <input id="in-fuel_price" type="number" inputmode="decimal" step="any" value="3.5" autocomplete="off" />
+      </div>
+      <div class="field">
+        <label for="in-kwh_per_mile">Electric car: kWh used per mile</label>
+        <input id="in-kwh_per_mile" type="number" inputmode="decimal" step="any" value="0.3" autocomplete="off" />
+      </div>
+      <div class="field">
+        <label for="in-elec_price">Electricity price per kWh ($)</label>
+        <input id="in-elec_price" type="number" inputmode="decimal" step="any" value="0.15" autocomplete="off" />
+      </div>
+      </div>
+
+      <div class="result-wrap" aria-live="polite">
+        <div class="stamp" id="stamp" aria-hidden="true" hidden>Checked ✓</div>
+        <div class="result-label">Result</div>
+        <div class="result" id="result">Petrol: $1,000.00 a year, Electric: $450.00 a year</div>
+        <div class="result-sentence" id="sentence">Electric costs $550.00 less a year. Petrol is $0.10 per mile; electric is $0.05 per mile.</div>
+        <p class="msg" id="msg" hidden></p>
+      </div>
+      <ol class="howto">
+        <li><strong>Type the miles you drive in a year, your petrol car&#x27;s miles per gallon and petrol price, then your electric car&#x27;s kWh per mile and electricity price. All prices are your own figures. There is no Calculate button — the answer appears as you type.</strong></li>
+        <li><strong>Read the yearly cost of each choice in the result line.</strong></li>
+        <li><strong>Check the table under the result for the cost per mile of each choice and the yearly saving.</strong></li>
+      </ol>
+      <p class="limit-note"><strong>Limit:</strong> Numbers up to 1,000,000,000,000; empty or over-limit input shows a clear message. <strong>Rounding:</strong> every result uses one named default — Half-up to 2 decimal places — in the answer, the bar and the table. The Checked stamp appears on the result box only while a valid result is showing.</p>
+    </section>
+
+    <section class="quick" aria-labelledby="quickH">
+      <h2 id="quickH"><span class="no">2</span>Quick answer</h2>
+      <p>Driving 10,000 miles a year costs $1,000.00 in petrol at 35 miles per gallon and $3.50 a gallon, against $450.00 in electricity at 0.30 kWh per mile and $0.15 per kWh. Electric driving costs $550.00 less a year here. All prices are figures you type yourself — this site holds no fuel or electricity prices.</p>
+    </section>
+
+    <section class="part" aria-labelledby="formulaH">
+      <h2 id="formulaH"><span class="no">3</span>The formula</h2>
+      <p>Both costs are worked out for the same miles, so the comparison is fair. Only fuel and charging are counted:</p>
+      <div class="formula-box">
+        <strong>Fuel vs EV — in words: yearly petrol cost is miles divided by miles per gallon, times the petrol price; yearly charging cost is miles times kWh per mile, times the electricity price.</strong>
+        <span class="sym">petrol cost per year = miles ÷ miles per gallon × petrol price; electric cost per year = miles × kWh per mile × electricity price</span>
+      </div>
+      <p class="small">Formula source: plain multiplication from the figures you type. No fuel price or electricity price is fetched from anywhere — you type your own prices, and the page uses only the five numbers you type. The result leaves out buying, tax, insurance, servicing and charging at home against public chargers.</p>
+    </section>
+
+    <section class="part" aria-labelledby="exampleH">
+      <h2 id="exampleH"><span class="no">4</span>Worked example: 10,000 miles a year</h2>
+      <ol class="steps">
+        <li>Start with the numbers: 10,000 miles a year, petrol car 35 miles per gallon at $3.50 a gallon, electric car 0.30 kWh per mile at $0.15 per kWh.</li>
+        <li>Petrol: 10,000 ÷ 35 = 285.71 gallons a year, times $3.50 = $1,000.00 a year.</li>
+        <li>Electric: 10,000 × 0.30 = 3,000 kWh a year, times $0.15 = $450.00 a year.</li>
+        <li class="ans">Answer: petrol $1,000.00 a year, electric $450.00 a year — electric costs $550.00 less.</li>
+      </ol>
+      <p class="small">Try it in the tool above: type 10000, 35, 3.5, 0.3 and 0.15, and the result line shows both yearly costs.</p>
+    </section>
+
+    <section class="part" aria-labelledby="chartH">
+      <h2 id="chartH"><span class="no">5</span>Your result, drawn</h2>
+      <p>This bar and table are drawn from the numbers you typed above. Change a number and they change with it.</p>
+      <div class="bar" role="img" id="bar" aria-label="Bar showing the cheaper yearly cost against the dearest">
+        <div class="seg-a" style="width:45%"></div>
+        <div class="seg-b"></div>
+      </div>
+      <div class="bar-legend">
+        <span><span class="swatch a"></span><span id="legend-a">Petrol: $1,000.00 a year</span></span>
+        <span><span class="swatch b"></span><span id="legend-b">Electric: $450.00 a year</span></span>
+      </div>
+      <div class="table-scroll">
+        <table>
+          <thead><tr><th scope="col">Part of your sum</th><th scope="col" class="num">Value</th></tr></thead>
+          <tbody id="break-body">
+            <tr><td>Petrol cost per year</td><td class="num">$1,000.00</td></tr>
+            <tr><td>Electric cost per year</td><td class="num">$450.00</td></tr>
+            <tr><td>Difference per year</td><td class="num">$550.00</td></tr>
+            <tr><td>Petrol cost per mile</td><td class="num">$0.10</td></tr>
+            <tr><td>Electric cost per mile</td><td class="num">$0.05</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="part" aria-labelledby="faqH">
+      <h2 id="faqH"><span class="no">6</span>Questions about fuel vs ev</h2>
+      <details>
+        <summary>Where do the fuel and electricity prices come from?</summary>
+        <p>From you. This site holds no fuel or electricity prices and fetches none. Type the prices you actually pay — a home charger is usually much cheaper than a public fast charger.</p>
+      </details>
+      <details>
+        <summary>Why is only fuel counted, not the cost of the car?</summary>
+        <p>Because this tool compares running costs for the same miles. The cost of buying the car, tax, insurance and servicing are left out — an electric car often costs more to buy and less to run, so the full answer needs both sides.</p>
+      </details>
+      <details>
+        <summary>What if I drive few miles?</summary>
+        <p>Then the yearly saving is small, because the saving is per mile. At 3,000 miles a year the saving in the example is only $165.00, which may not cover a dearer car.</p>
+      </details>
+      <details>
+        <summary>What does kWh per mile mean?</summary>
+        <p>It is how much electricity the car uses for each mile — about 0.25 to 0.40 for most electric cars. A bigger or faster car uses more. Your car&#x27;s own display or handbook gives the figure.</p>
+      </details>
+      <details>
+        <summary>Can I use litres and km instead?</summary>
+        <p>This page uses gallons and miles. To change litres per 100 km into miles per gallon, use the unit converter on this site first, then type the result here.</p>
+      </details>
+      <details>
+        <summary>Is this financial advice?</summary>
+        <p>No. This is an estimate for planning, from the figures you type. Prices change, so check your own fuel and electricity prices before you act.</p>
+      </details>
+    </section>
+
+    <section class="part" aria-labelledby="relatedH">
+      <h2 id="relatedH"><span class="no">7</span>Related tools</h2>
+      <p class="small">More tools that go with this one — each with its own page, one job per page:</p>
+      <ul class="related">
+        <li><a href="https://calculatorly.online/money/amortization-calculator/">Amortization Calculator<span class="d">Full repayment schedule: payment, interest and balance per month.</span><span class="u mono">calculatorly.online/money/amortization-calculator/</span></a></li>
+        <li><a href="https://calculatorly.online/money/loan-comparison-calculator/">Loan Comparison Calculator<span class="d">Two loans side by side: payment, interest and total cost.</span><span class="u mono">calculatorly.online/money/loan-comparison-calculator/</span></a></li>
+        <li><a href="https://calculatorly.online/money/budget-50-30-20-calculator/">Budget 50/30/20 Calculator<span class="d">Needs, wants and savings split from take-home pay.</span><span class="u mono">calculatorly.online/money/budget-50-30-20-calculator/</span></a></li>
+      </ul>
+    </section>
+
+    <section class="part" aria-labelledby="testsH">
+      <h2 id="testsH">Known-answer test cases — run live on this page</h2>
+      <p>Each test below is worked out by the same code as the calculator above, the moment this page loads, and marked Pass or Fail against its known answer. If a row ever shows Fail, the page is not finished.</p>
+      <div class="table-scroll stack-wrap">
+        <table class="stackable">
+          <thead><tr><th scope="col">#</th><th scope="col">Test</th><th scope="col">Expected answer</th><th scope="col">Calculator gave</th><th scope="col">Result</th></tr></thead>
+          <tbody id="test-body">
+            <tr><td class="num" data-label="#">1</td><td data-label="Test">10,000 miles, 35 mpg at $3.50, EV 0.30 kWh/mile at $0.15</td><td class="num" data-label="Expected answer">Petrol: $1,000.00 a year, Electric: $450.00 a year</td><td class="num" data-got data-label="Calculator gave">—</td><td data-label="Result"><span class="chip run" data-chip>RUNNING</span></td></tr>
+            <tr><td class="num" data-label="#">2</td><td data-label="Test">12,000 miles, 25 mpg at $4.00, EV 0.35 kWh/mile at $0.20</td><td class="num" data-label="Expected answer">Petrol: $1,920.00 a year, Electric: $840.00 a year</td><td class="num" data-got data-label="Calculator gave">—</td><td data-label="Result"><span class="chip run" data-chip>RUNNING</span></td></tr>
+            <tr><td class="num" data-label="#">3</td><td data-label="Test">8,000 miles, 50 mpg at $3.00, EV 0.40 kWh/mile at $0.30</td><td class="num" data-label="Expected answer">Petrol: $480.00 a year, Electric: $960.00 a year</td><td class="num" data-got data-label="Calculator gave">—</td><td data-label="Result"><span class="chip run" data-chip>RUNNING</span></td></tr>
+            <tr><td class="num" data-label="#">4</td><td data-label="Test">Empty input: the miles box left blank</td><td class="num" data-label="Expected answer">Prompt message, no result, no NaN</td><td class="num" data-got data-label="Calculator gave">—</td><td data-label="Result"><span class="chip run" data-chip>RUNNING</span></td></tr>
+            <tr><td class="num" data-label="#">5</td><td data-label="Test">Very large miles: 1,000,000,000 miles a year</td><td class="num" data-label="Expected answer">Petrol: $116,666,666.67 a year, Electric: $45,000,000.00 a year</td><td class="num" data-got data-label="Calculator gave">—</td><td data-label="Result"><span class="chip run" data-chip>RUNNING</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="record-note" style="margin-top:12px" id="test-summary">Tests are running…</p>
+    </section>
+
+    <section class="part" aria-labelledby="verdictH">
+      <h2 id="verdictH">Build record — verdict for this tool</h2>
+      <div class="table-scroll stack-wrap">
+        <table class="stackable">
+          <thead><tr><th scope="col">#</th><th scope="col">Tool</th><th scope="col">Verdict</th><th scope="col">Input → Output</th><th scope="col">Library / method</th><th scope="col">Limit or note shown on the page</th></tr></thead>
+          <tbody>
+            <tr>
+              <td class="num" data-label="#">1</td>
+              <td data-label="Tool">Fuel vs EV Calculator</td>
+              <td data-label="Verdict"><strong>Browser-real</strong></td>
+              <td data-label="Input → Output">Yearly miles + fuel price + electricity price -&gt; the yearly cost of petrol driving and of electric driving</td>
+              <td data-label="Library / method">No library. Plain JavaScript arithmetic in the browser</td>
+              <td data-label="Limit or note shown on the page">Numbers up to 1,000,000,000,000; empty or over-limit input shows a clear message.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="record-note" style="margin-top:12px"><strong>Plan for this tool:</strong> one page only, in the Money hub, built from the shared template with no libraries and no server. Security items that need a server (login, database, password rules) are N/A — this is a static page with no login and no stored data.</p>
+    </section>
+    <script type="application/json" id="tool-config">{"tool": "fuel-vs-ev", "chart": "bar", "tests": [{"label": "10,000 miles, 35 mpg at $3.50, EV 0.30 kWh/mile at $0.15", "inputs": {"miles": "10000", "mpg": "35", "fuel_price": "3.5", "kwh_per_mile": "0.3", "elec_price": "0.15"}, "expect": "Petrol: $1,000.00 a year, Electric: $450.00 a year"}, {"label": "12,000 miles, 25 mpg at $4.00, EV 0.35 kWh/mile at $0.20", "inputs": {"miles": "12000", "mpg": "25", "fuel_price": "4", "kwh_per_mile": "0.35", "elec_price": "0.2"}, "expect": "Petrol: $1,920.00 a year, Electric: $840.00 a year"}, {"label": "8,000 miles, 50 mpg at $3.00, EV 0.40 kWh/mile at $0.30", "inputs": {"miles": "8000", "mpg": "50", "fuel_price": "3", "kwh_per_mile": "0.4", "elec_price": "0.3"}, "expect": "Petrol: $480.00 a year, Electric: $960.00 a year"}, {"label": "Empty input: the miles box left blank", "inputs": {"miles": "", "mpg": "35", "fuel_price": "3.5", "kwh_per_mile": "0.3", "elec_price": "0.15"}, "expect_state": "empty", "expect_text": "Prompt message, no result, no NaN"}, {"label": "Very large miles: 1,000,000,000 miles a year", "inputs": {"miles": "1000000000", "mpg": "30", "fuel_price": "3.5", "kwh_per_mile": "0.3", "elec_price": "0.15"}, "expect": "Petrol: $116,666,666.67 a year, Electric: $45,000,000.00 a year"}], "fields": ["miles", "mpg", "fuel_price", "kwh_per_mile", "elec_price"]}</script>
+  </main>
+<footer class="site">
+    <span class="fbrand">Calculatorly</span>
+    <nav aria-label="Footer">
+      <a href="../../about/">About</a>
+      <a href="../../contact/">Contact</a>
+      <a href="../../privacy/">Privacy</a>
+      <a href="../../terms/">Terms</a>
+      <a href="../../disclaimer/">Disclaimer</a>
+    </nav>
+    <span>Calculatorly — free calculators, no sign-up. The domain calculatorly.online is bought; hosting is separate.</span>
+    <div class="ad-slot" hidden aria-hidden="true"></div>
+  </footer>
+</div>
+<script src="../../assets/js/calculatorly.js"></script>
+<script src="../../assets/js/engines-s2.js"></script>
+</body>
+</html>

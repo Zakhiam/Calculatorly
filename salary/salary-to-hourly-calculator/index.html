@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light" />
+<title>Salary to Hourly Calculator | Calculatorly</title>
+<meta name="description" content="Work out your hourly rate from a yearly salary — formula, worked example and breakdown. Free, no sign-up, answers as you type." />
+<link rel="canonical" href="https://calculatorly.online/salary/salary-to-hourly-calculator/" />
+<link rel="icon" href="data:," />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,400;0,600;0,700;0,800;1,400&amp;family=IBM+Plex+Mono:wght@500;600;700&amp;display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../../assets/css/khata.css" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Salary to Hourly Calculator","url":"https://calculatorly.online/salary/salary-to-hourly-calculator/","applicationCategory":"UtilitiesApplication","operatingSystem":"Any (web browser)","browserRequirements":"Requires JavaScript","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"provider":{"@type":"Organization","name":"Calculatorly","url":"https://calculatorly.online/"}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://calculatorly.online/"},{"@type":"ListItem","position":2,"name":"Salary and Tax","item":"https://calculatorly.online/salary/"},{"@type":"ListItem","position":3,"name":"Salary to Hourly Calculator","item":"https://calculatorly.online/salary/salary-to-hourly-calculator/"}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How many weeks a year should I type?","acceptedAnswer":{"@type":"Answer","text":"Type 52 if you work all year round, or fewer if you take unpaid time off. A teacher on a 39-week contract types 39; someone with 4 weeks of unpaid leave types 48. Paid holiday still counts as weeks worked."}},{"@type":"Question","name":"Is this my hourly rate before or after tax?","acceptedAnswer":{"@type":"Answer","text":"Before tax. This is the gross hourly rate from your gross yearly salary. To see what you keep after tax, use the take-home pay calculator for your country."}},{"@type":"Question","name":"What if I work different hours each week?","acceptedAnswer":{"@type":"Answer","text":"Type your average hours per week. For example, if you work 30 hours one week and 50 the next, type 40. The answer is only as exact as the average you type."}},{"@type":"Question","name":"How do I work out my hourly rate from a monthly salary?","acceptedAnswer":{"@type":"Answer","text":"Multiply the monthly salary by 12 to get the yearly salary, then use this calculator. For example, 3,000 a month is 36,000 a year, which at 40 hours a week for 52 weeks is 17.31 an hour."}},{"@type":"Question","name":"Does overtime change my hourly rate?","acceptedAnswer":{"@type":"Answer","text":"No. Overtime pay is extra on top of your salary, so it does not change the hourly rate of the salary itself. Work out overtime separately from your hourly rate."}},{"@type":"Question","name":"How are the answers rounded?","acceptedAnswer":{"@type":"Answer","text":"Every result on this page uses one rounding rule: half-up to 2 decimal places. For example, 60,000 a year at 37.5 hours a week for 52 weeks is 30.77 an hour. The same rule is used in the answer, the bar and the table, so the figures always agree."}}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"HowTo","name":"How to use the Salary to Hourly Calculator","step":[{"@type":"HowToStep","position":1,"text":"Type your yearly salary, how many hours you work each week, and how many weeks a year you work. There is no Calculate button — the hourly rate appears as you type."},{"@type":"HowToStep","position":2,"text":"Read the hourly rate in the result line, rounded half-up to 2 decimal places."},{"@type":"HowToStep","position":3,"text":"Check the bar and table under the result (Part 5 below) to see the hours a year and the hourly rate."}]}
+</script>
+</head>
+<body class="hub-salary">
+<div class="sheet">
+  <header class="masthead">
+    <div class="brand"><a href="../../">Calculator<span class="ly">ly</span></a></div>
+    <div class="domain mono">calculatorly.online</div>
+    <div class="mast-note">Every calculator, worked out in full.</div>
+  </header>
+  <main>
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="https://calculatorly.online/">Home</a></li>
+        <li><a href="https://calculatorly.online/salary/">Salary and Tax</a></li>
+        <li aria-current="page">Salary to Hourly Calculator</li>
+      </ol>
+    </nav>
+    <span class="hub-tag">Hub: Salary and Tax</span>
+    
+    <h1>Salary to Hourly Calculator</h1>
+
+    <section class="tool" aria-label="Salary to Hourly Calculator tool">
+      <p class="tool-q">What is my hourly rate from my yearly salary?</p>
+      <div class="fields">
+      <div class="field">
+        <label for="in-salary">Yearly salary</label>
+        <input id="in-salary" type="number" inputmode="decimal" step="any" value="52000" autocomplete="off" />
+      </div>
+      <div class="field">
+        <label for="in-hours">Hours worked per week</label>
+        <input id="in-hours" type="number" inputmode="decimal" step="any" value="40" autocomplete="off" />
+      </div>
+      <div class="field">
+        <label for="in-weeks">Weeks worked a year</label>
+        <input id="in-weeks" type="number" inputmode="decimal" step="any" value="52" autocomplete="off" />
+      </div>
+      </div>
+
+      <div class="result-wrap" aria-live="polite">
+        <div class="stamp" id="stamp" aria-hidden="true" hidden>Checked ✓</div>
+        <div class="result-label">Result</div>
+        <div class="result" id="result">25.00</div>
+        <div class="result-sentence" id="sentence">Your hourly rate is 25.00 for a yearly salary of 52,000.00 at 40 hours a week for 52 weeks a year, in your own currency.</div>
+        <p class="msg" id="msg" hidden></p>
+      </div>
+      <ol class="howto">
+        <li><strong>Type your yearly salary, how many hours you work each week, and how many weeks a year you work. There is no Calculate button — the hourly rate appears as you type.</strong></li>
+        <li><strong>Read the hourly rate in the result line, rounded half-up to 2 decimal places.</strong></li>
+        <li><strong>Check the bar and table under the result (Part 5 below) to see the hours a year and the hourly rate.</strong></li>
+      </ol>
+      <p class="limit-note"><strong>Limit:</strong> Numbers up to 1,000,000,000,000; empty or over-limit input shows a clear message. <strong>Rounding:</strong> every result uses one named default — Half-up to 2 decimal places — in the answer, the bar and the table. The Checked stamp appears on the result box only while a valid result is showing.</p>
+    </section>
+
+    <section class="quick" aria-labelledby="quickH">
+      <h2 id="quickH"><span class="no">2</span>Quick answer</h2>
+      <p>To turn a yearly salary into an hourly rate, divide the salary by the number of hours you work in a year. For example, 52,000 a year at 40 hours a week for 52 weeks is 2,080 hours, so the hourly rate is 25.00. Type your own salary, hours and weeks above and this calculator gives your hourly rate instantly.</p>
+    </section>
+
+    <section class="part" aria-labelledby="formulaH">
+      <h2 id="formulaH"><span class="no">3</span>The formula</h2>
+      <p>A yearly salary is pay for a whole year of hours, so the hourly rate is the salary shared out over those hours:</p>
+      <div class="formula-box">
+        <strong>Hourly rate — in words: divide the yearly salary by the hours worked in a week, then divide again by the weeks worked in a year.</strong>
+        <span class="sym">hourly rate = yearly salary ÷ (hours per week × weeks a year)</span>
+      </div>
+      <p class="small">Formula source: the standard salary-to-hourly conversion. No tax or other deduction is taken off here — this is the gross hourly rate, before tax. Amounts are in your own currency.</p>
+    </section>
+
+    <section class="part" aria-labelledby="exampleH">
+      <h2 id="exampleH"><span class="no">4</span>Worked example: 52,000 a year at 40 hours a week</h2>
+      <ol class="steps">
+        <li>Start with the figures: yearly salary 52,000, 40 hours a week, 52 weeks a year.</li>
+        <li>Work out the hours in a year: 40 × 52 = 2,080 hours.</li>
+        <li>Divide the salary by the hours: 52,000 ÷ 2,080 = 25.</li>
+        <li class="ans">Answer: the hourly rate is 25.00.</li>
+      </ol>
+      <p class="small">Try it in the tool above: type 52000, 40 and 52, and the result line shows 25.00.</p>
+    </section>
+
+    <section class="part" aria-labelledby="chartH">
+      <h2 id="chartH"><span class="no">5</span>Your result, drawn</h2>
+      <p>This bar and table are drawn from the numbers you typed above. Change a number and they change with it.</p>
+      <div class="bar" role="img" id="bar" aria-label="Bar showing the hourly rate 25.00">
+        <div class="seg-a" style="width:25%"></div>
+        <div class="seg-b"></div>
+      </div>
+      <div class="bar-legend">
+        <span><span class="swatch a"></span><span id="legend-a">Hourly rate: 25.00</span></span>
+        <span><span class="swatch b"></span><span id="legend-b">Hours a year: 2,080</span></span>
+      </div>
+      <div class="table-scroll">
+        <table>
+          <thead><tr><th scope="col">Part of your sum</th><th scope="col" class="num">Value</th></tr></thead>
+          <tbody id="break-body">
+            <tr><td>Yearly salary</td><td class="num">52,000.00</td></tr>
+            <tr><td>Hours per week</td><td class="num">40</td></tr>
+            <tr><td>Weeks a year</td><td class="num">52</td></tr>
+            <tr><td>Hours a year</td><td class="num">2,080</td></tr>
+            <tr><td>Hourly rate (your result)</td><td class="num">25.00</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="part" aria-labelledby="faqH">
+      <h2 id="faqH"><span class="no">6</span>Questions about salary to hourly</h2>
+      <details>
+        <summary>How many weeks a year should I type?</summary>
+        <p>Type 52 if you work all year round, or fewer if you take unpaid time off. A teacher on a 39-week contract types 39; someone with 4 weeks of unpaid leave types 48. Paid holiday still counts as weeks worked.</p>
+      </details>
+      <details>
+        <summary>Is this my hourly rate before or after tax?</summary>
+        <p>Before tax. This is the gross hourly rate from your gross yearly salary. To see what you keep after tax, use the take-home pay calculator for your country.</p>
+      </details>
+      <details>
+        <summary>What if I work different hours each week?</summary>
+        <p>Type your average hours per week. For example, if you work 30 hours one week and 50 the next, type 40. The answer is only as exact as the average you type.</p>
+      </details>
+      <details>
+        <summary>How do I work out my hourly rate from a monthly salary?</summary>
+        <p>Multiply the monthly salary by 12 to get the yearly salary, then use this calculator. For example, 3,000 a month is 36,000 a year, which at 40 hours a week for 52 weeks is 17.31 an hour.</p>
+      </details>
+      <details>
+        <summary>Does overtime change my hourly rate?</summary>
+        <p>No. Overtime pay is extra on top of your salary, so it does not change the hourly rate of the salary itself. Work out overtime separately from your hourly rate.</p>
+      </details>
+      <details>
+        <summary>How are the answers rounded?</summary>
+        <p>Every result on this page uses one rounding rule: half-up to 2 decimal places. For example, 60,000 a year at 37.5 hours a week for 52 weeks is 30.77 an hour. The same rule is used in the answer, the bar and the table, so the figures always agree.</p>
+      </details>
+    </section>
+
+    <section class="part" aria-labelledby="relatedH">
+      <h2 id="relatedH"><span class="no">7</span>Related tools</h2>
+      <p class="small">More tools that go with this one — each with its own page, one job per page:</p>
+      <ul class="related">
+        <li><a href="https://calculatorly.online/salary/take-home-pay-uk-calculator/">UK Take-Home Pay Calculator<span class="d">Work out your take-home pay in the UK after tax.</span><span class="u mono">calculatorly.online/salary/take-home-pay-uk-calculator/</span></a></li>
+        <li><a href="https://calculatorly.online/salary/take-home-pay-us-calculator/">US Take-Home Pay Calculator<span class="d">Work out your take-home pay in the USA after tax.</span><span class="u mono">calculatorly.online/salary/take-home-pay-us-calculator/</span></a></li>
+        <li><a href="https://calculatorly.online/salary/income-tax-uk-calculator/">UK Income Tax Calculator<span class="d">Work out your income tax in the UK.</span><span class="u mono">calculatorly.online/salary/income-tax-uk-calculator/</span></a></li>
+      </ul>
+    </section>
+
+    <section class="part" aria-labelledby="testsH">
+      <h2 id="testsH">Known-answer test cases — run live on this page</h2>
+      <p>Each test below is worked out by the same code as the calculator above, the moment this page loads, and marked Pass or Fail against its known answer. If a row ever shows Fail, the page is not finished.</p>
+      <div class="table-scroll stack-wrap">
+        <table class="stackable">
+          <thead><tr><th scope="col">#</th><th scope="col">Test</th><th scope="col">Expected answer</th><th scope="col">Calculator gave</th><th scope="col">Result</th></tr></thead>
+          <tbody id="test-body">
+            <tr><td class="num" data-label="#">1</td><td data-label="Test">Hourly rate: 52,000 a year, 40 hours a week, 52 weeks</td><td class="num" data-label="Expected answer">25.00</td><td class="num" data-got data-label="Calculator gave">—</td><td data-label="Result"><span class="chip run" data-chip>RUNNING</span></td></tr>
+            <tr><td class="num" data-label="#">2</td><td data-label="Test">Hourly rate: 60,000 a year, 37.5 hours a week, 52 weeks</td><td class="num" data-label="Expected answer">30.77</td><td class="num" data-got data-label="Calculator gave">—</td><td data-label="Result"><span class="chip run" data-chip>RUNNING</span></td></tr>
+            <tr><td class="num" data-label="#">3</td><td data-label="Test">Hourly rate: 30,000 a year, 20 hours a week, 48 weeks</td><td class="num" data-label="Expected answer">31.25</td><td class="num" data-got data-label="Calculator gave">—</td><td data-label="Result"><span class="chip run" data-chip>RUNNING</span></td></tr>
+            <tr><td class="num" data-label="#">4</td><td data-label="Test">Empty input: the salary box left blank</td><td class="num" data-label="Expected answer">State: empty</td><td class="num" data-got data-label="Calculator gave">—</td><td data-label="Result"><span class="chip run" data-chip>RUNNING</span></td></tr>
+            <tr><td class="num" data-label="#">5</td><td data-label="Test">Zero hours: 52,000 a year at 0 hours a week</td><td class="num" data-label="Expected answer">Hours cannot be zero, no result</td><td class="num" data-got data-label="Calculator gave">—</td><td data-label="Result"><span class="chip run" data-chip>RUNNING</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="record-note" style="margin-top:12px" id="test-summary">Tests are running…</p>
+    </section>
+
+    <section class="part" aria-labelledby="verdictH">
+      <h2 id="verdictH">Build record — verdict for this tool</h2>
+      <div class="table-scroll stack-wrap">
+        <table class="stackable">
+          <thead><tr><th scope="col">#</th><th scope="col">Tool</th><th scope="col">Verdict</th><th scope="col">Input → Output</th><th scope="col">Library / method</th><th scope="col">Limit or note shown on the page</th></tr></thead>
+          <tbody>
+            <tr>
+              <td class="num" data-label="#">1</td>
+              <td data-label="Tool">Salary to Hourly Calculator</td>
+              <td data-label="Verdict"><strong>Browser-real</strong></td>
+              <td data-label="Input → Output">A yearly salary + hours per week -&gt; the hourly rate</td>
+              <td data-label="Library / method">No library. Plain JavaScript arithmetic in the browser</td>
+              <td data-label="Limit or note shown on the page">Numbers up to 1,000,000,000,000; empty or over-limit input shows a clear message.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="record-note" style="margin-top:12px"><strong>Plan for this tool:</strong> one page only, in the Salary and Tax hub, built from the shared template with no libraries and no server. Security items that need a server (login, database, password rules) are N/A — this is a static page with no login and no stored data.</p>
+    </section>
+    <script type="application/json" id="tool-config">{"tool": "salary-to-hourly", "chart": "bar-table", "tests": [{"label": "Hourly rate: 52,000 a year, 40 hours a week, 52 weeks", "inputs": {"salary": "52000", "hours": "40", "weeks": "52"}, "expect": "25.00"}, {"label": "Hourly rate: 60,000 a year, 37.5 hours a week, 52 weeks", "inputs": {"salary": "60000", "hours": "37.5", "weeks": "52"}, "expect": "30.77"}, {"label": "Hourly rate: 30,000 a year, 20 hours a week, 48 weeks", "inputs": {"salary": "30000", "hours": "20", "weeks": "48"}, "expect": "31.25"}, {"label": "Empty input: the salary box left blank", "inputs": {"salary": "", "hours": "40", "weeks": "52"}, "expect_state": "empty", "expect_text": "State: empty"}, {"label": "Zero hours: 52,000 a year at 0 hours a week", "inputs": {"salary": "52000", "hours": "0", "weeks": "52"}, "expect_state": "invalid", "expect_text": "Hours cannot be zero, no result"}], "fields": ["salary", "hours", "weeks"]}</script>
+  </main>
+<footer class="site">
+    <span class="fbrand">Calculatorly</span>
+    <nav aria-label="Footer">
+      <a href="../../about/">About</a>
+      <a href="../../contact/">Contact</a>
+      <a href="../../privacy/">Privacy</a>
+      <a href="../../terms/">Terms</a>
+      <a href="../../disclaimer/">Disclaimer</a>
+    </nav>
+    <span>Calculatorly — free calculators, no sign-up. The domain calculatorly.online is bought; hosting is separate.</span>
+    <div class="ad-slot" hidden aria-hidden="true"></div>
+  </footer>
+</div>
+<script src="../../assets/js/calculatorly.js"></script>
+<script src="../../assets/js/engines-s1.js"></script>
+</body>
+</html>

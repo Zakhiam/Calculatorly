@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light" />
+<title>Freelance Rate Calculator | Calculatorly</title>
+<meta name="description" content="Work out the hourly rate to charge as a freelancer — formula, worked example and breakdown. Free, no sign-up, answers as you type." />
+<link rel="canonical" href="https://calculatorly.online/salary/freelance-rate-calculator/" />
+<link rel="icon" href="data:," />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,400;0,600;0,700;0,800;1,400&amp;family=IBM+Plex+Mono:wght@500;600;700&amp;display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../../assets/css/khata.css" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Freelance Rate Calculator","url":"https://calculatorly.online/salary/freelance-rate-calculator/","applicationCategory":"UtilitiesApplication","operatingSystem":"Any (web browser)","browserRequirements":"Requires JavaScript","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"provider":{"@type":"Organization","name":"Calculatorly","url":"https://calculatorly.online/"}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://calculatorly.online/"},{"@type":"ListItem","position":2,"name":"Salary and Tax","item":"https://calculatorly.online/salary/"},{"@type":"ListItem","position":3,"name":"Freelance Rate Calculator","item":"https://calculatorly.online/salary/freelance-rate-calculator/"}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What counts as a business cost?","acceptedAnswer":{"@type":"Answer","text":"Anything the work needs that an employer would normally pay: software, equipment, insurance, travel, phone, accounting and training. Add them all up for the year and put the total in the costs box."}},{"@type":"Question","name":"How many billable hours should I count?","acceptedAnswer":{"@type":"Answer","text":"Only the hours a client pays for. A common rule is about 1,200 to 1,400 billable hours in a full year, once holidays, admin and finding work are taken out. Count your own hours honestly — too many hours gives a rate that is too low."}},{"@type":"Question","name":"Should I add tax on top of this rate?","acceptedAnswer":{"@type":"Answer","text":"Yes, in your own planning. This page works out the rate before tax. If you want $60,000 after tax, set the target income to the before-tax figure that leaves $60,000 after tax."}},{"@type":"Question","name":"What if I only work part-time?","acceptedAnswer":{"@type":"Answer","text":"Use your part-time figures: the income you want from that work, the costs for that work, and the billable hours you will actually do. The same sum gives the rate for part-time work."}},{"@type":"Question","name":"Should I charge this rate to every client?","acceptedAnswer":{"@type":"Answer","text":"It is the lowest rate that covers your costs. You can charge more for urgent work, rare skills or short jobs, but charging less than this rate means the work does not pay for itself."}},{"@type":"Question","name":"Is this calculator free, and do I need to sign up?","acceptedAnswer":{"@type":"Answer","text":"Yes, it is free, and no sign-up is needed. Nothing is uploaded: the calculation runs in your browser on your own device, and the numbers you type are not sent anywhere."}}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"HowTo","name":"How to use the Freelance Rate Calculator","step":[{"@type":"HowToStep","position":1,"text":"Type the yearly income you want, your yearly business costs, and how many hours you can bill in the year. There is no Calculate button — the answer appears as you type."},{"@type":"HowToStep","position":2,"text":"Read the result line for the hourly rate to charge."},{"@type":"HowToStep","position":3,"text":"Check the bar and table under the result to see the yearly total and what each hour must cover."}]}
+</script>
+</head>
+<body class="hub-salary">
+<div class="sheet">
+  <header class="masthead">
+    <div class="brand"><a href="../../">Calculator<span class="ly">ly</span></a></div>
+    <div class="domain mono">calculatorly.online</div>
+    <div class="mast-note">Every calculator, worked out in full.</div>
+  </header>
+  <main>
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="https://calculatorly.online/">Home</a></li>
+        <li><a href="https://calculatorly.online/salary/">Salary and Tax</a></li>
+        <li aria-current="page">Freelance Rate Calculator</li>
+      </ol>
+    </nav>
+    <span class="hub-tag">Hub: Salary and Tax</span>
+    
+    <h1>Freelance Rate Calculator</h1>
+
+    <section class="tool" aria-label="Freelance Rate Calculator tool">
+      <p class="tool-q">What hourly rate should I charge as a freelancer?</p>
+      <div class="fields">
+      <div class="field">
+        <label for="in-salary">Target yearly income ($)</label>
+        <input id="in-salary" type="number" inputmode="decimal" step="any" value="60000" autocomplete="off" />
+      </div>
+      <div class="field">
+        <label for="in-costs">Yearly business costs ($)</label>
+        <input id="in-costs" type="number" inputmode="decimal" step="any" value="12000" autocomplete="off" />
+      </div>
+      <div class="field">
+        <label for="in-hours">Billable hours in the year</label>
+        <input id="in-hours" type="number" inputmode="decimal" step="any" value="1200" autocomplete="off" />
+      </div>
+      </div>
+
+      <div class="result-wrap" aria-live="polite">
+        <div class="stamp" id="stamp" aria-hidden="true" hidden>Checked ✓</div>
+        <div class="result-label">Result</div>
+        <div class="result" id="result">$60.00 per hour</div>
+        <div class="result-sentence" id="sentence">To cover $72,000.00 over 1,200.00 billable hours, charge $60.00 an hour.</div>
+        <p class="msg" id="msg" hidden></p>
+      </div>
+      <ol class="howto">
+        <li><strong>Type the yearly income you want, your yearly business costs, and how many hours you can bill in the year. There is no Calculate button — the answer appears as you type.</strong></li>
+        <li><strong>Read the result line for the hourly rate to charge.</strong></li>
+        <li><strong>Check the bar and table under the result to see the yearly total and what each hour must cover.</strong></li>
+      </ol>
+      <p class="limit-note"><strong>Limit:</strong> Numbers up to 1,000,000,000,000; empty or over-limit input shows a clear message. <strong>Rounding:</strong> every result uses one named default — Half-up to 2 decimal places — in the answer, the bar and the table. The Checked stamp appears on the result box only while a valid result is showing.</p>
+    </section>
+
+    <section class="quick" aria-labelledby="quickH">
+      <h2 id="quickH"><span class="no">2</span>Quick answer</h2>
+      <p>A freelancer must cover both the income they want and their business costs, from the hours they can actually bill. A $60,000 income plus $12,000 of costs over 1,200 billable hours needs a rate of $60.00 an hour. Type your own figures above and this calculator shows the rate you need.</p>
+    </section>
+
+    <section class="part" aria-labelledby="formulaH">
+      <h2 id="formulaH"><span class="no">3</span>The formula</h2>
+      <p>Billable hours are only the hours a client pays for. Time spent finding work, doing admin and learning is not billable, so it does not sit in this sum.</p>
+      <div class="formula-box">
+        <strong>Freelance hourly rate — in words: add the target yearly income and the yearly business costs, then divide by the billable hours in the year.</strong>
+        <span class="sym">hourly rate = (target income + yearly costs) ÷ billable hours</span>
+      </div>
+      <p class="small">Formula source: plain arithmetic on the three numbers you type. No rate, tax table or outside data is used. Tax, pension and holiday pay are not taken off here — add them to your target income if you want them covered.</p>
+    </section>
+
+    <section class="part" aria-labelledby="exampleH">
+      <h2 id="exampleH"><span class="no">4</span>Worked example: $60,000 income, $12,000 costs, 1,200 hours</h2>
+      <ol class="steps">
+        <li>Yearly total to cover: $60,000 + $12,000 = $72,000.</li>
+        <li>Billable hours in the year: 1,200.</li>
+        <li>Hourly rate: $72,000 ÷ 1,200 = $60.00.</li>
+        <li class="ans">Answer: $60.00 per hour.</li>
+      </ol>
+      <p class="small">Try it in the tool above: type 60000, 12000 and 1200, and the result line shows $60.00 per hour.</p>
+    </section>
+
+    <section class="part" aria-labelledby="chartH">
+      <h2 id="chartH"><span class="no">5</span>Your result, drawn</h2>
+      <p>This bar and table are drawn from the numbers you typed above. Change a number and they change with it.</p>
+      <div class="bar" role="img" id="bar" aria-label="Bar showing the target income out of the yearly total to cover">
+        <div class="seg-a" style="width:83.33%"></div>
+        <div class="seg-b"></div>
+      </div>
+      <div class="bar-legend">
+        <span><span class="swatch a"></span><span id="legend-a">Target income: $60,000.00</span></span>
+        <span><span class="swatch b"></span><span id="legend-b">Business costs: $12,000.00</span></span>
+      </div>
+      <div class="table-scroll">
+        <table>
+          <thead><tr><th scope="col">Part of your sum</th><th scope="col" class="num">Value</th></tr></thead>
+          <tbody id="break-body">
+            <tr><td>Target yearly income</td><td class="num">$60,000.00</td></tr>
+            <tr><td>Yearly business costs</td><td class="num">$12,000.00</td></tr>
+            <tr><td>Yearly total to cover</td><td class="num">$72,000.00</td></tr>
+            <tr><td>Billable hours</td><td class="num">1,200.00</td></tr>
+            <tr><td>Hourly rate (your result)</td><td class="num">$60.00 per hour</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="part" aria-labelledby="faqH">
+      <h2 id="faqH"><span class="no">6</span>Questions about freelance rate</h2>
+      <details>
+        <summary>What counts as a business cost?</summary>
+        <p>Anything the work needs that an employer would normally pay: software, equipment, insurance, travel, phone, accounting and training. Add them all up for the year and put the total in the costs box.</p>
+      </details>
+      <details>
+        <summary>How many billable hours should I count?</summary>
+        <p>Only the hours a client pays for. A common rule is about 1,200 to 1,400 billable hours in a full year, once holidays, admin and finding work are taken out. Count your own hours honestly — too many hours gives a rate that is too low.</p>
+      </details>
+      <details>
+        <summary>Should I add tax on top of this rate?</summary>
+        <p>Yes, in your own planning. This page works out the rate before tax. If you want $60,000 after tax, set the target income to the before-tax figure that leaves $60,000 after tax.</p>
+      </details>
+      <details>
+        <summary>What if I only work part-time?</summary>
+        <p>Use your part-time figures: the income you want from that work, the costs for that work, and the billable hours you will actually do. The same sum gives the rate for part-time work.</p>
+      </details>
+      <details>
+        <summary>Should I charge this rate to every client?</summary>
+        <p>It is the lowest rate that covers your costs. You can charge more for urgent work, rare skills or short jobs, but charging less than this rate means the work does not pay for itself.</p>
+      </details>
+      <details>
+        <summary>Is this calculator free, and do I need to sign up?</summary>
+        <p>Yes, it is free, and no sign-up is needed. Nothing is uploaded: the calculation runs in your browser on your own device, and the numbers you type are not sent anywhere.</p>
+      </details>
+    </section>
+
+    <section class="part" aria-labelledby="relatedH">
+      <h2 id="relatedH"><span class="no">7</span>Related tools</h2>
+      <p class="small">More tools that go with this one — each with its own page, one job per page:</p>
+      <ul class="related">
+        <li><a href="https://calculatorly.online/salary/job-offer-comparison-calculator/">Job Offer Comparison Calculator<span class="d">Which of two job offers is worth more in total.</span><span class="u mono">calculatorly.online/salary/job-offer-comparison-calculator/</span></a></li>
+        <li><a href="https://calculatorly.online/salary/invoice-late-payment-calculator/">Invoice Late Payment Calculator<span class="d">Interest owed on a late invoice payment.</span><span class="u mono">calculatorly.online/salary/invoice-late-payment-calculator/</span></a></li>
+        <li><a href="https://calculatorly.online/salary/shift-pay-calculator/">Shift Pay Calculator<span class="d">Pay for day, night and weekend hours in one shift.</span><span class="u mono">calculatorly.online/salary/shift-pay-calculator/</span></a></li>
+      </ul>
+    </section>
+
+    <section class="part" aria-labelledby="testsH">
+      <h2 id="testsH">Known-answer test cases — run live on this page</h2>
+      <p>Each test below is worked out by the same code as the calculator above, the moment this page loads, and marked Pass or Fail against its known answer. If a row ever shows Fail, the page is not finished.</p>
+      <div class="table-scroll stack-wrap">
+        <table class="stackable">
+          <thead><tr><th scope="col">#</th><th scope="col">Test</th><th scope="col">Expected answer</th><th scope="col">Calculator gave</th><th scope="col">Result</th></tr></thead>
+          <tbody id="test-body">
+            <tr><td class="num" data-label="#">1</td><td data-label="Test">$60,000 income, $12,000 costs, 1,200 hours</td><td class="num" data-label="Expected answer">$60.00 per hour</td><td class="num" data-got data-label="Calculator gave">—</td><td data-label="Result"><span class="chip run" data-chip>RUNNING</span></td></tr>
+            <tr><td class="num" data-label="#">2</td><td data-label="Test">$80,000 income, $10,000 costs, 1,500 hours</td><td class="num" data-label="Expected answer">$60.00 per hour</td><td class="num" data-got data-label="Calculator gave">—</td><td data-label="Result"><span class="chip run" data-chip>RUNNING</span></td></tr>
+            <tr><td class="num" data-label="#">3</td><td data-label="Test">$50,000 income, $5,000 costs, 1,000 hours</td><td class="num" data-label="Expected answer">$55.00 per hour</td><td class="num" data-got data-label="Calculator gave">—</td><td data-label="Result"><span class="chip run" data-chip>RUNNING</span></td></tr>
+            <tr><td class="num" data-label="#">4</td><td data-label="Test">Empty input: billable hours left blank</td><td class="num" data-label="Expected answer">Prompt message, no result, no NaN</td><td class="num" data-got data-label="Calculator gave">—</td><td data-label="Result"><span class="chip run" data-chip>RUNNING</span></td></tr>
+            <tr><td class="num" data-label="#">5</td><td data-label="Test">Zero billable hours</td><td class="num" data-label="Expected answer">Cannot divide by zero.</td><td class="num" data-got data-label="Calculator gave">—</td><td data-label="Result"><span class="chip run" data-chip>RUNNING</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="record-note" style="margin-top:12px" id="test-summary">Tests are running…</p>
+    </section>
+
+    <section class="part" aria-labelledby="verdictH">
+      <h2 id="verdictH">Build record — verdict for this tool</h2>
+      <div class="table-scroll stack-wrap">
+        <table class="stackable">
+          <thead><tr><th scope="col">#</th><th scope="col">Tool</th><th scope="col">Verdict</th><th scope="col">Input → Output</th><th scope="col">Library / method</th><th scope="col">Limit or note shown on the page</th></tr></thead>
+          <tbody>
+            <tr>
+              <td class="num" data-label="#">1</td>
+              <td data-label="Tool">Freelance Rate Calculator</td>
+              <td data-label="Verdict"><strong>Browser-real</strong></td>
+              <td data-label="Input → Output">A target salary + yearly costs + billable hours -&gt; the hourly rate to charge</td>
+              <td data-label="Library / method">No library. Plain JavaScript arithmetic in the browser</td>
+              <td data-label="Limit or note shown on the page">Numbers up to 1,000,000,000,000; empty or over-limit input shows a clear message.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="record-note" style="margin-top:12px"><strong>Plan for this tool:</strong> one page only, in the Salary and Tax hub, built from the shared template with no libraries and no server. Security items that need a server (login, database, password rules) are N/A — this is a static page with no login and no stored data.</p>
+    </section>
+    <script type="application/json" id="tool-config">{"tool": "freelance-rate", "chart": "bar-table", "tests": [{"label": "$60,000 income, $12,000 costs, 1,200 hours", "inputs": {"salary": "60000", "costs": "12000", "hours": "1200"}, "expect": "$60.00 per hour"}, {"label": "$80,000 income, $10,000 costs, 1,500 hours", "inputs": {"salary": "80000", "costs": "10000", "hours": "1500"}, "expect": "$60.00 per hour"}, {"label": "$50,000 income, $5,000 costs, 1,000 hours", "inputs": {"salary": "50000", "costs": "5000", "hours": "1000"}, "expect": "$55.00 per hour"}, {"label": "Empty input: billable hours left blank", "inputs": {"salary": "60000", "costs": "12000", "hours": ""}, "expect_state": "empty", "expect_text": "Prompt message, no result, no NaN"}, {"label": "Zero billable hours", "inputs": {"salary": "60000", "costs": "12000", "hours": "0"}, "expect_state": "zero", "expect_text": "Cannot divide by zero."}], "fields": ["salary", "costs", "hours"]}</script>
+  </main>
+<footer class="site">
+    <span class="fbrand">Calculatorly</span>
+    <nav aria-label="Footer">
+      <a href="../../about/">About</a>
+      <a href="../../contact/">Contact</a>
+      <a href="../../privacy/">Privacy</a>
+      <a href="../../terms/">Terms</a>
+      <a href="../../disclaimer/">Disclaimer</a>
+    </nav>
+    <span>Calculatorly — free calculators, no sign-up. The domain calculatorly.online is bought; hosting is separate.</span>
+    <div class="ad-slot" hidden aria-hidden="true"></div>
+  </footer>
+</div>
+<script src="../../assets/js/calculatorly.js"></script>
+<script src="../../assets/js/engines-s3.js"></script>
+</body>
+</html>

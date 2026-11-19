@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light" />
+<title>Down Payment Calculator | Calculatorly</title>
+<meta name="description" content="Work out the deposit needed for a home price — formula, worked example and breakdown. Free, no sign-up, answers as you type." />
+<link rel="canonical" href="https://calculatorly.online/money/down-payment-calculator/" />
+<link rel="icon" href="data:," />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,400;0,600;0,700;0,800;1,400&amp;family=IBM+Plex+Mono:wght@500;600;700&amp;display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../../assets/css/khata.css" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Down Payment Calculator","url":"https://calculatorly.online/money/down-payment-calculator/","applicationCategory":"UtilitiesApplication","operatingSystem":"Any (web browser)","browserRequirements":"Requires JavaScript","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"provider":{"@type":"Organization","name":"Calculatorly","url":"https://calculatorly.online/"}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://calculatorly.online/"},{"@type":"ListItem","position":2,"name":"Money","item":"https://calculatorly.online/money/"},{"@type":"ListItem","position":3,"name":"Down Payment Calculator","item":"https://calculatorly.online/money/down-payment-calculator/"}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How much deposit do I need?","acceptedAnswer":{"@type":"Answer","text":"It depends on the lender and the loan. 20% is the common target because it often avoids extra insurance, but many loans allow 10%, 5% or even less. A smaller deposit means a larger loan and a higher monthly payment."}},{"@type":"Question","name":"What is the loan after the deposit?","acceptedAnswer":{"@type":"Answer","text":"The loan is the home price minus the deposit. On a $300,000 home with a $60,000 deposit, the loan is $240,000. This calculator shows that figure in the table under your result."}},{"@type":"Question","name":"Does a bigger deposit save money?","acceptedAnswer":{"@type":"Answer","text":"Yes. A bigger deposit means a smaller loan, so the monthly payment is smaller and the total interest over the loan is smaller. It also leaves you owing less than the home is worth, which lenders like."}},{"@type":"Question","name":"Can the deposit percent be over 100?","acceptedAnswer":{"@type":"Answer","text":"No sensible deposit is over 100% of the price — that would be more than the home costs. If you type a percent over 100, the calculator shows a clear message instead of a made-up number."}},{"@type":"Question","name":"What if the deposit percent is zero?","acceptedAnswer":{"@type":"Answer","text":"A 0% deposit means a deposit of $0.00 and a loan for the full price. Some loans allow that, but the monthly payment is at its highest and the lender may add extra costs."}},{"@type":"Question","name":"Is this financial advice?","acceptedAnswer":{"@type":"Answer","text":"No. This is an estimate for planning, from the numbers you type. Deposit rules change by lender and by country, so check with the lender before you act."}}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"HowTo","name":"How to use the Down Payment Calculator","step":[{"@type":"HowToStep","position":1,"text":"Type the home price and the deposit percent you plan to pay. There is no Calculate button — the answer appears as you type."},{"@type":"HowToStep","position":2,"text":"Read the deposit amount in the result line, rounded half-up to 2 decimal places."},{"@type":"HowToStep","position":3,"text":"Check the table under the result for the deposit, the loan left to borrow and the same figures at 5%, 10% and 20%."}]}
+</script>
+</head>
+<body class="hub-money">
+<div class="sheet">
+  <header class="masthead">
+    <div class="brand"><a href="../../">Calculator<span class="ly">ly</span></a></div>
+    <div class="domain mono">calculatorly.online</div>
+    <div class="mast-note">Every calculator, worked out in full.</div>
+  </header>
+  <main>
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="https://calculatorly.online/">Home</a></li>
+        <li><a href="https://calculatorly.online/money/">Money</a></li>
+        <li aria-current="page">Down Payment Calculator</li>
+      </ol>
+    </nav>
+    <span class="hub-tag">Hub: Money</span>
+    
+    <h1>Down Payment Calculator</h1>
+
+    <section class="tool" aria-label="Down Payment Calculator tool">
+      <p class="tool-q">How much deposit do I need for this home price?</p>
+      <div class="fields">
+      <div class="field">
+        <label for="in-price">Home price ($)</label>
+        <input id="in-price" type="number" inputmode="decimal" step="any" value="300000" autocomplete="off" />
+      </div>
+      <div class="field">
+        <label for="in-percent">Deposit percent (%)</label>
+        <input id="in-percent" type="number" inputmode="decimal" step="any" value="20" autocomplete="off" />
+      </div>
+      </div>
+
+      <div class="result-wrap" aria-live="polite">
+        <div class="stamp" id="stamp" aria-hidden="true" hidden>Checked ✓</div>
+        <div class="result-label">Result</div>
+        <div class="result" id="result">$60,000.00</div>
+        <div class="result-sentence" id="sentence">Deposit $60,000.00 on a $300,000.00 home leaves a loan of $240,000.00.</div>
+        <p class="msg" id="msg" hidden></p>
+      </div>
+      <ol class="howto">
+        <li><strong>Type the home price and the deposit percent you plan to pay. There is no Calculate button — the answer appears as you type.</strong></li>
+        <li><strong>Read the deposit amount in the result line, rounded half-up to 2 decimal places.</strong></li>
+        <li><strong>Check the table under the result for the deposit, the loan left to borrow and the same figures at 5%, 10% and 20%.</strong></li>
+      </ol>
+      <p class="limit-note"><strong>Limit:</strong> Numbers up to 1,000,000,000,000; empty or over-limit input shows a clear message. <strong>Rounding:</strong> every result uses one named default — Half-up to 2 decimal places — in the answer, the bar and the table. The Checked stamp appears on the result box only while a valid result is showing.</p>
+    </section>
+
+    <section class="quick" aria-labelledby="quickH">
+      <h2 id="quickH"><span class="no">2</span>Quick answer</h2>
+      <p>A 20% deposit on a $300,000 home is $60,000, which leaves a loan of $240,000 to borrow. The deposit is the home price times the deposit percent divided by 100. A larger deposit means a smaller loan, a smaller monthly payment and less interest over the life of the loan.</p>
+    </section>
+
+    <section class="part" aria-labelledby="formulaH">
+      <h2 id="formulaH"><span class="no">3</span>The formula</h2>
+      <p>The deposit is a percent of the price. The rest is the loan you need to borrow:</p>
+      <div class="formula-box">
+        <strong>Down payment — in words: multiply the home price by the deposit percent, then divide by 100.</strong>
+        <span class="sym">deposit = home price × deposit percent ÷ 100; loan = home price − deposit</span>
+      </div>
+      <p class="small">Formula source: the standard arithmetic definition of percent. No rate is fetched from anywhere — you type the price and the percent, and the page uses only those two numbers.</p>
+    </section>
+
+    <section class="part" aria-labelledby="exampleH">
+      <h2 id="exampleH"><span class="no">4</span>Worked example: 20% deposit on a $300,000 home</h2>
+      <ol class="steps">
+        <li>Start with the numbers: home price $300,000, deposit percent 20%.</li>
+        <li>Turn the percent into a share: 20 ÷ 100 = 0.20.</li>
+        <li>Multiply the price by the share: $300,000 × 0.20 = $60,000.</li>
+        <li class="ans">Answer: the deposit is $60,000.00, and the loan left to borrow is $300,000 − $60,000 = $240,000.</li>
+      </ol>
+      <p class="small">Try it in the tool above: type 300000 and 20, and the result line shows $60,000.00.</p>
+    </section>
+
+    <section class="part" aria-labelledby="chartH">
+      <h2 id="chartH"><span class="no">5</span>Your result, drawn</h2>
+      <p>This bar and table are drawn from the numbers you typed above. Change a number and they change with it.</p>
+      <div class="bar" role="img" id="bar" aria-label="Bar showing the deposit $60,000.00 out of the home price $300,000.00">
+        <div class="seg-a" style="width:20%"></div>
+        <div class="seg-b"></div>
+      </div>
+      <div class="bar-legend">
+        <span><span class="swatch a"></span><span id="legend-a">Deposit: $60,000.00</span></span>
+        <span><span class="swatch b"></span><span id="legend-b">Loan left to borrow: $240,000.00</span></span>
+      </div>
+      <div class="table-scroll">
+        <table>
+          <thead><tr><th scope="col">Part of your sum</th><th scope="col" class="num">Value</th></tr></thead>
+          <tbody id="break-body">
+            <tr><td>Home price</td><td class="num">$300,000.00</td></tr>
+            <tr><td>Deposit percent</td><td class="num">20.00%</td></tr>
+            <tr><td>Deposit (your result)</td><td class="num">$60,000.00</td></tr>
+            <tr><td>Loan left to borrow</td><td class="num">$240,000.00</td></tr>
+            <tr><td>Deposit at 5%</td><td class="num">$15,000.00</td></tr>
+            <tr><td>Deposit at 10%</td><td class="num">$30,000.00</td></tr>
+            <tr><td>Deposit at 20%</td><td class="num">$60,000.00</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="part" aria-labelledby="faqH">
+      <h2 id="faqH"><span class="no">6</span>Questions about down payment</h2>
+      <details>
+        <summary>How much deposit do I need?</summary>
+        <p>It depends on the lender and the loan. 20% is the common target because it often avoids extra insurance, but many loans allow 10%, 5% or even less. A smaller deposit means a larger loan and a higher monthly payment.</p>
+      </details>
+      <details>
+        <summary>What is the loan after the deposit?</summary>
+        <p>The loan is the home price minus the deposit. On a $300,000 home with a $60,000 deposit, the loan is $240,000. This calculator shows that figure in the table under your result.</p>
+      </details>
+      <details>
+        <summary>Does a bigger deposit save money?</summary>
+        <p>Yes. A bigger deposit means a smaller loan, so the monthly payment is smaller and the total interest over the loan is smaller. It also leaves you owing less than the home is worth, which lenders like.</p>
+      </details>
+      <details>
+        <summary>Can the deposit percent be over 100?</summary>
+        <p>No sensible deposit is over 100% of the price — that would be more than the home costs. If you type a percent over 100, the calculator shows a clear message instead of a made-up number.</p>
+      </details>
+      <details>
+        <summary>What if the deposit percent is zero?</summary>
+        <p>A 0% deposit means a deposit of $0.00 and a loan for the full price. Some loans allow that, but the monthly payment is at its highest and the lender may add extra costs.</p>
+      </details>
+      <details>
+        <summary>Is this financial advice?</summary>
+        <p>No. This is an estimate for planning, from the numbers you type. Deposit rules change by lender and by country, so check with the lender before you act.</p>
+      </details>
+    </section>
+
+    <section class="part" aria-labelledby="relatedH">
+      <h2 id="relatedH"><span class="no">7</span>Related tools</h2>
+      <p class="small">More tools that go with this one — each with its own page, one job per page:</p>
+      <ul class="related">
+        <li><a href="https://calculatorly.online/money/house-affordability-calculator/">House Affordability Calculator<span class="d">Highest sensible home price from income, deposit and debts.</span><span class="u mono">calculatorly.online/money/house-affordability-calculator/</span></a></li>
+        <li><a href="https://calculatorly.online/money/amortization-calculator/">Amortization Calculator<span class="d">Full repayment schedule: payment, interest and balance per month.</span><span class="u mono">calculatorly.online/money/amortization-calculator/</span></a></li>
+        <li><a href="https://calculatorly.online/money/rent-vs-buy-calculator/">Rent vs Buy Calculator<span class="d">Total cost of renting against buying the same home.</span><span class="u mono">calculatorly.online/money/rent-vs-buy-calculator/</span></a></li>
+      </ul>
+    </section>
+
+    <section class="part" aria-labelledby="testsH">
+      <h2 id="testsH">Known-answer test cases — run live on this page</h2>
+      <p>Each test below is worked out by the same code as the calculator above, the moment this page loads, and marked Pass or Fail against its known answer. If a row ever shows Fail, the page is not finished.</p>
+      <div class="table-scroll stack-wrap">
+        <table class="stackable">
+          <thead><tr><th scope="col">#</th><th scope="col">Test</th><th scope="col">Expected answer</th><th scope="col">Calculator gave</th><th scope="col">Result</th></tr></thead>
+          <tbody id="test-body">
+            <tr><td class="num" data-label="#">1</td><td data-label="Test">20% deposit on a $300,000 home</td><td class="num" data-label="Expected answer">$60,000.00</td><td class="num" data-got data-label="Calculator gave">—</td><td data-label="Result"><span class="chip run" data-chip>RUNNING</span></td></tr>
+            <tr><td class="num" data-label="#">2</td><td data-label="Test">10% deposit on a $450,000 home</td><td class="num" data-label="Expected answer">$45,000.00</td><td class="num" data-got data-label="Calculator gave">—</td><td data-label="Result"><span class="chip run" data-chip>RUNNING</span></td></tr>
+            <tr><td class="num" data-label="#">3</td><td data-label="Test">5% deposit on a $250,000 home</td><td class="num" data-label="Expected answer">$12,500.00</td><td class="num" data-got data-label="Calculator gave">—</td><td data-label="Result"><span class="chip run" data-chip>RUNNING</span></td></tr>
+            <tr><td class="num" data-label="#">4</td><td data-label="Test">Empty input: the home price box left blank</td><td class="num" data-label="Expected answer">Prompt message, no result, no NaN</td><td class="num" data-got data-label="Calculator gave">—</td><td data-label="Result"><span class="chip run" data-chip>RUNNING</span></td></tr>
+            <tr><td class="num" data-label="#">5</td><td data-label="Test">Very large price: $999,999,999,999 at 20%</td><td class="num" data-label="Expected answer">$199,999,999,999.80</td><td class="num" data-got data-label="Calculator gave">—</td><td data-label="Result"><span class="chip run" data-chip>RUNNING</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="record-note" style="margin-top:12px" id="test-summary">Tests are running…</p>
+    </section>
+
+    <section class="part" aria-labelledby="verdictH">
+      <h2 id="verdictH">Build record — verdict for this tool</h2>
+      <div class="table-scroll stack-wrap">
+        <table class="stackable">
+          <thead><tr><th scope="col">#</th><th scope="col">Tool</th><th scope="col">Verdict</th><th scope="col">Input → Output</th><th scope="col">Library / method</th><th scope="col">Limit or note shown on the page</th></tr></thead>
+          <tbody>
+            <tr>
+              <td class="num" data-label="#">1</td>
+              <td data-label="Tool">Down Payment Calculator</td>
+              <td data-label="Verdict"><strong>Browser-real</strong></td>
+              <td data-label="Input → Output">A home price + a deposit percent -&gt; the deposit amount and the loan left to borrow</td>
+              <td data-label="Library / method">No library. Plain JavaScript arithmetic in the browser</td>
+              <td data-label="Limit or note shown on the page">Numbers up to 1,000,000,000,000; empty or over-limit input shows a clear message.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="record-note" style="margin-top:12px"><strong>Plan for this tool:</strong> one page only, in the Money hub, built from the shared template with no libraries and no server. Security items that need a server (login, database, password rules) are N/A — this is a static page with no login and no stored data.</p>
+    </section>
+    <script type="application/json" id="tool-config">{"tool": "down-payment", "chart": "bar", "tests": [{"label": "20% deposit on a $300,000 home", "inputs": {"price": "300000", "percent": "20"}, "expect": "$60,000.00"}, {"label": "10% deposit on a $450,000 home", "inputs": {"price": "450000", "percent": "10"}, "expect": "$45,000.00"}, {"label": "5% deposit on a $250,000 home", "inputs": {"price": "250000", "percent": "5"}, "expect": "$12,500.00"}, {"label": "Empty input: the home price box left blank", "inputs": {"price": "", "percent": "20"}, "expect_state": "empty", "expect_text": "Prompt message, no result, no NaN"}, {"label": "Very large price: $999,999,999,999 at 20%", "inputs": {"price": "999999999999", "percent": "20"}, "expect": "$199,999,999,999.80"}], "fields": ["price", "percent"]}</script>
+  </main>
+<footer class="site">
+    <span class="fbrand">Calculatorly</span>
+    <nav aria-label="Footer">
+      <a href="../../about/">About</a>
+      <a href="../../contact/">Contact</a>
+      <a href="../../privacy/">Privacy</a>
+      <a href="../../terms/">Terms</a>
+      <a href="../../disclaimer/">Disclaimer</a>
+    </nav>
+    <span>Calculatorly — free calculators, no sign-up. The domain calculatorly.online is bought; hosting is separate.</span>
+    <div class="ad-slot" hidden aria-hidden="true"></div>
+  </footer>
+</div>
+<script src="../../assets/js/calculatorly.js"></script>
+<script src="../../assets/js/engines-s2.js"></script>
+</body>
+</html>

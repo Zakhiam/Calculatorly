@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light" />
+<title>Discount Calculator | Calculatorly</title>
+<meta name="description" content="Work out the price after a discount and how much you save — formula, worked example and breakdown. Free, no sign-up, answers as you type." />
+<link rel="canonical" href="https://calculatorly.online/money/discount-calculator/" />
+<link rel="icon" href="data:," />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,400;0,600;0,700;0,800;1,400&amp;family=IBM+Plex+Mono:wght@500;600;700&amp;display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../../assets/css/khata.css" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Discount Calculator","url":"https://calculatorly.online/money/discount-calculator/","applicationCategory":"UtilitiesApplication","operatingSystem":"Any (web browser)","browserRequirements":"Requires JavaScript","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"provider":{"@type":"Organization","name":"Calculatorly","url":"https://calculatorly.online/"}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://calculatorly.online/"},{"@type":"ListItem","position":2,"name":"Money","item":"https://calculatorly.online/money/"},{"@type":"ListItem","position":3,"name":"Discount Calculator","item":"https://calculatorly.online/money/discount-calculator/"}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How do I work out a discount by hand?","acceptedAnswer":{"@type":"Answer","text":"Multiply the price by the discount percent and divide by 100 to get the saving, then subtract the saving from the price. For 25% off 80: 80 × 25 ÷ 100 = 20 saved, so 80 − 20 = 60. This calculator does the same sum instantly."}},{"@type":"Question","name":"What is 20% off 50?","acceptedAnswer":{"@type":"Answer","text":"20% of 50 is 10, so the sale price is 50 − 10 = 40. A quick check: 10% of 50 is 5, so 20% is double that, 10."}},{"@type":"Question","name":"Can the discount be more than 100%?","acceptedAnswer":{"@type":"Answer","text":"No. A discount over 100% would make the sale price negative, which has no meaning for a price, so this calculator does not accept a discount above 100%. A discount of 100% makes the item free: the sale price is 0.00."}},{"@type":"Question","name":"What is the difference between a discount and a sale price?","acceptedAnswer":{"@type":"Answer","text":"The discount is the amount taken off, and the sale price is what you actually pay. On an 80 item with 25% off, the discount is 20 and the sale price is 60. This page shows both, so you can see each one."}},{"@type":"Question","name":"How are the answers rounded?","acceptedAnswer":{"@type":"Answer","text":"Every result on this page uses one rounding rule: half-up to 2 decimal places. For example, 50% off 49.99 is 24.995, which rounds to 24.99. The same rule is used in the answer, the bar and the table, so the figures always agree."}},{"@type":"Question","name":"Does the discount include tax?","acceptedAnswer":{"@type":"Answer","text":"No. This tool works on the price you type, before or after tax, exactly as you type it. If the price on the shelf already includes tax, type that price; if you want the price before tax, work it out on the VAT calculator first."}}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"HowTo","name":"How to use the Discount Calculator","step":[{"@type":"HowToStep","position":1,"text":"Type the full price and the discount percent in the boxes. There is no Calculate button — the sale price appears as you type."},{"@type":"HowToStep","position":2,"text":"Read the sale price in the result line, rounded half-up to 2 decimal places."},{"@type":"HowToStep","position":3,"text":"Check the bar and table under the result (Part 5 below) to see the full price, the amount saved and the sale price."}]}
+</script>
+</head>
+<body class="hub-money">
+<div class="sheet">
+  <header class="masthead">
+    <div class="brand"><a href="../../">Calculator<span class="ly">ly</span></a></div>
+    <div class="domain mono">calculatorly.online</div>
+    <div class="mast-note">Every calculator, worked out in full.</div>
+  </header>
+  <main>
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="https://calculatorly.online/">Home</a></li>
+        <li><a href="https://calculatorly.online/money/">Money</a></li>
+        <li aria-current="page">Discount Calculator</li>
+      </ol>
+    </nav>
+    <span class="hub-tag">Hub: Money</span>
+    
+    <h1>Discount Calculator</h1>
+
+    <section class="tool" aria-label="Discount Calculator tool">
+      <p class="tool-q">What is the price after the discount?</p>
+      <div class="fields">
+      <div class="field">
+        <label for="in-price">Price before the discount</label>
+        <input id="in-price" type="number" inputmode="decimal" step="any" value="80" autocomplete="off" />
+      </div>
+      <div class="field">
+        <label for="in-pct">Discount percent (%)</label>
+        <input id="in-pct" type="number" inputmode="decimal" step="any" value="25" autocomplete="off" />
+      </div>
+      </div>
+
+      <div class="result-wrap" aria-live="polite">
+        <div class="stamp" id="stamp" aria-hidden="true" hidden>Checked ✓</div>
+        <div class="result-label">Result</div>
+        <div class="result" id="result">60.00</div>
+        <div class="result-sentence" id="sentence">The sale price is 60.00 after saving 20.00 (25.00% off the price of 80.00).</div>
+        <p class="msg" id="msg" hidden></p>
+      </div>
+      <ol class="howto">
+        <li><strong>Type the full price and the discount percent in the boxes. There is no Calculate button — the sale price appears as you type.</strong></li>
+        <li><strong>Read the sale price in the result line, rounded half-up to 2 decimal places.</strong></li>
+        <li><strong>Check the bar and table under the result (Part 5 below) to see the full price, the amount saved and the sale price.</strong></li>
+      </ol>
+      <p class="limit-note"><strong>Limit:</strong> Numbers up to 1,000,000,000,000; empty or over-limit input shows a clear message. <strong>Rounding:</strong> every result uses one named default — Half-up to 2 decimal places — in the answer, the bar and the table. The Checked stamp appears on the result box only while a valid result is showing.</p>
+    </section>
+
+    <section class="quick" aria-labelledby="quickH">
+      <h2 id="quickH"><span class="no">2</span>Quick answer</h2>
+      <p>To work out a sale price, find the amount saved and take it off the full price. For example, 25% off 80 saves 20, so the sale price is 60. Type any price and discount percent above and this calculator gives the sale price and the amount saved instantly, with the breakdown below.</p>
+    </section>
+
+    <section class="part" aria-labelledby="formulaH">
+      <h2 id="formulaH"><span class="no">3</span>The formula</h2>
+      <p>A discount is a share of the price taken off, so the sale price is what is left after that share is removed:</p>
+      <div class="formula-box">
+        <strong>Sale price — in words: take the discount percent of the price, then subtract that saving from the price.</strong>
+        <span class="sym">sale price = price − (price × discount ÷ 100)</span>
+      </div>
+      <p class="small">Formula source: the standard arithmetic definition of percent. No rate, price or outside data is used by this tool — only the two numbers you type, in your own currency.</p>
+    </section>
+
+    <section class="part" aria-labelledby="exampleH">
+      <h2 id="exampleH"><span class="no">4</span>Worked example: 25% off 80</h2>
+      <ol class="steps">
+        <li>Start with the price and the discount: price 80, discount 25%.</li>
+        <li>Work out the saving: 80 × 25 ÷ 100 = 20.</li>
+        <li>Take the saving off the price: 80 − 20 = 60.</li>
+        <li class="ans">Answer: the sale price is 60.00, and you save 20.00.</li>
+      </ol>
+      <p class="small">Try it in the tool above: type 80 and 25, and the result line shows 60.00.</p>
+    </section>
+
+    <section class="part" aria-labelledby="chartH">
+      <h2 id="chartH"><span class="no">5</span>Your result, drawn</h2>
+      <p>This bar and table are drawn from the numbers you typed above. Change a number and they change with it.</p>
+      <div class="bar" role="img" id="bar" aria-label="Bar showing the sale price 60.00 out of the full price 80.00">
+        <div class="seg-a" style="width:75%"></div>
+        <div class="seg-b"></div>
+      </div>
+      <div class="bar-legend">
+        <span><span class="swatch a"></span><span id="legend-a">Sale price: 60.00</span></span>
+        <span><span class="swatch b"></span><span id="legend-b">You save: 20.00</span></span>
+      </div>
+      <div class="table-scroll">
+        <table>
+          <thead><tr><th scope="col">Part of your sum</th><th scope="col" class="num">Value</th></tr></thead>
+          <tbody id="break-body">
+            <tr><td>Full price</td><td class="num">80.00</td></tr>
+            <tr><td>Discount (25.00%)</td><td class="num">−20.00</td></tr>
+            <tr><td>You save</td><td class="num">20.00</td></tr>
+            <tr><td>Sale price (your result)</td><td class="num">60.00</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="part" aria-labelledby="faqH">
+      <h2 id="faqH"><span class="no">6</span>Questions about discount</h2>
+      <details>
+        <summary>How do I work out a discount by hand?</summary>
+        <p>Multiply the price by the discount percent and divide by 100 to get the saving, then subtract the saving from the price. For 25% off 80: 80 × 25 ÷ 100 = 20 saved, so 80 − 20 = 60. This calculator does the same sum instantly.</p>
+      </details>
+      <details>
+        <summary>What is 20% off 50?</summary>
+        <p>20% of 50 is 10, so the sale price is 50 − 10 = 40. A quick check: 10% of 50 is 5, so 20% is double that, 10.</p>
+      </details>
+      <details>
+        <summary>Can the discount be more than 100%?</summary>
+        <p>No. A discount over 100% would make the sale price negative, which has no meaning for a price, so this calculator does not accept a discount above 100%. A discount of 100% makes the item free: the sale price is 0.00.</p>
+      </details>
+      <details>
+        <summary>What is the difference between a discount and a sale price?</summary>
+        <p>The discount is the amount taken off, and the sale price is what you actually pay. On an 80 item with 25% off, the discount is 20 and the sale price is 60. This page shows both, so you can see each one.</p>
+      </details>
+      <details>
+        <summary>How are the answers rounded?</summary>
+        <p>Every result on this page uses one rounding rule: half-up to 2 decimal places. For example, 50% off 49.99 is 24.995, which rounds to 24.99. The same rule is used in the answer, the bar and the table, so the figures always agree.</p>
+      </details>
+      <details>
+        <summary>Does the discount include tax?</summary>
+        <p>No. This tool works on the price you type, before or after tax, exactly as you type it. If the price on the shelf already includes tax, type that price; if you want the price before tax, work it out on the VAT calculator first.</p>
+      </details>
+    </section>
+
+    <section class="part" aria-labelledby="relatedH">
+      <h2 id="relatedH"><span class="no">7</span>Related tools</h2>
+      <p class="small">More tools that go with this one — each with its own page, one job per page:</p>
+      <ul class="related">
+        <li><a href="https://calculatorly.online/money/vat-calculator/">VAT Calculator<span class="d">Work out VAT on a price, with or without tax included.</span><span class="u mono">calculatorly.online/money/vat-calculator/</span></a></li>
+        <li><a href="https://calculatorly.online/money/sales-tax-calculator/">Sales Tax Calculator<span class="d">Work out the sales tax on a price and the total to pay.</span><span class="u mono">calculatorly.online/money/sales-tax-calculator/</span></a></li>
+        <li><a href="https://calculatorly.online/money/loan-calculator/">Loan Calculator<span class="d">Work out your monthly loan payment and total interest.</span><span class="u mono">calculatorly.online/money/loan-calculator/</span></a></li>
+      </ul>
+    </section>
+
+    <section class="part" aria-labelledby="testsH">
+      <h2 id="testsH">Known-answer test cases — run live on this page</h2>
+      <p>Each test below is worked out by the same code as the calculator above, the moment this page loads, and marked Pass or Fail against its known answer. If a row ever shows Fail, the page is not finished.</p>
+      <div class="table-scroll stack-wrap">
+        <table class="stackable">
+          <thead><tr><th scope="col">#</th><th scope="col">Test</th><th scope="col">Expected answer</th><th scope="col">Calculator gave</th><th scope="col">Result</th></tr></thead>
+          <tbody id="test-body">
+            <tr><td class="num" data-label="#">1</td><td data-label="Test">What is the sale price of 80 with 25% off?</td><td class="num" data-label="Expected answer">60.00</td><td class="num" data-got data-label="Calculator gave">—</td><td data-label="Result"><span class="chip run" data-chip>RUNNING</span></td></tr>
+            <tr><td class="num" data-label="#">2</td><td data-label="Test">What is the sale price of 120 with 10% off?</td><td class="num" data-label="Expected answer">108.00</td><td class="num" data-got data-label="Calculator gave">—</td><td data-label="Result"><span class="chip run" data-chip>RUNNING</span></td></tr>
+            <tr><td class="num" data-label="#">3</td><td data-label="Test">Rounding check: 50% off 49.99 (half of 49.99 is 24.995)</td><td class="num" data-label="Expected answer">25.00</td><td class="num" data-got data-label="Calculator gave">—</td><td data-label="Result"><span class="chip run" data-chip>RUNNING</span></td></tr>
+            <tr><td class="num" data-label="#">4</td><td data-label="Test">Empty input: the price box left blank</td><td class="num" data-label="Expected answer">State: empty</td><td class="num" data-got data-label="Calculator gave">—</td><td data-label="Result"><span class="chip run" data-chip>RUNNING</span></td></tr>
+            <tr><td class="num" data-label="#">5</td><td data-label="Test">Very large value: 50% off 999,999,999,999</td><td class="num" data-label="Expected answer">499,999,999,999.50</td><td class="num" data-got data-label="Calculator gave">—</td><td data-label="Result"><span class="chip run" data-chip>RUNNING</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="record-note" style="margin-top:12px" id="test-summary">Tests are running…</p>
+    </section>
+
+    <section class="part" aria-labelledby="verdictH">
+      <h2 id="verdictH">Build record — verdict for this tool</h2>
+      <div class="table-scroll stack-wrap">
+        <table class="stackable">
+          <thead><tr><th scope="col">#</th><th scope="col">Tool</th><th scope="col">Verdict</th><th scope="col">Input → Output</th><th scope="col">Library / method</th><th scope="col">Limit or note shown on the page</th></tr></thead>
+          <tbody>
+            <tr>
+              <td class="num" data-label="#">1</td>
+              <td data-label="Tool">Discount Calculator</td>
+              <td data-label="Verdict"><strong>Browser-real</strong></td>
+              <td data-label="Input → Output">A price + a discount percent -&gt; the sale price and the amount saved</td>
+              <td data-label="Library / method">No library. Plain JavaScript arithmetic in the browser</td>
+              <td data-label="Limit or note shown on the page">Numbers up to 1,000,000,000,000; empty or over-limit input shows a clear message.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="record-note" style="margin-top:12px"><strong>Plan for this tool:</strong> one page only, in the Money hub, built from the shared template with no libraries and no server. Security items that need a server (login, database, password rules) are N/A — this is a static page with no login and no stored data.</p>
+    </section>
+    <script type="application/json" id="tool-config">{"tool": "discount", "chart": "bar-table", "tests": [{"label": "What is the sale price of 80 with 25% off?", "inputs": {"price": "80", "pct": "25"}, "expect": "60.00"}, {"label": "What is the sale price of 120 with 10% off?", "inputs": {"price": "120", "pct": "10"}, "expect": "108.00"}, {"label": "Rounding check: 50% off 49.99 (half of 49.99 is 24.995)", "inputs": {"price": "49.99", "pct": "50"}, "expect": "25.00"}, {"label": "Empty input: the price box left blank", "inputs": {"price": "", "pct": "25"}, "expect_state": "empty", "expect_text": "State: empty"}, {"label": "Very large value: 50% off 999,999,999,999", "inputs": {"price": "999999999999", "pct": "50"}, "expect": "499,999,999,999.50"}], "fields": ["price", "pct"]}</script>
+  </main>
+<footer class="site">
+    <span class="fbrand">Calculatorly</span>
+    <nav aria-label="Footer">
+      <a href="../../about/">About</a>
+      <a href="../../contact/">Contact</a>
+      <a href="../../privacy/">Privacy</a>
+      <a href="../../terms/">Terms</a>
+      <a href="../../disclaimer/">Disclaimer</a>
+    </nav>
+    <span>Calculatorly — free calculators, no sign-up. The domain calculatorly.online is bought; hosting is separate.</span>
+    <div class="ad-slot" hidden aria-hidden="true"></div>
+  </footer>
+</div>
+<script src="../../assets/js/calculatorly.js"></script>
+<script src="../../assets/js/engines-s1.js"></script>
+</body>
+</html>

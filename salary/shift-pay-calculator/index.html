@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light" />
+<title>Shift Pay Calculator | Calculatorly</title>
+<meta name="description" content="Work out your pay for a shift with night and weekend rates — formula, worked example and breakdown. Free, no sign-up, answers as you type." />
+<link rel="canonical" href="https://calculatorly.online/salary/shift-pay-calculator/" />
+<link rel="icon" href="data:," />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,400;0,600;0,700;0,800;1,400&amp;family=IBM+Plex+Mono:wght@500;600;700&amp;display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../../assets/css/khata.css" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Shift Pay Calculator","url":"https://calculatorly.online/salary/shift-pay-calculator/","applicationCategory":"UtilitiesApplication","operatingSystem":"Any (web browser)","browserRequirements":"Requires JavaScript","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"provider":{"@type":"Organization","name":"Calculatorly","url":"https://calculatorly.online/"}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://calculatorly.online/"},{"@type":"ListItem","position":2,"name":"Salary and Tax","item":"https://calculatorly.online/salary/"},{"@type":"ListItem","position":3,"name":"Shift Pay Calculator","item":"https://calculatorly.online/salary/shift-pay-calculator/"}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What counts as night work?","acceptedAnswer":{"@type":"Answer","text":"That depends on your contract or award. A common night window is 10 pm to 6 am, but your own agreement can set other hours. Put the hours that fall inside your night window in the night boxes."}},{"@type":"Question","name":"What if my shift crosses midnight?","acceptedAnswer":{"@type":"Answer","text":"Split it by hand first: count the hours before and after midnight, then put the day and night hours in the right boxes. This page does not split a shift across midnight for you."}},{"@type":"Question","name":"What if I worked a public holiday?","acceptedAnswer":{"@type":"Answer","text":"Use the weekend rate box for the holiday rate if your agreement pays a higher rate for it, or add the holiday hours at the holiday rate in the weekend boxes. Say which rate you used, so the total is clear."}},{"@type":"Question","name":"Does this take tax off?","acceptedAnswer":{"@type":"Answer","text":"No. It works out the gross pay for the shift, before tax. Tax depends on your full income and your country, so it is not taken off here."}},{"@type":"Question","name":"Can I use this for a whole week?","acceptedAnswer":{"@type":"Answer","text":"Yes. Put the whole week's day, night and weekend hours in the boxes and the total is the week's gross pay. Overtime is not added here — use the Overtime Calculator for that."}},{"@type":"Question","name":"Is this calculator free, and do I need to sign up?","acceptedAnswer":{"@type":"Answer","text":"Yes, it is free, and no sign-up is needed. Nothing is uploaded: the calculation runs in your browser on your own device, and the numbers you type are not sent anywhere."}}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"HowTo","name":"How to use the Shift Pay Calculator","step":[{"@type":"HowToStep","position":1,"text":"Type the hours and the rate for day, night and weekend work in the shift. There is no Calculate button — the answer appears as you type."},{"@type":"HowToStep","position":2,"text":"Read the result line for the total pay for the shift."},{"@type":"HowToStep","position":3,"text":"Check the bar and table under the result to see what each part of the shift pays."}]}
+</script>
+</head>
+<body class="hub-salary">
+<div class="sheet">
+  <header class="masthead">
+    <div class="brand"><a href="../../">Calculator<span class="ly">ly</span></a></div>
+    <div class="domain mono">calculatorly.online</div>
+    <div class="mast-note">Every calculator, worked out in full.</div>
+  </header>
+  <main>
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="https://calculatorly.online/">Home</a></li>
+        <li><a href="https://calculatorly.online/salary/">Salary and Tax</a></li>
+        <li aria-current="page">Shift Pay Calculator</li>
+      </ol>
+    </nav>
+    <span class="hub-tag">Hub: Salary and Tax</span>
+    
+    <h1>Shift Pay Calculator</h1>
+
+    <section class="tool" aria-label="Shift Pay Calculator tool">
+      <p class="tool-q">How much pay is a shift worth?</p>
+      <div class="fields">
+      <div class="field">
+        <label for="in-day_hours">Day hours</label>
+        <input id="in-day_hours" type="number" inputmode="decimal" step="any" value="8" autocomplete="off" />
+      </div>
+      <div class="field">
+        <label for="in-day_rate">Day rate ($)</label>
+        <input id="in-day_rate" type="number" inputmode="decimal" step="any" value="20" autocomplete="off" />
+      </div>
+      <div class="field">
+        <label for="in-night_hours">Night hours</label>
+        <input id="in-night_hours" type="number" inputmode="decimal" step="any" value="4" autocomplete="off" />
+      </div>
+      <div class="field">
+        <label for="in-night_rate">Night rate ($)</label>
+        <input id="in-night_rate" type="number" inputmode="decimal" step="any" value="30" autocomplete="off" />
+      </div>
+      <div class="field">
+        <label for="in-weekend_hours">Weekend hours</label>
+        <input id="in-weekend_hours" type="number" inputmode="decimal" step="any" value="0" autocomplete="off" />
+      </div>
+      <div class="field">
+        <label for="in-weekend_rate">Weekend rate ($)</label>
+        <input id="in-weekend_rate" type="number" inputmode="decimal" step="any" value="40" autocomplete="off" />
+      </div>
+      </div>
+
+      <div class="result-wrap" aria-live="polite">
+        <div class="stamp" id="stamp" aria-hidden="true" hidden>Checked ✓</div>
+        <div class="result-label">Result</div>
+        <div class="result" id="result">$280.00</div>
+        <div class="result-sentence" id="sentence">Day pay $160.00 + night pay $120.00 + weekend pay $0.00 = $280.00 for the shift.</div>
+        <p class="msg" id="msg" hidden></p>
+      </div>
+      <ol class="howto">
+        <li><strong>Type the hours and the rate for day, night and weekend work in the shift. There is no Calculate button — the answer appears as you type.</strong></li>
+        <li><strong>Read the result line for the total pay for the shift.</strong></li>
+        <li><strong>Check the bar and table under the result to see what each part of the shift pays.</strong></li>
+      </ol>
+      <p class="limit-note"><strong>Limit:</strong> Numbers up to 1,000,000,000,000; empty or over-limit input shows a clear message. <strong>Rounding:</strong> every result uses one named default — Half-up to 2 decimal places — in the answer, the bar and the table. The Checked stamp appears on the result box only while a valid result is showing.</p>
+    </section>
+
+    <section class="quick" aria-labelledby="quickH">
+      <h2 id="quickH"><span class="no">2</span>Quick answer</h2>
+      <p>Shift pay adds each part of the shift at its own rate. A shift of 8 day hours at $20 and 4 night hours at $30 pays $280.00 in total. Type your hours and rates above and this calculator shows the total for the shift instantly.</p>
+    </section>
+
+    <section class="part" aria-labelledby="formulaH">
+      <h2 id="formulaH"><span class="no">3</span>The formula</h2>
+      <p>Each part of the shift is paid at its own rate, so night and weekend hours can pay more than day hours. Put 0 in a part you did not work.</p>
+      <div class="formula-box">
+        <strong>Shift pay — in words: multiply the hours by the rate for day, night and weekend work, then add the three parts together.</strong>
+        <span class="sym">total pay = (day hours × day rate) + (night hours × night rate) + (weekend hours × weekend rate)</span>
+      </div>
+      <p class="small">Formula source: plain arithmetic on the six numbers you type. No rate, tax table or outside data is used. Tax is not taken off.</p>
+    </section>
+
+    <section class="part" aria-labelledby="exampleH">
+      <h2 id="exampleH"><span class="no">4</span>Worked example: 8 day hours at $20, 4 night hours at $30</h2>
+      <ol class="steps">
+        <li>Day pay: 8 × $20 = $160.00.</li>
+        <li>Night pay: 4 × $30 = $120.00.</li>
+        <li>Weekend pay: 0 × $40 = $0.00.</li>
+        <li class="ans">Answer: $160.00 + $120.00 + $0.00 = $280.00.</li>
+      </ol>
+      <p class="small">Try it in the tool above: type 8, 20, 4, 30, 0 and 40, and the result line shows $280.00.</p>
+    </section>
+
+    <section class="part" aria-labelledby="chartH">
+      <h2 id="chartH"><span class="no">5</span>Your result, drawn</h2>
+      <p>This bar and table are drawn from the numbers you typed above. Change a number and they change with it.</p>
+      <div class="bar" role="img" id="bar" aria-label="Bar showing the day pay out of the total shift pay">
+        <div class="seg-a" style="width:57.14%"></div>
+        <div class="seg-b"></div>
+      </div>
+      <div class="bar-legend">
+        <span><span class="swatch a"></span><span id="legend-a">Day pay: $160.00</span></span>
+        <span><span class="swatch b"></span><span id="legend-b">Night + weekend pay: $120.00</span></span>
+      </div>
+      <div class="table-scroll">
+        <table>
+          <thead><tr><th scope="col">Part of your sum</th><th scope="col" class="num">Value</th></tr></thead>
+          <tbody id="break-body">
+            <tr><td>Day pay (8.00 hours)</td><td class="num">$160.00</td></tr>
+            <tr><td>Night pay (4.00 hours)</td><td class="num">$120.00</td></tr>
+            <tr><td>Weekend pay (0.00 hours)</td><td class="num">$0.00</td></tr>
+            <tr><td>Total pay (your result)</td><td class="num">$280.00</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="part" aria-labelledby="faqH">
+      <h2 id="faqH"><span class="no">6</span>Questions about shift pay</h2>
+      <details>
+        <summary>What counts as night work?</summary>
+        <p>That depends on your contract or award. A common night window is 10 pm to 6 am, but your own agreement can set other hours. Put the hours that fall inside your night window in the night boxes.</p>
+      </details>
+      <details>
+        <summary>What if my shift crosses midnight?</summary>
+        <p>Split it by hand first: count the hours before and after midnight, then put the day and night hours in the right boxes. This page does not split a shift across midnight for you.</p>
+      </details>
+      <details>
+        <summary>What if I worked a public holiday?</summary>
+        <p>Use the weekend rate box for the holiday rate if your agreement pays a higher rate for it, or add the holiday hours at the holiday rate in the weekend boxes. Say which rate you used, so the total is clear.</p>
+      </details>
+      <details>
+        <summary>Does this take tax off?</summary>
+        <p>No. It works out the gross pay for the shift, before tax. Tax depends on your full income and your country, so it is not taken off here.</p>
+      </details>
+      <details>
+        <summary>Can I use this for a whole week?</summary>
+        <p>Yes. Put the whole week&#x27;s day, night and weekend hours in the boxes and the total is the week&#x27;s gross pay. Overtime is not added here — use the Overtime Calculator for that.</p>
+      </details>
+      <details>
+        <summary>Is this calculator free, and do I need to sign up?</summary>
+        <p>Yes, it is free, and no sign-up is needed. Nothing is uploaded: the calculation runs in your browser on your own device, and the numbers you type are not sent anywhere.</p>
+      </details>
+    </section>
+
+    <section class="part" aria-labelledby="relatedH">
+      <h2 id="relatedH"><span class="no">7</span>Related tools</h2>
+      <p class="small">More tools that go with this one — each with its own page, one job per page:</p>
+      <ul class="related">
+        <li><a href="https://calculatorly.online/salary/overtime-calculator/">Overtime Calculator<span class="d">Extra pay for hours over the standard week, in the USA and Australia.</span><span class="u mono">calculatorly.online/salary/overtime-calculator/</span></a></li>
+        <li><a href="https://calculatorly.online/salary/pto-calculator/">PTO Calculator<span class="d">Paid days off earned so far this year.</span><span class="u mono">calculatorly.online/salary/pto-calculator/</span></a></li>
+        <li><a href="https://calculatorly.online/salary/parental-leave-pay-calculator/">Parental Leave Pay Calculator<span class="d">Pay during parental leave from a salary, weeks and pay rate.</span><span class="u mono">calculatorly.online/salary/parental-leave-pay-calculator/</span></a></li>
+      </ul>
+    </section>
+
+    <section class="part" aria-labelledby="testsH">
+      <h2 id="testsH">Known-answer test cases — run live on this page</h2>
+      <p>Each test below is worked out by the same code as the calculator above, the moment this page loads, and marked Pass or Fail against its known answer. If a row ever shows Fail, the page is not finished.</p>
+      <div class="table-scroll stack-wrap">
+        <table class="stackable">
+          <thead><tr><th scope="col">#</th><th scope="col">Test</th><th scope="col">Expected answer</th><th scope="col">Calculator gave</th><th scope="col">Result</th></tr></thead>
+          <tbody id="test-body">
+            <tr><td class="num" data-label="#">1</td><td data-label="Test">8 day hours at $20, 4 night hours at $30</td><td class="num" data-label="Expected answer">$280.00</td><td class="num" data-got data-label="Calculator gave">—</td><td data-label="Result"><span class="chip run" data-chip>RUNNING</span></td></tr>
+            <tr><td class="num" data-label="#">2</td><td data-label="Test">Day work only: 8 hours at $20</td><td class="num" data-label="Expected answer">$160.00</td><td class="num" data-got data-label="Calculator gave">—</td><td data-label="Result"><span class="chip run" data-chip>RUNNING</span></td></tr>
+            <tr><td class="num" data-label="#">3</td><td data-label="Test">Weekend only: 5 hours at $40</td><td class="num" data-label="Expected answer">$200.00</td><td class="num" data-got data-label="Calculator gave">—</td><td data-label="Result"><span class="chip run" data-chip>RUNNING</span></td></tr>
+            <tr><td class="num" data-label="#">4</td><td data-label="Test">Empty input: day rate left blank</td><td class="num" data-label="Expected answer">Prompt message, no result, no NaN</td><td class="num" data-got data-label="Calculator gave">—</td><td data-label="Result"><span class="chip run" data-chip>RUNNING</span></td></tr>
+            <tr><td class="num" data-label="#">5</td><td data-label="Test">Very large value: 999,999,999,999 day hours</td><td class="num" data-label="Expected answer">$19,999,999,999,980.00</td><td class="num" data-got data-label="Calculator gave">—</td><td data-label="Result"><span class="chip run" data-chip>RUNNING</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="record-note" style="margin-top:12px" id="test-summary">Tests are running…</p>
+    </section>
+
+    <section class="part" aria-labelledby="verdictH">
+      <h2 id="verdictH">Build record — verdict for this tool</h2>
+      <div class="table-scroll stack-wrap">
+        <table class="stackable">
+          <thead><tr><th scope="col">#</th><th scope="col">Tool</th><th scope="col">Verdict</th><th scope="col">Input → Output</th><th scope="col">Library / method</th><th scope="col">Limit or note shown on the page</th></tr></thead>
+          <tbody>
+            <tr>
+              <td class="num" data-label="#">1</td>
+              <td data-label="Tool">Shift Pay Calculator</td>
+              <td data-label="Verdict"><strong>Browser-real</strong></td>
+              <td data-label="Input → Output">Shift hours + rates for day, night and weekend -&gt; the total pay for the shift</td>
+              <td data-label="Library / method">No library. Plain JavaScript arithmetic in the browser</td>
+              <td data-label="Limit or note shown on the page">Numbers up to 1,000,000,000,000; empty or over-limit input shows a clear message.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="record-note" style="margin-top:12px"><strong>Plan for this tool:</strong> one page only, in the Salary and Tax hub, built from the shared template with no libraries and no server. Security items that need a server (login, database, password rules) are N/A — this is a static page with no login and no stored data.</p>
+    </section>
+    <script type="application/json" id="tool-config">{"tool": "shift-pay", "chart": "bar-table", "tests": [{"label": "8 day hours at $20, 4 night hours at $30", "inputs": {"day_hours": "8", "day_rate": "20", "night_hours": "4", "night_rate": "30", "weekend_hours": "0", "weekend_rate": "40"}, "expect": "$280.00"}, {"label": "Day work only: 8 hours at $20", "inputs": {"day_hours": "8", "day_rate": "20", "night_hours": "0", "night_rate": "30", "weekend_hours": "0", "weekend_rate": "40"}, "expect": "$160.00"}, {"label": "Weekend only: 5 hours at $40", "inputs": {"day_hours": "0", "day_rate": "20", "night_hours": "0", "night_rate": "30", "weekend_hours": "5", "weekend_rate": "40"}, "expect": "$200.00"}, {"label": "Empty input: day rate left blank", "inputs": {"day_hours": "8", "day_rate": "", "night_hours": "4", "night_rate": "30", "weekend_hours": "0", "weekend_rate": "40"}, "expect_state": "empty", "expect_text": "Prompt message, no result, no NaN"}, {"label": "Very large value: 999,999,999,999 day hours", "inputs": {"day_hours": "999999999999", "day_rate": "20", "night_hours": "0", "night_rate": "30", "weekend_hours": "0", "weekend_rate": "40"}, "expect": "$19,999,999,999,980.00"}], "fields": ["day_hours", "day_rate", "night_hours", "night_rate", "weekend_hours", "weekend_rate"]}</script>
+  </main>
+<footer class="site">
+    <span class="fbrand">Calculatorly</span>
+    <nav aria-label="Footer">
+      <a href="../../about/">About</a>
+      <a href="../../contact/">Contact</a>
+      <a href="../../privacy/">Privacy</a>
+      <a href="../../terms/">Terms</a>
+      <a href="../../disclaimer/">Disclaimer</a>
+    </nav>
+    <span>Calculatorly — free calculators, no sign-up. The domain calculatorly.online is bought; hosting is separate.</span>
+    <div class="ad-slot" hidden aria-hidden="true"></div>
+  </footer>
+</div>
+<script src="../../assets/js/calculatorly.js"></script>
+<script src="../../assets/js/engines-s3.js"></script>
+</body>
+</html>

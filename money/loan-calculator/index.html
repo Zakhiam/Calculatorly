@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light" />
+<title>Loan Calculator | Calculatorly</title>
+<meta name="description" content="Work out your monthly loan payment and total interest — formula, worked example and breakdown. Free, no sign-up, answers as you type." />
+<link rel="canonical" href="https://calculatorly.online/money/loan-calculator/" />
+<link rel="icon" href="data:," />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,400;0,600;0,700;0,800;1,400&amp;family=IBM+Plex+Mono:wght@500;600;700&amp;display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../../assets/css/khata.css" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Loan Calculator","url":"https://calculatorly.online/money/loan-calculator/","applicationCategory":"UtilitiesApplication","operatingSystem":"Any (web browser)","browserRequirements":"Requires JavaScript","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"provider":{"@type":"Organization","name":"Calculatorly","url":"https://calculatorly.online/"}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://calculatorly.online/"},{"@type":"ListItem","position":2,"name":"Money","item":"https://calculatorly.online/money/"},{"@type":"ListItem","position":3,"name":"Loan Calculator","item":"https://calculatorly.online/money/loan-calculator/"}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What does the monthly payment include?","acceptedAnswer":{"@type":"Answer","text":"Only the loan repayment and the interest on it. It does not include fees, insurance or any extra charges the lender adds, which are charged separately."}},{"@type":"Question","name":"Does a longer term mean a lower payment?","acceptedAnswer":{"@type":"Answer","text":"Yes, the monthly payment falls, because the loan is spread over more months — but the total interest rises, because you pay interest for longer. Compare 5 years with 7 years above to see both effects."}},{"@type":"Question","name":"What happens if the interest rate is zero?","acceptedAnswer":{"@type":"Answer","text":"The payment is simply the loan divided by the number of months: a 5,000 loan over 2 years at 0% is 208.33 a month, with no interest at all."}},{"@type":"Question","name":"How is the total interest worked out?","acceptedAnswer":{"@type":"Answer","text":"Multiply the monthly payment by the number of months to get the total paid, then subtract the amount borrowed. The difference is the total interest."}},{"@type":"Question","name":"How are the answers rounded?","acceptedAnswer":{"@type":"Answer","text":"Every result on this page uses one rounding rule: half-up to 2 decimal places. Each line is rounded on its own for display, so multiplying the rounded monthly payment by the number of months can differ by a few cents from the total shown."}},{"@type":"Question","name":"Is this the payment my lender will charge?","acceptedAnswer":{"@type":"Answer","text":"Not exactly. Lenders round payments their own way and add fees, and may use a different day count. Use this figure to plan and compare; ask your lender for the exact payment before you sign anything."}}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"HowTo","name":"How to use the Loan Calculator","step":[{"@type":"HowToStep","position":1,"text":"Type the loan amount, the yearly interest rate and the term in years. There is no Calculate button — the payment appears as you type."},{"@type":"HowToStep","position":2,"text":"Read the monthly payment in the result line, rounded half-up to 2 decimal places."},{"@type":"HowToStep","position":3,"text":"Check the bar and table under the result (Part 5 below) to see the total interest and the total paid over the whole term."}]}
+</script>
+</head>
+<body class="hub-money">
+<div class="sheet">
+  <header class="masthead">
+    <div class="brand"><a href="../../">Calculator<span class="ly">ly</span></a></div>
+    <div class="domain mono">calculatorly.online</div>
+    <div class="mast-note">Every calculator, worked out in full.</div>
+  </header>
+  <main>
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="https://calculatorly.online/">Home</a></li>
+        <li><a href="https://calculatorly.online/money/">Money</a></li>
+        <li aria-current="page">Loan Calculator</li>
+      </ol>
+    </nav>
+    <span class="hub-tag">Hub: Money</span>
+    
+    <h1>Loan Calculator</h1>
+
+    <section class="tool" aria-label="Loan Calculator tool">
+      <p class="tool-q">What is my monthly loan payment?</p>
+      <div class="fields">
+      <div class="field">
+        <label for="in-loan">Loan amount</label>
+        <input id="in-loan" type="number" inputmode="decimal" step="any" value="10000" autocomplete="off" />
+      </div>
+      <div class="field">
+        <label for="in-rate">Yearly interest rate (%)</label>
+        <input id="in-rate" type="number" inputmode="decimal" step="any" value="7" autocomplete="off" />
+      </div>
+      <div class="field">
+        <label for="in-years">Term in years</label>
+        <input id="in-years" type="number" inputmode="decimal" step="any" value="5" autocomplete="off" />
+      </div>
+      </div>
+
+      <div class="result-wrap" aria-live="polite">
+        <div class="stamp" id="stamp" aria-hidden="true" hidden>Checked ✓</div>
+        <div class="result-label">Result</div>
+        <div class="result" id="result">198.01</div>
+        <div class="result-sentence" id="sentence">Your monthly payment is 198.01 for a loan of 10,000.00 over 5 years at 7.00% a year, in your own currency.</div>
+        <p class="msg" id="msg" hidden></p>
+      </div>
+      <ol class="howto">
+        <li><strong>Type the loan amount, the yearly interest rate and the term in years. There is no Calculate button — the payment appears as you type.</strong></li>
+        <li><strong>Read the monthly payment in the result line, rounded half-up to 2 decimal places.</strong></li>
+        <li><strong>Check the bar and table under the result (Part 5 below) to see the total interest and the total paid over the whole term.</strong></li>
+      </ol>
+      <p class="limit-note"><strong>Limit:</strong> Numbers up to 1,000,000,000,000; empty or over-limit input shows a clear message. <strong>Rounding:</strong> every result uses one named default — Half-up to 2 decimal places — in the answer, the bar and the table. The Checked stamp appears on the result box only while a valid result is showing.</p>
+    </section>
+
+    <section class="quick" aria-labelledby="quickH">
+      <h2 id="quickH"><span class="no">2</span>Quick answer</h2>
+      <p>A monthly loan payment comes from the amount borrowed, the yearly interest rate and the term. For example, a loan of 10,000 at 7% a year over 5 years costs about 198.01 a month. Type your own loan, rate and term above and this calculator gives the monthly payment, the total interest and the total paid, in your own currency.</p>
+    </section>
+
+    <section class="part" aria-labelledby="formulaH">
+      <h2 id="formulaH"><span class="no">3</span>The formula</h2>
+      <p>A loan is repaid in equal monthly payments that cover interest and part of the loan. The standard repayment formula is:</p>
+      <div class="formula-box">
+        <strong>Monthly loan payment — in words: take the monthly interest rate, multiply it by the loan, and divide by one minus the monthly rate factor raised to the number of months.</strong>
+        <span class="sym">M = P × r ÷ (1 − (1 + r)^−n), where r is the monthly rate and n is the number of months</span>
+      </div>
+      <p class="small">Formula source: the standard amortisation formula for a fixed-rate loan. The interest rate is typed by you — this site does not fetch live loan rates. This is an estimate only, not professional advice.</p>
+    </section>
+
+    <section class="part" aria-labelledby="exampleH">
+      <h2 id="exampleH"><span class="no">4</span>Worked example: 10,000 at 7% over 5 years</h2>
+      <ol class="steps">
+        <li>Start with the loan, rate and term: loan 10,000, yearly rate 7%, term 5 years (60 months).</li>
+        <li>Work out the monthly rate: 7 ÷ 100 ÷ 12 = 0.005833.</li>
+        <li>Put the numbers in the formula: 10,000 × 0.005833 ÷ (1 − (1.005833)^−60).</li>
+        <li class="ans">Answer: the monthly payment is 198.01. Over 60 months that is 11,880.72 in total, of which 1,880.72 is interest.</li>
+      </ol>
+      <p class="small">Try it in the tool above: type 10000, 7 and 5, and the result line shows 198.01.</p>
+    </section>
+
+    <section class="part" aria-labelledby="chartH">
+      <h2 id="chartH"><span class="no">5</span>Your result, drawn</h2>
+      <p>This bar and table are drawn from the numbers you typed above. Change a number and they change with it.</p>
+      <div class="bar" role="img" id="bar" aria-label="Bar showing total interest 1,880.72 out of the total paid 11,880.72">
+        <div class="seg-a" style="width:15.83%"></div>
+        <div class="seg-b"></div>
+      </div>
+      <div class="bar-legend">
+        <span><span class="swatch a"></span><span id="legend-a">Total interest: 1,880.72</span></span>
+        <span><span class="swatch b"></span><span id="legend-b">Amount borrowed: 10,000.00</span></span>
+      </div>
+      <div class="table-scroll">
+        <table>
+          <thead><tr><th scope="col">Part of your sum</th><th scope="col" class="num">Value</th></tr></thead>
+          <tbody id="break-body">
+            <tr><td>Amount borrowed</td><td class="num">10,000.00</td></tr>
+            <tr><td>Monthly payment (your result)</td><td class="num">198.01</td></tr>
+            <tr><td>Total interest</td><td class="num">1,880.72</td></tr>
+            <tr><td>Total paid over 5 years</td><td class="num">11,880.72</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="part" aria-labelledby="faqH">
+      <h2 id="faqH"><span class="no">6</span>Questions about loan</h2>
+      <details>
+        <summary>What does the monthly payment include?</summary>
+        <p>Only the loan repayment and the interest on it. It does not include fees, insurance or any extra charges the lender adds, which are charged separately.</p>
+      </details>
+      <details>
+        <summary>Does a longer term mean a lower payment?</summary>
+        <p>Yes, the monthly payment falls, because the loan is spread over more months — but the total interest rises, because you pay interest for longer. Compare 5 years with 7 years above to see both effects.</p>
+      </details>
+      <details>
+        <summary>What happens if the interest rate is zero?</summary>
+        <p>The payment is simply the loan divided by the number of months: a 5,000 loan over 2 years at 0% is 208.33 a month, with no interest at all.</p>
+      </details>
+      <details>
+        <summary>How is the total interest worked out?</summary>
+        <p>Multiply the monthly payment by the number of months to get the total paid, then subtract the amount borrowed. The difference is the total interest.</p>
+      </details>
+      <details>
+        <summary>How are the answers rounded?</summary>
+        <p>Every result on this page uses one rounding rule: half-up to 2 decimal places. Each line is rounded on its own for display, so multiplying the rounded monthly payment by the number of months can differ by a few cents from the total shown.</p>
+      </details>
+      <details>
+        <summary>Is this the payment my lender will charge?</summary>
+        <p>Not exactly. Lenders round payments their own way and add fees, and may use a different day count. Use this figure to plan and compare; ask your lender for the exact payment before you sign anything.</p>
+      </details>
+    </section>
+
+    <section class="part" aria-labelledby="relatedH">
+      <h2 id="relatedH"><span class="no">7</span>Related tools</h2>
+      <p class="small">More tools that go with this one — each with its own page, one job per page:</p>
+      <ul class="related">
+        <li><a href="https://calculatorly.online/money/mortgage-calculator/">Mortgage Calculator<span class="d">Work out your monthly mortgage payment from loan, rate and term.</span><span class="u mono">calculatorly.online/money/mortgage-calculator/</span></a></li>
+        <li><a href="https://calculatorly.online/money/auto-loan-calculator/">Auto Loan Calculator<span class="d">Work out your monthly car loan payment and total interest.</span><span class="u mono">calculatorly.online/money/auto-loan-calculator/</span></a></li>
+        <li><a href="https://calculatorly.online/money/compound-interest-calculator/">Compound Interest Calculator<span class="d">Work out how your savings grow with compound interest.</span><span class="u mono">calculatorly.online/money/compound-interest-calculator/</span></a></li>
+      </ul>
+    </section>
+
+    <section class="part" aria-labelledby="testsH">
+      <h2 id="testsH">Known-answer test cases — run live on this page</h2>
+      <p>Each test below is worked out by the same code as the calculator above, the moment this page loads, and marked Pass or Fail against its known answer. If a row ever shows Fail, the page is not finished.</p>
+      <div class="table-scroll stack-wrap">
+        <table class="stackable">
+          <thead><tr><th scope="col">#</th><th scope="col">Test</th><th scope="col">Expected answer</th><th scope="col">Calculator gave</th><th scope="col">Result</th></tr></thead>
+          <tbody id="test-body">
+            <tr><td class="num" data-label="#">1</td><td data-label="Test">Monthly payment on 10,000 at 7% over 5 years</td><td class="num" data-label="Expected answer">198.01</td><td class="num" data-got data-label="Calculator gave">—</td><td data-label="Result"><span class="chip run" data-chip>RUNNING</span></td></tr>
+            <tr><td class="num" data-label="#">2</td><td data-label="Test">Zero interest: 5,000 over 2 years is 5,000 / 24 months</td><td class="num" data-label="Expected answer">208.33</td><td class="num" data-got data-label="Calculator gave">—</td><td data-label="Result"><span class="chip run" data-chip>RUNNING</span></td></tr>
+            <tr><td class="num" data-label="#">3</td><td data-label="Test">Monthly payment on 20,000 at 9.5% over 7 years</td><td class="num" data-label="Expected answer">326.88</td><td class="num" data-got data-label="Calculator gave">—</td><td data-label="Result"><span class="chip run" data-chip>RUNNING</span></td></tr>
+            <tr><td class="num" data-label="#">4</td><td data-label="Test">Empty input: the loan amount box left blank</td><td class="num" data-label="Expected answer">State: empty</td><td class="num" data-got data-label="Calculator gave">—</td><td data-label="Result"><span class="chip run" data-chip>RUNNING</span></td></tr>
+            <tr><td class="num" data-label="#">5</td><td data-label="Test">Very large value: 999,999,999,999 at 7% over 5 years</td><td class="num" data-label="Expected answer">19,801,198,540.33</td><td class="num" data-got data-label="Calculator gave">—</td><td data-label="Result"><span class="chip run" data-chip>RUNNING</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="record-note" style="margin-top:12px" id="test-summary">Tests are running…</p>
+    </section>
+
+    <section class="part" aria-labelledby="verdictH">
+      <h2 id="verdictH">Build record — verdict for this tool</h2>
+      <div class="table-scroll stack-wrap">
+        <table class="stackable">
+          <thead><tr><th scope="col">#</th><th scope="col">Tool</th><th scope="col">Verdict</th><th scope="col">Input → Output</th><th scope="col">Library / method</th><th scope="col">Limit or note shown on the page</th></tr></thead>
+          <tbody>
+            <tr>
+              <td class="num" data-label="#">1</td>
+              <td data-label="Tool">Loan Calculator</td>
+              <td data-label="Verdict"><strong>Browser-real</strong></td>
+              <td data-label="Input → Output">A loan amount + an interest rate + a term -&gt; the monthly payment and the total interest</td>
+              <td data-label="Library / method">No library. Plain JavaScript arithmetic in the browser</td>
+              <td data-label="Limit or note shown on the page">Numbers up to 1,000,000,000,000; empty or over-limit input shows a clear message.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="record-note" style="margin-top:12px"><strong>Plan for this tool:</strong> one page only, in the Money hub, built from the shared template with no libraries and no server. Security items that need a server (login, database, password rules) are N/A — this is a static page with no login and no stored data.</p>
+    </section>
+    <script type="application/json" id="tool-config">{"tool": "loan", "chart": "bar-table", "tests": [{"label": "Monthly payment on 10,000 at 7% over 5 years", "inputs": {"loan": "10000", "rate": "7", "years": "5"}, "expect": "198.01"}, {"label": "Zero interest: 5,000 over 2 years is 5,000 / 24 months", "inputs": {"loan": "5000", "rate": "0", "years": "2"}, "expect": "208.33"}, {"label": "Monthly payment on 20,000 at 9.5% over 7 years", "inputs": {"loan": "20000", "rate": "9.5", "years": "7"}, "expect": "326.88"}, {"label": "Empty input: the loan amount box left blank", "inputs": {"loan": "", "rate": "7", "years": "5"}, "expect_state": "empty", "expect_text": "State: empty"}, {"label": "Very large value: 999,999,999,999 at 7% over 5 years", "inputs": {"loan": "999999999999", "rate": "7", "years": "5"}, "expect": "19,801,198,540.33"}], "fields": ["loan", "rate", "years"]}</script>
+  </main>
+<footer class="site">
+    <span class="fbrand">Calculatorly</span>
+    <nav aria-label="Footer">
+      <a href="../../about/">About</a>
+      <a href="../../contact/">Contact</a>
+      <a href="../../privacy/">Privacy</a>
+      <a href="../../terms/">Terms</a>
+      <a href="../../disclaimer/">Disclaimer</a>
+    </nav>
+    <span>Calculatorly — free calculators, no sign-up. The domain calculatorly.online is bought; hosting is separate.</span>
+    <div class="ad-slot" hidden aria-hidden="true"></div>
+  </footer>
+</div>
+<script src="../../assets/js/calculatorly.js"></script>
+<script src="../../assets/js/engines-s1.js"></script>
+</body>
+</html>

@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light" />
+<title>Debt Payoff Calculator | Calculatorly</title>
+<meta name="description" content="Work out how fast you can clear several debts at once — formula, worked example and breakdown. Free, no sign-up, answers as you type." />
+<link rel="canonical" href="https://calculatorly.online/money/debt-payoff-calculator/" />
+<link rel="icon" href="data:," />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,400;0,600;0,700;0,800;1,400&amp;family=IBM+Plex+Mono:wght@500;600;700&amp;display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../../assets/css/khata.css" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Debt Payoff Calculator","url":"https://calculatorly.online/money/debt-payoff-calculator/","applicationCategory":"UtilitiesApplication","operatingSystem":"Any (web browser)","browserRequirements":"Requires JavaScript","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"provider":{"@type":"Organization","name":"Calculatorly","url":"https://calculatorly.online/"}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://calculatorly.online/"},{"@type":"ListItem","position":2,"name":"Money","item":"https://calculatorly.online/money/"},{"@type":"ListItem","position":3,"name":"Debt Payoff Calculator","item":"https://calculatorly.online/money/debt-payoff-calculator/"}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the snowball method?","acceptedAnswer":{"@type":"Answer","text":"Snowball pays the smallest debt first, whatever its rate. Clearing a whole debt quickly feels like a win and frees up money for the next debt. It can cost more interest than avalanche, but many people stick with it longer."}},{"@type":"Question","name":"What is the avalanche method?","acceptedAnswer":{"@type":"Answer","text":"Avalanche pays the highest-rate debt first, whatever its size. That cuts the most interest, so it is usually the cheapest way to clear all the debts. In the example above it saves $29.43 against snowball."}},{"@type":"Question","name":"Which method should I choose?","acceptedAnswer":{"@type":"Answer","text":"Avalanche costs less interest in almost every case. Snowball wins only if quick wins keep you going when a big high-rate debt would feel endless. Pick the one you will actually stick with — a plan you drop costs more than either method."}},{"@type":"Question","name":"How do I use this for more than three debts?","acceptedAnswer":{"@type":"Answer","text":"Add the smallest debts together, or run the calculator twice: first for the three debts you will clear first, then again for the rest with the payment you will have after those are gone."}},{"@type":"Question","name":"What if my payment does not cover the interest?","acceptedAnswer":{"@type":"Answer","text":"Then the debts never fall — they grow. The calculator says so plainly instead of showing a payoff date that does not exist. Raise the payment above the first month's interest, or the count has no end."}},{"@type":"Question","name":"Is this financial advice?","acceptedAnswer":{"@type":"Answer","text":"No. This is an estimate for planning, from the numbers you type. It leaves out minimum payments, fees and rate changes, so check your own statements before you act."}}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"HowTo","name":"How to use the Debt Payoff Calculator","step":[{"@type":"HowToStep","position":1,"text":"Type the total amount you can pay each month, then the balance and yearly rate of up to three debts. Put 0 for a balance you do not have. There is no Calculate button — the answer appears as you type."},{"@type":"HowToStep","position":2,"text":"Read the result line for the months and interest under both the snowball and the avalanche order."},{"@type":"HowToStep","position":3,"text":"Check the table under the result for the payoff order of each method and the interest each one costs."}]}
+</script>
+</head>
+<body class="hub-money">
+<div class="sheet">
+  <header class="masthead">
+    <div class="brand"><a href="../../">Calculator<span class="ly">ly</span></a></div>
+    <div class="domain mono">calculatorly.online</div>
+    <div class="mast-note">Every calculator, worked out in full.</div>
+  </header>
+  <main>
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="https://calculatorly.online/">Home</a></li>
+        <li><a href="https://calculatorly.online/money/">Money</a></li>
+        <li aria-current="page">Debt Payoff Calculator</li>
+      </ol>
+    </nav>
+    <span class="hub-tag">Hub: Money</span>
+    
+    <h1>Debt Payoff Calculator</h1>
+
+    <section class="tool" aria-label="Debt Payoff Calculator tool">
+      <p class="tool-q">How fast can I clear several debts at once, and which order should I pay them in?</p>
+      <div class="fields">
+      <div class="field">
+        <label for="in-payment">Total monthly payment for all debts ($)</label>
+        <input id="in-payment" type="number" inputmode="decimal" step="any" value="1000" autocomplete="off" />
+      </div>
+      <div class="field">
+        <label for="in-balance1">Debt 1 balance ($)</label>
+        <input id="in-balance1" type="number" inputmode="decimal" step="any" value="3000" autocomplete="off" />
+      </div>
+      <div class="field">
+        <label for="in-rate1">Debt 1 yearly rate (%)</label>
+        <input id="in-rate1" type="number" inputmode="decimal" step="any" value="20" autocomplete="off" />
+      </div>
+      <div class="field">
+        <label for="in-balance2">Debt 2 balance ($)</label>
+        <input id="in-balance2" type="number" inputmode="decimal" step="any" value="5000" autocomplete="off" />
+      </div>
+      <div class="field">
+        <label for="in-rate2">Debt 2 yearly rate (%)</label>
+        <input id="in-rate2" type="number" inputmode="decimal" step="any" value="10" autocomplete="off" />
+      </div>
+      <div class="field">
+        <label for="in-balance3">Debt 3 balance ($)</label>
+        <input id="in-balance3" type="number" inputmode="decimal" step="any" value="2000" autocomplete="off" />
+      </div>
+      <div class="field">
+        <label for="in-rate3">Debt 3 yearly rate (%)</label>
+        <input id="in-rate3" type="number" inputmode="decimal" step="any" value="15" autocomplete="off" />
+      </div>
+      </div>
+
+      <div class="result-wrap" aria-live="polite">
+        <div class="stamp" id="stamp" aria-hidden="true" hidden>Checked ✓</div>
+        <div class="result-label">Result</div>
+        <div class="result" id="result">Snowball: 11 months, $614.09 interest. Avalanche: 11 months, $584.66 interest.</div>
+        <div class="result-sentence" id="sentence">Total debt $10,000.00. Snowball order: Debt 3, Debt 1, Debt 2. Avalanche order: Debt 1, Debt 3, Debt 2.</div>
+        <p class="msg" id="msg" hidden></p>
+      </div>
+      <ol class="howto">
+        <li><strong>Type the total amount you can pay each month, then the balance and yearly rate of up to three debts. Put 0 for a balance you do not have. There is no Calculate button — the answer appears as you type.</strong></li>
+        <li><strong>Read the result line for the months and interest under both the snowball and the avalanche order.</strong></li>
+        <li><strong>Check the table under the result for the payoff order of each method and the interest each one costs.</strong></li>
+      </ol>
+      <p class="limit-note"><strong>Limit:</strong> Numbers up to 1,000,000,000,000; empty or over-limit input shows a clear message. <strong>Rounding:</strong> every result uses one named default — Half-up to 2 decimal places — in the answer, the bar and the table. The Checked stamp appears on the result box only while a valid result is showing.</p>
+    </section>
+
+    <section class="quick" aria-labelledby="quickH">
+      <h2 id="quickH"><span class="no">2</span>Quick answer</h2>
+      <p>With $1,000 a month to pay three debts of $3,000 at 20%, $5,000 at 10% and $2,000 at 15%, snowball clears them in 11 months with $614.09 of interest, while avalanche also takes 11 months but costs $584.66 of interest. Snowball pays the smallest debt first; avalanche pays the highest rate first.</p>
+    </section>
+
+    <section class="part" aria-labelledby="formulaH">
+      <h2 id="formulaH"><span class="no">3</span>The formula</h2>
+      <p>Both methods use the same monthly count. Only the order changes. The count runs month by month until every balance reaches zero:</p>
+      <div class="formula-box">
+        <strong>Debt payoff — in words: each month add one month of interest to every debt, then pay the debts in the chosen order until the monthly payment is used up, and repeat until all debts reach zero.</strong>
+        <span class="sym">each month: balance grows by balance × yearly rate ÷ 12, then the payment is used up in order — smallest balance first (snowball) or highest rate first (avalanche)</span>
+      </div>
+      <p class="small">Formula source: the standard month-by-month loan payoff count, run twice — once in snowball order and once in avalanche order. No rate is fetched from anywhere — you type your own rates, and the page uses only the numbers you type. The count leaves out minimum payments and fees.</p>
+    </section>
+
+    <section class="part" aria-labelledby="exampleH">
+      <h2 id="exampleH"><span class="no">4</span>Worked example: three debts, $1,000 a month</h2>
+      <ol class="steps">
+        <li>Start with the numbers: $1,000 a month to pay debts of $3,000 at 20%, $5,000 at 10% and $2,000 at 15%.</li>
+        <li>Snowball order is smallest first: the $2,000 debt, then the $3,000 debt, then the $5,000 debt. Avalanche order is highest rate first: the $3,000 debt at 20%, then the $2,000 debt at 15%, then the $5,000 debt at 10%.</li>
+        <li>Each month, interest is added to every debt, then the $1,000 payment is used up in order, clearing one debt before moving to the next.</li>
+        <li class="ans">Answer: both orders take 11 months, but snowball costs $614.09 in interest and avalanche costs $584.66 — avalanche saves $29.43 here.</li>
+      </ol>
+      <p class="small">Try it in the tool above: type 1000, then 3000 at 20, 5000 at 10 and 2000 at 15, and the result line shows both orders.</p>
+    </section>
+
+    <section class="part" aria-labelledby="chartH">
+      <h2 id="chartH"><span class="no">5</span>Your result, drawn</h2>
+      <p>This bar and table are drawn from the numbers you typed above. Change a number and they change with it.</p>
+      <div class="bar" role="img" id="bar" aria-label="Bar showing the total debt $10,000.00 out of debt plus avalanche interest">
+        <div class="seg-a" style="width:94.48%"></div>
+        <div class="seg-b"></div>
+      </div>
+      <div class="bar-legend">
+        <span><span class="swatch a"></span><span id="legend-a">Total debt: $10,000.00</span></span>
+        <span><span class="swatch b"></span><span id="legend-b">Avalanche interest: $584.66</span></span>
+      </div>
+      <div class="table-scroll">
+        <table>
+          <thead><tr><th scope="col">Part of your sum</th><th scope="col" class="num">Value</th></tr></thead>
+          <tbody id="break-body">
+            <tr><td>Total debt</td><td class="num">$10,000.00</td></tr>
+            <tr><td>Monthly payment</td><td class="num">$1,000.00</td></tr>
+            <tr><td>Snowball months</td><td class="num">11 months</td></tr>
+            <tr><td>Snowball interest</td><td class="num">$614.09</td></tr>
+            <tr><td>Avalanche months</td><td class="num">11 months</td></tr>
+            <tr><td>Avalanche interest</td><td class="num">$584.66</td></tr>
+            <tr><td>Snowball order</td><td class="num">Debt 3, Debt 1, Debt 2</td></tr>
+            <tr><td>Avalanche order</td><td class="num">Debt 1, Debt 3, Debt 2</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="part" aria-labelledby="faqH">
+      <h2 id="faqH"><span class="no">6</span>Questions about debt payoff</h2>
+      <details>
+        <summary>What is the snowball method?</summary>
+        <p>Snowball pays the smallest debt first, whatever its rate. Clearing a whole debt quickly feels like a win and frees up money for the next debt. It can cost more interest than avalanche, but many people stick with it longer.</p>
+      </details>
+      <details>
+        <summary>What is the avalanche method?</summary>
+        <p>Avalanche pays the highest-rate debt first, whatever its size. That cuts the most interest, so it is usually the cheapest way to clear all the debts. In the example above it saves $29.43 against snowball.</p>
+      </details>
+      <details>
+        <summary>Which method should I choose?</summary>
+        <p>Avalanche costs less interest in almost every case. Snowball wins only if quick wins keep you going when a big high-rate debt would feel endless. Pick the one you will actually stick with — a plan you drop costs more than either method.</p>
+      </details>
+      <details>
+        <summary>How do I use this for more than three debts?</summary>
+        <p>Add the smallest debts together, or run the calculator twice: first for the three debts you will clear first, then again for the rest with the payment you will have after those are gone.</p>
+      </details>
+      <details>
+        <summary>What if my payment does not cover the interest?</summary>
+        <p>Then the debts never fall — they grow. The calculator says so plainly instead of showing a payoff date that does not exist. Raise the payment above the first month&#x27;s interest, or the count has no end.</p>
+      </details>
+      <details>
+        <summary>Is this financial advice?</summary>
+        <p>No. This is an estimate for planning, from the numbers you type. It leaves out minimum payments, fees and rate changes, so check your own statements before you act.</p>
+      </details>
+    </section>
+
+    <section class="part" aria-labelledby="relatedH">
+      <h2 id="relatedH"><span class="no">7</span>Related tools</h2>
+      <p class="small">More tools that go with this one — each with its own page, one job per page:</p>
+      <ul class="related">
+        <li><a href="https://calculatorly.online/money/credit-card-payoff-calculator/">Credit Card Payoff Calculator<span class="d">Months to clear a card balance at a fixed monthly payment.</span><span class="u mono">calculatorly.online/money/credit-card-payoff-calculator/</span></a></li>
+        <li><a href="https://calculatorly.online/money/budget-50-30-20-calculator/">Budget 50/30/20 Calculator<span class="d">Needs, wants and savings split from take-home pay.</span><span class="u mono">calculatorly.online/money/budget-50-30-20-calculator/</span></a></li>
+        <li><a href="https://calculatorly.online/money/loan-comparison-calculator/">Loan Comparison Calculator<span class="d">Two loans side by side: payment, interest and total cost.</span><span class="u mono">calculatorly.online/money/loan-comparison-calculator/</span></a></li>
+      </ul>
+    </section>
+
+    <section class="part" aria-labelledby="testsH">
+      <h2 id="testsH">Known-answer test cases — run live on this page</h2>
+      <p>Each test below is worked out by the same code as the calculator above, the moment this page loads, and marked Pass or Fail against its known answer. If a row ever shows Fail, the page is not finished.</p>
+      <div class="table-scroll stack-wrap">
+        <table class="stackable">
+          <thead><tr><th scope="col">#</th><th scope="col">Test</th><th scope="col">Expected answer</th><th scope="col">Calculator gave</th><th scope="col">Result</th></tr></thead>
+          <tbody id="test-body">
+            <tr><td class="num" data-label="#">1</td><td data-label="Test">Debts $3,000 at 20%, $5,000 at 10%, $2,000 at 15%, $1,000 a month</td><td class="num" data-label="Expected answer">Snowball: 11 months, $614.09 interest. Avalanche: 11 months, $584.66 interest.</td><td class="num" data-got data-label="Calculator gave">—</td><td data-label="Result"><span class="chip run" data-chip>RUNNING</span></td></tr>
+            <tr><td class="num" data-label="#">2</td><td data-label="Test">Debts $1,000 at 5% and $2,000 at 25%, $500 a month</td><td class="num" data-label="Expected answer">Snowball: 7 months, $211.02 interest. Avalanche: 7 months, $135.04 interest.</td><td class="num" data-got data-label="Calculator gave">—</td><td data-label="Result"><span class="chip run" data-chip>RUNNING</span></td></tr>
+            <tr><td class="num" data-label="#">3</td><td data-label="Test">Payment too small: $50 a month on $5,000 at 20%</td><td class="num" data-label="Expected answer">Payment does not cover the monthly interest, so the debts never fall</td><td class="num" data-got data-label="Calculator gave">—</td><td data-label="Result"><span class="chip run" data-chip>RUNNING</span></td></tr>
+            <tr><td class="num" data-label="#">4</td><td data-label="Test">Empty input: the monthly payment box left blank</td><td class="num" data-label="Expected answer">Prompt message, no result, no NaN</td><td class="num" data-got data-label="Calculator gave">—</td><td data-label="Result"><span class="chip run" data-chip>RUNNING</span></td></tr>
+            <tr><td class="num" data-label="#">5</td><td data-label="Test">Very large debts: $999,999,999,999 at 12% and $500,000,000,000 at 8%</td><td class="num" data-label="Expected answer">Snowball: 154 months, $1,477,698,345,013.24 interest. Avalanche: 125 months, $884,107,241,256.08 interest.</td><td class="num" data-got data-label="Calculator gave">—</td><td data-label="Result"><span class="chip run" data-chip>RUNNING</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="record-note" style="margin-top:12px" id="test-summary">Tests are running…</p>
+    </section>
+
+    <section class="part" aria-labelledby="verdictH">
+      <h2 id="verdictH">Build record — verdict for this tool</h2>
+      <div class="table-scroll stack-wrap">
+        <table class="stackable">
+          <thead><tr><th scope="col">#</th><th scope="col">Tool</th><th scope="col">Verdict</th><th scope="col">Input → Output</th><th scope="col">Library / method</th><th scope="col">Limit or note shown on the page</th></tr></thead>
+          <tbody>
+            <tr>
+              <td class="num" data-label="#">1</td>
+              <td data-label="Tool">Debt Payoff Calculator</td>
+              <td data-label="Verdict"><strong>Browser-real</strong></td>
+              <td data-label="Input → Output">A list of debts + a monthly payment -&gt; the payoff order, the months needed and the interest saved</td>
+              <td data-label="Library / method">No library. Plain JavaScript arithmetic in the browser</td>
+              <td data-label="Limit or note shown on the page">Numbers up to 1,000,000,000,000; empty or over-limit input shows a clear message.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="record-note" style="margin-top:12px"><strong>Plan for this tool:</strong> one page only, in the Money hub, built from the shared template with no libraries and no server. Security items that need a server (login, database, password rules) are N/A — this is a static page with no login and no stored data.</p>
+    </section>
+    <script type="application/json" id="tool-config">{"tool": "debt-payoff", "chart": "bar", "tests": [{"label": "Debts $3,000 at 20%, $5,000 at 10%, $2,000 at 15%, $1,000 a month", "inputs": {"payment": "1000", "balance1": "3000", "rate1": "20", "balance2": "5000", "rate2": "10", "balance3": "2000", "rate3": "15"}, "expect": "Snowball: 11 months, $614.09 interest. Avalanche: 11 months, $584.66 interest."}, {"label": "Debts $1,000 at 5% and $2,000 at 25%, $500 a month", "inputs": {"payment": "500", "balance1": "1000", "rate1": "5", "balance2": "2000", "rate2": "25", "balance3": "0", "rate3": "0"}, "expect": "Snowball: 7 months, $211.02 interest. Avalanche: 7 months, $135.04 interest."}, {"label": "Payment too small: $50 a month on $5,000 at 20%", "inputs": {"payment": "50", "balance1": "5000", "rate1": "20", "balance2": "0", "rate2": "0", "balance3": "0", "rate3": "0"}, "expect_state": "invalid", "expect_text": "Payment does not cover the monthly interest, so the debts never fall"}, {"label": "Empty input: the monthly payment box left blank", "inputs": {"payment": "", "balance1": "3000", "rate1": "20", "balance2": "5000", "rate2": "10", "balance3": "2000", "rate3": "15"}, "expect_state": "empty", "expect_text": "Prompt message, no result, no NaN"}, {"label": "Very large debts: $999,999,999,999 at 12% and $500,000,000,000 at 8%", "inputs": {"payment": "20000000000", "balance1": "999999999999", "rate1": "12", "balance2": "500000000000", "rate2": "8", "balance3": "100000000000", "rate3": "5"}, "expect": "Snowball: 154 months, $1,477,698,345,013.24 interest. Avalanche: 125 months, $884,107,241,256.08 interest."}], "fields": ["payment", "balance1", "rate1", "balance2", "rate2", "balance3", "rate3"]}</script>
+  </main>
+<footer class="site">
+    <span class="fbrand">Calculatorly</span>
+    <nav aria-label="Footer">
+      <a href="../../about/">About</a>
+      <a href="../../contact/">Contact</a>
+      <a href="../../privacy/">Privacy</a>
+      <a href="../../terms/">Terms</a>
+      <a href="../../disclaimer/">Disclaimer</a>
+    </nav>
+    <span>Calculatorly — free calculators, no sign-up. The domain calculatorly.online is bought; hosting is separate.</span>
+    <div class="ad-slot" hidden aria-hidden="true"></div>
+  </footer>
+</div>
+<script src="../../assets/js/calculatorly.js"></script>
+<script src="../../assets/js/engines-s2.js"></script>
+</body>
+</html>

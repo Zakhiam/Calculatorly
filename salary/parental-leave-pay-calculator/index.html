@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light" />
+<title>Parental Leave Pay Calculator | Calculatorly</title>
+<meta name="description" content="Work out your pay while on parental leave — formula, worked example and breakdown. Free, no sign-up, answers as you type." />
+<link rel="canonical" href="https://calculatorly.online/salary/parental-leave-pay-calculator/" />
+<link rel="icon" href="data:," />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,400;0,600;0,700;0,800;1,400&amp;family=IBM+Plex+Mono:wght@500;600;700&amp;display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../../assets/css/khata.css" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Parental Leave Pay Calculator","url":"https://calculatorly.online/salary/parental-leave-pay-calculator/","applicationCategory":"UtilitiesApplication","operatingSystem":"Any (web browser)","browserRequirements":"Requires JavaScript","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"provider":{"@type":"Organization","name":"Calculatorly","url":"https://calculatorly.online/"}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://calculatorly.online/"},{"@type":"ListItem","position":2,"name":"Salary and Tax","item":"https://calculatorly.online/salary/"},{"@type":"ListItem","position":3,"name":"Parental Leave Pay Calculator","item":"https://calculatorly.online/salary/parental-leave-pay-calculator/"}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is this the government parental leave payment?","acceptedAnswer":{"@type":"Answer","text":"No. This works out pay from your employer at a percent of your salary. Government schemes — such as Parental Leave Pay in Australia, Statutory Maternity Pay in the UK, and state schemes in the USA — pay their own fixed amounts on top of, or instead of, employer pay."}},{"@type":"Question","name":"What if part of my leave is at half pay?","acceptedAnswer":{"@type":"Answer","text":"Work each part out on its own and add them together. For example, 6 weeks at 100% plus 6 weeks at 50% is two sums with the same salary and different weeks and rates."}},{"@type":"Question","name":"What if my salary changes during the leave?","acceptedAnswer":{"@type":"Answer","text":"Use the salary that applies to the weeks you are counting. If a pay rise falls inside the leave, split the leave at the rise date and work each part out with its own salary."}},{"@type":"Question","name":"Does this include tax?","acceptedAnswer":{"@type":"Answer","text":"No. It works out the gross pay during the leave, before tax. Tax is taken off by your employer in the normal way."}},{"@type":"Question","name":"What is the most weeks I can count?","acceptedAnswer":{"@type":"Answer","text":"52 weeks, or one full year. A longer break has unpaid weeks, which this page does not count — put only the paid weeks in the weeks box."}},{"@type":"Question","name":"Is this calculator free, and do I need to sign up?","acceptedAnswer":{"@type":"Answer","text":"Yes, it is free, and no sign-up is needed. Nothing is uploaded: the calculation runs in your browser on your own device, and the numbers you type are not sent anywhere."}}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"HowTo","name":"How to use the Parental Leave Pay Calculator","step":[{"@type":"HowToStep","position":1,"text":"Type your yearly salary, how many weeks of leave you will take, and the pay rate during leave as a percent of your salary. There is no Calculate button — the answer appears as you type."},{"@type":"HowToStep","position":2,"text":"Read the result line for the total pay during the leave."},{"@type":"HowToStep","position":3,"text":"Check the bar and table under the result to see the weekly pay and the total for each part of the leave."}]}
+</script>
+</head>
+<body class="hub-salary">
+<div class="sheet">
+  <header class="masthead">
+    <div class="brand"><a href="../../">Calculator<span class="ly">ly</span></a></div>
+    <div class="domain mono">calculatorly.online</div>
+    <div class="mast-note">Every calculator, worked out in full.</div>
+  </header>
+  <main>
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="https://calculatorly.online/">Home</a></li>
+        <li><a href="https://calculatorly.online/salary/">Salary and Tax</a></li>
+        <li aria-current="page">Parental Leave Pay Calculator</li>
+      </ol>
+    </nav>
+    <span class="hub-tag">Hub: Salary and Tax</span>
+    
+    <h1>Parental Leave Pay Calculator</h1>
+
+    <section class="tool" aria-label="Parental Leave Pay Calculator tool">
+      <p class="tool-q">How much pay will I get during parental leave?</p>
+      <div class="fields">
+      <div class="field">
+        <label for="in-salary">Yearly salary ($)</label>
+        <input id="in-salary" type="number" inputmode="decimal" step="any" value="60000" autocomplete="off" />
+      </div>
+      <div class="field">
+        <label for="in-weeks">Weeks of leave</label>
+        <input id="in-weeks" type="number" inputmode="decimal" step="any" value="12" autocomplete="off" />
+      </div>
+      <div class="field">
+        <label for="in-pay_rate">Pay rate during leave (%)</label>
+        <input id="in-pay_rate" type="number" inputmode="decimal" step="any" value="100" autocomplete="off" />
+      </div>
+      </div>
+
+      <div class="result-wrap" aria-live="polite">
+        <div class="stamp" id="stamp" aria-hidden="true" hidden>Checked ✓</div>
+        <div class="result-label">Result</div>
+        <div class="result" id="result">$13,846.15</div>
+        <div class="result-sentence" id="sentence">Weekly pay $1,153.85 for 12.00 weeks at 100.00% gives $13,846.15 for the leave.</div>
+        <p class="msg" id="msg" hidden></p>
+      </div>
+      <ol class="howto">
+        <li><strong>Type your yearly salary, how many weeks of leave you will take, and the pay rate during leave as a percent of your salary. There is no Calculate button — the answer appears as you type.</strong></li>
+        <li><strong>Read the result line for the total pay during the leave.</strong></li>
+        <li><strong>Check the bar and table under the result to see the weekly pay and the total for each part of the leave.</strong></li>
+      </ol>
+      <p class="limit-note"><strong>Limit:</strong> Numbers up to 1,000,000,000,000; empty or over-limit input shows a clear message. <strong>Rounding:</strong> every result uses one named default — Half-up to 2 decimal places — in the answer, the bar and the table. The Checked stamp appears on the result box only while a valid result is showing.</p>
+    </section>
+
+    <section class="quick" aria-labelledby="quickH">
+      <h2 id="quickH"><span class="no">2</span>Quick answer</h2>
+      <p>Parental leave pay is your weekly salary, times the weeks of leave, times the pay rate. A $60,000 salary for 12 weeks at full pay gives $13,846.15. Type your salary, weeks and rate above and this calculator shows the total pay for the leave instantly.</p>
+    </section>
+
+    <section class="part" aria-labelledby="formulaH">
+      <h2 id="formulaH"><span class="no">3</span>The formula</h2>
+      <p>The pay rate is a percent of your normal salary: 100% is full pay, 50% is half pay. Unpaid weeks are not counted here — put only the paid weeks in the weeks box.</p>
+      <div class="formula-box">
+        <strong>Parental leave pay — in words: divide the yearly salary by 52 to get the weekly pay, multiply by the weeks of leave, then multiply by the pay rate.</strong>
+        <span class="sym">leave pay = (yearly salary ÷ 52) × weeks of leave × (pay rate ÷ 100)</span>
+      </div>
+      <p class="small">Formula source: plain arithmetic on the three numbers you type, with 52 weeks in a year. No government scheme, rate table or outside data is used. Government parental leave schemes pay their own fixed amounts, which are not part of this sum.</p>
+    </section>
+
+    <section class="part" aria-labelledby="exampleH">
+      <h2 id="exampleH"><span class="no">4</span>Worked example: $60,000 salary, 12 weeks at full pay</h2>
+      <ol class="steps">
+        <li>Weekly pay: $60,000 ÷ 52 = $1,153.85.</li>
+        <li>Pay for 12 weeks at full pay: $1,153.85 × 12 = $13,846.15.</li>
+        <li>Pay rate: 100%, so nothing is taken off.</li>
+        <li class="ans">Answer: $13,846.15 for the 12 weeks.</li>
+      </ol>
+      <p class="small">Try it in the tool above: type 60000, 12 and 100, and the result line shows $13,846.15.</p>
+    </section>
+
+    <section class="part" aria-labelledby="chartH">
+      <h2 id="chartH"><span class="no">5</span>Your result, drawn</h2>
+      <p>This bar and table are drawn from the numbers you typed above. Change a number and they change with it.</p>
+      <div class="bar" role="img" id="bar" aria-label="Bar showing the leave pay out of the yearly salary">
+        <div class="seg-a" style="width:23.08%"></div>
+        <div class="seg-b"></div>
+      </div>
+      <div class="bar-legend">
+        <span><span class="swatch a"></span><span id="legend-a">Leave pay: $13,846.15</span></span>
+        <span><span class="swatch b"></span><span id="legend-b">Yearly salary: $60,000.00</span></span>
+      </div>
+      <div class="table-scroll">
+        <table>
+          <thead><tr><th scope="col">Part of your sum</th><th scope="col" class="num">Value</th></tr></thead>
+          <tbody id="break-body">
+            <tr><td>Yearly salary</td><td class="num">$60,000.00</td></tr>
+            <tr><td>Weekly pay</td><td class="num">$1,153.85</td></tr>
+            <tr><td>Weeks of leave</td><td class="num">12.00</td></tr>
+            <tr><td>Pay rate</td><td class="num">100.00%</td></tr>
+            <tr><td>Total leave pay (your result)</td><td class="num">$13,846.15</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="part" aria-labelledby="faqH">
+      <h2 id="faqH"><span class="no">6</span>Questions about parental leave pay</h2>
+      <details>
+        <summary>Is this the government parental leave payment?</summary>
+        <p>No. This works out pay from your employer at a percent of your salary. Government schemes — such as Parental Leave Pay in Australia, Statutory Maternity Pay in the UK, and state schemes in the USA — pay their own fixed amounts on top of, or instead of, employer pay.</p>
+      </details>
+      <details>
+        <summary>What if part of my leave is at half pay?</summary>
+        <p>Work each part out on its own and add them together. For example, 6 weeks at 100% plus 6 weeks at 50% is two sums with the same salary and different weeks and rates.</p>
+      </details>
+      <details>
+        <summary>What if my salary changes during the leave?</summary>
+        <p>Use the salary that applies to the weeks you are counting. If a pay rise falls inside the leave, split the leave at the rise date and work each part out with its own salary.</p>
+      </details>
+      <details>
+        <summary>Does this include tax?</summary>
+        <p>No. It works out the gross pay during the leave, before tax. Tax is taken off by your employer in the normal way.</p>
+      </details>
+      <details>
+        <summary>What is the most weeks I can count?</summary>
+        <p>52 weeks, or one full year. A longer break has unpaid weeks, which this page does not count — put only the paid weeks in the weeks box.</p>
+      </details>
+      <details>
+        <summary>Is this calculator free, and do I need to sign up?</summary>
+        <p>Yes, it is free, and no sign-up is needed. Nothing is uploaded: the calculation runs in your browser on your own device, and the numbers you type are not sent anywhere.</p>
+      </details>
+    </section>
+
+    <section class="part" aria-labelledby="relatedH">
+      <h2 id="relatedH"><span class="no">7</span>Related tools</h2>
+      <p class="small">More tools that go with this one — each with its own page, one job per page:</p>
+      <ul class="related">
+        <li><a href="https://calculatorly.online/salary/pto-calculator/">PTO Calculator<span class="d">Paid days off earned so far this year.</span><span class="u mono">calculatorly.online/salary/pto-calculator/</span></a></li>
+        <li><a href="https://calculatorly.online/salary/redundancy-pay-calculator/">Redundancy Pay Calculator<span class="d">Statutory redundancy pay in the UK.</span><span class="u mono">calculatorly.online/salary/redundancy-pay-calculator/</span></a></li>
+        <li><a href="https://calculatorly.online/salary/job-offer-comparison-calculator/">Job Offer Comparison Calculator<span class="d">Which of two job offers is worth more in total.</span><span class="u mono">calculatorly.online/salary/job-offer-comparison-calculator/</span></a></li>
+      </ul>
+    </section>
+
+    <section class="part" aria-labelledby="testsH">
+      <h2 id="testsH">Known-answer test cases — run live on this page</h2>
+      <p>Each test below is worked out by the same code as the calculator above, the moment this page loads, and marked Pass or Fail against its known answer. If a row ever shows Fail, the page is not finished.</p>
+      <div class="table-scroll stack-wrap">
+        <table class="stackable">
+          <thead><tr><th scope="col">#</th><th scope="col">Test</th><th scope="col">Expected answer</th><th scope="col">Calculator gave</th><th scope="col">Result</th></tr></thead>
+          <tbody id="test-body">
+            <tr><td class="num" data-label="#">1</td><td data-label="Test">$60,000 salary, 12 weeks at 100%</td><td class="num" data-label="Expected answer">$13,846.15</td><td class="num" data-got data-label="Calculator gave">—</td><td data-label="Result"><span class="chip run" data-chip>RUNNING</span></td></tr>
+            <tr><td class="num" data-label="#">2</td><td data-label="Test">$52,000 salary, 10 weeks at 50%</td><td class="num" data-label="Expected answer">$5,000.00</td><td class="num" data-got data-label="Calculator gave">—</td><td data-label="Result"><span class="chip run" data-chip>RUNNING</span></td></tr>
+            <tr><td class="num" data-label="#">3</td><td data-label="Test">$78,000 salary, 26 weeks at 80%</td><td class="num" data-label="Expected answer">$31,200.00</td><td class="num" data-got data-label="Calculator gave">—</td><td data-label="Result"><span class="chip run" data-chip>RUNNING</span></td></tr>
+            <tr><td class="num" data-label="#">4</td><td data-label="Test">Empty input: weeks left blank</td><td class="num" data-label="Expected answer">Prompt message, no result, no NaN</td><td class="num" data-got data-label="Calculator gave">—</td><td data-label="Result"><span class="chip run" data-chip>RUNNING</span></td></tr>
+            <tr><td class="num" data-label="#">5</td><td data-label="Test">Pay rate over 100%</td><td class="num" data-label="Expected answer">Pay rate cannot be more than 100%.</td><td class="num" data-got data-label="Calculator gave">—</td><td data-label="Result"><span class="chip run" data-chip>RUNNING</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="record-note" style="margin-top:12px" id="test-summary">Tests are running…</p>
+    </section>
+
+    <section class="part" aria-labelledby="verdictH">
+      <h2 id="verdictH">Build record — verdict for this tool</h2>
+      <div class="table-scroll stack-wrap">
+        <table class="stackable">
+          <thead><tr><th scope="col">#</th><th scope="col">Tool</th><th scope="col">Verdict</th><th scope="col">Input → Output</th><th scope="col">Library / method</th><th scope="col">Limit or note shown on the page</th></tr></thead>
+          <tbody>
+            <tr>
+              <td class="num" data-label="#">1</td>
+              <td data-label="Tool">Parental Leave Pay Calculator</td>
+              <td data-label="Verdict"><strong>Browser-real</strong></td>
+              <td data-label="Input → Output">A salary + weeks of leave + a leave pay rate -&gt; the pay during parental leave</td>
+              <td data-label="Library / method">No library. Plain JavaScript arithmetic in the browser</td>
+              <td data-label="Limit or note shown on the page">Numbers up to 1,000,000,000,000; empty or over-limit input shows a clear message.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="record-note" style="margin-top:12px"><strong>Plan for this tool:</strong> one page only, in the Salary and Tax hub, built from the shared template with no libraries and no server. Security items that need a server (login, database, password rules) are N/A — this is a static page with no login and no stored data.</p>
+    </section>
+    <script type="application/json" id="tool-config">{"tool": "parental-leave-pay", "chart": "bar-table", "tests": [{"label": "$60,000 salary, 12 weeks at 100%", "inputs": {"salary": "60000", "weeks": "12", "pay_rate": "100"}, "expect": "$13,846.15"}, {"label": "$52,000 salary, 10 weeks at 50%", "inputs": {"salary": "52000", "weeks": "10", "pay_rate": "50"}, "expect": "$5,000.00"}, {"label": "$78,000 salary, 26 weeks at 80%", "inputs": {"salary": "78000", "weeks": "26", "pay_rate": "80"}, "expect": "$31,200.00"}, {"label": "Empty input: weeks left blank", "inputs": {"salary": "60000", "weeks": "", "pay_rate": "100"}, "expect_state": "empty", "expect_text": "Prompt message, no result, no NaN"}, {"label": "Pay rate over 100%", "inputs": {"salary": "60000", "weeks": "12", "pay_rate": "150"}, "expect_state": "range", "expect_text": "Pay rate cannot be more than 100%."}], "fields": ["salary", "weeks", "pay_rate"]}</script>
+  </main>
+<footer class="site">
+    <span class="fbrand">Calculatorly</span>
+    <nav aria-label="Footer">
+      <a href="../../about/">About</a>
+      <a href="../../contact/">Contact</a>
+      <a href="../../privacy/">Privacy</a>
+      <a href="../../terms/">Terms</a>
+      <a href="../../disclaimer/">Disclaimer</a>
+    </nav>
+    <span>Calculatorly — free calculators, no sign-up. The domain calculatorly.online is bought; hosting is separate.</span>
+    <div class="ad-slot" hidden aria-hidden="true"></div>
+  </footer>
+</div>
+<script src="../../assets/js/calculatorly.js"></script>
+<script src="../../assets/js/engines-s3.js"></script>
+</body>
+</html>

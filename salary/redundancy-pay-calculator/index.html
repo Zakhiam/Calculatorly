@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light" />
+<title>Redundancy Pay Calculator | Calculatorly</title>
+<meta name="description" content="Work out your redundancy payment from service and pay — formula, worked example and breakdown. Free, no sign-up, answers as you type." />
+<link rel="canonical" href="https://calculatorly.online/salary/redundancy-pay-calculator/" />
+<link rel="icon" href="data:," />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,400;0,600;0,700;0,800;1,400&amp;family=IBM+Plex+Mono:wght@500;600;700&amp;display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../../assets/css/khata.css" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Redundancy Pay Calculator","url":"https://calculatorly.online/salary/redundancy-pay-calculator/","applicationCategory":"UtilitiesApplication","operatingSystem":"Any (web browser)","browserRequirements":"Requires JavaScript","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"provider":{"@type":"Organization","name":"Calculatorly","url":"https://calculatorly.online/"}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://calculatorly.online/"},{"@type":"ListItem","position":2,"name":"Salary and Tax","item":"https://calculatorly.online/salary/"},{"@type":"ListItem","position":3,"name":"Redundancy Pay Calculator","item":"https://calculatorly.online/salary/redundancy-pay-calculator/"}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Do I qualify for statutory redundancy pay?","acceptedAnswer":{"@type":"Answer","text":"You need at least 2 full years of continuous service with the same employer. With less than 2 years there is no statutory payment, though your contract can still give you something."}},{"@type":"Question","name":"Why is the answer worked out year by year?","acceptedAnswer":{"@type":"Answer","text":"Because the weeks depend on the age you were during each year of service, not the age you are now. A year worked at 44 counts 1.5 weeks, while a year worked at 30 counts 1 week, even for the same person."}},{"@type":"Question","name":"What is the weekly pay cap?","acceptedAnswer":{"@type":"Answer","text":"For redundancies on or after 6 April 2026 the weekly pay used is capped at £751 in England, Scotland and Wales. If you earn more than that a week, the cap is used instead of your real pay. The most anyone can get is £22,530."}},{"@type":"Question","name":"Is redundancy pay taxed?","acceptedAnswer":{"@type":"Answer","text":"The first £30,000 of a genuine redundancy payment is free of income tax. Any amount over £30,000 is taxed in the normal way. This calculator shows the gross amount before tax."}},{"@type":"Question","name":"Does this cover Northern Ireland?","acceptedAnswer":{"@type":"Answer","text":"No. Northern Ireland has its own cap of £783 a week and a maximum of £23,490. This page uses the Great Britain figures of £751 and £22,530."}},{"@type":"Question","name":"My employer offered more than this. Is that normal?","acceptedAnswer":{"@type":"Answer","text":"Yes. This is the legal minimum only. Many employers pay an enhanced package under the contract or a settlement agreement, and that can be much more than the statutory amount."}}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"HowTo","name":"How to use the Redundancy Pay Calculator","step":[{"@type":"HowToStep","position":1,"text":"Type your age on the last day, your complete years of service, and your gross weekly pay. There is no Calculate button — the answer appears as you type."},{"@type":"HowToStep","position":2,"text":"Read the result line for the statutory redundancy pay, and the sentence under it for how many weeks of pay it is."},{"@type":"HowToStep","position":3,"text":"Check the bar and table under the result to see the weeks counted in each age band."}]}
+</script>
+</head>
+<body class="hub-salary">
+<div class="sheet">
+  <header class="masthead">
+    <div class="brand"><a href="../../">Calculator<span class="ly">ly</span></a></div>
+    <div class="domain mono">calculatorly.online</div>
+    <div class="mast-note">Every calculator, worked out in full.</div>
+  </header>
+  <main>
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="https://calculatorly.online/">Home</a></li>
+        <li><a href="https://calculatorly.online/salary/">Salary and Tax</a></li>
+        <li aria-current="page">Redundancy Pay Calculator</li>
+      </ol>
+    </nav>
+    <span class="hub-tag">Hub: Salary and Tax</span>
+    
+    <h1>Redundancy Pay Calculator</h1>
+
+    <section class="tool" aria-label="Redundancy Pay Calculator tool">
+      <p class="tool-q">How much statutory redundancy pay am I owed in the UK?</p>
+      <div class="fields">
+      <div class="field">
+        <label for="in-age">Your age on the last day of employment</label>
+        <input id="in-age" type="number" inputmode="decimal" step="any" value="45" autocomplete="off" />
+      </div>
+      <div class="field">
+        <label for="in-years">Complete years of continuous service</label>
+        <input id="in-years" type="number" inputmode="decimal" step="any" value="10" autocomplete="off" />
+      </div>
+      <div class="field">
+        <label for="in-weekly_pay">Gross weekly pay (£)</label>
+        <input id="in-weekly_pay" type="number" inputmode="decimal" step="any" value="600" autocomplete="off" />
+      </div>
+      </div>
+
+      <div class="result-wrap" aria-live="polite">
+        <div class="stamp" id="stamp" aria-hidden="true" hidden>Checked ✓</div>
+        <div class="result-label">Result</div>
+        <div class="result" id="result">£7,200.00</div>
+        <div class="result-sentence" id="sentence">12.00 weeks of pay at £600.00 a week gives statutory redundancy pay of £7,200.00.</div>
+        <p class="msg" id="msg" hidden></p>
+      </div>
+      <ol class="howto">
+        <li><strong>Type your age on the last day, your complete years of service, and your gross weekly pay. There is no Calculate button — the answer appears as you type.</strong></li>
+        <li><strong>Read the result line for the statutory redundancy pay, and the sentence under it for how many weeks of pay it is.</strong></li>
+        <li><strong>Check the bar and table under the result to see the weeks counted in each age band.</strong></li>
+      </ol>
+      <p class="limit-note"><strong>Limit:</strong> Numbers up to 1,000,000,000,000; empty or over-limit input shows a clear message. <strong>Rounding:</strong> every result uses one named default — Half-up to 2 decimal places — in the answer, the bar and the table. The Checked stamp appears on the result box only while a valid result is showing.</p>
+    </section>
+
+    <section class="quick" aria-labelledby="quickH">
+      <h2 id="quickH"><span class="no">2</span>Quick answer</h2>
+      <p>Statutory redundancy pay in the UK is worked out year by year: half a week for each year under 22, one week for each year from 22 to 40, and one and a half weeks for each year at 41 or over. A 45-year-old with 10 years of service and £600 a week is owed £7,200.00.</p>
+    </section>
+
+    <section class="part" aria-labelledby="formulaH">
+      <h2 id="formulaH"><span class="no">3</span>The formula</h2>
+      <p>Only the last 20 years of service count, and you need at least 2 full years to qualify. The weekly pay cap is £751 for redundancies on or after 6 April 2026 in England, Scotland and Wales.</p>
+      <div class="formula-box">
+        <strong>Statutory redundancy pay — in words: count back from your age, give each complete year of service the weeks for the age you were in that year, add the weeks, and multiply by your weekly pay, capped at £751.</strong>
+        <span class="sym">redundancy pay = weeks of pay × weekly pay (capped at £751)</span>
+      </div>
+      <p class="small">Formula source: GOV.UK statutory redundancy pay — 0.5 week per year under 22, 1 week per year aged 22 to 40, 1.5 weeks per year aged 41 or over, 20-year cap, weekly pay cap £751 from 6 April 2026. Last checked 11 November 2026. This is an estimate only, not professional advice.</p>
+    </section>
+
+    <section class="part" aria-labelledby="exampleH">
+      <h2 id="exampleH"><span class="no">4</span>Worked example: age 45, 10 years, £600 a week</h2>
+      <ol class="steps">
+        <li>Count back 10 years from age 45: ages 45, 44, 43 and 42 give 4 years at 1.5 weeks = 6 weeks.</li>
+        <li>Ages 41, 40, 39, 38, 37 and 36 give 6 years at 1 week = 6 weeks.</li>
+        <li>Total weeks: 6 + 6 = 12 weeks. Weekly pay £600 is under the £751 cap, so it is used in full.</li>
+        <li class="ans">Answer: 12 × £600 = £7,200.00.</li>
+      </ol>
+      <p class="small">Try it in the tool above: type 45, 10 and 600, and the result line shows £7,200.00.</p>
+    </section>
+
+    <section class="part" aria-labelledby="chartH">
+      <h2 id="chartH"><span class="no">5</span>Your result, drawn</h2>
+      <p>This bar and table are drawn from the numbers you typed above. Change a number and they change with it.</p>
+      <div class="bar" role="img" id="bar" aria-label="Bar showing the weeks of pay out of the 30-week maximum">
+        <div class="seg-a" style="width:40%"></div>
+        <div class="seg-b"></div>
+      </div>
+      <div class="bar-legend">
+        <span><span class="swatch a"></span><span id="legend-a">Weeks of pay: 12.00</span></span>
+        <span><span class="swatch b"></span><span id="legend-b">Most anyone can get: 30 weeks</span></span>
+      </div>
+      <div class="table-scroll">
+        <table>
+          <thead><tr><th scope="col">Part of your sum</th><th scope="col" class="num">Value</th></tr></thead>
+          <tbody id="break-body">
+            <tr><td>Years under 22 (0.5 week each)</td><td class="num">0</td></tr>
+            <tr><td>Years aged 22 to 40 (1 week each)</td><td class="num">6</td></tr>
+            <tr><td>Years aged 41 or over (1.5 weeks each)</td><td class="num">4</td></tr>
+            <tr><td>Total weeks of pay</td><td class="num">12.00</td></tr>
+            <tr><td>Weekly pay used (capped at £751.00)</td><td class="num">£600.00</td></tr>
+            <tr><td>Statutory redundancy pay (your result)</td><td class="num">£7,200.00</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="part" aria-labelledby="faqH">
+      <h2 id="faqH"><span class="no">6</span>Questions about redundancy pay</h2>
+      <details>
+        <summary>Do I qualify for statutory redundancy pay?</summary>
+        <p>You need at least 2 full years of continuous service with the same employer. With less than 2 years there is no statutory payment, though your contract can still give you something.</p>
+      </details>
+      <details>
+        <summary>Why is the answer worked out year by year?</summary>
+        <p>Because the weeks depend on the age you were during each year of service, not the age you are now. A year worked at 44 counts 1.5 weeks, while a year worked at 30 counts 1 week, even for the same person.</p>
+      </details>
+      <details>
+        <summary>What is the weekly pay cap?</summary>
+        <p>For redundancies on or after 6 April 2026 the weekly pay used is capped at £751 in England, Scotland and Wales. If you earn more than that a week, the cap is used instead of your real pay. The most anyone can get is £22,530.</p>
+      </details>
+      <details>
+        <summary>Is redundancy pay taxed?</summary>
+        <p>The first £30,000 of a genuine redundancy payment is free of income tax. Any amount over £30,000 is taxed in the normal way. This calculator shows the gross amount before tax.</p>
+      </details>
+      <details>
+        <summary>Does this cover Northern Ireland?</summary>
+        <p>No. Northern Ireland has its own cap of £783 a week and a maximum of £23,490. This page uses the Great Britain figures of £751 and £22,530.</p>
+      </details>
+      <details>
+        <summary>My employer offered more than this. Is that normal?</summary>
+        <p>Yes. This is the legal minimum only. Many employers pay an enhanced package under the contract or a settlement agreement, and that can be much more than the statutory amount.</p>
+      </details>
+    </section>
+
+    <section class="part" aria-labelledby="relatedH">
+      <h2 id="relatedH"><span class="no">7</span>Related tools</h2>
+      <p class="small">More tools that go with this one — each with its own page, one job per page:</p>
+      <ul class="related">
+        <li><a href="https://calculatorly.online/salary/parental-leave-pay-calculator/">Parental Leave Pay Calculator<span class="d">Pay during parental leave from a salary, weeks and pay rate.</span><span class="u mono">calculatorly.online/salary/parental-leave-pay-calculator/</span></a></li>
+        <li><a href="https://calculatorly.online/salary/pto-calculator/">PTO Calculator<span class="d">Paid days off earned so far this year.</span><span class="u mono">calculatorly.online/salary/pto-calculator/</span></a></li>
+        <li><a href="https://calculatorly.online/salary/job-offer-comparison-calculator/">Job Offer Comparison Calculator<span class="d">Which of two job offers is worth more in total.</span><span class="u mono">calculatorly.online/salary/job-offer-comparison-calculator/</span></a></li>
+      </ul>
+    </section>
+
+    <section class="part" aria-labelledby="testsH">
+      <h2 id="testsH">Known-answer test cases — run live on this page</h2>
+      <p>Each test below is worked out by the same code as the calculator above, the moment this page loads, and marked Pass or Fail against its known answer. If a row ever shows Fail, the page is not finished.</p>
+      <div class="table-scroll stack-wrap">
+        <table class="stackable">
+          <thead><tr><th scope="col">#</th><th scope="col">Test</th><th scope="col">Expected answer</th><th scope="col">Calculator gave</th><th scope="col">Result</th></tr></thead>
+          <tbody id="test-body">
+            <tr><td class="num" data-label="#">1</td><td data-label="Test">Age 45, 10 years, £600 a week</td><td class="num" data-label="Expected answer">£7,200.00</td><td class="num" data-got data-label="Calculator gave">—</td><td data-label="Result"><span class="chip run" data-chip>RUNNING</span></td></tr>
+            <tr><td class="num" data-label="#">2</td><td data-label="Test">Age 30, 8 years, £800 a week (capped at £751)</td><td class="num" data-label="Expected answer">£6,008.00</td><td class="num" data-got data-label="Calculator gave">—</td><td data-label="Result"><span class="chip run" data-chip>RUNNING</span></td></tr>
+            <tr><td class="num" data-label="#">3</td><td data-label="Test">Age 20, 2 years, £400 a week</td><td class="num" data-label="Expected answer">£400.00</td><td class="num" data-got data-label="Calculator gave">—</td><td data-label="Result"><span class="chip run" data-chip>RUNNING</span></td></tr>
+            <tr><td class="num" data-label="#">4</td><td data-label="Test">Empty input: years left blank</td><td class="num" data-label="Expected answer">Prompt message, no result, no NaN</td><td class="num" data-got data-label="Calculator gave">—</td><td data-label="Result"><span class="chip run" data-chip>RUNNING</span></td></tr>
+            <tr><td class="num" data-label="#">5</td><td data-label="Test">Less than 2 years of service</td><td class="num" data-label="Expected answer">Statutory redundancy pay needs at least 2 full years of service.</td><td class="num" data-got data-label="Calculator gave">—</td><td data-label="Result"><span class="chip run" data-chip>RUNNING</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="record-note" style="margin-top:12px" id="test-summary">Tests are running…</p>
+    </section>
+
+    <section class="part" aria-labelledby="verdictH">
+      <h2 id="verdictH">Build record — verdict for this tool</h2>
+      <div class="table-scroll stack-wrap">
+        <table class="stackable">
+          <thead><tr><th scope="col">#</th><th scope="col">Tool</th><th scope="col">Verdict</th><th scope="col">Input → Output</th><th scope="col">Library / method</th><th scope="col">Limit or note shown on the page</th></tr></thead>
+          <tbody>
+            <tr>
+              <td class="num" data-label="#">1</td>
+              <td data-label="Tool">Redundancy Pay Calculator</td>
+              <td data-label="Verdict"><strong>Browser-real</strong></td>
+              <td data-label="Input → Output">Years of service + age + weekly pay -&gt; the redundancy payment</td>
+              <td data-label="Library / method">No library. Plain JavaScript arithmetic in the browser</td>
+              <td data-label="Limit or note shown on the page">Numbers up to 1,000,000,000,000; empty or over-limit input shows a clear message.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="record-note" style="margin-top:12px"><strong>Plan for this tool:</strong> one page only, in the Salary and Tax hub, built from the shared template with no libraries and no server. Security items that need a server (login, database, password rules) are N/A — this is a static page with no login and no stored data.</p>
+    </section>
+    <script type="application/json" id="tool-config">{"tool": "redundancy-pay", "chart": "bar-table", "tests": [{"label": "Age 45, 10 years, £600 a week", "inputs": {"age": "45", "years": "10", "weekly_pay": "600"}, "expect": "£7,200.00"}, {"label": "Age 30, 8 years, £800 a week (capped at £751)", "inputs": {"age": "30", "years": "8", "weekly_pay": "800"}, "expect": "£6,008.00"}, {"label": "Age 20, 2 years, £400 a week", "inputs": {"age": "20", "years": "2", "weekly_pay": "400"}, "expect": "£400.00"}, {"label": "Empty input: years left blank", "inputs": {"age": "45", "years": "", "weekly_pay": "600"}, "expect_state": "empty", "expect_text": "Prompt message, no result, no NaN"}, {"label": "Less than 2 years of service", "inputs": {"age": "45", "years": "1", "weekly_pay": "600"}, "expect_state": "range", "expect_text": "Statutory redundancy pay needs at least 2 full years of service."}], "fields": ["age", "years", "weekly_pay"]}</script>
+  </main>
+<footer class="site">
+    <span class="fbrand">Calculatorly</span>
+    <nav aria-label="Footer">
+      <a href="../../about/">About</a>
+      <a href="../../contact/">Contact</a>
+      <a href="../../privacy/">Privacy</a>
+      <a href="../../terms/">Terms</a>
+      <a href="../../disclaimer/">Disclaimer</a>
+    </nav>
+    <span>Calculatorly — free calculators, no sign-up. The domain calculatorly.online is bought; hosting is separate.</span>
+    <div class="ad-slot" hidden aria-hidden="true"></div>
+  </footer>
+</div>
+<script src="../../assets/js/calculatorly.js"></script>
+<script src="../../assets/js/engines-s3.js"></script>
+</body>
+</html>

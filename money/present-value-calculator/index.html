@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light" />
+<title>Present Value Calculator | Calculatorly</title>
+<meta name="description" content="Work out what a future sum is worth in today&#x27;s money — formula, worked example and breakdown. Free, no sign-up, answers as you type." />
+<link rel="canonical" href="https://calculatorly.online/money/present-value-calculator/" />
+<link rel="icon" href="data:," />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,400;0,600;0,700;0,800;1,400&amp;family=IBM+Plex+Mono:wght@500;600;700&amp;display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../../assets/css/khata.css" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Present Value Calculator","url":"https://calculatorly.online/money/present-value-calculator/","applicationCategory":"UtilitiesApplication","operatingSystem":"Any (web browser)","browserRequirements":"Requires JavaScript","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"provider":{"@type":"Organization","name":"Calculatorly","url":"https://calculatorly.online/"}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://calculatorly.online/"},{"@type":"ListItem","position":2,"name":"Money","item":"https://calculatorly.online/money/"},{"@type":"ListItem","position":3,"name":"Present Value Calculator","item":"https://calculatorly.online/money/present-value-calculator/"}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What does present value mean in plain words?","acceptedAnswer":{"@type":"Answer","text":"It is what a future sum of money is worth today. If you will receive $1,000.00 in 10 years, and money can earn 5.00% a year, that future $1,000.00 is worth $613.91 today — because $613.91 invested now at 5.00% would grow to $1,000.00 in 10 years."}},{"@type":"Question","name":"What discount rate should I type?","acceptedAnswer":{"@type":"Answer","text":"Type the yearly rate that matches your question: the interest you could earn, the inflation rate, or the return you want from an investment. A higher rate gives a lower present value, because the future money is discounted more heavily."}},{"@type":"Question","name":"What if the discount rate is zero?","acceptedAnswer":{"@type":"Answer","text":"Then the present value equals the future amount exactly, because money is not discounted at all. For example, $5,000.00 in 3 years at 0% is worth $5,000.00 today."}},{"@type":"Question","name":"How is present value different from future value?","acceptedAnswer":{"@type":"Answer","text":"They are the same idea in opposite directions. Present value works backwards: a future amount is discounted to today. Future value works forwards: a sum today is grown to a future date. The Future Value Calculator on this site does the forward sum."}},{"@type":"Question","name":"Why is the present value always smaller than the future amount?","acceptedAnswer":{"@type":"Answer","text":"As long as the discount rate is above zero, the discount factor is above one, so dividing by it always gives a smaller number. The longer the wait, or the higher the rate, the smaller the present value."}},{"@type":"Question","name":"Is this calculator free, and do I need to sign up?","acceptedAnswer":{"@type":"Answer","text":"Yes, it is free, and no sign-up is needed. Nothing is uploaded: the calculation runs in your browser on your own device, and the numbers you type are not sent anywhere."}}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"HowTo","name":"How to use the Present Value Calculator","step":[{"@type":"HowToStep","position":1,"text":"Type the future amount, the discount rate per year and the number of years from now. There is no Calculate button — the answer appears as you type."},{"@type":"HowToStep","position":2,"text":"Read the present value in the result line, rounded half-up to 2 decimal places."},{"@type":"HowToStep","position":3,"text":"Check the bar and table under the result (Part 5 below) to see the discount and the present value."}]}
+</script>
+</head>
+<body class="hub-money">
+<div class="sheet">
+  <header class="masthead">
+    <div class="brand"><a href="../../">Calculator<span class="ly">ly</span></a></div>
+    <div class="domain mono">calculatorly.online</div>
+    <div class="mast-note">Every calculator, worked out in full.</div>
+  </header>
+  <main>
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="https://calculatorly.online/">Home</a></li>
+        <li><a href="https://calculatorly.online/money/">Money</a></li>
+        <li aria-current="page">Present Value Calculator</li>
+      </ol>
+    </nav>
+    <span class="hub-tag">Hub: Money</span>
+    
+    <h1>Present Value Calculator</h1>
+
+    <section class="tool" aria-label="Present Value Calculator tool">
+      <p class="tool-q">What is this future sum worth in today&#x27;s money?</p>
+      <div class="fields">
+      <div class="field">
+        <label for="in-f">Future amount ($)</label>
+        <input id="in-f" type="number" inputmode="decimal" step="any" value="1000" autocomplete="off" />
+      </div>
+      <div class="field">
+        <label for="in-r">Discount rate per year (%)</label>
+        <input id="in-r" type="number" inputmode="decimal" step="any" value="5" autocomplete="off" />
+      </div>
+      <div class="field">
+        <label for="in-y">Years from now</label>
+        <input id="in-y" type="number" inputmode="decimal" step="any" value="10" autocomplete="off" />
+      </div>
+      </div>
+
+      <div class="result-wrap" aria-live="polite">
+        <div class="stamp" id="stamp" aria-hidden="true" hidden>Checked ✓</div>
+        <div class="result-label">Result</div>
+        <div class="result" id="result">$613.91</div>
+        <div class="result-sentence" id="sentence">$1,000.00 in 10 years at a discount rate of 5.00% a year is worth $613.91 today.</div>
+        <p class="msg" id="msg" hidden></p>
+      </div>
+      <ol class="howto">
+        <li><strong>Type the future amount, the discount rate per year and the number of years from now. There is no Calculate button — the answer appears as you type.</strong></li>
+        <li><strong>Read the present value in the result line, rounded half-up to 2 decimal places.</strong></li>
+        <li><strong>Check the bar and table under the result (Part 5 below) to see the discount and the present value.</strong></li>
+      </ol>
+      <p class="limit-note"><strong>Limit:</strong> Numbers up to 1,000,000,000,000; empty or over-limit input shows a clear message. <strong>Rounding:</strong> every result uses one named default — Half-up to 2 decimal places — in the answer, the bar and the table. The Checked stamp appears on the result box only while a valid result is showing.</p>
+    </section>
+
+    <section class="quick" aria-labelledby="quickH">
+      <h2 id="quickH"><span class="no">2</span>Quick answer</h2>
+      <p>The present value of a future sum is the future amount divided by one plus the discount rate, raised to the number of years. For example, $1,000.00 in 10 years at a discount rate of 5.00% a year is worth $613.91 today. Type your own future amount, rate and years above.</p>
+    </section>
+
+    <section class="part" aria-labelledby="formulaH">
+      <h2 id="formulaH"><span class="no">3</span>The formula</h2>
+      <p>Money in the future is worth less than money today, because money today can earn interest. The discount rate is how much less it is worth each year:</p>
+      <div class="formula-box">
+        <strong>Present value — in words: divide the future amount by one plus the yearly discount rate, raised to the power of the number of years.</strong>
+        <span class="sym">present value = future amount ÷ (1 + rate)^years</span>
+      </div>
+      <p class="small">Formula source: the standard present value (discounting) formula. No live rate is used — the discount rate is the one you type.</p>
+    </section>
+
+    <section class="part" aria-labelledby="exampleH">
+      <h2 id="exampleH"><span class="no">4</span>Worked example: $1,000.00 in 10 years at 5.00%</h2>
+      <ol class="steps">
+        <li>Start with the figures: a future amount of $1,000.00, a discount rate of 5.00% a year, 10 years from now.</li>
+        <li>Find the discount factor: (1 + 5.00 ÷ 100)^10 = 1.05^10 = 1.62889.</li>
+        <li>Divide the future amount by the factor: $1,000.00 ÷ 1.62889 = $613.91.</li>
+        <li class="ans">Answer: the present value is $613.91 — the discount is $1,000.00 − $613.91 = $386.09.</li>
+      </ol>
+      <p class="small">Try it in the tool above: type 1000, 5 and 10, and the result line shows $613.91.</p>
+    </section>
+
+    <section class="part" aria-labelledby="chartH">
+      <h2 id="chartH"><span class="no">5</span>Your result, drawn</h2>
+      <p>This bar and table are drawn from the numbers you typed above. Change a number and they change with it.</p>
+      <div class="bar" role="img" id="bar" aria-label="Bar showing the present value as a share of the future amount">
+        <div class="seg-a" style="width:61.39%"></div>
+        <div class="seg-b"></div>
+      </div>
+      <div class="bar-legend">
+        <span><span class="swatch a"></span><span id="legend-a">Present value: $613.91</span></span>
+        <span><span class="swatch b"></span><span id="legend-b">Discount: $386.09</span></span>
+      </div>
+      <div class="table-scroll">
+        <table>
+          <thead><tr><th scope="col">Part of your sum</th><th scope="col" class="num">Value</th></tr></thead>
+          <tbody id="break-body">
+            <tr><td>Future amount</td><td class="num">$1,000.00</td></tr>
+            <tr><td>Discount</td><td class="num">$386.09</td></tr>
+            <tr><td>Present value</td><td class="num">$613.91</td></tr>
+            <tr><td>Years</td><td class="num">10</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="part" aria-labelledby="faqH">
+      <h2 id="faqH"><span class="no">6</span>Questions about present value</h2>
+      <details>
+        <summary>What does present value mean in plain words?</summary>
+        <p>It is what a future sum of money is worth today. If you will receive $1,000.00 in 10 years, and money can earn 5.00% a year, that future $1,000.00 is worth $613.91 today — because $613.91 invested now at 5.00% would grow to $1,000.00 in 10 years.</p>
+      </details>
+      <details>
+        <summary>What discount rate should I type?</summary>
+        <p>Type the yearly rate that matches your question: the interest you could earn, the inflation rate, or the return you want from an investment. A higher rate gives a lower present value, because the future money is discounted more heavily.</p>
+      </details>
+      <details>
+        <summary>What if the discount rate is zero?</summary>
+        <p>Then the present value equals the future amount exactly, because money is not discounted at all. For example, $5,000.00 in 3 years at 0% is worth $5,000.00 today.</p>
+      </details>
+      <details>
+        <summary>How is present value different from future value?</summary>
+        <p>They are the same idea in opposite directions. Present value works backwards: a future amount is discounted to today. Future value works forwards: a sum today is grown to a future date. The Future Value Calculator on this site does the forward sum.</p>
+      </details>
+      <details>
+        <summary>Why is the present value always smaller than the future amount?</summary>
+        <p>As long as the discount rate is above zero, the discount factor is above one, so dividing by it always gives a smaller number. The longer the wait, or the higher the rate, the smaller the present value.</p>
+      </details>
+      <details>
+        <summary>Is this calculator free, and do I need to sign up?</summary>
+        <p>Yes, it is free, and no sign-up is needed. Nothing is uploaded: the calculation runs in your browser on your own device, and the numbers you type are not sent anywhere.</p>
+      </details>
+    </section>
+
+    <section class="part" aria-labelledby="relatedH">
+      <h2 id="relatedH"><span class="no">7</span>Related tools</h2>
+      <p class="small">More tools that go with this one — each with its own page, one job per page:</p>
+      <ul class="related">
+        <li><a href="https://calculatorly.online/money/future-value-calculator/">Future Value Calculator<span class="d">Future value of a sum at a growth rate over time.</span><span class="u mono">calculatorly.online/money/future-value-calculator/</span></a></li>
+        <li><a href="https://calculatorly.online/money/annuity-calculator/">Annuity Calculator<span class="d">Monthly income from a lump sum at a fixed rate.</span><span class="u mono">calculatorly.online/money/annuity-calculator/</span></a></li>
+      </ul>
+    </section>
+
+    <section class="part" aria-labelledby="testsH">
+      <h2 id="testsH">Known-answer test cases — run live on this page</h2>
+      <p>Each test below is worked out by the same code as the calculator above, the moment this page loads, and marked Pass or Fail against its known answer. If a row ever shows Fail, the page is not finished.</p>
+      <div class="table-scroll stack-wrap">
+        <table class="stackable">
+          <thead><tr><th scope="col">#</th><th scope="col">Test</th><th scope="col">Expected answer</th><th scope="col">Calculator gave</th><th scope="col">Result</th></tr></thead>
+          <tbody id="test-body">
+            <tr><td class="num" data-label="#">1</td><td data-label="Test">$1,000.00 in 10 years at 5%</td><td class="num" data-label="Expected answer">$613.91</td><td class="num" data-got data-label="Calculator gave">—</td><td data-label="Result"><span class="chip run" data-chip>RUNNING</span></td></tr>
+            <tr><td class="num" data-label="#">2</td><td data-label="Test">$10,000.00 in 5 years at 8%</td><td class="num" data-label="Expected answer">$6,805.83</td><td class="num" data-got data-label="Calculator gave">—</td><td data-label="Result"><span class="chip run" data-chip>RUNNING</span></td></tr>
+            <tr><td class="num" data-label="#">3</td><td data-label="Test">No-discount check: $5,000.00 in 3 years at 0%</td><td class="num" data-label="Expected answer">$5,000.00</td><td class="num" data-got data-label="Calculator gave">—</td><td data-label="Result"><span class="chip run" data-chip>RUNNING</span></td></tr>
+            <tr><td class="num" data-label="#">4</td><td data-label="Test">Zero-year check: $2,000.00 now at 10%</td><td class="num" data-label="Expected answer">$2,000.00</td><td class="num" data-got data-label="Calculator gave">—</td><td data-label="Result"><span class="chip run" data-chip>RUNNING</span></td></tr>
+            <tr><td class="num" data-label="#">5</td><td data-label="Test">Empty input: the future amount box left blank</td><td class="num" data-label="Expected answer">Prompt message, no result, no NaN</td><td class="num" data-got data-label="Calculator gave">—</td><td data-label="Result"><span class="chip run" data-chip>RUNNING</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="record-note" style="margin-top:12px" id="test-summary">Tests are running…</p>
+    </section>
+
+    <section class="part" aria-labelledby="verdictH">
+      <h2 id="verdictH">Build record — verdict for this tool</h2>
+      <div class="table-scroll stack-wrap">
+        <table class="stackable">
+          <thead><tr><th scope="col">#</th><th scope="col">Tool</th><th scope="col">Verdict</th><th scope="col">Input → Output</th><th scope="col">Library / method</th><th scope="col">Limit or note shown on the page</th></tr></thead>
+          <tbody>
+            <tr>
+              <td class="num" data-label="#">1</td>
+              <td data-label="Tool">Present Value Calculator</td>
+              <td data-label="Verdict"><strong>Browser-real</strong></td>
+              <td data-label="Input → Output">A future amount + a rate + years -&gt; the present value</td>
+              <td data-label="Library / method">No library. Plain JavaScript arithmetic in the browser</td>
+              <td data-label="Limit or note shown on the page">Numbers up to 1,000,000,000,000; empty or over-limit input shows a clear message.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="record-note" style="margin-top:12px"><strong>Plan for this tool:</strong> one page only, in the Money hub, built from the shared template with no libraries and no server. Security items that need a server (login, database, password rules) are N/A — this is a static page with no login and no stored data.</p>
+    </section>
+    <script type="application/json" id="tool-config">{"tool": "present-value", "chart": "present-value", "tests": [{"label": "$1,000.00 in 10 years at 5%", "inputs": {"f": "1000", "r": "5", "y": "10"}, "expect": "$613.91"}, {"label": "$10,000.00 in 5 years at 8%", "inputs": {"f": "10000", "r": "8", "y": "5"}, "expect": "$6,805.83"}, {"label": "No-discount check: $5,000.00 in 3 years at 0%", "inputs": {"f": "5000", "r": "0", "y": "3"}, "expect": "$5,000.00"}, {"label": "Zero-year check: $2,000.00 now at 10%", "inputs": {"f": "2000", "r": "10", "y": "0"}, "expect": "$2,000.00"}, {"label": "Empty input: the future amount box left blank", "inputs": {"f": "", "r": "5", "y": "10"}, "expect_state": "empty", "expect_text": "Prompt message, no result, no NaN"}], "fields": ["f", "r", "y"]}</script>
+  </main>
+<footer class="site">
+    <span class="fbrand">Calculatorly</span>
+    <nav aria-label="Footer">
+      <a href="../../about/">About</a>
+      <a href="../../contact/">Contact</a>
+      <a href="../../privacy/">Privacy</a>
+      <a href="../../terms/">Terms</a>
+      <a href="../../disclaimer/">Disclaimer</a>
+    </nav>
+    <span>Calculatorly — free calculators, no sign-up. The domain calculatorly.online is bought; hosting is separate.</span>
+    <div class="ad-slot" hidden aria-hidden="true"></div>
+  </footer>
+</div>
+<script src="../../assets/js/calculatorly.js"></script>
+<script src="../../assets/js/engines-s4.js"></script>
+</body>
+</html>
